@@ -1,0 +1,14 @@
+services:
+    _defaults:
+        public: true
+        autowire: true
+        autoconfigure: true
+
+    Migrify\VendorPatches\:
+        resource: "../src"
+        exclude:
+            - "../src/HttpKernel/*"
+            - "../src/ValueObject/*"
+
+    Symplify\SmartFileSystem\Finder\FinderSanitizer: null
+    Symplify\PackageBuilder\Console\Style\SymfonyStyleFactory: null
