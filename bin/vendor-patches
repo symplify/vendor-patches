@@ -4,7 +4,18 @@
 use Migrify\VendorPatches\Console\VendorPatchesApplication;
 use Migrify\VendorPatches\HttpKernel\VendorPatchesKernel;
 
-require __DIR__ . '/../vendor/autoload.php';
+$possibleAutoloadPaths = [
+    __DIR__ . '/../vendor/autoload.php',
+    __DIR__ . '/../../../vendor/autoload.php',
+];
+
+foreach ($possibleAutoloadPaths as $possibleAutoloadPath) {
+    if (! file_exists($possibleAutoloadPath)) {
+        continue;
+    }
+
+    require_once $possibleAutoloadPath;
+}
 
 // allow container override on param changes
 $environment = 'prod' . random_int(0, 100000);

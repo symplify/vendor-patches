@@ -12,7 +12,7 @@ use Symplify\AutoBindParameter\DependencyInjection\CompilerPass\AutoBindParamete
 use Symplify\AutowireArrayParameter\DependencyInjection\CompilerPass\AutowireArrayParameterCompilerPass;
 use Symplify\PackageBuilder\DependencyInjection\CompilerPass\AutoReturnFactoryCompilerPass;
 
-final class VendorPatchesGeneratorKernel extends Kernel
+final class VendorPatchesKernel extends Kernel
 {
     /**
      * @return BundleInterface[]
