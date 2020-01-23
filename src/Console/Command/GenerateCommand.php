@@ -148,7 +148,7 @@ final class GenerateCommand extends Command
      */
     private function updateComposerJson(array $composerExtraPatches): void
     {
-        $composerJsonArray = [
+        $patchComposerJsonArray = [
             'config' => [
                 'preffered-install' => 'source',
             ],
@@ -160,7 +160,7 @@ final class GenerateCommand extends Command
         $composerJsonFilePath = getcwd() . '/composer.json';
         $composerJsonArray = $this->jsonFileSystem->loadFilePathToJson($composerJsonFilePath);
 
-        $newComposerJsonArray = Arrays::mergeTree($composerJsonArray, $composerJsonArray);
+        $newComposerJsonArray = Arrays::mergeTree($composerJsonArray, $patchComposerJsonArray);
 
         $this->jsonFileSystem->writeJsonToFilePath($newComposerJsonArray, $composerJsonFilePath);
     }
