@@ -7,7 +7,9 @@ namespace Migrify\VendorPatches\Console\Command;
 use Migrify\VendorPatches\Composer\PackageNameResolver;
 use Migrify\VendorPatches\Differ\PatchDiffer;
 use Migrify\VendorPatches\Finder\VendorFilesFinder;
+use Migrify\VendorPatches\Json\JsonFileSystem;
 use Migrify\VendorPatches\ValueObject\Option;
+use Nette\Utils\Arrays;
 use Nette\Utils\FileSystem;
 use Nette\Utils\Json;
 use Nette\Utils\Strings;
@@ -41,16 +43,23 @@ final class GenerateCommand extends Command
      */
     private $packageNameResolver;
 
+    /**
+     * @var JsonFileSystem
+     */
+    private $jsonFileSystem;
+
     public function __construct(
         VendorFilesFinder $vendorFilesFinder,
         PatchDiffer $patchDiffer,
         SymfonyStyle $symfonyStyle,
-        PackageNameResolver $packageNameResolver
+        PackageNameResolver $packageNameResolver,
+        JsonFileSystem $jsonFileSystem
     ) {
         $this->vendorFilesFinder = $vendorFilesFinder;
         $this->patchDiffer = $patchDiffer;
         $this->symfonyStyle = $symfonyStyle;
         $this->packageNameResolver = $packageNameResolver;
+        $this->jsonFileSystem = $jsonFileSystem;
 
         parent::__construct();
     }
@@ -139,7 +148,7 @@ final class GenerateCommand extends Command
      */
     private function updateComposerJson(array $composerExtraPatches): void
     {
-        $composerJsonContent = [
+        $composerJsonArray = [
             'config' => [
                 'preffered-install' => 'source',
             ],
@@ -148,8 +157,11 @@ final class GenerateCommand extends Command
             ],
         ];
 
-        $composerExtraPatchContent = Json::encode($composerJsonContent, Json::PRETTY);
+        $composerJsonFilePath = getcwd() . '/composer.json';
+        $composerJsonArray = $this->jsonFileSystem->loadFilePathToJson($composerJsonFilePath);
 
-        // @todo write it down
+        $newComposerJsonArray = Arrays::mergeTree($composerJsonArray, $composerJsonArray);
+
+        $this->jsonFileSystem->writeJsonToFilePath($newComposerJsonArray, $composerJsonFilePath);
     }
 }

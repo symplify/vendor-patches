@@ -15,4 +15,11 @@ final class JsonFileSystem
 
         return Json::decode($fileContent, Json::FORCE_ARRAY);
     }
+
+    public function writeJsonToFilePath(array $jsonArray, string $filePath): void
+    {
+        $jsonContent = Json::encode($jsonArray, Json::PRETTY);
+
+        FileSystem::write($filePath, $jsonContent);
+    }
 }
