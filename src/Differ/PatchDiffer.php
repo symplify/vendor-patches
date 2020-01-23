@@ -44,6 +44,7 @@ final class PatchDiffer
     private function resolveFileInfoPathRelativeFilePath(SmartFileInfo $beforeFileInfo): string
     {
         $match = Strings::match($beforeFileInfo->getRealPath(), self::LOCAL_PATH_PATTERN);
+
         if (! isset($match['local_path'])) {
             throw new ShouldNotHappenException();
         }

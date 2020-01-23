@@ -109,6 +109,7 @@ final class GenerateCommand extends Command
         ];
 
         $composerExtraPatchContent = Json::encode($composerJsonContent, Json::PRETTY);
+
         // @todo write it down
 
         return ShellCode::SUCCESS;
