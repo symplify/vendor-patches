@@ -136,6 +136,9 @@ final class GenerateCommand extends Command
     private function createPathFilePath(string $relativeVendorFilePath): string
     {
         $relativeFilePathWithoutSuffix = Strings::before($relativeVendorFilePath, '.php');
+
+        assert(is_string($relativeFilePathWithoutSuffix));
+
         $pathFileName = Strings::webalize($relativeFilePathWithoutSuffix) . '.patch';
 
         return 'patches/' . $pathFileName;
