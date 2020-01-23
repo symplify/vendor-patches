@@ -95,22 +95,11 @@ final class GenerateCommand extends Command
             $this->symfonyStyle->note(sprintf('File "%s" was created', $relativePathFileName));
         }
 
+        $this->updateComposerJson($composerExtraPatches);
+
         // @todo update composer.json with extra patches
 
         $this->symfonyStyle->success('Patching done');
-
-        $composerJsonContent = [
-            'config' => [
-                'preffered-install' => 'source',
-            ],
-            'extra' => [
-                'patches' => $composerExtraPatches,
-            ],
-        ];
-
-        $composerExtraPatchContent = Json::encode($composerJsonContent, Json::PRETTY);
-
-        // @todo write it down
 
         return ShellCode::SUCCESS;
     }
@@ -143,5 +132,24 @@ final class GenerateCommand extends Command
         $pathFileName = Strings::webalize($relativeFilePathWithoutSuffix) . '.patch';
 
         return 'patches/' . $pathFileName;
+    }
+
+    /**
+     * @param mixed[] $composerExtraPatches
+     */
+    private function updateComposerJson(array $composerExtraPatches): void
+    {
+        $composerJsonContent = [
+            'config' => [
+                'preffered-install' => 'source',
+            ],
+            'extra' => [
+                'patches' => $composerExtraPatches,
+            ],
+        ];
+
+        $composerExtraPatchContent = Json::encode($composerJsonContent, Json::PRETTY);
+
+        // @todo write it down
     }
 }
