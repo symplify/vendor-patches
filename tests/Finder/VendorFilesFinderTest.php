@@ -18,7 +18,6 @@ final class VendorFilesFinderTest extends AbstractKernelTestCase
     protected function setUp(): void
     {
         self::bootKernel(VendorPatchesKernel::class);
-
         $this->vendorFilesFinder = self::$container->get(VendorFilesFinder::class);
     }
 
@@ -26,6 +25,9 @@ final class VendorFilesFinderTest extends AbstractKernelTestCase
     {
         $files = $this->vendorFilesFinder->find(__DIR__ . '/VendorFilesFinderSource');
 
-        $this->assertCount(0, $files);
+        $this->assertCount(1, $files);
+
+        $relativeFilePath = 'some/package/PackageClass.php';
+        $this->assertArrayHasKey($relativeFilePath, $files);
     }
 }
