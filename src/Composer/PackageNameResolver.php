@@ -7,6 +7,7 @@ namespace Migrify\VendorPatches\Composer;
 use Migrify\VendorPatches\Exception\ShouldNotHappenException;
 use Migrify\VendorPatches\FileSystem\PathResolver;
 use Migrify\VendorPatches\Json\JsonFileSystem;
+use Symplify\SmartFileSystem\FileSystemGuard;
 use Symplify\SmartFileSystem\SmartFileInfo;
 
 final class PackageNameResolver
@@ -21,20 +22,24 @@ final class PackageNameResolver
      */
     private $pathResolver;
 
-    public function __construct(JsonFileSystem $jsonFileSystem, PathResolver $pathResolver)
-    {
+    /**
+     * @var FileSystemGuard
+     */
+    private $fileSystemGuard;
+
+    public function __construct(
+        JsonFileSystem $jsonFileSystem,
+        PathResolver $pathResolver,
+        FileSystemGuard $fileSystemGuard
+    ) {
         $this->jsonFileSystem = $jsonFileSystem;
         $this->pathResolver = $pathResolver;
+        $this->fileSystemGuard = $fileSystemGuard;
     }
 
     public function resolveFromFileInfo(SmartFileInfo $vendorFile): string
     {
-        $vendorPackageDirectory = $this->pathResolver->resolveVendor($vendorFile->getRealPath());
-
-        $packageComposerJsonFilePath = $vendorPackageDirectory . '/composer.json';
-        if (! file_exists($packageComposerJsonFilePath)) {
-            throw new ShouldNotHappenException();
-        }
+        $packageComposerJsonFilePath = $this->getPackageComposerJsonFilePath($vendorFile);
 
         $composerJson = $this->jsonFileSystem->loadFilePathToJson($packageComposerJsonFilePath);
         if (! isset($composerJson['name'])) {
@@ -42,5 +47,14 @@ final class PackageNameResolver
         }
 
         return $composerJson['name'];
+    }
+
+    private function getPackageComposerJsonFilePath(SmartFileInfo $vendorFile): string
+    {
+        $vendorPackageDirectory = $this->pathResolver->resolveVendor($vendorFile->getRealPath());
+        $packageComposerJsonFilePath = $vendorPackageDirectory . '/composer.json';
+        $this->fileSystemGuard->ensureFileExists($packageComposerJsonFilePath, __METHOD__);
+
+        return $packageComposerJsonFilePath;
     }
 }
