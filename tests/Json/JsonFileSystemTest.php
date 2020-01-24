@@ -40,4 +40,21 @@ final class JsonFileSystemTest extends AbstractKernelTestCase
 
         FileSystem::delete($filePath);
     }
+
+    public function testMergeArrayToJsonFile(): void
+    {
+        $originalFilePath = __DIR__ . '/JsonFileSystemSource/original.json';
+        $temporaryFilePath = $originalFilePath . '-copy';
+
+        FileSystem::copy($originalFilePath, $temporaryFilePath);
+
+        $this->jsonFileSystem->mergeArrayToJsonFile($temporaryFilePath, [
+            'new' => 'data',
+        ]);
+
+        $expectedFilePath = __DIR__ . '/JsonFileSystemSource/expected_merged_original.json';
+        $this->assertFileEquals($expectedFilePath, $temporaryFilePath);
+
+        FileSystem::delete($temporaryFilePath);
+    }
 }
