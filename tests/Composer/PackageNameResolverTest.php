@@ -25,7 +25,7 @@ final class PackageNameResolverTest extends AbstractKernelTestCase
 
     public function test(): void
     {
-        $fileInfo = new SmartFileInfo(__DIR__ . '/PackageNameResolverSource/vendor/some/package/composer.json');
+        $fileInfo = new SmartFileInfo(__DIR__ . '/PackageNameResolverSource/vendor/some/pac.kage/composer.json');
 
         $packageName = $this->packageNameResolver->resolveFromFileInfo($fileInfo);
         $this->assertSame('some/name', $packageName);
