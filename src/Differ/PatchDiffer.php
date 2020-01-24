@@ -20,7 +20,7 @@ final class PatchDiffer
      * @see https://regex101.com/r/0O5NO1/1/
      * @var string
      */
-    private const LOCAL_PATH_PATTERN = '#vendor\/\w+\/\w+\/(?<local_path>.*?)$#';
+    private const LOCAL_PATH_PATTERN = '#vendor\/(\w|\-)+\/(\w|\-)+\/(?<local_path>.*?)$#is';
 
     /**
      * @var Differ
@@ -38,13 +38,12 @@ final class PatchDiffer
 
         $relativePatchPatch = $this->resolveFileInfoPathRelativeFilePath($beforeFileInfo);
 
-        return Strings::replace($diff, '#' . self::CHANGED_FILE_PLACEHOLDER . '#', $relativePatchPatch);
+        return Strings::replace($diff, '#' . self::CHANGED_FILE_PLACEHOLDER . '#is', $relativePatchPatch);
     }
 
     private function resolveFileInfoPathRelativeFilePath(SmartFileInfo $beforeFileInfo): string
     {
         $match = Strings::match($beforeFileInfo->getRealPath(), self::LOCAL_PATH_PATTERN);
-
         if (! isset($match['local_path'])) {
             throw new ShouldNotHappenException();
         }

@@ -10,7 +10,6 @@ use Migrify\VendorPatches\Finder\VendorFilesFinder;
 use Migrify\VendorPatches\Json\JsonFileSystem;
 use Migrify\VendorPatches\ValueObject\Option;
 use Nette\Utils\FileSystem;
-use Nette\Utils\Json;
 use Nette\Utils\Strings;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
@@ -90,7 +89,7 @@ final class GenerateCommand extends Command
 
             // write into patches file
             $relativePathFileName = $this->createPathFilePath($relativeVendorFilePath);
-            $absolutePathFilename = getcwd() . $relativeVendorFilePath;
+            $absolutePathFilename = getcwd() . '/' . $relativePathFileName;
 
             $packageName = $this->packageNameResolver->resolveFromFileInfo($originalVendorFile);
             $composerExtraPatches[$packageName][] = $relativeVendorFilePath;
@@ -104,9 +103,6 @@ final class GenerateCommand extends Command
         }
 
         $this->updateComposerJson($composerExtraPatches);
-
-        // @todo update composer.json with extra patches
-
         $this->symfonyStyle->success('Patching done');
 
         return ShellCode::SUCCESS;

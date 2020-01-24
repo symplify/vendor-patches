@@ -5,13 +5,27 @@ declare(strict_types=1);
 namespace Migrify\VendorPatches\Composer;
 
 use Migrify\VendorPatches\Exception\ShouldNotHappenException;
-use Nette\Utils\FileSystem;
-use Nette\Utils\Json;
+use Migrify\VendorPatches\Json\JsonFileSystem;
 use Nette\Utils\Strings;
 use Symplify\SmartFileSystem\SmartFileInfo;
 
 final class PackageNameResolver
 {
+    /**
+     * @var string
+     */
+    private const VENDOR_PACKAGE_DIRECTORY_PATTERN = '#^(?<vendor_package_directory>.*?vendor\/(\w|\-)+\/(\w|-)+)\/#is';
+
+    /**
+     * @var JsonFileSystem
+     */
+    private $jsonFileSystem;
+
+    public function __construct(JsonFileSystem $jsonFileSystem)
+    {
+        $this->jsonFileSystem = $jsonFileSystem;
+    }
+
     public function resolveFromFileInfo(SmartFileInfo $vendorFile): string
     {
         $vendorPackageDirectory = $this->resolveVendorPackageDirectory($vendorFile);
@@ -21,7 +35,7 @@ final class PackageNameResolver
             throw new ShouldNotHappenException();
         }
 
-        $composerJson = $this->loadFileToJson($packageComposerJsonFilePath);
+        $composerJson = $this->jsonFileSystem->loadFilePathToJson($packageComposerJsonFilePath);
         if (! isset($composerJson['name'])) {
             throw new ShouldNotHappenException();
         }
@@ -31,18 +45,11 @@ final class PackageNameResolver
 
     private function resolveVendorPackageDirectory(SmartFileInfo $vendorFile): string
     {
-        $match = Strings::match($vendorFile->getRealPath(), '#^(?<vendor_package_directory>.*?vendor\/\w+\/\w+)\/#');
+        $match = Strings::match($vendorFile->getRealPath(), self::VENDOR_PACKAGE_DIRECTORY_PATTERN);
         if (! isset($match['vendor_package_directory'])) {
-            throw new ShouldNotHappenException();
+            throw new ShouldNotHappenException('Could not resolve vendor package directory');
         }
 
         return $match['vendor_package_directory'];
-    }
-
-    private function loadFileToJson(string $filePath): array
-    {
-        $composerJsonFileContent = FileSystem::read($filePath);
-
-        return Json::decode($composerJsonFileContent, Json::FORCE_ARRAY);
     }
 }
