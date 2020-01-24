@@ -31,9 +31,7 @@ final class JsonFileSystem
 
     public function writeJsonToFilePath(array $jsonArray, string $filePath): void
     {
-        $this->fileSystemGuard->ensureFileExists($filePath, __METHOD__);
-
-        $jsonContent = Json::encode($jsonArray, Json::PRETTY);
+        $jsonContent = Json::encode($jsonArray, Json::PRETTY) . PHP_EOL;
         FileSystem::write($filePath, $jsonContent);
     }
 
