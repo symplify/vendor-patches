@@ -29,7 +29,7 @@ final class PackageNameResolver
 
     public function resolveFromFileInfo(SmartFileInfo $vendorFile): string
     {
-        $vendorPackageDirectory = $this->resolveVendorPackageDirectory($vendorFile);
+        $vendorPackageDirectory = $this->pathResolver->resolveVendor($vendorFile->getRealPath());
 
         $packageComposerJsonFilePath = $vendorPackageDirectory . '/composer.json';
         if (! file_exists($packageComposerJsonFilePath)) {
@@ -42,10 +42,5 @@ final class PackageNameResolver
         }
 
         return $composerJson['name'];
-    }
-
-    private function resolveVendorPackageDirectory(SmartFileInfo $vendorFile): string
-    {
-        return $this->pathResolver->resolveVendor($vendorFile->getRealPath());
     }
 }
