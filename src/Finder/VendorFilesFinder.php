@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Migrify\VendorPatches\Finder;
 
-use Migrify\VendorPatches\Validation\FileSystemValidator;
 use Symfony\Component\Finder\Finder;
+use Symplify\SmartFileSystem\FileSystemGuard;
 use Symplify\SmartFileSystem\Finder\FinderSanitizer;
 use Symplify\SmartFileSystem\SmartFileInfo;
 
@@ -17,14 +17,14 @@ final class VendorFilesFinder
     private $finderSanitizer;
 
     /**
-     * @var FileSystemValidator
+     * @var FileSystemGuard
      */
-    private $fileSystemValidator;
+    private $fileSystemGuard;
 
-    public function __construct(FinderSanitizer $finderSanitizer, FileSystemValidator $fileSystemValidator)
+    public function __construct(FinderSanitizer $finderSanitizer, FileSystemGuard $fileSystemGuard)
     {
         $this->finderSanitizer = $finderSanitizer;
-        $this->fileSystemValidator = $fileSystemValidator;
+        $this->fileSystemGuard = $fileSystemGuard;
     }
 
     /**
@@ -32,7 +32,7 @@ final class VendorFilesFinder
      */
     public function find(string $directory): array
     {
-        $this->fileSystemValidator->ensureIsDirectoryAndDirectoryExists($directory);
+        $this->fileSystemGuard->ensureDirectoryExists($directory);
 
         $smartFileInfos = $this->findSmartFileInfosInDirectory($directory);
 

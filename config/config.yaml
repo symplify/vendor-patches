@@ -12,3 +12,4 @@ services:
 
     Symplify\SmartFileSystem\Finder\FinderSanitizer: null
     Symplify\PackageBuilder\Console\Style\SymfonyStyleFactory: null
+    Symplify\SmartFileSystem\FileSystemGuard: null
