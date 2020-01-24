@@ -5,25 +5,26 @@ declare(strict_types=1);
 namespace Migrify\VendorPatches\Composer;
 
 use Migrify\VendorPatches\Exception\ShouldNotHappenException;
+use Migrify\VendorPatches\FileSystem\PathResolver;
 use Migrify\VendorPatches\Json\JsonFileSystem;
-use Nette\Utils\Strings;
 use Symplify\SmartFileSystem\SmartFileInfo;
 
 final class PackageNameResolver
 {
     /**
-     * @var string
-     */
-    private const VENDOR_PACKAGE_DIRECTORY_PATTERN = '#^(?<vendor_package_directory>.*?vendor\/(\w|\-)+\/(\w|-)+)\/#is';
-
-    /**
      * @var JsonFileSystem
      */
     private $jsonFileSystem;
 
-    public function __construct(JsonFileSystem $jsonFileSystem)
+    /**
+     * @var PathResolver
+     */
+    private $pathResolver;
+
+    public function __construct(JsonFileSystem $jsonFileSystem, PathResolver $pathResolver)
     {
         $this->jsonFileSystem = $jsonFileSystem;
+        $this->pathResolver = $pathResolver;
     }
 
     public function resolveFromFileInfo(SmartFileInfo $vendorFile): string
@@ -45,12 +46,6 @@ final class PackageNameResolver
 
     private function resolveVendorPackageDirectory(SmartFileInfo $vendorFile): string
     {
-        $match = Strings::match($vendorFile->getRealPath(), self::VENDOR_PACKAGE_DIRECTORY_PATTERN);
-
-        if (! isset($match['vendor_package_directory'])) {
-            throw new ShouldNotHappenException('Could not resolve vendor package directory');
-        }
-
-        return $match['vendor_package_directory'];
+        return $this->pathResolver->resolveVendor($vendorFile->getRealPath());
     }
 }
