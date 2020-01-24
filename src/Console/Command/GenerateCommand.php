@@ -9,7 +9,6 @@ use Migrify\VendorPatches\Differ\PatchDiffer;
 use Migrify\VendorPatches\Finder\VendorFilesFinder;
 use Migrify\VendorPatches\Json\JsonFileSystem;
 use Migrify\VendorPatches\ValueObject\Option;
-use Nette\Utils\Arrays;
 use Nette\Utils\FileSystem;
 use Nette\Utils\Json;
 use Nette\Utils\Strings;
@@ -158,10 +157,7 @@ final class GenerateCommand extends Command
         ];
 
         $composerJsonFilePath = getcwd() . '/composer.json';
-        $composerJsonArray = $this->jsonFileSystem->loadFilePathToJson($composerJsonFilePath);
 
-        $newComposerJsonArray = Arrays::mergeTree($composerJsonArray, $patchComposerJsonArray);
-
-        $this->jsonFileSystem->writeJsonToFilePath($newComposerJsonArray, $composerJsonFilePath);
+        $this->jsonFileSystem->mergeArrayToJsonFile($composerJsonFilePath, $patchComposerJsonArray);
     }
 }

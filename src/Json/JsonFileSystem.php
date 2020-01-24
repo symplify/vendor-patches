@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Migrify\VendorPatches\Json;
 
+use Nette\Utils\Arrays;
 use Nette\Utils\FileSystem;
 use Nette\Utils\Json;
 
@@ -21,5 +22,14 @@ final class JsonFileSystem
         $jsonContent = Json::encode($jsonArray, Json::PRETTY);
 
         FileSystem::write($filePath, $jsonContent);
+    }
+
+    public function mergeArrayToJsonFile(string $filePath, array $newJsonArray): void
+    {
+        $jsonArray = $this->loadFilePathToJson($filePath);
+
+        $newComposerJsonArray = Arrays::mergeTree($jsonArray, $newJsonArray);
+
+        $this->writeJsonToFilePath($newComposerJsonArray, $filePath);
     }
 }
