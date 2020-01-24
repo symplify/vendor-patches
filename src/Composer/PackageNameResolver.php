@@ -46,6 +46,7 @@ final class PackageNameResolver
     private function resolveVendorPackageDirectory(SmartFileInfo $vendorFile): string
     {
         $match = Strings::match($vendorFile->getRealPath(), self::VENDOR_PACKAGE_DIRECTORY_PATTERN);
+
         if (! isset($match['vendor_package_directory'])) {
             throw new ShouldNotHappenException('Could not resolve vendor package directory');
         }
