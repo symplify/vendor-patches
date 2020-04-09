@@ -4,9 +4,9 @@
     "require": {
         "php": "^7.2",
         "nette/utils": "^3.1",
-        "symfony/console": "^5.0",
-        "symfony/dependency-injection": "^5.0",
-        "symfony/http-kernel": "^5.0",
+        "symfony/console": "^4.4|^5.0",
+        "symfony/dependency-injection": "^4.4|^5.0",
+        "symfony/http-kernel": "^4.4|^5.0",
         "symplify/smart-file-system": "^7.2",
         "symplify/package-builder": "^7.2",
         "symplify/autowire-array-parameter": "^7.2"
