@@ -11,6 +11,11 @@ use Symplify\PackageBuilder\Tests\AbstractKernelTestCase;
 final class PathResolverTest extends AbstractKernelTestCase
 {
     /**
+     * @var string
+     */
+    private const ABSOLUTE_PATH = '/var/www/project/Vendor/mtdowling/jmespath.php/tests/EnvTest.php';
+
+    /**
      * @var PathResolver
      */
     private $pathResolver;
@@ -24,9 +29,7 @@ final class PathResolverTest extends AbstractKernelTestCase
 
     public function test(): void
     {
-        $absolutePath = '/var/www/project/Vendor/mtdowling/jmespath.php/tests/EnvTest.php';
-        $vendor = $this->pathResolver->resolveVendor($absolutePath);
-
+        $vendor = $this->pathResolver->resolveVendor(self::ABSOLUTE_PATH);
         $this->assertSame('/var/www/project/Vendor/mtdowling/jmespath.php', $vendor);
     }
 }
