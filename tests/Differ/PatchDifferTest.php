@@ -25,11 +25,10 @@ final class PatchDifferTest extends AbstractKernelTestCase
 
     public function test(): void
     {
-        $beforeFile = new SmartFileInfo(__DIR__ . '/PatchDifferSource/vendor/some/package/before_file.php');
-        $afterFile = new SmartFileInfo(__DIR__ . '/PatchDifferSource/vendor-changed/some/package/after_file.php');
+        $beforeFileInfo = new SmartFileInfo(__DIR__ . '/PatchDifferSource/vendor/some/package/before_file.php');
+        $afterFileInfo = new SmartFileInfo(__DIR__ . '/PatchDifferSource/vendor-changed/some/package/after_file.php');
 
-        $diff = $this->patchDiffer->diff($beforeFile, $afterFile);
-
+        $diff = $this->patchDiffer->diff($beforeFileInfo, $afterFileInfo);
         $this->assertStringEqualsFile(__DIR__ . '/PatchDifferFixture/expected_diff.php', $diff);
     }
 }

@@ -12,11 +12,6 @@ use Symplify\SmartFileSystem\SmartFileInfo;
 final class PatchDiffer
 {
     /**
-     * @var string
-     */
-    public const CHANGED_FILE_PLACEHOLDER = '__PATH_PLACEHOLDER__';
-
-    /**
      * @see https://regex101.com/r/0O5NO1/1/
      * @var string
      */
@@ -36,9 +31,10 @@ final class PatchDiffer
     {
         $diff = $this->differ->diff($beforeFileInfo->getContents(), $afterFileInfo->getContents());
 
-        $relativePatchPatch = $this->resolveFileInfoPathRelativeFilePath($beforeFileInfo);
+        $patchedFileRelativePath = $this->resolveFileInfoPathRelativeFilePath($beforeFileInfo);
 
-        return Strings::replace($diff, '#' . self::CHANGED_FILE_PLACEHOLDER . '#is', $relativePatchPatch);
+        $diff = Strings::replace($diff, '#^--- Original#', '--- /dev/null');
+        return Strings::replace($diff, '#^\+\+\+ New#m', '+++ ' . $patchedFileRelativePath);
     }
 
     private function resolveFileInfoPathRelativeFilePath(SmartFileInfo $beforeFileInfo): string
