@@ -9,7 +9,8 @@
         "symfony/http-kernel": "^4.4|^5.0",
         "symplify/smart-file-system": "^8.0",
         "symplify/package-builder": "^8.0",
-        "symplify/autowire-array-parameter": "^8.0"
+        "symplify/autowire-array-parameter": "^8.0",
+        "cweagans/composer-patches": "^1.6"
     },
     "autoload": {
         "psr-4": {

@@ -6,6 +6,7 @@ namespace Migrify\VendorPatches\Tests\Differ;
 
 use Migrify\VendorPatches\Differ\PatchDiffer;
 use Migrify\VendorPatches\HttpKernel\VendorPatchesKernel;
+use Migrify\VendorPatches\ValueObject\OldAndNewFileInfo;
 use Symplify\PackageBuilder\Tests\AbstractKernelTestCase;
 use Symplify\SmartFileSystem\SmartFileInfo;
 
@@ -25,10 +26,12 @@ final class PatchDifferTest extends AbstractKernelTestCase
 
     public function test(): void
     {
-        $beforeFileInfo = new SmartFileInfo(__DIR__ . '/PatchDifferSource/vendor/some/package/before_file.php');
-        $afterFileInfo = new SmartFileInfo(__DIR__ . '/PatchDifferSource/vendor-changed/some/package/after_file.php');
+        $oldFileInfo = new SmartFileInfo(__DIR__ . '/PatchDifferSource/vendor/some/package/file.php.old');
+        $newFileInfo = new SmartFileInfo(__DIR__ . '/PatchDifferSource/vendor/some/package/file.php');
 
-        $diff = $this->patchDiffer->diff($beforeFileInfo, $afterFileInfo);
+        $oldAndNewFileInfo = new OldAndNewFileInfo($oldFileInfo, $newFileInfo, 'some/package');
+
+        $diff = $this->patchDiffer->diff($oldAndNewFileInfo);
         $this->assertStringEqualsFile(__DIR__ . '/PatchDifferFixture/expected_diff.php', $diff);
     }
 }
