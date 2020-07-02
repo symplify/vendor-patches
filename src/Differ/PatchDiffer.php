@@ -5,10 +5,14 @@ declare(strict_types=1);
 namespace Migrify\VendorPatches\Differ;
 
 use Migrify\VendorPatches\Exception\ShouldNotHappenException;
+use Migrify\VendorPatches\ValueObject\OldAndNewFileInfo;
 use Nette\Utils\Strings;
 use SebastianBergmann\Diff\Differ;
 use Symplify\SmartFileSystem\SmartFileInfo;
 
+/**
+ * @see \Migrify\VendorPatches\Tests\Differ\PatchDifferTest
+ */
 final class PatchDiffer
 {
     /**
@@ -27,11 +31,14 @@ final class PatchDiffer
         $this->differ = $differ;
     }
 
-    public function diff(SmartFileInfo $beforeFileInfo, SmartFileInfo $afterFileInfo): string
+    public function diff(OldAndNewFileInfo $oldAndNewFileInfo): string
     {
-        $diff = $this->differ->diff($beforeFileInfo->getContents(), $afterFileInfo->getContents());
+        $oldFileInfo = $oldAndNewFileInfo->getOldFileInfo();
+        $newFileInfo = $oldAndNewFileInfo->getNewFileInfo();
 
-        $patchedFileRelativePath = $this->resolveFileInfoPathRelativeFilePath($beforeFileInfo);
+        $diff = $this->differ->diff($oldFileInfo->getContents(), $newFileInfo->getContents());
+
+        $patchedFileRelativePath = $this->resolveFileInfoPathRelativeFilePath($newFileInfo);
 
         $diff = Strings::replace($diff, '#^--- Original#', '--- /dev/null');
         return Strings::replace($diff, '#^\+\+\+ New#m', '+++ ' . $patchedFileRelativePath);
