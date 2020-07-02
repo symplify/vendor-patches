@@ -10,7 +10,6 @@ services:
             - "../src/HttpKernel/*"
             - "../src/ValueObject/*"
 
-
     SebastianBergmann\Diff\Output\UnifiedDiffOutputBuilder:
         arguments:
             $addLineNumbers: true

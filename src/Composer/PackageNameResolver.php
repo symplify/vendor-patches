@@ -49,9 +49,9 @@ final class PackageNameResolver
         return $composerJson['name'];
     }
 
-    private function getPackageComposerJsonFilePath(SmartFileInfo $vendorFile): string
+    private function getPackageComposerJsonFilePath(SmartFileInfo $vendorFileInfo): string
     {
-        $vendorPackageDirectory = $this->pathResolver->resolveVendor($vendorFile->getRealPath());
+        $vendorPackageDirectory = $this->pathResolver->resolveVendorDirectory($vendorFileInfo);
         $packageComposerJsonFilePath = $vendorPackageDirectory . '/composer.json';
         $this->fileSystemGuard->ensureFileExists($packageComposerJsonFilePath, __METHOD__);
 
