@@ -9,16 +9,7 @@ Check NEON/YAML/TWIG/LATTE files for existing classes and class constants
 ```bash
 # this package needs to be in root to work 
 composer require cweagans/composer-patches --dev
-```
-
-```bash
 composer require migrify/vendor-patches --dev
-```
-
-In legacy projects, we expect many version conflicts that would normally stop us hard... we're ready for that with prefixed version:
-
-```bash
-composer require migrify/vendor-patches-prefixed --dev
 ```
 
 ## Usage
