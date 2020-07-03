@@ -38,7 +38,7 @@ vendor/nette/di/src/DI/Extensions/InjectExtension.php.old
 
 Only `*.php` file is loaded, not the `*.php.old` one. This way you can **be sure the new code** is working before you generate patches.
 
-3. Run `generate` command ~~for every single files changed this way~~... once for all files 🎆
+3. Run `generate` command ~~for every single file changed this way~~... once for all files 🎆
 
 ```bash
 vendor/bin/vendor-patches generate
@@ -59,7 +59,7 @@ The patch path is based on original file path, so **the patch name is always uni
     "extra": {
         "patches": {
             "nette/di": [
-                "patches/nette/di/di_extensions_injectextension.patch"
+                "patches/nette_di_di_extensions_injectextension.patch"
             ]
         }
     }
