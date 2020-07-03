@@ -16,7 +16,7 @@ composer require migrify/vendor-patches --dev
 
 How to create [a patch for a file in `/vendor`](https://pehapkari.cz/blog/2017/01/20/jak-snadno-a-rychle-upravovat-soubory-ve-vendoru)?
 
-1. Create a copy of your file in vendor with any suffix, e.g. `*.old`
+1. Create a Copy of `/vendor` file you Want To Change with `*.old` Suffix
 
 For example, if you edit:
  
@@ -44,7 +44,7 @@ Only `*.php` file is loaded, not the `*.php.old` one. This way you can **be sure
 vendor/bin/vendor-patches generate
 ```
 
-4. This tool will generate patch files for all files created this way in `/patches` directory:
+This tool will generate patch files for all files created this way in `/patches` directory:
 
 ```bash
 /patches/nette-di-di-extensions-injectextension.php.patch
@@ -52,7 +52,7 @@ vendor/bin/vendor-patches generate
 
 The patch path is based on original file path, so **the patch name is always unique**. 
 
-5. In the last step, configuration for `cweagans/composer-patches` is added your `composer.json`:
+Also, it will add configuration for `cweagans/composer-patches` to your `composer.json`:
 
 ```json
 {
@@ -65,8 +65,6 @@ The patch path is based on original file path, so **the patch name is always uni
     }
 }
 ```
-
-(If the file is already there, it won't be added of course.)
 
 That's it!
 
