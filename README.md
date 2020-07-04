@@ -16,7 +16,7 @@ composer require migrify/vendor-patches --dev
 
 How to create [a patch for a file in `/vendor`](https://tomasvotruba.com/blog/2020/07/02/how-to-patch-package-in-vendor-yet-allow-its-updates/)?
 
-1. Create a Copy of `/vendor` file you Want To Change with `*.old` Suffix
+### 1. Create a Copy of `/vendor` file you Want To Change with `*.old` Suffix
 
 For example, if you edit:
  
@@ -26,7 +26,7 @@ vendor/nette/di/src/DI/Extensions/InjectExtension.php
 vendor/nette/di/src/DI/Extensions/InjectExtension.php.old
 ```
 
-2. Open the original file and change the lines you need:
+### 2. Open the original file and change the lines you need:
 
 ```diff
  			if (DI\Helpers::parseAnnotation($rp, 'inject') !== null) {
@@ -38,7 +38,7 @@ vendor/nette/di/src/DI/Extensions/InjectExtension.php.old
 
 Only `*.php` file is loaded, not the `*.php.old` one. This way you can **be sure the new code** is working before you generate patches.
 
-3. Run `generate` command ~~for every single file changed this way~~... once for all files 🎆
+### 3. Run `generate` command ~~for every single file changed this way~~ once for all files 🎆
 
 ```bash
 vendor/bin/vendor-patches generate
