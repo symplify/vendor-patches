@@ -1,5 +1,6 @@
 {
     "name": "migrify/vendor-patches",
+    "description": "Generate vendor patches for packages with single command",
     "license": "MIT",
     "require": {
         "php": "^7.2",
@@ -7,9 +8,9 @@
         "symfony/console": "^4.4|^5.0",
         "symfony/dependency-injection": "^4.4|^5.0",
         "symfony/http-kernel": "^4.4|^5.0",
-        "symplify/smart-file-system": "^8.0",
-        "symplify/package-builder": "^8.0",
-        "symplify/autowire-array-parameter": "^8.0",
+        "symplify/smart-file-system": "^8.1",
+        "symplify/package-builder": "^8.1",
+        "symplify/autowire-array-parameter": "^8.1",
         "cweagans/composer-patches": "^1.6"
     },
     "autoload": {

@@ -2,7 +2,7 @@
 
 [![Downloads total](https://img.shields.io/packagist/dt/migrify/vendor-patches.svg?style=flat-square)](https://packagist.org/packages/migrify/vendor-patches/stats)
 
-Check NEON/YAML/TWIG/LATTE files for existing classes and class constants
+Generate vendor patches for packages with single command.
 
 ## Install
 
