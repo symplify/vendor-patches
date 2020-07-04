@@ -1,5 +1,6 @@
 {
     "name": "migrify/vendor-patches",
+    "description": "Generate vendor patches for packages with single command",
     "license": "MIT",
     "require": {
         "php": "^7.2",
