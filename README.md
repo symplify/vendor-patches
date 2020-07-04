@@ -14,7 +14,7 @@ composer require migrify/vendor-patches --dev
 
 ## Usage
 
-How to create [a patch for a file in `/vendor`](https://pehapkari.cz/blog/2017/01/20/jak-snadno-a-rychle-upravovat-soubory-ve-vendoru)?
+How to create [a patch for a file in `/vendor`](https://tomasvotruba.com/blog/2020/07/02/how-to-patch-package-in-vendor-yet-allow-its-updates/)?
 
 1. Create a Copy of `/vendor` file you Want To Change with `*.old` Suffix
 
