@@ -15,6 +15,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symplify\PackageBuilder\Composer\StaticVendorDirProvider;
+use Symplify\PackageBuilder\Console\Command\CommandNaming;
 use Symplify\PackageBuilder\Console\ShellCode;
 
 final class GenerateCommand extends Command
@@ -55,7 +56,7 @@ final class GenerateCommand extends Command
 
     protected function configure(): void
     {
-        $this->setName('generate');
+        $this->setName(CommandNaming::classToName(self::class));
         $this->setDescription('Generate patches from /vendor directory');
     }
 
