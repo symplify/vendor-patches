@@ -40,12 +40,12 @@ final class GenerateCommand extends Command
     private $composerPatchesConfigurationUpdater;
 
     public function __construct(
-        OldToNewFilesFinder $vendorFilesFinder,
+        OldToNewFilesFinder $oldToNewFilesFinder,
         PatchDiffer $patchDiffer,
         ComposerPatchesConfigurationUpdater $composerPatchesConfigurationUpdater,
         SymfonyStyle $symfonyStyle
     ) {
-        $this->oldToNewFilesFinder = $vendorFilesFinder;
+        $this->oldToNewFilesFinder = $oldToNewFilesFinder;
         $this->patchDiffer = $patchDiffer;
         $this->symfonyStyle = $symfonyStyle;
         $this->composerPatchesConfigurationUpdater = $composerPatchesConfigurationUpdater;
@@ -90,9 +90,11 @@ final class GenerateCommand extends Command
             }
 
             if (is_file($patchFileAbsolutePath)) {
-                $this->symfonyStyle->note(sprintf('File "%s" was updated', $patchFileRelativePath));
+                $message = sprintf('File "%s" was updated', $patchFileRelativePath);
+                $this->symfonyStyle->note($message);
             } else {
-                $this->symfonyStyle->note(sprintf('File "%s" was created', $patchFileRelativePath));
+                $message = sprintf('File "%s" was created', $patchFileRelativePath);
+                $this->symfonyStyle->note($message);
             }
 
             FileSystem::write($patchFileAbsolutePath, $patchDiff);
