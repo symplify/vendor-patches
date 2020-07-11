@@ -10,6 +10,7 @@
         "symfony/http-kernel": "^4.4|^5.0",
         "symplify/smart-file-system": "^8.1",
         "symplify/package-builder": "^8.1",
+        "symplify/auto-bind-parameter": "^8.1",
         "symplify/autowire-array-parameter": "^8.1",
         "cweagans/composer-patches": "^1.6"
     },
