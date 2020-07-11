@@ -5,6 +5,7 @@ use Migrify\VendorPatches\Console\VendorPatchesApplication;
 use Migrify\VendorPatches\HttpKernel\VendorPatchesKernel;
 
 $possibleAutoloadPaths = [
+    __DIR__ . '/../autoload.php',
     __DIR__ . '/../vendor/autoload.php',
     __DIR__ . '/../../../vendor/autoload.php',
 ];
