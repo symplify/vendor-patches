@@ -7,11 +7,9 @@ Generate vendor patches for packages with single command.
 ## Install
 
 ```bash
+# this package needs to be in root to work
 composer require cweagans/composer-patches --dev
 composer require migrify/vendor-patches --dev
-
-# this package needs to be in root to work 
-cp -R vendor/migrify/vendor-patches/bin ./
 ```
 
 ## Usage
@@ -43,7 +41,7 @@ Only `*.php` file is loaded, not the `*.php.old` one. This way you can **be sure
 ### 3. Run `generate` command ~~for every single file changed this way~~ once for all files 🎆
 
 ```bash
-bin/vendor-patches generate
+vendor/bin/vendor-patches generate
 ```
 
 This tool will generate patch files for all files created this way in `/patches` directory:
