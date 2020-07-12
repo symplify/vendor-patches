@@ -24,5 +24,7 @@
             "Migrify\\VendorPatches\\Tests\\": "tests"
         }
     },
-    "bin": ["bin/vendor-patches"]
+    "bin": [
+        "bin/vendor-patches"
+    ]
 }
