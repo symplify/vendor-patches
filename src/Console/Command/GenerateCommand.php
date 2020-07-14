@@ -8,7 +8,6 @@ use Migrify\VendorPatches\Composer\ComposerPatchesConfigurationUpdater;
 use Migrify\VendorPatches\Differ\PatchDiffer;
 use Migrify\VendorPatches\Finder\OldToNewFilesFinder;
 use Migrify\VendorPatches\ValueObject\OldAndNewFileInfo;
-use Nette\Utils\FileSystem;
 use Nette\Utils\Strings;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -17,6 +16,7 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 use Symplify\PackageBuilder\Composer\StaticVendorDirProvider;
 use Symplify\PackageBuilder\Console\Command\CommandNaming;
 use Symplify\PackageBuilder\Console\ShellCode;
+use Symplify\SmartFileSystem\SmartFileSystem;
 
 final class GenerateCommand extends Command
 {
@@ -40,11 +40,17 @@ final class GenerateCommand extends Command
      */
     private $composerPatchesConfigurationUpdater;
 
+    /**
+     * @var SmartFileSystem
+     */
+    private $smartFileSystem;
+
     public function __construct(
         OldToNewFilesFinder $oldToNewFilesFinder,
         PatchDiffer $patchDiffer,
         ComposerPatchesConfigurationUpdater $composerPatchesConfigurationUpdater,
-        SymfonyStyle $symfonyStyle
+        SymfonyStyle $symfonyStyle,
+        SmartFileSystem $smartFileSystem
     ) {
         $this->oldToNewFilesFinder = $oldToNewFilesFinder;
         $this->patchDiffer = $patchDiffer;
@@ -52,6 +58,8 @@ final class GenerateCommand extends Command
         $this->composerPatchesConfigurationUpdater = $composerPatchesConfigurationUpdater;
 
         parent::__construct();
+
+        $this->smartFileSystem = $smartFileSystem;
     }
 
     protected function configure(): void
@@ -98,7 +106,7 @@ final class GenerateCommand extends Command
                 $this->symfonyStyle->note($message);
             }
 
-            FileSystem::write($patchFileAbsolutePath, $patchDiff);
+            $this->smartFileSystem->dumpFile($patchFileAbsolutePath, $patchDiff);
 
             $addedPatchFilesByPackageName[$oldAndNewFileInfo->getPackageName()][] = $patchFileRelativePath;
         }
@@ -133,7 +141,7 @@ final class GenerateCommand extends Command
             return false;
         }
 
-        return FileSystem::read($patchFileAbsolutePath) === $diff;
+        return $this->smartFileSystem->readFile($patchFileAbsolutePath) === $diff;
     }
 
     private function reportIdenticalNewAndOldFile(OldAndNewFileInfo $oldAndNewFileInfo): void
