@@ -6,8 +6,8 @@ namespace Migrify\VendorPatches\Tests\Json;
 
 use Migrify\VendorPatches\HttpKernel\VendorPatchesKernel;
 use Migrify\VendorPatches\Json\JsonFileSystem;
-use Nette\Utils\FileSystem;
 use Symplify\PackageBuilder\Tests\AbstractKernelTestCase;
+use Symplify\SmartFileSystem\SmartFileSystem;
 
 final class JsonFileSystemTest extends AbstractKernelTestCase
 {
@@ -16,10 +16,16 @@ final class JsonFileSystemTest extends AbstractKernelTestCase
      */
     private $jsonFileSystem;
 
+    /**
+     * @var SmartFileSystem
+     */
+    private $smartFileSystem;
+
     protected function setUp(): void
     {
         self::bootKernel(VendorPatchesKernel::class);
         $this->jsonFileSystem = self::$container->get(JsonFileSystem::class);
+        $this->smartFileSystem = self::$container->get(SmartFileSystem::class);
     }
 
     public function testLoadFilePathToJson(): void
@@ -38,7 +44,7 @@ final class JsonFileSystemTest extends AbstractKernelTestCase
         $expectedFilePath = __DIR__ . '/JsonFileSystemSource/expected_temp_file.json';
         $this->assertFileEquals($expectedFilePath, $filePath);
 
-        FileSystem::delete($filePath);
+        $this->smartFileSystem->remove($filePath);
     }
 
     public function testMergeArrayToJsonFile(): void
@@ -46,7 +52,7 @@ final class JsonFileSystemTest extends AbstractKernelTestCase
         $originalFilePath = __DIR__ . '/JsonFileSystemSource/original.json';
         $temporaryFilePath = $originalFilePath . '-copy';
 
-        FileSystem::copy($originalFilePath, $temporaryFilePath);
+        $this->smartFileSystem->copy($originalFilePath, $temporaryFilePath);
 
         $this->jsonFileSystem->mergeArrayToJsonFile($temporaryFilePath, [
             'new' => 'data',
@@ -55,6 +61,6 @@ final class JsonFileSystemTest extends AbstractKernelTestCase
         $expectedFilePath = __DIR__ . '/JsonFileSystemSource/expected_merged_original.json';
         $this->assertFileEquals($expectedFilePath, $temporaryFilePath);
 
-        FileSystem::delete($temporaryFilePath);
+        $this->smartFileSystem->remove($temporaryFilePath);
     }
 }
