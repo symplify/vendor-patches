@@ -33,7 +33,7 @@ final class VendorPatchesKernel extends Kernel
 
     public function registerContainerConfiguration(LoaderInterface $loader): void
     {
-        $loader->load(__DIR__ . '/../../config/config.yaml');
+        $loader->load(__DIR__ . '/../../config/config.php');
     }
 
     protected function build(ContainerBuilder $containerBuilder): void
