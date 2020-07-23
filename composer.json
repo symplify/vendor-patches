@@ -8,11 +8,11 @@
         "symfony/console": "^4.4|^5.0",
         "symfony/dependency-injection": "^4.4|^5.0",
         "symfony/http-kernel": "^4.4|^5.0",
-        "symplify/smart-file-system": "^8.1",
-        "symplify/package-builder": "^8.1",
+        "symplify/smart-file-system": "^8.1.17",
+        "symplify/package-builder": "^8.1.17",
         "sebastian/diff": "^3.0|^4.0",
-        "symplify/auto-bind-parameter": "^8.1",
-        "symplify/autowire-array-parameter": "^8.1",
+        "symplify/auto-bind-parameter": "^8.1.17",
+        "symplify/autowire-array-parameter": "^8.1.17",
         "cweagans/composer-patches": "^1.6"
     },
     "autoload": {
