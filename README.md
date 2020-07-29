@@ -83,3 +83,11 @@ If not, get more information from composer to find out why:
 ```bash
 composer install --verbose
 ```
+
+## Report Issues
+
+In case you are experiencing a bug or want to request a new feature head over to the [migrify monorepo issue tracker](https://github.com/migrify/migrify/issues)
+
+## Contribute
+
+The sources of this package are contained in the migrify monorepo. We welcome contributions for this package on [migrify/migrify](https://github.com/migrify/migrify).
