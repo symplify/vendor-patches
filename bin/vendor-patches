@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-use Migrify\VendorPatches\Console\VendorPatchesApplication;
+use Migrify\MigrifyKernel\Bootstrap\KernelBootAndApplicationRun;
 use Migrify\VendorPatches\HttpKernel\VendorPatchesKernel;
 
 $possibleAutoloadPaths = [
@@ -19,13 +19,5 @@ foreach ($possibleAutoloadPaths as $possibleAutoloadPath) {
     require_once $possibleAutoloadPath;
 }
 
-// allow container override on param changes
-$environment = 'prod' . random_int(0, 100000);
-$VendorPatchesKernel = new VendorPatchesKernel($environment, false);
-$VendorPatchesKernel->boot();
-
-$container = $VendorPatchesKernel->getContainer();
-
-/** @var VendorPatchesApplication $VendorPatchesApplication */
-$VendorPatchesApplication = $container->get(VendorPatchesApplication::class);
-exit($VendorPatchesApplication->run());
+$kernelBootAndApplicationRun = new KernelBootAndApplicationRun(VendorPatchesKernel::class);
+$kernelBootAndApplicationRun->run();
