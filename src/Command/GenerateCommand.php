@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Migrify\VendorPatches\Console\Command;
+namespace Migrify\VendorPatches\Command;
 
 use Migrify\VendorPatches\Composer\ComposerPatchesConfigurationUpdater;
 use Migrify\VendorPatches\Differ\PatchDiffer;
