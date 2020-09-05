@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Migrify\VendorPatches\HttpKernel;
 
+use Migrify\MigrifyKernel\Bundle\MigrifyKernelBundle;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\BundleInterface;
 use Symfony\Component\HttpKernel\Kernel;
 use Symplify\AutoBindParameter\DependencyInjection\CompilerPass\AutoBindParameterCompilerPass;
-use Symplify\AutowireArrayParameter\DependencyInjection\CompilerPass\AutowireArrayParameterCompilerPass;
 
 final class VendorPatchesKernel extends Kernel
 {
@@ -18,7 +18,7 @@ final class VendorPatchesKernel extends Kernel
      */
     public function registerBundles(): iterable
     {
-        return [];
+        return [new MigrifyKernelBundle()];
     }
 
     public function getCacheDir(): string
@@ -38,7 +38,6 @@ final class VendorPatchesKernel extends Kernel
 
     protected function build(ContainerBuilder $containerBuilder): void
     {
-        $containerBuilder->addCompilerPass(new AutowireArrayParameterCompilerPass());
         $containerBuilder->addCompilerPass(new AutoBindParameterCompilerPass());
     }
 }
