@@ -13,7 +13,7 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
-use Symplify\PackageBuilder\Composer\StaticVendorDirProvider;
+use Symplify\PackageBuilder\Composer\VendorDirProvider;
 use Symplify\PackageBuilder\Console\Command\CommandNaming;
 use Symplify\PackageBuilder\Console\ShellCode;
 use Symplify\SmartFileSystem\SmartFileSystem;
@@ -45,21 +45,28 @@ final class GenerateCommand extends Command
      */
     private $smartFileSystem;
 
+    /**
+     * @var VendorDirProvider
+     */
+    private $vendorDirProvider;
+
     public function __construct(
         OldToNewFilesFinder $oldToNewFilesFinder,
         PatchDiffer $patchDiffer,
         ComposerPatchesConfigurationUpdater $composerPatchesConfigurationUpdater,
         SymfonyStyle $symfonyStyle,
-        SmartFileSystem $smartFileSystem
+        SmartFileSystem $smartFileSystem,
+        VendorDirProvider $vendorDirProvider
     ) {
         $this->oldToNewFilesFinder = $oldToNewFilesFinder;
         $this->patchDiffer = $patchDiffer;
         $this->symfonyStyle = $symfonyStyle;
         $this->composerPatchesConfigurationUpdater = $composerPatchesConfigurationUpdater;
+        $this->smartFileSystem = $smartFileSystem;
 
         parent::__construct();
 
-        $this->smartFileSystem = $smartFileSystem;
+        $this->vendorDirProvider = $vendorDirProvider;
     }
 
     protected function configure(): void
@@ -70,8 +77,7 @@ final class GenerateCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $vendorDirectory = StaticVendorDirProvider::provide();
-
+        $vendorDirectory = $this->vendorDirProvider->provide();
         $oldAndNewFileInfos = $this->oldToNewFilesFinder->find($vendorDirectory);
 
         $composerExtraPatches = [];
