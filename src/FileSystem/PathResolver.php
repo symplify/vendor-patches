@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Migrify\VendorPatches\FileSystem;
 
-use Migrify\VendorPatches\Exception\ShouldNotHappenException;
+use Migrify\MigrifyKernel\Exception\ShouldNotHappenException;
 use Nette\Utils\Strings;
 use Symplify\SmartFileSystem\SmartFileInfo;
 
