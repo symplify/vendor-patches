@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Migrify\VendorPatches\Composer;
 
-use Migrify\VendorPatches\Exception\ShouldNotHappenException;
+use Migrify\MigrifyKernel\Exception\ShouldNotHappenException;
 use Migrify\VendorPatches\FileSystem\PathResolver;
 use Migrify\VendorPatches\Json\JsonFileSystem;
 use Symplify\SmartFileSystem\FileSystemGuard;
