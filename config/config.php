@@ -5,6 +5,7 @@ declare(strict_types=1);
 use SebastianBergmann\Diff\Differ;
 use SebastianBergmann\Diff\Output\UnifiedDiffOutputBuilder;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symplify\PackageBuilder\Composer\VendorDirProvider;
 use function Symfony\Component\DependencyInjection\Loader\Configurator\ref;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
@@ -23,4 +24,6 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
     $services->set(Differ::class)
         ->args(['$outputBuilder' => ref(UnifiedDiffOutputBuilder::class)]);
+
+    $services->set(VendorDirProvider::class);
 };
