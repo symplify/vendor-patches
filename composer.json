@@ -28,5 +28,7 @@
         "psr-4": {
             "Migrify\\VendorPatches\\Tests\\": "tests"
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
