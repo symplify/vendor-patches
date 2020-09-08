@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Migrify\VendorPatches\Differ;
 
-use Migrify\VendorPatches\Exception\ShouldNotHappenException;
+use Migrify\MigrifyKernel\Exception\ShouldNotHappenException;
 use Migrify\VendorPatches\ValueObject\OldAndNewFileInfo;
 use Nette\Utils\Strings;
 use SebastianBergmann\Diff\Differ;
