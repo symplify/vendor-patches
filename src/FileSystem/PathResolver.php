@@ -11,6 +11,7 @@ use Symplify\SmartFileSystem\SmartFileInfo;
 final class PathResolver
 {
     /**
+     * @see https://regex101.com/r/KhzCSu/1
      * @var string
      */
     private const VENDOR_PACKAGE_DIRECTORY_PATTERN = '#^(?<vendor_package_directory>.*?vendor\/(\w|\.|\-)+\/(\w|\.|\-)+)\/#si';
