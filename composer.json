@@ -12,7 +12,6 @@
         "symfony/dependency-injection": "^4.4|^5.1",
         "symfony/http-kernel": "^4.4|^5.1",
         "sebastian/diff": "^3.0|^4.0",
-        "symplify/auto-bind-parameter": "^8.2",
         "cweagans/composer-patches": "^1.6",
         "migrify/migrify-kernel": "^0.4"
     },
