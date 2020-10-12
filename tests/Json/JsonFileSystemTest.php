@@ -31,14 +31,18 @@ final class JsonFileSystemTest extends AbstractKernelTestCase
     public function testLoadFilePathToJson(): void
     {
         $json = $this->jsonFileSystem->loadFilePathToJson(__DIR__ . '/JsonFileSystemSource/some_file.json');
-        $this->assertSame(['key' => 'value'], $json);
+        $this->assertSame([
+            'key' => 'value',
+        ], $json);
     }
 
     public function testWriteJsonToFilePath(): void
     {
         $filePath = __DIR__ . '/JsonFileSystemSource/temp_file.json';
 
-        $this->jsonFileSystem->writeJsonToFilePath(['hey' => 'you'], $filePath);
+        $this->jsonFileSystem->writeJsonToFilePath([
+            'hey' => 'you',
+        ], $filePath);
         $this->assertFileExists($filePath);
 
         $expectedFilePath = __DIR__ . '/JsonFileSystemSource/expected_temp_file.json';
