@@ -20,10 +20,14 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         ->exclude([__DIR__ . '/../src/HttpKernel', __DIR__ . '/../src/ValueObject']);
 
     $services->set(UnifiedDiffOutputBuilder::class)
-        ->args(['$addLineNumbers' => true]);
+        ->args([
+            '$addLineNumbers' => true,
+        ]);
 
     $services->set(Differ::class)
-        ->args(['$outputBuilder' => ref(UnifiedDiffOutputBuilder::class)]);
+        ->args([
+            '$outputBuilder' => ref(UnifiedDiffOutputBuilder::class),
+        ]);
 
     $services->set(VendorDirProvider::class);
 };
