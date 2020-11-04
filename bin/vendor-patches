@@ -1,23 +1,4 @@
 #!/usr/bin/env php
 <?php
 
-use Migrify\MigrifyKernel\Bootstrap\KernelBootAndApplicationRun;
-use Migrify\VendorPatches\HttpKernel\VendorPatchesKernel;
-
-$possibleAutoloadPaths = [
-    __DIR__ . '/../autoload.php',
-    __DIR__ . '/../vendor/autoload.php',
-    __DIR__ . '/../../../autoload.php',
-    __DIR__ . '/../../../vendor/autoload.php',
-];
-
-foreach ($possibleAutoloadPaths as $possibleAutoloadPath) {
-    if (! file_exists($possibleAutoloadPath)) {
-        continue;
-    }
-
-    require_once $possibleAutoloadPath;
-}
-
-$kernelBootAndApplicationRun = new KernelBootAndApplicationRun(VendorPatchesKernel::class);
-$kernelBootAndApplicationRun->run();
+require __DIR__ . '/vendor-patches.php';
