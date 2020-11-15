@@ -50,21 +50,4 @@ final class JsonFileSystemTest extends AbstractKernelTestCase
 
         $this->smartFileSystem->remove($filePath);
     }
-
-    public function testMergeArrayToJsonFile(): void
-    {
-        $originalFilePath = __DIR__ . '/JsonFileSystemSource/original.json';
-        $temporaryFilePath = $originalFilePath . '-copy';
-
-        $this->smartFileSystem->copy($originalFilePath, $temporaryFilePath);
-
-        $this->jsonFileSystem->mergeArrayToJsonFile($temporaryFilePath, [
-            'new' => 'data',
-        ]);
-
-        $expectedFilePath = __DIR__ . '/JsonFileSystemSource/expected_merged_original.json';
-        $this->assertFileEquals($expectedFilePath, $temporaryFilePath);
-
-        $this->smartFileSystem->remove($temporaryFilePath);
-    }
 }

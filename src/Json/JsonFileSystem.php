@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Migrify\VendorPatches\Json;
 
-use Nette\Utils\Arrays;
 use Nette\Utils\Json;
 use Symplify\SmartFileSystem\FileSystemGuard;
 use Symplify\SmartFileSystem\SmartFileSystem;
@@ -39,14 +38,5 @@ final class JsonFileSystem
     {
         $jsonContent = Json::encode($jsonArray, Json::PRETTY) . PHP_EOL;
         $this->smartFileSystem->dumpFile($filePath, $jsonContent);
-    }
-
-    public function mergeArrayToJsonFile(string $filePath, array $newJsonArray): void
-    {
-        $jsonArray = $this->loadFilePathToJson($filePath);
-
-        $newComposerJsonArray = Arrays::mergeTree($jsonArray, $newJsonArray);
-
-        $this->writeJsonToFilePath($newComposerJsonArray, $filePath);
     }
 }

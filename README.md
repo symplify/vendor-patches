@@ -7,8 +7,6 @@ Generate vendor patches for packages with single command.
 ## Install
 
 ```bash
-# this package needs to be in root to work
-composer require cweagans/composer-patches --dev
 composer require migrify/vendor-patches --dev
 ```
 

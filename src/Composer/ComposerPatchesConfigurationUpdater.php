@@ -4,18 +4,25 @@ declare(strict_types=1);
 
 namespace Migrify\VendorPatches\Composer;
 
-use Migrify\VendorPatches\Json\JsonFileSystem;
+use Symplify\ComposerJsonManipulator\ComposerJsonFactory;
+use Symplify\ComposerJsonManipulator\FileSystem\JsonFileManager;
 
 final class ComposerPatchesConfigurationUpdater
 {
     /**
-     * @var JsonFileSystem
+     * @var ComposerJsonFactory
      */
-    private $jsonFileSystem;
+    private $composerJsonFactory;
 
-    public function __construct(JsonFileSystem $jsonFileSystem)
+    /**
+     * @var JsonFileManager
+     */
+    private $jsonFileManager;
+
+    public function __construct(ComposerJsonFactory $composerJsonFactory, JsonFileManager $jsonFileManager)
     {
-        $this->jsonFileSystem = $jsonFileSystem;
+        $this->composerJsonFactory = $composerJsonFactory;
+        $this->jsonFileManager = $jsonFileManager;
     }
 
     /**
@@ -23,13 +30,17 @@ final class ComposerPatchesConfigurationUpdater
      */
     public function updateComposerJson(array $composerExtraPatches): void
     {
-        $patchComposerJsonArray = [
-            'extra' => [
-                'patches' => $composerExtraPatches,
-            ],
+        $extra = [
+            'patches' => $composerExtraPatches,
         ];
 
         $composerJsonFilePath = getcwd() . '/composer.json';
-        $this->jsonFileSystem->mergeArrayToJsonFile($composerJsonFilePath, $patchComposerJsonArray);
+        $composerJson = $this->composerJsonFactory->createFromFilePath($composerJsonFilePath);
+
+        // merge "extra" section
+        $newExtra = array_merge($composerJson->getExtra(), $extra);
+        $composerJson->setExtra($newExtra);
+
+        $this->jsonFileManager->saveComposerJsonToFilePath($composerJson, $composerJsonFilePath);
     }
 }
