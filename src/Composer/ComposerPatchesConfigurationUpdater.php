@@ -41,6 +41,6 @@ final class ComposerPatchesConfigurationUpdater
         $newExtra = array_merge($composerJson->getExtra(), $extra);
         $composerJson->setExtra($newExtra);
 
-        $this->jsonFileManager->saveComposerJsonToFilePath($composerJson, $composerJsonFilePath);
+        $this->jsonFileManager->printComposerJsonToFilePath($composerJson, $composerJsonFilePath);
     }
 }

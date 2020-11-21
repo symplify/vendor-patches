@@ -6,7 +6,7 @@ namespace Migrify\VendorPatches\Tests\Finder;
 
 use Migrify\VendorPatches\Finder\OldToNewFilesFinder;
 use Migrify\VendorPatches\HttpKernel\VendorPatchesKernel;
-use Symplify\PackageBuilder\Tests\AbstractKernelTestCase;
+use Symplify\PackageBuilder\Testing\AbstractKernelTestCase;
 
 final class VendorFilesFinderTest extends AbstractKernelTestCase
 {

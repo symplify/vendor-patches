@@ -6,7 +6,7 @@ namespace Migrify\VendorPatches\Tests\Composer;
 
 use Migrify\VendorPatches\Composer\PackageNameResolver;
 use Migrify\VendorPatches\HttpKernel\VendorPatchesKernel;
-use Symplify\PackageBuilder\Tests\AbstractKernelTestCase;
+use Symplify\PackageBuilder\Testing\AbstractKernelTestCase;
 use Symplify\SmartFileSystem\SmartFileInfo;
 
 final class PackageNameResolverTest extends AbstractKernelTestCase

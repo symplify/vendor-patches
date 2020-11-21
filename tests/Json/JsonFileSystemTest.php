@@ -6,7 +6,7 @@ namespace Migrify\VendorPatches\Tests\Json;
 
 use Migrify\VendorPatches\HttpKernel\VendorPatchesKernel;
 use Migrify\VendorPatches\Json\JsonFileSystem;
-use Symplify\PackageBuilder\Tests\AbstractKernelTestCase;
+use Symplify\PackageBuilder\Testing\AbstractKernelTestCase;
 use Symplify\SmartFileSystem\SmartFileSystem;
 
 final class JsonFileSystemTest extends AbstractKernelTestCase
