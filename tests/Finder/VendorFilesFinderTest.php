@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Migrify\VendorPatches\Tests\Finder;
+namespace Symplify\VendorPatches\Tests\Finder;
 
-use Migrify\VendorPatches\Finder\OldToNewFilesFinder;
-use Migrify\VendorPatches\HttpKernel\VendorPatchesKernel;
 use Symplify\PackageBuilder\Testing\AbstractKernelTestCase;
+use Symplify\VendorPatches\Finder\OldToNewFilesFinder;
+use Symplify\VendorPatches\HttpKernel\VendorPatchesKernel;
 
 final class VendorFilesFinderTest extends AbstractKernelTestCase
 {

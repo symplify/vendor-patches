@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Migrify\VendorPatches\Tests\Differ;
+namespace Symplify\VendorPatches\Tests\Differ;
 
-use Migrify\VendorPatches\Differ\PatchDiffer;
-use Migrify\VendorPatches\HttpKernel\VendorPatchesKernel;
-use Migrify\VendorPatches\ValueObject\OldAndNewFileInfo;
 use Symplify\PackageBuilder\Testing\AbstractKernelTestCase;
 use Symplify\SmartFileSystem\SmartFileInfo;
+use Symplify\VendorPatches\Differ\PatchDiffer;
+use Symplify\VendorPatches\HttpKernel\VendorPatchesKernel;
+use Symplify\VendorPatches\ValueObject\OldAndNewFileInfo;
 
 final class PatchDifferTest extends AbstractKernelTestCase
 {

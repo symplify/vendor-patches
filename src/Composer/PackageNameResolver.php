@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Migrify\VendorPatches\Composer;
+namespace Symplify\VendorPatches\Composer;
 
 use Migrify\MigrifyKernel\Exception\ShouldNotHappenException;
-use Migrify\VendorPatches\FileSystem\PathResolver;
-use Migrify\VendorPatches\Json\JsonFileSystem;
 use Symplify\SmartFileSystem\FileSystemGuard;
 use Symplify\SmartFileSystem\SmartFileInfo;
+use Symplify\VendorPatches\FileSystem\PathResolver;
+use Symplify\VendorPatches\Json\JsonFileSystem;
 
 final class PackageNameResolver
 {

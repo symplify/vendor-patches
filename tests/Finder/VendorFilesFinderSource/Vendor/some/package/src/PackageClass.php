@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Migrify\VendorPatches\Tests\Finder\VendorFilesFinderSource;
+namespace Symplify\VendorPatches\Tests\Finder\VendorFilesFinderSource;
 
 class PackageClass
 {

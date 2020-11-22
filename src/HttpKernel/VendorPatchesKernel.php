@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Migrify\VendorPatches\HttpKernel;
+namespace Symplify\VendorPatches\HttpKernel;
 
 use Migrify\MigrifyKernel\Bundle\MigrifyKernelBundle;
 use Migrify\MigrifyKernel\HttpKernel\AbstractMigrifyKernel;

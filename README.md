@@ -1,13 +1,13 @@
 # Vendor Patches
 
-[![Downloads total](https://img.shields.io/packagist/dt/migrify/vendor-patches.svg?style=flat-square)](https://packagist.org/packages/migrify/vendor-patches/stats)
+[![Downloads total](https://img.shields.io/packagist/dt/symplify/vendor-patches.svg?style=flat-square)](https://packagist.org/packages/symplify/vendor-patches/stats)
 
 Generate vendor patches for packages with single command.
 
 ## Install
 
 ```bash
-composer require migrify/vendor-patches --dev
+composer require symplify/vendor-patches --dev
 ```
 
 ## Usage
@@ -17,7 +17,7 @@ How to create [a patch for a file in `/vendor`](https://tomasvotruba.com/blog/20
 ### 1. Create a Copy of `/vendor` file you Want To Change with `*.old` Suffix
 
 For example, if you edit:
- 
+
 ```bash
 vendor/nette/di/src/DI/Extensions/InjectExtension.php
 # copy of the file
@@ -48,7 +48,7 @@ This tool will generate patch files for all files created this way in `/patches`
 /patches/nette-di-di-extensions-injectextension.php.patch
 ```
 
-The patch path is based on original file path, so **the patch name is always unique**. 
+The patch path is based on original file path, so **the patch name is always unique**.
 
 Also, it will add configuration for `cweagans/composer-patches` to your `composer.json`:
 
@@ -70,9 +70,9 @@ Now all you need to do is run composer:
 
 ```bash
 composer install
-``` 
+```
 
-And your patches are applied to your code! 
+And your patches are applied to your code!
 
 <br>
 

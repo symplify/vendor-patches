@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Migrify\VendorPatches\ValueObject;
+namespace Symplify\VendorPatches\ValueObject;
 
 use Symplify\SmartFileSystem\SmartFileInfo;
 

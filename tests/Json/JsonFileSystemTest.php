@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Migrify\VendorPatches\Tests\Json;
+namespace Symplify\VendorPatches\Tests\Json;
 
-use Migrify\VendorPatches\HttpKernel\VendorPatchesKernel;
-use Migrify\VendorPatches\Json\JsonFileSystem;
 use Symplify\PackageBuilder\Testing\AbstractKernelTestCase;
 use Symplify\SmartFileSystem\SmartFileSystem;
+use Symplify\VendorPatches\HttpKernel\VendorPatchesKernel;
+use Symplify\VendorPatches\Json\JsonFileSystem;
 
 final class JsonFileSystemTest extends AbstractKernelTestCase
 {

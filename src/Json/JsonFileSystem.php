@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Migrify\VendorPatches\Json;
+namespace Symplify\VendorPatches\Json;
 
 use Nette\Utils\Json;
 use Symplify\SmartFileSystem\FileSystemGuard;

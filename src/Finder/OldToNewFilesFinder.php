@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Migrify\VendorPatches\Finder;
+namespace Symplify\VendorPatches\Finder;
 
-use Migrify\VendorPatches\Composer\PackageNameResolver;
-use Migrify\VendorPatches\ValueObject\OldAndNewFileInfo;
 use Symfony\Component\Finder\Finder;
 use Symplify\SmartFileSystem\Finder\FinderSanitizer;
 use Symplify\SmartFileSystem\SmartFileInfo;
+use Symplify\VendorPatches\Composer\PackageNameResolver;
+use Symplify\VendorPatches\ValueObject\OldAndNewFileInfo;
 
 final class OldToNewFilesFinder
 {

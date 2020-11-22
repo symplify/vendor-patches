@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Migrify\VendorPatches\FileSystem;
+namespace Symplify\VendorPatches\FileSystem;
 
 use Migrify\MigrifyKernel\Exception\ShouldNotHappenException;
 use Nette\Utils\Strings;

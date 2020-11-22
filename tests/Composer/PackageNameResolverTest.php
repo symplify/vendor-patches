@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Migrify\VendorPatches\Tests\Composer;
+namespace Symplify\VendorPatches\Tests\Composer;
 
-use Migrify\VendorPatches\Composer\PackageNameResolver;
-use Migrify\VendorPatches\HttpKernel\VendorPatchesKernel;
 use Symplify\PackageBuilder\Testing\AbstractKernelTestCase;
 use Symplify\SmartFileSystem\SmartFileInfo;
+use Symplify\VendorPatches\Composer\PackageNameResolver;
+use Symplify\VendorPatches\HttpKernel\VendorPatchesKernel;
 
 final class PackageNameResolverTest extends AbstractKernelTestCase
 {
