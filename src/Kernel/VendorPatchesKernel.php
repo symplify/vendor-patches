@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Symplify\VendorPatches\HttpKernel;
+namespace Symplify\VendorPatches\Kernel;
 
 use Psr\Container\ContainerInterface;
 use Symplify\ComposerJsonManipulator\ValueObject\ComposerJsonManipulatorConfig;
