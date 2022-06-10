@@ -1,10 +1,12 @@
 <?php
 
-declare (strict_types=1);
-namespace VendorPatches20220610\Symplify\VendorPatches\Console;
+declare(strict_types=1);
 
-use VendorPatches20220610\Symfony\Component\Console\Application;
-use VendorPatches20220610\Symfony\Component\Console\Command\Command;
+namespace Symplify\VendorPatches\Console;
+
+use Symfony\Component\Console\Application;
+use Symfony\Component\Console\Command\Command;
+
 final class VendorPatchesApplication extends Application
 {
     /**
