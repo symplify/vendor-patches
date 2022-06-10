@@ -1,0 +1,5 @@
+#!/usr/bin/env php
+<?php 
+namespace VendorPatches20220610;
+
+require __DIR__ . '/easy-testing.php';
