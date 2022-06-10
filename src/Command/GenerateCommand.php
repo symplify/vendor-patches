@@ -7,7 +7,6 @@ use VendorPatches20220610\Symfony\Component\Console\Input\InputInterface;
 use VendorPatches20220610\Symfony\Component\Console\Output\OutputInterface;
 use VendorPatches20220610\Symplify\PackageBuilder\Composer\VendorDirProvider;
 use VendorPatches20220610\Symplify\PackageBuilder\Console\Command\AbstractSymplifyCommand;
-use VendorPatches20220610\Symplify\PackageBuilder\Console\Command\CommandNaming;
 use Symplify\VendorPatches\Composer\ComposerPatchesConfigurationUpdater;
 use Symplify\VendorPatches\Console\GenerateCommandReporter;
 use Symplify\VendorPatches\Differ\PatchDiffer;
@@ -51,7 +50,7 @@ final class GenerateCommand extends AbstractSymplifyCommand
     }
     protected function configure() : void
     {
-        $this->setName(CommandNaming::classToName(self::class));
+        $this->setName('generate');
         $this->setDescription('Generate patches from /vendor directory');
     }
     protected function execute(InputInterface $input, OutputInterface $output) : int
