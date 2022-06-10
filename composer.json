@@ -2,16 +2,61 @@
     "name": "symplify/vendor-patches",
     "description": "Generate vendor patches for packages with single command",
     "license": "MIT",
-    "require": {
-        "php": ">=7.2",
-        "cweagans/composer-patches": "^1.7"
-    },
     "bin": [
         "bin/vendor-patches"
     ],
+    "require": {
+        "php": ">=8.0",
+        "nette/utils": "^3.2",
+        "symfony/console": "^6.0",
+        "symfony/dependency-injection": "^6.0",
+        "sebastian/diff": "^4.0",
+        "cweagans/composer-patches": "^1.7",
+        "symplify/composer-json-manipulator": "^10.4",
+        "symplify/symplify-kernel": "^10.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Symplify\\VendorPatches\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Symplify\\VendorPatches\\Tests\\": "tests"
+        }
+    },
     "extra": {
         "branch-alias": {
-            "dev-main": "10.3-dev"
+            "dev-main": "10.4-dev"
         }
-    }
+    },
+    "conflict": {
+        "symplify/astral": "<10.3.0",
+        "symplify/easy-coding-standard": "<10.3.0",
+        "symplify/phpstan-rules": "<10.3.0",
+        "symplify/easy-testing": "<10.3.0",
+        "symplify/rule-doc-generator-contracts": "<10.3.0",
+        "symplify/php-config-printer": "<10.3.0",
+        "symplify/autowire-array-parameter": "<10.3.0",
+        "symplify/package-builder": "<10.3.0",
+        "symplify/phpstan-extensions": "<10.3.0",
+        "symplify/rule-doc-generator": "<10.3.0",
+        "symplify/skipper": "<10.3.0",
+        "symplify/smart-file-system": "<10.3.0",
+        "symplify/symfony-static-dumper": "<10.3.0",
+        "symplify/monorepo-builder": "<10.3.0",
+        "symplify/config-transformer": "<10.3.0",
+        "symplify/easy-ci": "<10.3.0",
+        "symplify/coding-standard": "<10.3.0",
+        "symplify/easy-parallel": "<10.3.0",
+        "symplify/neon-config-dumper": "<10.3.0"
+    },
+    "config": {
+        "platform-check": false
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
