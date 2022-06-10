@@ -1,7 +1,7 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches20220610\Symplify\VendorPatches\Kernel;
+namespace Symplify\VendorPatches\Kernel;
 
 use VendorPatches20220610\Psr\Container\ContainerInterface;
 use VendorPatches20220610\Symplify\ComposerJsonManipulator\ValueObject\ComposerJsonManipulatorConfig;

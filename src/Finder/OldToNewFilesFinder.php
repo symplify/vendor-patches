@@ -1,13 +1,13 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches20220610\Symplify\VendorPatches\Finder;
+namespace Symplify\VendorPatches\Finder;
 
 use VendorPatches20220610\Symfony\Component\Finder\Finder;
 use VendorPatches20220610\Symplify\SmartFileSystem\Finder\FinderSanitizer;
 use VendorPatches20220610\Symplify\SmartFileSystem\SmartFileInfo;
-use VendorPatches20220610\Symplify\VendorPatches\Composer\PackageNameResolver;
-use VendorPatches20220610\Symplify\VendorPatches\ValueObject\OldAndNewFileInfo;
+use Symplify\VendorPatches\Composer\PackageNameResolver;
+use Symplify\VendorPatches\ValueObject\OldAndNewFileInfo;
 final class OldToNewFilesFinder
 {
     /**

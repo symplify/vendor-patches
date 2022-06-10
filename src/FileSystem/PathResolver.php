@@ -1,7 +1,7 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches20220610\Symplify\VendorPatches\FileSystem;
+namespace Symplify\VendorPatches\FileSystem;
 
 use VendorPatches20220610\Nette\Utils\Strings;
 use VendorPatches20220610\Symplify\SmartFileSystem\SmartFileInfo;

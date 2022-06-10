@@ -10,7 +10,7 @@ use VendorPatches20220610\Symfony\Component\DependencyInjection\Loader\Configura
 use VendorPatches20220610\Symplify\PackageBuilder\Composer\VendorDirProvider;
 use VendorPatches20220610\Symplify\PackageBuilder\Yaml\ParametersMerger;
 use VendorPatches20220610\Symplify\SmartFileSystem\Json\JsonFileSystem;
-use VendorPatches20220610\Symplify\VendorPatches\Console\VendorPatchesApplication;
+use Symplify\VendorPatches\Console\VendorPatchesApplication;
 use function VendorPatches20220610\Symfony\Component\DependencyInjection\Loader\Configurator\service;
 return static function (ContainerConfigurator $containerConfigurator) : void {
     $services = $containerConfigurator->services();

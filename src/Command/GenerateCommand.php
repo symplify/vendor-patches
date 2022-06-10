@@ -1,18 +1,18 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches20220610\Symplify\VendorPatches\Command;
+namespace Symplify\VendorPatches\Command;
 
 use VendorPatches20220610\Symfony\Component\Console\Input\InputInterface;
 use VendorPatches20220610\Symfony\Component\Console\Output\OutputInterface;
 use VendorPatches20220610\Symplify\PackageBuilder\Composer\VendorDirProvider;
 use VendorPatches20220610\Symplify\PackageBuilder\Console\Command\AbstractSymplifyCommand;
 use VendorPatches20220610\Symplify\PackageBuilder\Console\Command\CommandNaming;
-use VendorPatches20220610\Symplify\VendorPatches\Composer\ComposerPatchesConfigurationUpdater;
-use VendorPatches20220610\Symplify\VendorPatches\Console\GenerateCommandReporter;
-use VendorPatches20220610\Symplify\VendorPatches\Differ\PatchDiffer;
-use VendorPatches20220610\Symplify\VendorPatches\Finder\OldToNewFilesFinder;
-use VendorPatches20220610\Symplify\VendorPatches\PatchFileFactory;
+use Symplify\VendorPatches\Composer\ComposerPatchesConfigurationUpdater;
+use Symplify\VendorPatches\Console\GenerateCommandReporter;
+use Symplify\VendorPatches\Differ\PatchDiffer;
+use Symplify\VendorPatches\Finder\OldToNewFilesFinder;
+use Symplify\VendorPatches\PatchFileFactory;
 final class GenerateCommand extends AbstractSymplifyCommand
 {
     /**

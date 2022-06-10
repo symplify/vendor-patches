@@ -1,13 +1,13 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches20220610\Symplify\VendorPatches\Composer;
+namespace Symplify\VendorPatches\Composer;
 
 use VendorPatches20220610\Symplify\SmartFileSystem\FileSystemGuard;
 use VendorPatches20220610\Symplify\SmartFileSystem\Json\JsonFileSystem;
 use VendorPatches20220610\Symplify\SmartFileSystem\SmartFileInfo;
 use VendorPatches20220610\Symplify\SymplifyKernel\Exception\ShouldNotHappenException;
-use VendorPatches20220610\Symplify\VendorPatches\FileSystem\PathResolver;
+use Symplify\VendorPatches\FileSystem\PathResolver;
 /**
  * @see \Symplify\VendorPatches\Tests\Composer\PackageNameResolverTest
  */

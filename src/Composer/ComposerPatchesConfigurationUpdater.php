@@ -1,7 +1,7 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches20220610\Symplify\VendorPatches\Composer;
+namespace Symplify\VendorPatches\Composer;
 
 use VendorPatches20220610\Symplify\Astral\Exception\ShouldNotHappenException;
 use VendorPatches20220610\Symplify\ComposerJsonManipulator\ComposerJsonFactory;

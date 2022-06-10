@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInita60fa3cc2f7857cf305e334942785426
+class ComposerStaticInitb041c80a10bbbea03c5f06b1255598b1
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -21,13 +21,17 @@ class ComposerStaticInita60fa3cc2f7857cf305e334942785426
         array (
             'VendorPatches20220610\\cweagans\\Composer\\' => 40,
             'VendorPatches20220610\\Webmozart\\Assert\\' => 39,
-            'VendorPatches20220610\\Symplify\\VendorPatches\\' => 45,
             'VendorPatches20220610\\Symplify\\SymplifyKernel\\' => 46,
             'VendorPatches20220610\\Symplify\\SmartFileSystem\\' => 47,
             'VendorPatches20220610\\Symplify\\PackageBuilder\\' => 46,
             'VendorPatches20220610\\Symplify\\EasyTesting\\' => 43,
             'VendorPatches20220610\\Symplify\\ComposerJsonManipulator\\' => 55,
             'VendorPatches20220610\\Symplify\\AutowireArrayParameter\\' => 54,
+            'VendorPatches20220610\\Symfony\\Polyfill\\Php81\\' => 45,
+            'VendorPatches20220610\\Symfony\\Polyfill\\Mbstring\\' => 48,
+            'VendorPatches20220610\\Symfony\\Polyfill\\Intl\\Normalizer\\' => 55,
+            'VendorPatches20220610\\Symfony\\Polyfill\\Intl\\Grapheme\\' => 53,
+            'VendorPatches20220610\\Symfony\\Polyfill\\Ctype\\' => 45,
             'VendorPatches20220610\\Symfony\\Contracts\\Service\\' => 48,
             'VendorPatches20220610\\Symfony\\Component\\String\\' => 47,
             'VendorPatches20220610\\Symfony\\Component\\Finder\\' => 47,
@@ -39,11 +43,7 @@ class ComposerStaticInita60fa3cc2f7857cf305e334942785426
         ),
         'S' => 
         array (
-            'Symfony\\Polyfill\\Php81\\' => 23,
-            'Symfony\\Polyfill\\Mbstring\\' => 26,
-            'Symfony\\Polyfill\\Intl\\Normalizer\\' => 33,
-            'Symfony\\Polyfill\\Intl\\Grapheme\\' => 31,
-            'Symfony\\Polyfill\\Ctype\\' => 23,
+            'Symplify\\VendorPatches\\' => 23,
         ),
     );
 
@@ -55,10 +55,6 @@ class ComposerStaticInita60fa3cc2f7857cf305e334942785426
         'VendorPatches20220610\\Webmozart\\Assert\\' => 
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
-        ),
-        'VendorPatches20220610\\Symplify\\VendorPatches\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src',
         ),
         'VendorPatches20220610\\Symplify\\SymplifyKernel\\' => 
         array (
@@ -83,6 +79,26 @@ class ComposerStaticInita60fa3cc2f7857cf305e334942785426
         'VendorPatches20220610\\Symplify\\AutowireArrayParameter\\' => 
         array (
             0 => __DIR__ . '/..' . '/symplify/autowire-array-parameter/src',
+        ),
+        'VendorPatches20220610\\Symfony\\Polyfill\\Php81\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-php81',
+        ),
+        'VendorPatches20220610\\Symfony\\Polyfill\\Mbstring\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'VendorPatches20220610\\Symfony\\Polyfill\\Intl\\Normalizer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer',
+        ),
+        'VendorPatches20220610\\Symfony\\Polyfill\\Intl\\Grapheme\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme',
+        ),
+        'VendorPatches20220610\\Symfony\\Polyfill\\Ctype\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
         ),
         'VendorPatches20220610\\Symfony\\Contracts\\Service\\' => 
         array (
@@ -116,25 +132,9 @@ class ComposerStaticInita60fa3cc2f7857cf305e334942785426
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
         ),
-        'Symfony\\Polyfill\\Php81\\' => 
+        'Symplify\\VendorPatches\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-php81',
-        ),
-        'Symfony\\Polyfill\\Mbstring\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
-        ),
-        'Symfony\\Polyfill\\Intl\\Normalizer\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer',
-        ),
-        'Symfony\\Polyfill\\Intl\\Grapheme\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme',
-        ),
-        'Symfony\\Polyfill\\Ctype\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
+            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 
@@ -142,11 +142,17 @@ class ComposerStaticInita60fa3cc2f7857cf305e334942785426
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',
         'ReturnTypeWillChange' => __DIR__ . '/..' . '/symfony/polyfill-php81/Resources/stubs/ReturnTypeWillChange.php',
-        'Symfony\\Polyfill\\Ctype\\Ctype' => __DIR__ . '/..' . '/symfony/polyfill-ctype/Ctype.php',
-        'Symfony\\Polyfill\\Intl\\Grapheme\\Grapheme' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/Grapheme.php',
-        'Symfony\\Polyfill\\Intl\\Normalizer\\Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Normalizer.php',
-        'Symfony\\Polyfill\\Mbstring\\Mbstring' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/Mbstring.php',
-        'Symfony\\Polyfill\\Php81\\Php81' => __DIR__ . '/..' . '/symfony/polyfill-php81/Php81.php',
+        'Symplify\\VendorPatches\\Command\\GenerateCommand' => __DIR__ . '/../..' . '/src/Command/GenerateCommand.php',
+        'Symplify\\VendorPatches\\Composer\\ComposerPatchesConfigurationUpdater' => __DIR__ . '/../..' . '/src/Composer/ComposerPatchesConfigurationUpdater.php',
+        'Symplify\\VendorPatches\\Composer\\PackageNameResolver' => __DIR__ . '/../..' . '/src/Composer/PackageNameResolver.php',
+        'Symplify\\VendorPatches\\Console\\GenerateCommandReporter' => __DIR__ . '/../..' . '/src/Console/GenerateCommandReporter.php',
+        'Symplify\\VendorPatches\\Console\\VendorPatchesApplication' => __DIR__ . '/../..' . '/src/Console/VendorPatchesApplication.php',
+        'Symplify\\VendorPatches\\Differ\\PatchDiffer' => __DIR__ . '/../..' . '/src/Differ/PatchDiffer.php',
+        'Symplify\\VendorPatches\\FileSystem\\PathResolver' => __DIR__ . '/../..' . '/src/FileSystem/PathResolver.php',
+        'Symplify\\VendorPatches\\Finder\\OldToNewFilesFinder' => __DIR__ . '/../..' . '/src/Finder/OldToNewFilesFinder.php',
+        'Symplify\\VendorPatches\\Kernel\\VendorPatchesKernel' => __DIR__ . '/../..' . '/src/Kernel/VendorPatchesKernel.php',
+        'Symplify\\VendorPatches\\PatchFileFactory' => __DIR__ . '/../..' . '/src/PatchFileFactory.php',
+        'Symplify\\VendorPatches\\ValueObject\\OldAndNewFileInfo' => __DIR__ . '/../..' . '/src/ValueObject/OldAndNewFileInfo.php',
         'VendorPatches20220610\\Nette\\ArgumentOutOfRangeException' => __DIR__ . '/..' . '/nette/utils/src/exceptions.php',
         'VendorPatches20220610\\Nette\\DeprecatedException' => __DIR__ . '/..' . '/nette/utils/src/exceptions.php',
         'VendorPatches20220610\\Nette\\DirectoryNotFoundException' => __DIR__ . '/..' . '/nette/utils/src/exceptions.php',
@@ -615,6 +621,11 @@ class ComposerStaticInita60fa3cc2f7857cf305e334942785426
         'VendorPatches20220610\\Symfony\\Contracts\\Service\\ServiceSubscriberInterface' => __DIR__ . '/..' . '/symfony/service-contracts/ServiceSubscriberInterface.php',
         'VendorPatches20220610\\Symfony\\Contracts\\Service\\ServiceSubscriberTrait' => __DIR__ . '/..' . '/symfony/service-contracts/ServiceSubscriberTrait.php',
         'VendorPatches20220610\\Symfony\\Contracts\\Service\\Test\\ServiceLocatorTest' => __DIR__ . '/..' . '/symfony/service-contracts/Test/ServiceLocatorTest.php',
+        'VendorPatches20220610\\Symfony\\Polyfill\\Ctype\\Ctype' => __DIR__ . '/..' . '/symfony/polyfill-ctype/Ctype.php',
+        'VendorPatches20220610\\Symfony\\Polyfill\\Intl\\Grapheme\\Grapheme' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/Grapheme.php',
+        'VendorPatches20220610\\Symfony\\Polyfill\\Intl\\Normalizer\\Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Normalizer.php',
+        'VendorPatches20220610\\Symfony\\Polyfill\\Mbstring\\Mbstring' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/Mbstring.php',
+        'VendorPatches20220610\\Symfony\\Polyfill\\Php81\\Php81' => __DIR__ . '/..' . '/symfony/polyfill-php81/Php81.php',
         'VendorPatches20220610\\Symplify\\AutowireArrayParameter\\DependencyInjection\\CompilerPass\\AutowireArrayParameterCompilerPass' => __DIR__ . '/..' . '/symplify/autowire-array-parameter/src/DependencyInjection/CompilerPass/AutowireArrayParameterCompilerPass.php',
         'VendorPatches20220610\\Symplify\\AutowireArrayParameter\\DependencyInjection\\DefinitionFinder' => __DIR__ . '/..' . '/symplify/autowire-array-parameter/src/DependencyInjection/DefinitionFinder.php',
         'VendorPatches20220610\\Symplify\\AutowireArrayParameter\\DocBlock\\ParamTypeDocBlockResolver' => __DIR__ . '/..' . '/symplify/autowire-array-parameter/src/DocBlock/ParamTypeDocBlockResolver.php',
@@ -696,17 +707,6 @@ class ComposerStaticInita60fa3cc2f7857cf305e334942785426
         'VendorPatches20220610\\Symplify\\SymplifyKernel\\HttpKernel\\AbstractSymplifyKernel' => __DIR__ . '/..' . '/symplify/symplify-kernel/src/HttpKernel/AbstractSymplifyKernel.php',
         'VendorPatches20220610\\Symplify\\SymplifyKernel\\ValueObject\\KernelBootAndApplicationRun' => __DIR__ . '/..' . '/symplify/symplify-kernel/src/ValueObject/KernelBootAndApplicationRun.php',
         'VendorPatches20220610\\Symplify\\SymplifyKernel\\ValueObject\\SymplifyKernelConfig' => __DIR__ . '/..' . '/symplify/symplify-kernel/src/ValueObject/SymplifyKernelConfig.php',
-        'VendorPatches20220610\\Symplify\\VendorPatches\\Command\\GenerateCommand' => __DIR__ . '/../..' . '/src/Command/GenerateCommand.php',
-        'VendorPatches20220610\\Symplify\\VendorPatches\\Composer\\ComposerPatchesConfigurationUpdater' => __DIR__ . '/../..' . '/src/Composer/ComposerPatchesConfigurationUpdater.php',
-        'VendorPatches20220610\\Symplify\\VendorPatches\\Composer\\PackageNameResolver' => __DIR__ . '/../..' . '/src/Composer/PackageNameResolver.php',
-        'VendorPatches20220610\\Symplify\\VendorPatches\\Console\\GenerateCommandReporter' => __DIR__ . '/../..' . '/src/Console/GenerateCommandReporter.php',
-        'VendorPatches20220610\\Symplify\\VendorPatches\\Console\\VendorPatchesApplication' => __DIR__ . '/../..' . '/src/Console/VendorPatchesApplication.php',
-        'VendorPatches20220610\\Symplify\\VendorPatches\\Differ\\PatchDiffer' => __DIR__ . '/../..' . '/src/Differ/PatchDiffer.php',
-        'VendorPatches20220610\\Symplify\\VendorPatches\\FileSystem\\PathResolver' => __DIR__ . '/../..' . '/src/FileSystem/PathResolver.php',
-        'VendorPatches20220610\\Symplify\\VendorPatches\\Finder\\OldToNewFilesFinder' => __DIR__ . '/../..' . '/src/Finder/OldToNewFilesFinder.php',
-        'VendorPatches20220610\\Symplify\\VendorPatches\\Kernel\\VendorPatchesKernel' => __DIR__ . '/../..' . '/src/Kernel/VendorPatchesKernel.php',
-        'VendorPatches20220610\\Symplify\\VendorPatches\\PatchFileFactory' => __DIR__ . '/../..' . '/src/PatchFileFactory.php',
-        'VendorPatches20220610\\Symplify\\VendorPatches\\ValueObject\\OldAndNewFileInfo' => __DIR__ . '/../..' . '/src/ValueObject/OldAndNewFileInfo.php',
         'VendorPatches20220610\\Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
         'VendorPatches20220610\\Webmozart\\Assert\\InvalidArgumentException' => __DIR__ . '/..' . '/webmozart/assert/src/InvalidArgumentException.php',
         'VendorPatches20220610\\Webmozart\\Assert\\Mixin' => __DIR__ . '/..' . '/webmozart/assert/src/Mixin.php',
@@ -718,9 +718,9 @@ class ComposerStaticInita60fa3cc2f7857cf305e334942785426
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInita60fa3cc2f7857cf305e334942785426::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInita60fa3cc2f7857cf305e334942785426::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInita60fa3cc2f7857cf305e334942785426::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitb041c80a10bbbea03c5f06b1255598b1::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitb041c80a10bbbea03c5f06b1255598b1::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitb041c80a10bbbea03c5f06b1255598b1::$classMap;
 
         }, null, ClassLoader::class);
     }
