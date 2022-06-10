@@ -68,9 +68,9 @@ final class GenerateCommand extends AbstractSymplifyCommand
                 continue;
             }
             // write into patches file
-            $patchFileRelativePath = $this->patchFileFactory->createPatchFilePath($oldAndNewFileInfo, $vendorDirectory);
+            $patchFileRelativePath = $this->patchFileFactory->createPatchFilePath($oldAndNewFileInfo, $projectVendorDirectory);
             $composerExtraPatches[$oldAndNewFileInfo->getPackageName()][] = $patchFileRelativePath;
-            $patchFileAbsolutePath = \dirname($vendorDirectory) . \DIRECTORY_SEPARATOR . $patchFileRelativePath;
+            $patchFileAbsolutePath = \dirname($projectVendorDirectory) . \DIRECTORY_SEPARATOR . $patchFileRelativePath;
             // dump the patch
             $patchDiff = $this->patchDiffer->diff($oldAndNewFileInfo);
             if (\is_file($patchFileAbsolutePath)) {
