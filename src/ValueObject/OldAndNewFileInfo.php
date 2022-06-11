@@ -3,7 +3,7 @@
 declare (strict_types=1);
 namespace Symplify\VendorPatches\ValueObject;
 
-use VendorPatches20220610\Symplify\SmartFileSystem\SmartFileInfo;
+use VendorPatches20220611\Symplify\SmartFileSystem\SmartFileInfo;
 final class OldAndNewFileInfo
 {
     /**

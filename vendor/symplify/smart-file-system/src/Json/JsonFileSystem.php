@@ -1,12 +1,12 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches20220610\Symplify\SmartFileSystem\Json;
+namespace VendorPatches20220611\Symplify\SmartFileSystem\Json;
 
-use VendorPatches20220610\Nette\Utils\Arrays;
-use VendorPatches20220610\Nette\Utils\Json;
-use VendorPatches20220610\Symplify\SmartFileSystem\FileSystemGuard;
-use VendorPatches20220610\Symplify\SmartFileSystem\SmartFileSystem;
+use VendorPatches20220611\Nette\Utils\Arrays;
+use VendorPatches20220611\Nette\Utils\Json;
+use VendorPatches20220611\Symplify\SmartFileSystem\FileSystemGuard;
+use VendorPatches20220611\Symplify\SmartFileSystem\SmartFileSystem;
 /**
  * @api
  * @see \Symplify\SmartFileSystem\Tests\Json\JsonFileSystem\JsonFileSystemTest

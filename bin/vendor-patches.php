@@ -1,9 +1,9 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches20220610;
+namespace VendorPatches20220611;
 
-use VendorPatches20220610\Symplify\SymplifyKernel\ValueObject\KernelBootAndApplicationRun;
+use VendorPatches20220611\Symplify\SymplifyKernel\ValueObject\KernelBootAndApplicationRun;
 use Symplify\VendorPatches\Kernel\VendorPatchesKernel;
 $possibleAutoloadPaths = [__DIR__ . '/../autoload.php', __DIR__ . '/../vendor/autoload.php', __DIR__ . '/../../../autoload.php', __DIR__ . '/../../../vendor/autoload.php'];
 foreach ($possibleAutoloadPaths as $possibleAutoloadPath) {

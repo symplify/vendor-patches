@@ -1,11 +1,11 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches20220610\Symplify\SmartFileSystem\Finder;
+namespace VendorPatches20220611\Symplify\SmartFileSystem\Finder;
 
-use VendorPatches20220610\Symfony\Component\Finder\Finder;
-use VendorPatches20220610\Symplify\SmartFileSystem\FileSystemFilter;
-use VendorPatches20220610\Symplify\SmartFileSystem\SmartFileInfo;
+use VendorPatches20220611\Symfony\Component\Finder\Finder;
+use VendorPatches20220611\Symplify\SmartFileSystem\FileSystemFilter;
+use VendorPatches20220611\Symplify\SmartFileSystem\SmartFileInfo;
 /**
  * @api
  * @see \Symplify\SmartFileSystem\Tests\Finder\SmartFinder\SmartFinderTest

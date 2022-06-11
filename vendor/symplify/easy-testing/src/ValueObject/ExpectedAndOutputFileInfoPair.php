@@ -1,10 +1,10 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches20220610\Symplify\EasyTesting\ValueObject;
+namespace VendorPatches20220611\Symplify\EasyTesting\ValueObject;
 
-use VendorPatches20220610\Symplify\SmartFileSystem\SmartFileInfo;
-use VendorPatches20220610\Symplify\SymplifyKernel\Exception\ShouldNotHappenException;
+use VendorPatches20220611\Symplify\SmartFileSystem\SmartFileInfo;
+use VendorPatches20220611\Symplify\SymplifyKernel\Exception\ShouldNotHappenException;
 final class ExpectedAndOutputFileInfoPair
 {
     /**

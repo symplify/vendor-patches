@@ -1,10 +1,10 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches20220610\Symplify\PackageBuilder\Console\Command;
+namespace VendorPatches20220611\Symplify\PackageBuilder\Console\Command;
 
-use VendorPatches20220610\Nette\Utils\Strings;
-use VendorPatches20220610\Symfony\Component\Console\Command\Command;
+use VendorPatches20220611\Nette\Utils\Strings;
+use VendorPatches20220611\Symfony\Component\Console\Command\Command;
 /**
  * @api
  * @see \Symplify\PackageBuilder\Tests\Console\Command\CommandNamingTest

@@ -1,15 +1,15 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches20220610\Symplify\EasyTesting;
+namespace VendorPatches20220611\Symplify\EasyTesting;
 
-use VendorPatches20220610\Nette\Utils\Strings;
-use VendorPatches20220610\Symplify\EasyTesting\ValueObject\InputAndExpected;
-use VendorPatches20220610\Symplify\EasyTesting\ValueObject\InputFileInfoAndExpected;
-use VendorPatches20220610\Symplify\EasyTesting\ValueObject\InputFileInfoAndExpectedFileInfo;
-use VendorPatches20220610\Symplify\EasyTesting\ValueObject\SplitLine;
-use VendorPatches20220610\Symplify\SmartFileSystem\SmartFileInfo;
-use VendorPatches20220610\Symplify\SmartFileSystem\SmartFileSystem;
+use VendorPatches20220611\Nette\Utils\Strings;
+use VendorPatches20220611\Symplify\EasyTesting\ValueObject\InputAndExpected;
+use VendorPatches20220611\Symplify\EasyTesting\ValueObject\InputFileInfoAndExpected;
+use VendorPatches20220611\Symplify\EasyTesting\ValueObject\InputFileInfoAndExpectedFileInfo;
+use VendorPatches20220611\Symplify\EasyTesting\ValueObject\SplitLine;
+use VendorPatches20220611\Symplify\SmartFileSystem\SmartFileInfo;
+use VendorPatches20220611\Symplify\SmartFileSystem\SmartFileSystem;
 /**
  * @api
  */

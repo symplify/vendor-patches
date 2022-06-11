@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorPatches20220610\Psr\Container;
+namespace VendorPatches20220611\Psr\Container;
 
 /**
  * No entry was found in the container.

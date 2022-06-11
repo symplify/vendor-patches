@@ -1,11 +1,11 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches20220610\Symplify\PackageBuilder\Parameter;
+namespace VendorPatches20220611\Symplify\PackageBuilder\Parameter;
 
-use VendorPatches20220610\Symfony\Component\DependencyInjection\ContainerInterface;
-use VendorPatches20220610\Symfony\Component\DependencyInjection\Exception\ParameterNotFoundException;
-use VendorPatches20220610\Symfony\Component\HttpFoundation\ParameterBag;
+use VendorPatches20220611\Symfony\Component\DependencyInjection\ContainerInterface;
+use VendorPatches20220611\Symfony\Component\DependencyInjection\Exception\ParameterNotFoundException;
+use VendorPatches20220611\Symfony\Component\HttpFoundation\ParameterBag;
 /**
  * @api
  * @see \Symplify\PackageBuilder\Tests\Parameter\ParameterProviderTest

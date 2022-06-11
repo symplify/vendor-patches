@@ -8,10 +8,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220610\Symfony\Component\DependencyInjection;
+namespace VendorPatches20220611\Symfony\Component\DependencyInjection;
 
-use VendorPatches20220610\Psr\Cache\CacheItemPoolInterface;
-use VendorPatches20220610\Symfony\Component\ExpressionLanguage\ExpressionLanguage as BaseExpressionLanguage;
+use VendorPatches20220611\Psr\Cache\CacheItemPoolInterface;
+use VendorPatches20220611\Symfony\Component\ExpressionLanguage\ExpressionLanguage as BaseExpressionLanguage;
 if (!\class_exists(BaseExpressionLanguage::class)) {
     return;
 }

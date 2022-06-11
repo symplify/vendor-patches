@@ -8,10 +8,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220610\Symfony\Component\Console\Tester;
+namespace VendorPatches20220611\Symfony\Component\Console\Tester;
 
-use VendorPatches20220610\Symfony\Component\Console\Command\Command;
-use VendorPatches20220610\Symfony\Component\Console\Input\ArrayInput;
+use VendorPatches20220611\Symfony\Component\Console\Command\Command;
+use VendorPatches20220611\Symfony\Component\Console\Input\ArrayInput;
 /**
  * Eases the testing of console commands.
  *

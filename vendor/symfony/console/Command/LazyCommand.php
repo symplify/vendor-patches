@@ -8,15 +8,15 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220610\Symfony\Component\Console\Command;
+namespace VendorPatches20220611\Symfony\Component\Console\Command;
 
-use VendorPatches20220610\Symfony\Component\Console\Application;
-use VendorPatches20220610\Symfony\Component\Console\Completion\CompletionInput;
-use VendorPatches20220610\Symfony\Component\Console\Completion\CompletionSuggestions;
-use VendorPatches20220610\Symfony\Component\Console\Helper\HelperSet;
-use VendorPatches20220610\Symfony\Component\Console\Input\InputDefinition;
-use VendorPatches20220610\Symfony\Component\Console\Input\InputInterface;
-use VendorPatches20220610\Symfony\Component\Console\Output\OutputInterface;
+use VendorPatches20220611\Symfony\Component\Console\Application;
+use VendorPatches20220611\Symfony\Component\Console\Completion\CompletionInput;
+use VendorPatches20220611\Symfony\Component\Console\Completion\CompletionSuggestions;
+use VendorPatches20220611\Symfony\Component\Console\Helper\HelperSet;
+use VendorPatches20220611\Symfony\Component\Console\Input\InputDefinition;
+use VendorPatches20220611\Symfony\Component\Console\Input\InputInterface;
+use VendorPatches20220611\Symfony\Component\Console\Output\OutputInterface;
 /**
  * @author Nicolas Grekas <p@tchwork.com>
  */

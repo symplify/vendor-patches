@@ -8,10 +8,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220610\Symfony\Contracts\Service;
+namespace VendorPatches20220611\Symfony\Contracts\Service;
 
-use VendorPatches20220610\Psr\Container\ContainerInterface;
-use VendorPatches20220610\Symfony\Contracts\Service\Attribute\SubscribedService;
+use VendorPatches20220611\Psr\Container\ContainerInterface;
+use VendorPatches20220611\Symfony\Contracts\Service\Attribute\SubscribedService;
 /**
  * Implementation of ServiceSubscriberInterface that determines subscribed services from
  * method return types. Service ids are available as "ClassName::methodName".

@@ -8,10 +8,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220610\Symfony\Component\Console\Completion\Output;
+namespace VendorPatches20220611\Symfony\Component\Console\Completion\Output;
 
-use VendorPatches20220610\Symfony\Component\Console\Completion\CompletionSuggestions;
-use VendorPatches20220610\Symfony\Component\Console\Output\OutputInterface;
+use VendorPatches20220611\Symfony\Component\Console\Completion\CompletionSuggestions;
+use VendorPatches20220611\Symfony\Component\Console\Output\OutputInterface;
 /**
  * @author Wouter de Jong <wouter@wouterj.nl>
  */

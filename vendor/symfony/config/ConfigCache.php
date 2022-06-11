@@ -8,9 +8,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220610\Symfony\Component\Config;
+namespace VendorPatches20220611\Symfony\Component\Config;
 
-use VendorPatches20220610\Symfony\Component\Config\Resource\SelfCheckingResourceChecker;
+use VendorPatches20220611\Symfony\Component\Config\Resource\SelfCheckingResourceChecker;
 /**
  * ConfigCache caches arbitrary content in files on disk.
  *

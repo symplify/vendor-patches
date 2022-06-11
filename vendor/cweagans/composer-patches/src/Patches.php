@@ -4,25 +4,25 @@
  * @file
  * Provides a way to patch Composer packages after installation.
  */
-namespace VendorPatches20220610\cweagans\Composer;
+namespace VendorPatches20220611\cweagans\Composer;
 
-use VendorPatches20220610\Composer\Composer;
-use VendorPatches20220610\Composer\DependencyResolver\Operation\InstallOperation;
-use VendorPatches20220610\Composer\DependencyResolver\Operation\UninstallOperation;
-use VendorPatches20220610\Composer\DependencyResolver\Operation\UpdateOperation;
-use VendorPatches20220610\Composer\DependencyResolver\Operation\OperationInterface;
-use VendorPatches20220610\Composer\EventDispatcher\EventSubscriberInterface;
-use VendorPatches20220610\Composer\IO\IOInterface;
-use VendorPatches20220610\Composer\Package\AliasPackage;
-use VendorPatches20220610\Composer\Package\PackageInterface;
-use VendorPatches20220610\Composer\Plugin\PluginInterface;
-use VendorPatches20220610\Composer\Installer\PackageEvents;
-use VendorPatches20220610\Composer\Script\Event;
-use VendorPatches20220610\Composer\Script\ScriptEvents;
-use VendorPatches20220610\Composer\Installer\PackageEvent;
-use VendorPatches20220610\Composer\Util\ProcessExecutor;
-use VendorPatches20220610\Composer\Util\RemoteFilesystem;
-use VendorPatches20220610\Symfony\Component\Process\Process;
+use VendorPatches20220611\Composer\Composer;
+use VendorPatches20220611\Composer\DependencyResolver\Operation\InstallOperation;
+use VendorPatches20220611\Composer\DependencyResolver\Operation\UninstallOperation;
+use VendorPatches20220611\Composer\DependencyResolver\Operation\UpdateOperation;
+use VendorPatches20220611\Composer\DependencyResolver\Operation\OperationInterface;
+use VendorPatches20220611\Composer\EventDispatcher\EventSubscriberInterface;
+use VendorPatches20220611\Composer\IO\IOInterface;
+use VendorPatches20220611\Composer\Package\AliasPackage;
+use VendorPatches20220611\Composer\Package\PackageInterface;
+use VendorPatches20220611\Composer\Plugin\PluginInterface;
+use VendorPatches20220611\Composer\Installer\PackageEvents;
+use VendorPatches20220611\Composer\Script\Event;
+use VendorPatches20220611\Composer\Script\ScriptEvents;
+use VendorPatches20220611\Composer\Installer\PackageEvent;
+use VendorPatches20220611\Composer\Util\ProcessExecutor;
+use VendorPatches20220611\Composer\Util\RemoteFilesystem;
+use VendorPatches20220611\Symfony\Component\Process\Process;
 class Patches implements PluginInterface, EventSubscriberInterface
 {
     /**

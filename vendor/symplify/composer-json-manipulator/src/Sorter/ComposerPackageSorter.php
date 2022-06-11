@@ -1,9 +1,9 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches20220610\Symplify\ComposerJsonManipulator\Sorter;
+namespace VendorPatches20220611\Symplify\ComposerJsonManipulator\Sorter;
 
-use VendorPatches20220610\Nette\Utils\Strings;
+use VendorPatches20220611\Nette\Utils\Strings;
 /**
  * Mostly inspired by https://github.com/composer/composer/blob/master/src/Composer/Json/JsonManipulator.php
  *
