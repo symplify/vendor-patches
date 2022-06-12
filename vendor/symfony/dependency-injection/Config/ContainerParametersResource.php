@@ -8,9 +8,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220611\Symfony\Component\DependencyInjection\Config;
+namespace VendorPatches20220612\Symfony\Component\DependencyInjection\Config;
 
-use VendorPatches20220611\Symfony\Component\Config\Resource\ResourceInterface;
+use VendorPatches20220612\Symfony\Component\Config\Resource\ResourceInterface;
 /**
  * Tracks container parameters.
  *

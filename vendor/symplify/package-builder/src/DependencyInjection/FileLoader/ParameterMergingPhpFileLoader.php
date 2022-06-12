@@ -1,12 +1,12 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches20220611\Symplify\PackageBuilder\DependencyInjection\FileLoader;
+namespace VendorPatches20220612\Symplify\PackageBuilder\DependencyInjection\FileLoader;
 
-use VendorPatches20220611\Symfony\Component\Config\FileLocatorInterface;
-use VendorPatches20220611\Symfony\Component\DependencyInjection\ContainerBuilder;
-use VendorPatches20220611\Symfony\Component\DependencyInjection\Loader\PhpFileLoader;
-use VendorPatches20220611\Symplify\PackageBuilder\Yaml\ParametersMerger;
+use VendorPatches20220612\Symfony\Component\Config\FileLocatorInterface;
+use VendorPatches20220612\Symfony\Component\DependencyInjection\ContainerBuilder;
+use VendorPatches20220612\Symfony\Component\DependencyInjection\Loader\PhpFileLoader;
+use VendorPatches20220612\Symplify\PackageBuilder\Yaml\ParametersMerger;
 /**
  * @api
  *

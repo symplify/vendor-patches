@@ -1,11 +1,11 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches20220611\Symplify\EasyTesting\Finder;
+namespace VendorPatches20220612\Symplify\EasyTesting\Finder;
 
-use VendorPatches20220611\Symfony\Component\Finder\Finder;
-use VendorPatches20220611\Symplify\SmartFileSystem\Finder\FinderSanitizer;
-use VendorPatches20220611\Symplify\SmartFileSystem\SmartFileInfo;
+use VendorPatches20220612\Symfony\Component\Finder\Finder;
+use VendorPatches20220612\Symplify\SmartFileSystem\Finder\FinderSanitizer;
+use VendorPatches20220612\Symplify\SmartFileSystem\SmartFileInfo;
 final class FixtureFinder
 {
     /**

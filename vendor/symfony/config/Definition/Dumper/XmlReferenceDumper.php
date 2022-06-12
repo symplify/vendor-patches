@@ -8,14 +8,14 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220611\Symfony\Component\Config\Definition\Dumper;
+namespace VendorPatches20220612\Symfony\Component\Config\Definition\Dumper;
 
-use VendorPatches20220611\Symfony\Component\Config\Definition\ArrayNode;
-use VendorPatches20220611\Symfony\Component\Config\Definition\BaseNode;
-use VendorPatches20220611\Symfony\Component\Config\Definition\ConfigurationInterface;
-use VendorPatches20220611\Symfony\Component\Config\Definition\EnumNode;
-use VendorPatches20220611\Symfony\Component\Config\Definition\NodeInterface;
-use VendorPatches20220611\Symfony\Component\Config\Definition\PrototypedArrayNode;
+use VendorPatches20220612\Symfony\Component\Config\Definition\ArrayNode;
+use VendorPatches20220612\Symfony\Component\Config\Definition\BaseNode;
+use VendorPatches20220612\Symfony\Component\Config\Definition\ConfigurationInterface;
+use VendorPatches20220612\Symfony\Component\Config\Definition\EnumNode;
+use VendorPatches20220612\Symfony\Component\Config\Definition\NodeInterface;
+use VendorPatches20220612\Symfony\Component\Config\Definition\PrototypedArrayNode;
 /**
  * Dumps an XML reference configuration for the given configuration/node instance.
  *

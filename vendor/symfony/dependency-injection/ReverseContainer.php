@@ -8,10 +8,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220611\Symfony\Component\DependencyInjection;
+namespace VendorPatches20220612\Symfony\Component\DependencyInjection;
 
-use VendorPatches20220611\Psr\Container\ContainerInterface;
-use VendorPatches20220611\Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
+use VendorPatches20220612\Psr\Container\ContainerInterface;
+use VendorPatches20220612\Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
 /**
  * Turns public and "container.reversible" services back to their ids.
  *

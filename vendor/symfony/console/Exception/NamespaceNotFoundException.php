@@ -8,7 +8,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220611\Symfony\Component\Console\Exception;
+namespace VendorPatches20220612\Symfony\Component\Console\Exception;
 
 /**
  * Represents an incorrect namespace typed in the console.

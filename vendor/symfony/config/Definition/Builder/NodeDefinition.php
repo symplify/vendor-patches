@@ -8,11 +8,11 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220611\Symfony\Component\Config\Definition\Builder;
+namespace VendorPatches20220612\Symfony\Component\Config\Definition\Builder;
 
-use VendorPatches20220611\Symfony\Component\Config\Definition\BaseNode;
-use VendorPatches20220611\Symfony\Component\Config\Definition\Exception\InvalidDefinitionException;
-use VendorPatches20220611\Symfony\Component\Config\Definition\NodeInterface;
+use VendorPatches20220612\Symfony\Component\Config\Definition\BaseNode;
+use VendorPatches20220612\Symfony\Component\Config\Definition\Exception\InvalidDefinitionException;
+use VendorPatches20220612\Symfony\Component\Config\Definition\NodeInterface;
 /**
  * This class provides a fluent interface for defining a node.
  *

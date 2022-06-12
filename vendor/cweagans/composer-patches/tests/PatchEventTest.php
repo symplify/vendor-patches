@@ -4,12 +4,12 @@
  * @file
  * Tests event dispatching.
  */
-namespace VendorPatches20220611\cweagans\Composer\Tests;
+namespace VendorPatches20220612\cweagans\Composer\Tests;
 
-use VendorPatches20220611\cweagans\Composer\PatchEvent;
-use VendorPatches20220611\cweagans\Composer\PatchEvents;
-use VendorPatches20220611\Composer\Package\PackageInterface;
-class PatchEventTest extends \VendorPatches20220611\PHPUnit_Framework_TestCase
+use VendorPatches20220612\cweagans\Composer\PatchEvent;
+use VendorPatches20220612\cweagans\Composer\PatchEvents;
+use VendorPatches20220612\Composer\Package\PackageInterface;
+class PatchEventTest extends \VendorPatches20220612\PHPUnit_Framework_TestCase
 {
     /**
      * Tests all the getters.
@@ -26,7 +26,7 @@ class PatchEventTest extends \VendorPatches20220611\PHPUnit_Framework_TestCase
     }
     public function patchEventDataProvider()
     {
-        $prophecy = $this->prophesize('VendorPatches20220611\\Composer\\Package\\PackageInterface');
+        $prophecy = $this->prophesize('VendorPatches20220612\\Composer\\Package\\PackageInterface');
         $package = $prophecy->reveal();
         return array(array(PatchEvents::PRE_PATCH_APPLY, $package, 'https://www.drupal.org', 'A test patch'), array(PatchEvents::POST_PATCH_APPLY, $package, 'https://www.drupal.org', 'A test patch'));
     }

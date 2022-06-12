@@ -5,9 +5,9 @@
  * Copyright (c) 2004 David Grudl (https://davidgrudl.com)
  */
 declare (strict_types=1);
-namespace VendorPatches20220611\Nette;
+namespace VendorPatches20220612\Nette;
 
-use VendorPatches20220611\Nette\Utils\ObjectHelpers;
+use VendorPatches20220612\Nette\Utils\ObjectHelpers;
 /**
  * Strict class for better experience.
  * - 'did you mean' hints

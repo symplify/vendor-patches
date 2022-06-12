@@ -8,22 +8,22 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220611\Symfony\Component\Console\Helper;
+namespace VendorPatches20220612\Symfony\Component\Console\Helper;
 
-use VendorPatches20220611\Symfony\Component\Console\Cursor;
-use VendorPatches20220611\Symfony\Component\Console\Exception\MissingInputException;
-use VendorPatches20220611\Symfony\Component\Console\Exception\RuntimeException;
-use VendorPatches20220611\Symfony\Component\Console\Formatter\OutputFormatter;
-use VendorPatches20220611\Symfony\Component\Console\Formatter\OutputFormatterStyle;
-use VendorPatches20220611\Symfony\Component\Console\Input\InputInterface;
-use VendorPatches20220611\Symfony\Component\Console\Input\StreamableInputInterface;
-use VendorPatches20220611\Symfony\Component\Console\Output\ConsoleOutputInterface;
-use VendorPatches20220611\Symfony\Component\Console\Output\ConsoleSectionOutput;
-use VendorPatches20220611\Symfony\Component\Console\Output\OutputInterface;
-use VendorPatches20220611\Symfony\Component\Console\Question\ChoiceQuestion;
-use VendorPatches20220611\Symfony\Component\Console\Question\Question;
-use VendorPatches20220611\Symfony\Component\Console\Terminal;
-use function VendorPatches20220611\Symfony\Component\String\s;
+use VendorPatches20220612\Symfony\Component\Console\Cursor;
+use VendorPatches20220612\Symfony\Component\Console\Exception\MissingInputException;
+use VendorPatches20220612\Symfony\Component\Console\Exception\RuntimeException;
+use VendorPatches20220612\Symfony\Component\Console\Formatter\OutputFormatter;
+use VendorPatches20220612\Symfony\Component\Console\Formatter\OutputFormatterStyle;
+use VendorPatches20220612\Symfony\Component\Console\Input\InputInterface;
+use VendorPatches20220612\Symfony\Component\Console\Input\StreamableInputInterface;
+use VendorPatches20220612\Symfony\Component\Console\Output\ConsoleOutputInterface;
+use VendorPatches20220612\Symfony\Component\Console\Output\ConsoleSectionOutput;
+use VendorPatches20220612\Symfony\Component\Console\Output\OutputInterface;
+use VendorPatches20220612\Symfony\Component\Console\Question\ChoiceQuestion;
+use VendorPatches20220612\Symfony\Component\Console\Question\Question;
+use VendorPatches20220612\Symfony\Component\Console\Terminal;
+use function VendorPatches20220612\Symfony\Component\String\s;
 /**
  * The QuestionHelper class provides helpers to interact with the user.
  *

@@ -5,9 +5,9 @@
  * Copyright (c) 2004 David Grudl (https://davidgrudl.com)
  */
 declare (strict_types=1);
-namespace VendorPatches20220611\Nette\Utils;
+namespace VendorPatches20220612\Nette\Utils;
 
-use VendorPatches20220611\Nette;
+use VendorPatches20220612\Nette;
 /**
  * Basic manipulation with images. Supported types are JPEG, PNG, GIF, WEBP, AVIF and BMP.
  *

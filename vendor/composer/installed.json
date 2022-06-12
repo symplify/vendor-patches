@@ -31,7 +31,7 @@
             "installation-source": "dist",
             "autoload": {
                 "psr-4": {
-                    "VendorPatches20220611\\cweagans\\Composer\\": "src"
+                    "VendorPatches20220612\\cweagans\\Composer\\": "src"
                 }
             },
             "notification-url": "https:\/\/packagist.org\/downloads\/",
@@ -167,7 +167,7 @@
             "installation-source": "dist",
             "autoload": {
                 "psr-4": {
-                    "VendorPatches20220611\\Psr\\Container\\": "src\/"
+                    "VendorPatches20220612\\Psr\\Container\\": "src\/"
                 }
             },
             "notification-url": "https:\/\/packagist.org\/downloads\/",
@@ -304,7 +304,7 @@
             "installation-source": "dist",
             "autoload": {
                 "psr-4": {
-                    "VendorPatches20220611\\Symfony\\Component\\Config\\": ""
+                    "VendorPatches20220612\\Symfony\\Component\\Config\\": ""
                 },
                 "exclude-from-classmap": [
                     "\/Tests\/"
@@ -396,7 +396,7 @@
             "installation-source": "dist",
             "autoload": {
                 "psr-4": {
-                    "VendorPatches20220611\\Symfony\\Component\\Console\\": ""
+                    "VendorPatches20220612\\Symfony\\Component\\Console\\": ""
                 },
                 "exclude-from-classmap": [
                     "\/Tests\/"
@@ -493,7 +493,7 @@
             "installation-source": "dist",
             "autoload": {
                 "psr-4": {
-                    "VendorPatches20220611\\Symfony\\Component\\DependencyInjection\\": ""
+                    "VendorPatches20220612\\Symfony\\Component\\DependencyInjection\\": ""
                 },
                 "exclude-from-classmap": [
                     "\/Tests\/"
@@ -629,7 +629,7 @@
             "installation-source": "dist",
             "autoload": {
                 "psr-4": {
-                    "VendorPatches20220611\\Symfony\\Component\\Filesystem\\": ""
+                    "VendorPatches20220612\\Symfony\\Component\\Filesystem\\": ""
                 },
                 "exclude-from-classmap": [
                     "\/Tests\/"
@@ -693,7 +693,7 @@
             "installation-source": "dist",
             "autoload": {
                 "psr-4": {
-                    "VendorPatches20220611\\Symfony\\Component\\Finder\\": ""
+                    "VendorPatches20220612\\Symfony\\Component\\Finder\\": ""
                 },
                 "exclude-from-classmap": [
                     "\/Tests\/"
@@ -775,7 +775,7 @@
                     "bootstrap.php"
                 ],
                 "psr-4": {
-                    "VendorPatches20220611\\Symfony\\Polyfill\\Ctype\\": ""
+                    "VendorPatches20220612\\Symfony\\Polyfill\\Ctype\\": ""
                 }
             },
             "notification-url": "https:\/\/packagist.org\/downloads\/",
@@ -857,7 +857,7 @@
                     "bootstrap.php"
                 ],
                 "psr-4": {
-                    "VendorPatches20220611\\Symfony\\Polyfill\\Intl\\Grapheme\\": ""
+                    "VendorPatches20220612\\Symfony\\Polyfill\\Intl\\Grapheme\\": ""
                 }
             },
             "notification-url": "https:\/\/packagist.org\/downloads\/",
@@ -941,7 +941,7 @@
                     "bootstrap.php"
                 ],
                 "psr-4": {
-                    "VendorPatches20220611\\Symfony\\Polyfill\\Intl\\Normalizer\\": ""
+                    "VendorPatches20220612\\Symfony\\Polyfill\\Intl\\Normalizer\\": ""
                 },
                 "classmap": [
                     "Resources\/stubs"
@@ -1031,7 +1031,7 @@
                     "bootstrap.php"
                 ],
                 "psr-4": {
-                    "VendorPatches20220611\\Symfony\\Polyfill\\Mbstring\\": ""
+                    "VendorPatches20220612\\Symfony\\Polyfill\\Mbstring\\": ""
                 }
             },
             "notification-url": "https:\/\/packagist.org\/downloads\/",
@@ -1111,7 +1111,7 @@
                     "bootstrap.php"
                 ],
                 "psr-4": {
-                    "VendorPatches20220611\\Symfony\\Polyfill\\Php81\\": ""
+                    "VendorPatches20220612\\Symfony\\Polyfill\\Php81\\": ""
                 },
                 "classmap": [
                     "Resources\/stubs"
@@ -1197,7 +1197,7 @@
             "installation-source": "dist",
             "autoload": {
                 "psr-4": {
-                    "VendorPatches20220611\\Symfony\\Contracts\\Service\\": ""
+                    "VendorPatches20220612\\Symfony\\Contracts\\Service\\": ""
                 }
             },
             "notification-url": "https:\/\/packagist.org\/downloads\/",
@@ -1282,7 +1282,7 @@
                     "Resources\/functions.php"
                 ],
                 "psr-4": {
-                    "VendorPatches20220611\\Symfony\\Component\\String\\": ""
+                    "VendorPatches20220612\\Symfony\\Component\\String\\": ""
                 },
                 "exclude-from-classmap": [
                     "\/Tests\/"
@@ -1380,12 +1380,12 @@
             "installation-source": "dist",
             "autoload": {
                 "psr-4": {
-                    "VendorPatches20220611\\Symplify\\AutowireArrayParameter\\": "src"
+                    "VendorPatches20220612\\Symplify\\AutowireArrayParameter\\": "src"
                 }
             },
             "autoload-dev": {
                 "psr-4": {
-                    "VendorPatches20220611\\Symplify\\AutowireArrayParameter\\Tests\\": "tests"
+                    "VendorPatches20220612\\Symplify\\AutowireArrayParameter\\Tests\\": "tests"
                 }
             },
             "license": [
@@ -1450,12 +1450,12 @@
             "installation-source": "dist",
             "autoload": {
                 "psr-4": {
-                    "VendorPatches20220611\\Symplify\\ComposerJsonManipulator\\": "src"
+                    "VendorPatches20220612\\Symplify\\ComposerJsonManipulator\\": "src"
                 }
             },
             "autoload-dev": {
                 "psr-4": {
-                    "VendorPatches20220611\\Symplify\\ComposerJsonManipulator\\Tests\\": "tests"
+                    "VendorPatches20220612\\Symplify\\ComposerJsonManipulator\\Tests\\": "tests"
                 }
             },
             "license": [
@@ -1522,12 +1522,12 @@
             "installation-source": "dist",
             "autoload": {
                 "psr-4": {
-                    "VendorPatches20220611\\Symplify\\EasyTesting\\": "src"
+                    "VendorPatches20220612\\Symplify\\EasyTesting\\": "src"
                 }
             },
             "autoload-dev": {
                 "psr-4": {
-                    "VendorPatches20220611\\Symplify\\EasyTesting\\Tests\\": "tests"
+                    "VendorPatches20220612\\Symplify\\EasyTesting\\Tests\\": "tests"
                 }
             },
             "license": [
@@ -1593,12 +1593,12 @@
             "installation-source": "dist",
             "autoload": {
                 "psr-4": {
-                    "VendorPatches20220611\\Symplify\\PackageBuilder\\": "src"
+                    "VendorPatches20220612\\Symplify\\PackageBuilder\\": "src"
                 }
             },
             "autoload-dev": {
                 "psr-4": {
-                    "VendorPatches20220611\\Symplify\\PackageBuilder\\Tests\\": "tests"
+                    "VendorPatches20220612\\Symplify\\PackageBuilder\\Tests\\": "tests"
                 }
             },
             "license": [
@@ -1662,12 +1662,12 @@
             "installation-source": "dist",
             "autoload": {
                 "psr-4": {
-                    "VendorPatches20220611\\Symplify\\SmartFileSystem\\": "src"
+                    "VendorPatches20220612\\Symplify\\SmartFileSystem\\": "src"
                 }
             },
             "autoload-dev": {
                 "psr-4": {
-                    "VendorPatches20220611\\Symplify\\SmartFileSystem\\Tests\\": "tests"
+                    "VendorPatches20220612\\Symplify\\SmartFileSystem\\Tests\\": "tests"
                 }
             },
             "license": [
@@ -1730,12 +1730,12 @@
             "installation-source": "dist",
             "autoload": {
                 "psr-4": {
-                    "VendorPatches20220611\\Symplify\\SymplifyKernel\\": "src"
+                    "VendorPatches20220612\\Symplify\\SymplifyKernel\\": "src"
                 }
             },
             "autoload-dev": {
                 "psr-4": {
-                    "VendorPatches20220611\\Symplify\\SymplifyKernel\\Tests\\": "tests"
+                    "VendorPatches20220612\\Symplify\\SymplifyKernel\\Tests\\": "tests"
                 }
             },
             "license": [
@@ -1784,7 +1784,7 @@
             "installation-source": "dist",
             "autoload": {
                 "psr-4": {
-                    "VendorPatches20220611\\Webmozart\\Assert\\": "src\/"
+                    "VendorPatches20220612\\Webmozart\\Assert\\": "src\/"
                 }
             },
             "notification-url": "https:\/\/packagist.org\/downloads\/",

@@ -8,12 +8,12 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220611\Symfony\Component\Console\Helper;
+namespace VendorPatches20220612\Symfony\Component\Console\Helper;
 
-use VendorPatches20220611\Symfony\Component\Console\Output\OutputInterface;
-use VendorPatches20220611\Symfony\Component\VarDumper\Cloner\ClonerInterface;
-use VendorPatches20220611\Symfony\Component\VarDumper\Cloner\VarCloner;
-use VendorPatches20220611\Symfony\Component\VarDumper\Dumper\CliDumper;
+use VendorPatches20220612\Symfony\Component\Console\Output\OutputInterface;
+use VendorPatches20220612\Symfony\Component\VarDumper\Cloner\ClonerInterface;
+use VendorPatches20220612\Symfony\Component\VarDumper\Cloner\VarCloner;
+use VendorPatches20220612\Symfony\Component\VarDumper\Dumper\CliDumper;
 /**
  * @author Roland Franssen <franssen.roland@gmail.com>
  */
