@@ -8,15 +8,15 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220612\Symfony\Component\DependencyInjection\Compiler;
+namespace VendorPatches20220613\Symfony\Component\DependencyInjection\Compiler;
 
-use VendorPatches20220612\Symfony\Component\Config\Definition\BaseNode;
-use VendorPatches20220612\Symfony\Component\Config\Definition\ConfigurationInterface;
-use VendorPatches20220612\Symfony\Component\Config\Definition\Processor;
-use VendorPatches20220612\Symfony\Component\DependencyInjection\ContainerBuilder;
-use VendorPatches20220612\Symfony\Component\DependencyInjection\Extension\ConfigurationExtensionInterface;
-use VendorPatches20220612\Symfony\Component\DependencyInjection\ParameterBag\EnvPlaceholderParameterBag;
-use VendorPatches20220612\Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
+use VendorPatches20220613\Symfony\Component\Config\Definition\BaseNode;
+use VendorPatches20220613\Symfony\Component\Config\Definition\ConfigurationInterface;
+use VendorPatches20220613\Symfony\Component\Config\Definition\Processor;
+use VendorPatches20220613\Symfony\Component\DependencyInjection\ContainerBuilder;
+use VendorPatches20220613\Symfony\Component\DependencyInjection\Extension\ConfigurationExtensionInterface;
+use VendorPatches20220613\Symfony\Component\DependencyInjection\ParameterBag\EnvPlaceholderParameterBag;
+use VendorPatches20220613\Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
 /**
  * Validates environment variable placeholders used in extension configuration with dummy values.
  *

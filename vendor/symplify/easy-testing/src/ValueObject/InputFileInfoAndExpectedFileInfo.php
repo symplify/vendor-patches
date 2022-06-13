@@ -1,9 +1,9 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches20220612\Symplify\EasyTesting\ValueObject;
+namespace VendorPatches20220613\Symplify\EasyTesting\ValueObject;
 
-use VendorPatches20220612\Symplify\SmartFileSystem\SmartFileInfo;
+use VendorPatches20220613\Symplify\SmartFileSystem\SmartFileInfo;
 final class InputFileInfoAndExpectedFileInfo
 {
     /**

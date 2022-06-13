@@ -20,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorPatches20220612\\Symfony\\Component\\Finder\\": ""
+            "VendorPatches20220613\\Symfony\\Component\\Finder\\": ""
         },
         "exclude-from-classmap": [
             "\/Tests\/"

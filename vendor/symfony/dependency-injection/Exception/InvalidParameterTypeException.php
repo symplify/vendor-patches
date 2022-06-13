@@ -8,7 +8,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220612\Symfony\Component\DependencyInjection\Exception;
+namespace VendorPatches20220613\Symfony\Component\DependencyInjection\Exception;
 
 /**
  * Thrown when trying to inject a parameter into a constructor/method with an incompatible type.

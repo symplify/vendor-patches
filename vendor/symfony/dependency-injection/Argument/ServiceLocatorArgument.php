@@ -8,9 +8,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220612\Symfony\Component\DependencyInjection\Argument;
+namespace VendorPatches20220613\Symfony\Component\DependencyInjection\Argument;
 
-use VendorPatches20220612\Symfony\Component\DependencyInjection\Reference;
+use VendorPatches20220613\Symfony\Component\DependencyInjection\Reference;
 /**
  * Represents a closure acting as a service locator.
  *

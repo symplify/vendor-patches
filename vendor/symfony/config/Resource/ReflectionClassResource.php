@@ -8,11 +8,11 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220612\Symfony\Component\Config\Resource;
+namespace VendorPatches20220613\Symfony\Component\Config\Resource;
 
-use VendorPatches20220612\Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use VendorPatches20220612\Symfony\Component\Messenger\Handler\MessageSubscriberInterface;
-use VendorPatches20220612\Symfony\Contracts\Service\ServiceSubscriberInterface;
+use VendorPatches20220613\Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use VendorPatches20220613\Symfony\Component\Messenger\Handler\MessageSubscriberInterface;
+use VendorPatches20220613\Symfony\Contracts\Service\ServiceSubscriberInterface;
 /**
  * @author Nicolas Grekas <p@tchwork.com>
  *

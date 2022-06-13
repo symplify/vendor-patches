@@ -8,19 +8,19 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220612\Symfony\Component\DependencyInjection\Compiler;
+namespace VendorPatches20220613\Symfony\Component\DependencyInjection\Compiler;
 
-use VendorPatches20220612\Symfony\Component\DependencyInjection\Argument\BoundArgument;
-use VendorPatches20220612\Symfony\Component\DependencyInjection\Argument\ServiceLocatorArgument;
-use VendorPatches20220612\Symfony\Component\DependencyInjection\Argument\TaggedIteratorArgument;
-use VendorPatches20220612\Symfony\Component\DependencyInjection\Attribute\Target;
-use VendorPatches20220612\Symfony\Component\DependencyInjection\ContainerBuilder;
-use VendorPatches20220612\Symfony\Component\DependencyInjection\Definition;
-use VendorPatches20220612\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
-use VendorPatches20220612\Symfony\Component\DependencyInjection\Exception\RuntimeException;
-use VendorPatches20220612\Symfony\Component\DependencyInjection\LazyProxy\ProxyHelper;
-use VendorPatches20220612\Symfony\Component\DependencyInjection\Reference;
-use VendorPatches20220612\Symfony\Component\DependencyInjection\TypedReference;
+use VendorPatches20220613\Symfony\Component\DependencyInjection\Argument\BoundArgument;
+use VendorPatches20220613\Symfony\Component\DependencyInjection\Argument\ServiceLocatorArgument;
+use VendorPatches20220613\Symfony\Component\DependencyInjection\Argument\TaggedIteratorArgument;
+use VendorPatches20220613\Symfony\Component\DependencyInjection\Attribute\Target;
+use VendorPatches20220613\Symfony\Component\DependencyInjection\ContainerBuilder;
+use VendorPatches20220613\Symfony\Component\DependencyInjection\Definition;
+use VendorPatches20220613\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
+use VendorPatches20220613\Symfony\Component\DependencyInjection\Exception\RuntimeException;
+use VendorPatches20220613\Symfony\Component\DependencyInjection\LazyProxy\ProxyHelper;
+use VendorPatches20220613\Symfony\Component\DependencyInjection\Reference;
+use VendorPatches20220613\Symfony\Component\DependencyInjection\TypedReference;
 /**
  * @author Guilhem Niot <guilhem.niot@gmail.com>
  */

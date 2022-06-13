@@ -1,15 +1,15 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches20220612\Symplify\EasyTesting\Command;
+namespace VendorPatches20220613\Symplify\EasyTesting\Command;
 
-use VendorPatches20220612\Symfony\Component\Console\Input\InputArgument;
-use VendorPatches20220612\Symfony\Component\Console\Input\InputInterface;
-use VendorPatches20220612\Symfony\Component\Console\Output\OutputInterface;
-use VendorPatches20220612\Symplify\EasyTesting\Finder\FixtureFinder;
-use VendorPatches20220612\Symplify\EasyTesting\MissplacedSkipPrefixResolver;
-use VendorPatches20220612\Symplify\EasyTesting\ValueObject\Option;
-use VendorPatches20220612\Symplify\PackageBuilder\Console\Command\AbstractSymplifyCommand;
+use VendorPatches20220613\Symfony\Component\Console\Input\InputArgument;
+use VendorPatches20220613\Symfony\Component\Console\Input\InputInterface;
+use VendorPatches20220613\Symfony\Component\Console\Output\OutputInterface;
+use VendorPatches20220613\Symplify\EasyTesting\Finder\FixtureFinder;
+use VendorPatches20220613\Symplify\EasyTesting\MissplacedSkipPrefixResolver;
+use VendorPatches20220613\Symplify\EasyTesting\ValueObject\Option;
+use VendorPatches20220613\Symplify\PackageBuilder\Console\Command\AbstractSymplifyCommand;
 final class ValidateFixtureSkipNamingCommand extends AbstractSymplifyCommand
 {
     /**

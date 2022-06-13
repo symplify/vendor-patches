@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorPatches20220612\Webmozart\Assert;
+namespace VendorPatches20220613\Webmozart\Assert;
 
 use ArrayAccess;
 use Closure;

@@ -5,7 +5,7 @@
  * Copyright (c) 2004 David Grudl (https://davidgrudl.com)
  */
 declare (strict_types=1);
-namespace VendorPatches20220612\Nette;
+namespace VendorPatches20220613\Nette;
 
 interface HtmlStringable
 {

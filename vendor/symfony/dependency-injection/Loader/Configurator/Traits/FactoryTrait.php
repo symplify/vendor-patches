@@ -8,10 +8,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220612\Symfony\Component\DependencyInjection\Loader\Configurator\Traits;
+namespace VendorPatches20220613\Symfony\Component\DependencyInjection\Loader\Configurator\Traits;
 
-use VendorPatches20220612\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
-use VendorPatches20220612\Symfony\Component\DependencyInjection\Loader\Configurator\ReferenceConfigurator;
+use VendorPatches20220613\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
+use VendorPatches20220613\Symfony\Component\DependencyInjection\Loader\Configurator\ReferenceConfigurator;
 trait FactoryTrait
 {
     /**

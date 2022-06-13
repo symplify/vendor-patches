@@ -8,12 +8,12 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220612\Symfony\Component\Console\Helper;
+namespace VendorPatches20220613\Symfony\Component\Console\Helper;
 
-use VendorPatches20220612\Symfony\Component\Console\Output\ConsoleOutputInterface;
-use VendorPatches20220612\Symfony\Component\Console\Output\OutputInterface;
-use VendorPatches20220612\Symfony\Component\Process\Exception\ProcessFailedException;
-use VendorPatches20220612\Symfony\Component\Process\Process;
+use VendorPatches20220613\Symfony\Component\Console\Output\ConsoleOutputInterface;
+use VendorPatches20220613\Symfony\Component\Console\Output\OutputInterface;
+use VendorPatches20220613\Symfony\Component\Process\Exception\ProcessFailedException;
+use VendorPatches20220613\Symfony\Component\Process\Process;
 /**
  * The ProcessHelper class provides helpers to run external processes.
  *

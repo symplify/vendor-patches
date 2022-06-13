@@ -1,7 +1,7 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches20220612\Symplify\SmartFileSystem;
+namespace VendorPatches20220613\Symplify\SmartFileSystem;
 
 /**
  * @see \Symplify\SmartFileSystem\Tests\FileSystemFilter\FileSystemFilterTest

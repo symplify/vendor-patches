@@ -8,25 +8,25 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220612\Symfony\Component\Console\Style;
+namespace VendorPatches20220613\Symfony\Component\Console\Style;
 
-use VendorPatches20220612\Symfony\Component\Console\Exception\InvalidArgumentException;
-use VendorPatches20220612\Symfony\Component\Console\Exception\RuntimeException;
-use VendorPatches20220612\Symfony\Component\Console\Formatter\OutputFormatter;
-use VendorPatches20220612\Symfony\Component\Console\Helper\Helper;
-use VendorPatches20220612\Symfony\Component\Console\Helper\ProgressBar;
-use VendorPatches20220612\Symfony\Component\Console\Helper\SymfonyQuestionHelper;
-use VendorPatches20220612\Symfony\Component\Console\Helper\Table;
-use VendorPatches20220612\Symfony\Component\Console\Helper\TableCell;
-use VendorPatches20220612\Symfony\Component\Console\Helper\TableSeparator;
-use VendorPatches20220612\Symfony\Component\Console\Input\InputInterface;
-use VendorPatches20220612\Symfony\Component\Console\Output\ConsoleOutputInterface;
-use VendorPatches20220612\Symfony\Component\Console\Output\OutputInterface;
-use VendorPatches20220612\Symfony\Component\Console\Output\TrimmedBufferOutput;
-use VendorPatches20220612\Symfony\Component\Console\Question\ChoiceQuestion;
-use VendorPatches20220612\Symfony\Component\Console\Question\ConfirmationQuestion;
-use VendorPatches20220612\Symfony\Component\Console\Question\Question;
-use VendorPatches20220612\Symfony\Component\Console\Terminal;
+use VendorPatches20220613\Symfony\Component\Console\Exception\InvalidArgumentException;
+use VendorPatches20220613\Symfony\Component\Console\Exception\RuntimeException;
+use VendorPatches20220613\Symfony\Component\Console\Formatter\OutputFormatter;
+use VendorPatches20220613\Symfony\Component\Console\Helper\Helper;
+use VendorPatches20220613\Symfony\Component\Console\Helper\ProgressBar;
+use VendorPatches20220613\Symfony\Component\Console\Helper\SymfonyQuestionHelper;
+use VendorPatches20220613\Symfony\Component\Console\Helper\Table;
+use VendorPatches20220613\Symfony\Component\Console\Helper\TableCell;
+use VendorPatches20220613\Symfony\Component\Console\Helper\TableSeparator;
+use VendorPatches20220613\Symfony\Component\Console\Input\InputInterface;
+use VendorPatches20220613\Symfony\Component\Console\Output\ConsoleOutputInterface;
+use VendorPatches20220613\Symfony\Component\Console\Output\OutputInterface;
+use VendorPatches20220613\Symfony\Component\Console\Output\TrimmedBufferOutput;
+use VendorPatches20220613\Symfony\Component\Console\Question\ChoiceQuestion;
+use VendorPatches20220613\Symfony\Component\Console\Question\ConfirmationQuestion;
+use VendorPatches20220613\Symfony\Component\Console\Question\Question;
+use VendorPatches20220613\Symfony\Component\Console\Terminal;
 /**
  * Output decorator helpers for the Symfony Style Guide.
  *

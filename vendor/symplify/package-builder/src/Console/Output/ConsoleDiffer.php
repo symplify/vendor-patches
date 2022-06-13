@@ -1,10 +1,10 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches20220612\Symplify\PackageBuilder\Console\Output;
+namespace VendorPatches20220613\Symplify\PackageBuilder\Console\Output;
 
-use VendorPatches20220612\SebastianBergmann\Diff\Differ;
-use VendorPatches20220612\Symplify\PackageBuilder\Console\Formatter\ColorConsoleDiffFormatter;
+use VendorPatches20220613\SebastianBergmann\Diff\Differ;
+use VendorPatches20220613\Symplify\PackageBuilder\Console\Formatter\ColorConsoleDiffFormatter;
 /**
  * @api
  */

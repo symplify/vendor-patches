@@ -8,12 +8,12 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220612\Symfony\Component\DependencyInjection\Compiler;
+namespace VendorPatches20220613\Symfony\Component\DependencyInjection\Compiler;
 
-use VendorPatches20220612\Symfony\Component\DependencyInjection\Attribute\Autoconfigure;
-use VendorPatches20220612\Symfony\Component\DependencyInjection\ContainerBuilder;
-use VendorPatches20220612\Symfony\Component\DependencyInjection\Definition;
-use VendorPatches20220612\Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
+use VendorPatches20220613\Symfony\Component\DependencyInjection\Attribute\Autoconfigure;
+use VendorPatches20220613\Symfony\Component\DependencyInjection\ContainerBuilder;
+use VendorPatches20220613\Symfony\Component\DependencyInjection\Definition;
+use VendorPatches20220613\Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 /**
  * Reads #[Autoconfigure] attributes on definitions that are autoconfigured
  * and don't have the "container.ignore_attributes" tag.

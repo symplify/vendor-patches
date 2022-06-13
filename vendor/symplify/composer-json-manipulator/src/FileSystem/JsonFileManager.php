@@ -1,15 +1,15 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches20220612\Symplify\ComposerJsonManipulator\FileSystem;
+namespace VendorPatches20220613\Symplify\ComposerJsonManipulator\FileSystem;
 
-use VendorPatches20220612\Nette\Utils\Json;
-use VendorPatches20220612\Symplify\ComposerJsonManipulator\Json\JsonCleaner;
-use VendorPatches20220612\Symplify\ComposerJsonManipulator\Json\JsonInliner;
-use VendorPatches20220612\Symplify\ComposerJsonManipulator\ValueObject\ComposerJson;
-use VendorPatches20220612\Symplify\PackageBuilder\Configuration\StaticEolConfiguration;
-use VendorPatches20220612\Symplify\SmartFileSystem\SmartFileInfo;
-use VendorPatches20220612\Symplify\SmartFileSystem\SmartFileSystem;
+use VendorPatches20220613\Nette\Utils\Json;
+use VendorPatches20220613\Symplify\ComposerJsonManipulator\Json\JsonCleaner;
+use VendorPatches20220613\Symplify\ComposerJsonManipulator\Json\JsonInliner;
+use VendorPatches20220613\Symplify\ComposerJsonManipulator\ValueObject\ComposerJson;
+use VendorPatches20220613\Symplify\PackageBuilder\Configuration\StaticEolConfiguration;
+use VendorPatches20220613\Symplify\SmartFileSystem\SmartFileInfo;
+use VendorPatches20220613\Symplify\SmartFileSystem\SmartFileSystem;
 /**
  * @see \Symplify\MonorepoBuilder\Tests\FileSystem\JsonFileManager\JsonFileManagerTest
  */

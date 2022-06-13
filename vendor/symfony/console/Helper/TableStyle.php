@@ -8,10 +8,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220612\Symfony\Component\Console\Helper;
+namespace VendorPatches20220613\Symfony\Component\Console\Helper;
 
-use VendorPatches20220612\Symfony\Component\Console\Exception\InvalidArgumentException;
-use VendorPatches20220612\Symfony\Component\Console\Exception\LogicException;
+use VendorPatches20220613\Symfony\Component\Console\Exception\InvalidArgumentException;
+use VendorPatches20220613\Symfony\Component\Console\Exception\LogicException;
 /**
  * Defines the styles for a Table.
  *

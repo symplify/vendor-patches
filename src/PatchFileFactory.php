@@ -3,7 +3,7 @@
 declare (strict_types=1);
 namespace Symplify\VendorPatches;
 
-use VendorPatches20220612\Nette\Utils\Strings;
+use VendorPatches20220613\Nette\Utils\Strings;
 use Symplify\VendorPatches\ValueObject\OldAndNewFileInfo;
 final class PatchFileFactory
 {
