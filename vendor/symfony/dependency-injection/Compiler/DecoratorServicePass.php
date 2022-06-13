@@ -8,14 +8,14 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220613\Symfony\Component\DependencyInjection\Compiler;
+namespace VendorPatches202206\Symfony\Component\DependencyInjection\Compiler;
 
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Alias;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\ContainerBuilder;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\ContainerInterface;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Reference;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Alias;
+use VendorPatches202206\Symfony\Component\DependencyInjection\ContainerBuilder;
+use VendorPatches202206\Symfony\Component\DependencyInjection\ContainerInterface;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Reference;
 /**
  * Overwrites a service but keeps the overridden one.
  *

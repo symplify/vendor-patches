@@ -8,10 +8,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220613\Symfony\Component\Config\Util;
+namespace VendorPatches202206\Symfony\Component\Config\Util;
 
-use VendorPatches20220613\Symfony\Component\Config\Util\Exception\InvalidXmlException;
-use VendorPatches20220613\Symfony\Component\Config\Util\Exception\XmlParsingException;
+use VendorPatches202206\Symfony\Component\Config\Util\Exception\InvalidXmlException;
+use VendorPatches202206\Symfony\Component\Config\Util\Exception\XmlParsingException;
 /**
  * XMLUtils is a bunch of utility methods to XML operations.
  *

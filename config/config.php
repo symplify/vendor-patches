@@ -1,17 +1,17 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches20220613;
+namespace VendorPatches202206;
 
-use VendorPatches20220613\SebastianBergmann\Diff\Differ;
-use VendorPatches20220613\SebastianBergmann\Diff\Output\UnifiedDiffOutputBuilder;
-use VendorPatches20220613\Symfony\Component\Console\Application;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use VendorPatches20220613\Symplify\PackageBuilder\Composer\VendorDirProvider;
-use VendorPatches20220613\Symplify\PackageBuilder\Yaml\ParametersMerger;
-use VendorPatches20220613\Symplify\SmartFileSystem\Json\JsonFileSystem;
+use VendorPatches202206\SebastianBergmann\Diff\Differ;
+use VendorPatches202206\SebastianBergmann\Diff\Output\UnifiedDiffOutputBuilder;
+use VendorPatches202206\Symfony\Component\Console\Application;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use VendorPatches202206\Symplify\PackageBuilder\Composer\VendorDirProvider;
+use VendorPatches202206\Symplify\PackageBuilder\Yaml\ParametersMerger;
+use VendorPatches202206\Symplify\SmartFileSystem\Json\JsonFileSystem;
 use Symplify\VendorPatches\Console\VendorPatchesApplication;
-use function VendorPatches20220613\Symfony\Component\DependencyInjection\Loader\Configurator\service;
+use function VendorPatches202206\Symfony\Component\DependencyInjection\Loader\Configurator\service;
 return static function (ContainerConfigurator $containerConfigurator) : void {
     $services = $containerConfigurator->services();
     $services->defaults()->public()->autowire();

@@ -8,42 +8,42 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220613\Symfony\Component\DependencyInjection;
+namespace VendorPatches202206\Symfony\Component\DependencyInjection;
 
-use VendorPatches20220613\Composer\InstalledVersions;
-use VendorPatches20220613\Symfony\Component\Config\Resource\ClassExistenceResource;
-use VendorPatches20220613\Symfony\Component\Config\Resource\ComposerResource;
-use VendorPatches20220613\Symfony\Component\Config\Resource\DirectoryResource;
-use VendorPatches20220613\Symfony\Component\Config\Resource\FileExistenceResource;
-use VendorPatches20220613\Symfony\Component\Config\Resource\FileResource;
-use VendorPatches20220613\Symfony\Component\Config\Resource\GlobResource;
-use VendorPatches20220613\Symfony\Component\Config\Resource\ReflectionClassResource;
-use VendorPatches20220613\Symfony\Component\Config\Resource\ResourceInterface;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Argument\AbstractArgument;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Argument\IteratorArgument;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Argument\ServiceClosureArgument;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Argument\ServiceLocator;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Argument\ServiceLocatorArgument;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Attribute\Target;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Compiler\Compiler;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Compiler\PassConfig;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Compiler\ResolveEnvPlaceholdersPass;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Exception\BadMethodCallException;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Exception\LogicException;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Exception\RuntimeException;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Exception\ServiceCircularReferenceException;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\LazyProxy\Instantiator\InstantiatorInterface;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\LazyProxy\Instantiator\RealServiceInstantiator;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\ParameterBag\EnvPlaceholderParameterBag;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
-use VendorPatches20220613\Symfony\Component\ExpressionLanguage\Expression;
-use VendorPatches20220613\Symfony\Component\ExpressionLanguage\ExpressionFunctionProviderInterface;
+use VendorPatches202206\Composer\InstalledVersions;
+use VendorPatches202206\Symfony\Component\Config\Resource\ClassExistenceResource;
+use VendorPatches202206\Symfony\Component\Config\Resource\ComposerResource;
+use VendorPatches202206\Symfony\Component\Config\Resource\DirectoryResource;
+use VendorPatches202206\Symfony\Component\Config\Resource\FileExistenceResource;
+use VendorPatches202206\Symfony\Component\Config\Resource\FileResource;
+use VendorPatches202206\Symfony\Component\Config\Resource\GlobResource;
+use VendorPatches202206\Symfony\Component\Config\Resource\ReflectionClassResource;
+use VendorPatches202206\Symfony\Component\Config\Resource\ResourceInterface;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Argument\AbstractArgument;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Argument\IteratorArgument;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Argument\ServiceClosureArgument;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Argument\ServiceLocator;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Argument\ServiceLocatorArgument;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Attribute\Target;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Compiler\Compiler;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Compiler\PassConfig;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Compiler\ResolveEnvPlaceholdersPass;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Exception\BadMethodCallException;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Exception\LogicException;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Exception\RuntimeException;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Exception\ServiceCircularReferenceException;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
+use VendorPatches202206\Symfony\Component\DependencyInjection\LazyProxy\Instantiator\InstantiatorInterface;
+use VendorPatches202206\Symfony\Component\DependencyInjection\LazyProxy\Instantiator\RealServiceInstantiator;
+use VendorPatches202206\Symfony\Component\DependencyInjection\ParameterBag\EnvPlaceholderParameterBag;
+use VendorPatches202206\Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
+use VendorPatches202206\Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
+use VendorPatches202206\Symfony\Component\ExpressionLanguage\Expression;
+use VendorPatches202206\Symfony\Component\ExpressionLanguage\ExpressionFunctionProviderInterface;
 /**
  * ContainerBuilder is a DI container that provides an API to easily describe services.
  *
@@ -1366,7 +1366,7 @@ class ContainerBuilder extends Container implements TaggedContainerInterface
     private function getExpressionLanguage() : ExpressionLanguage
     {
         if (!isset($this->expressionLanguage)) {
-            if (!\class_exists(\VendorPatches20220613\Symfony\Component\ExpressionLanguage\ExpressionLanguage::class)) {
+            if (!\class_exists(\VendorPatches202206\Symfony\Component\ExpressionLanguage\ExpressionLanguage::class)) {
                 throw new LogicException('Unable to use expressions as the Symfony ExpressionLanguage component is not installed.');
             }
             $this->expressionLanguage = new ExpressionLanguage(null, $this->expressionLanguageProviders);

@@ -8,10 +8,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220613\Symfony\Component\Console\CommandLoader;
+namespace VendorPatches202206\Symfony\Component\Console\CommandLoader;
 
-use VendorPatches20220613\Symfony\Component\Console\Command\Command;
-use VendorPatches20220613\Symfony\Component\Console\Exception\CommandNotFoundException;
+use VendorPatches202206\Symfony\Component\Console\Command\Command;
+use VendorPatches202206\Symfony\Component\Console\Exception\CommandNotFoundException;
 /**
  * A simple command loader using factories to instantiate commands lazily.
  *

@@ -8,16 +8,16 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220613\Symfony\Component\Console\Command;
+namespace VendorPatches202206\Symfony\Component\Console\Command;
 
-use VendorPatches20220613\Symfony\Component\Console\Completion\CompletionInput;
-use VendorPatches20220613\Symfony\Component\Console\Completion\CompletionSuggestions;
-use VendorPatches20220613\Symfony\Component\Console\Descriptor\ApplicationDescription;
-use VendorPatches20220613\Symfony\Component\Console\Helper\DescriptorHelper;
-use VendorPatches20220613\Symfony\Component\Console\Input\InputArgument;
-use VendorPatches20220613\Symfony\Component\Console\Input\InputInterface;
-use VendorPatches20220613\Symfony\Component\Console\Input\InputOption;
-use VendorPatches20220613\Symfony\Component\Console\Output\OutputInterface;
+use VendorPatches202206\Symfony\Component\Console\Completion\CompletionInput;
+use VendorPatches202206\Symfony\Component\Console\Completion\CompletionSuggestions;
+use VendorPatches202206\Symfony\Component\Console\Descriptor\ApplicationDescription;
+use VendorPatches202206\Symfony\Component\Console\Helper\DescriptorHelper;
+use VendorPatches202206\Symfony\Component\Console\Input\InputArgument;
+use VendorPatches202206\Symfony\Component\Console\Input\InputInterface;
+use VendorPatches202206\Symfony\Component\Console\Input\InputOption;
+use VendorPatches202206\Symfony\Component\Console\Output\OutputInterface;
 /**
  * ListCommand displays the list of all available commands for the application.
  *

@@ -1,9 +1,9 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches20220613\Symplify\SymplifyKernel\Contract;
+namespace VendorPatches202206\Symplify\SymplifyKernel\Contract;
 
-use VendorPatches20220613\Psr\Container\ContainerInterface;
+use VendorPatches202206\Psr\Container\ContainerInterface;
 /**
  * @api
  */

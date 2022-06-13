@@ -1,7 +1,7 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches20220613\Symplify\PackageBuilder\Matcher;
+namespace VendorPatches202206\Symplify\PackageBuilder\Matcher;
 
 /**
  * @api

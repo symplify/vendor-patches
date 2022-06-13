@@ -8,11 +8,11 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220613\Symfony\Component\DependencyInjection\Loader\Configurator\Traits;
+namespace VendorPatches202206\Symfony\Component\DependencyInjection\Loader\Configurator\Traits;
 
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Argument\BoundArgument;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Loader\Configurator\DefaultsConfigurator;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Loader\Configurator\InstanceofConfigurator;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Argument\BoundArgument;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Loader\Configurator\DefaultsConfigurator;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Loader\Configurator\InstanceofConfigurator;
 trait BindTrait
 {
     /**

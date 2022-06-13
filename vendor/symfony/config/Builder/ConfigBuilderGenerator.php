@@ -8,20 +8,20 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220613\Symfony\Component\Config\Builder;
+namespace VendorPatches202206\Symfony\Component\Config\Builder;
 
-use VendorPatches20220613\Symfony\Component\Config\Definition\ArrayNode;
-use VendorPatches20220613\Symfony\Component\Config\Definition\BooleanNode;
-use VendorPatches20220613\Symfony\Component\Config\Definition\ConfigurationInterface;
-use VendorPatches20220613\Symfony\Component\Config\Definition\EnumNode;
-use VendorPatches20220613\Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
-use VendorPatches20220613\Symfony\Component\Config\Definition\FloatNode;
-use VendorPatches20220613\Symfony\Component\Config\Definition\IntegerNode;
-use VendorPatches20220613\Symfony\Component\Config\Definition\NodeInterface;
-use VendorPatches20220613\Symfony\Component\Config\Definition\PrototypedArrayNode;
-use VendorPatches20220613\Symfony\Component\Config\Definition\ScalarNode;
-use VendorPatches20220613\Symfony\Component\Config\Definition\VariableNode;
-use VendorPatches20220613\Symfony\Component\Config\Loader\ParamConfigurator;
+use VendorPatches202206\Symfony\Component\Config\Definition\ArrayNode;
+use VendorPatches202206\Symfony\Component\Config\Definition\BooleanNode;
+use VendorPatches202206\Symfony\Component\Config\Definition\ConfigurationInterface;
+use VendorPatches202206\Symfony\Component\Config\Definition\EnumNode;
+use VendorPatches202206\Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
+use VendorPatches202206\Symfony\Component\Config\Definition\FloatNode;
+use VendorPatches202206\Symfony\Component\Config\Definition\IntegerNode;
+use VendorPatches202206\Symfony\Component\Config\Definition\NodeInterface;
+use VendorPatches202206\Symfony\Component\Config\Definition\PrototypedArrayNode;
+use VendorPatches202206\Symfony\Component\Config\Definition\ScalarNode;
+use VendorPatches202206\Symfony\Component\Config\Definition\VariableNode;
+use VendorPatches202206\Symfony\Component\Config\Loader\ParamConfigurator;
 /**
  * Generate ConfigBuilders to help create valid config.
  *
@@ -48,7 +48,7 @@ class ConfigBuilderGenerator implements ConfigBuilderGeneratorInterface
     {
         $this->classes = [];
         $rootNode = $configuration->getConfigTreeBuilder()->buildTree();
-        $rootClass = new ClassBuilder('VendorPatches20220613\\Symfony\\Config', $rootNode->getName());
+        $rootClass = new ClassBuilder('VendorPatches202206\\Symfony\\Config', $rootNode->getName());
         $path = $this->getFullPath($rootClass);
         if (!\is_file($path)) {
             // Generate the class if the file not exists

@@ -8,14 +8,14 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220613\Symfony\Component\Console\Helper;
+namespace VendorPatches202206\Symfony\Component\Console\Helper;
 
-use VendorPatches20220613\Symfony\Component\Console\Formatter\OutputFormatter;
-use VendorPatches20220613\Symfony\Component\Console\Output\OutputInterface;
-use VendorPatches20220613\Symfony\Component\Console\Question\ChoiceQuestion;
-use VendorPatches20220613\Symfony\Component\Console\Question\ConfirmationQuestion;
-use VendorPatches20220613\Symfony\Component\Console\Question\Question;
-use VendorPatches20220613\Symfony\Component\Console\Style\SymfonyStyle;
+use VendorPatches202206\Symfony\Component\Console\Formatter\OutputFormatter;
+use VendorPatches202206\Symfony\Component\Console\Output\OutputInterface;
+use VendorPatches202206\Symfony\Component\Console\Question\ChoiceQuestion;
+use VendorPatches202206\Symfony\Component\Console\Question\ConfirmationQuestion;
+use VendorPatches202206\Symfony\Component\Console\Question\Question;
+use VendorPatches202206\Symfony\Component\Console\Style\SymfonyStyle;
 /**
  * Symfony Style Guide compliant question helper.
  *

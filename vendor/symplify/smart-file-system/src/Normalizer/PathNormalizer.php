@@ -1,9 +1,9 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches20220613\Symplify\SmartFileSystem\Normalizer;
+namespace VendorPatches202206\Symplify\SmartFileSystem\Normalizer;
 
-use VendorPatches20220613\Nette\Utils\Strings;
+use VendorPatches202206\Nette\Utils\Strings;
 /**
  * @api
  *

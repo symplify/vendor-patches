@@ -8,26 +8,26 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220613\Symfony\Component\DependencyInjection\Dumper;
+namespace VendorPatches202206\Symfony\Component\DependencyInjection\Dumper;
 
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Alias;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Argument\AbstractArgument;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Argument\ArgumentInterface;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Argument\IteratorArgument;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Argument\ServiceClosureArgument;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Argument\ServiceLocatorArgument;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Argument\TaggedIteratorArgument;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\ContainerInterface;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Definition;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Exception\LogicException;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Exception\RuntimeException;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Parameter;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Reference;
-use VendorPatches20220613\Symfony\Component\ExpressionLanguage\Expression;
-use VendorPatches20220613\Symfony\Component\Yaml\Dumper as YmlDumper;
-use VendorPatches20220613\Symfony\Component\Yaml\Parser;
-use VendorPatches20220613\Symfony\Component\Yaml\Tag\TaggedValue;
-use VendorPatches20220613\Symfony\Component\Yaml\Yaml;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Alias;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Argument\AbstractArgument;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Argument\ArgumentInterface;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Argument\IteratorArgument;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Argument\ServiceClosureArgument;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Argument\ServiceLocatorArgument;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Argument\TaggedIteratorArgument;
+use VendorPatches202206\Symfony\Component\DependencyInjection\ContainerInterface;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Definition;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Exception\LogicException;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Exception\RuntimeException;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Parameter;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Reference;
+use VendorPatches202206\Symfony\Component\ExpressionLanguage\Expression;
+use VendorPatches202206\Symfony\Component\Yaml\Dumper as YmlDumper;
+use VendorPatches202206\Symfony\Component\Yaml\Parser;
+use VendorPatches202206\Symfony\Component\Yaml\Tag\TaggedValue;
+use VendorPatches202206\Symfony\Component\Yaml\Yaml;
 /**
  * YamlDumper dumps a service container as a YAML string.
  *

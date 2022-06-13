@@ -8,18 +8,18 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220613\Symfony\Component\DependencyInjection\Compiler;
+namespace VendorPatches202206\Symfony\Component\DependencyInjection\Compiler;
 
-use VendorPatches20220613\Symfony\Component\Config\Definition\BaseNode;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\ContainerBuilder;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Exception\LogicException;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Exception\RuntimeException;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Extension\ConfigurationExtensionInterface;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Extension\Extension;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\ParameterBag\EnvPlaceholderParameterBag;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
+use VendorPatches202206\Symfony\Component\Config\Definition\BaseNode;
+use VendorPatches202206\Symfony\Component\DependencyInjection\ContainerBuilder;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Exception\LogicException;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Exception\RuntimeException;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Extension\ConfigurationExtensionInterface;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Extension\Extension;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
+use VendorPatches202206\Symfony\Component\DependencyInjection\ParameterBag\EnvPlaceholderParameterBag;
+use VendorPatches202206\Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 /**
  * Merges extension configs into the container builder.
  *

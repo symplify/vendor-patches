@@ -8,20 +8,20 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220613\Symfony\Component\DependencyInjection\Loader;
+namespace VendorPatches202206\Symfony\Component\DependencyInjection\Loader;
 
-use VendorPatches20220613\Symfony\Component\Config\Exception\FileLocatorFileNotFoundException;
-use VendorPatches20220613\Symfony\Component\Config\Exception\LoaderLoadException;
-use VendorPatches20220613\Symfony\Component\Config\FileLocatorInterface;
-use VendorPatches20220613\Symfony\Component\Config\Loader\FileLoader as BaseFileLoader;
-use VendorPatches20220613\Symfony\Component\Config\Loader\Loader;
-use VendorPatches20220613\Symfony\Component\Config\Resource\GlobResource;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Attribute\When;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\ChildDefinition;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Compiler\RegisterAutoconfigureAttributesPass;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\ContainerBuilder;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Definition;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
+use VendorPatches202206\Symfony\Component\Config\Exception\FileLocatorFileNotFoundException;
+use VendorPatches202206\Symfony\Component\Config\Exception\LoaderLoadException;
+use VendorPatches202206\Symfony\Component\Config\FileLocatorInterface;
+use VendorPatches202206\Symfony\Component\Config\Loader\FileLoader as BaseFileLoader;
+use VendorPatches202206\Symfony\Component\Config\Loader\Loader;
+use VendorPatches202206\Symfony\Component\Config\Resource\GlobResource;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Attribute\When;
+use VendorPatches202206\Symfony\Component\DependencyInjection\ChildDefinition;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Compiler\RegisterAutoconfigureAttributesPass;
+use VendorPatches202206\Symfony\Component\DependencyInjection\ContainerBuilder;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Definition;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
 /**
  * FileLoader is the abstract class used by all built-in loaders that are file based.
  *

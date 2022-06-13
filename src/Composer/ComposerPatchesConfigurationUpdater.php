@@ -3,12 +3,12 @@
 declare (strict_types=1);
 namespace Symplify\VendorPatches\Composer;
 
-use VendorPatches20220613\Symplify\Astral\Exception\ShouldNotHappenException;
-use VendorPatches20220613\Symplify\ComposerJsonManipulator\ComposerJsonFactory;
-use VendorPatches20220613\Symplify\ComposerJsonManipulator\FileSystem\JsonFileManager;
-use VendorPatches20220613\Symplify\ComposerJsonManipulator\ValueObject\ComposerJson;
-use VendorPatches20220613\Symplify\PackageBuilder\Yaml\ParametersMerger;
-use VendorPatches20220613\Symplify\SmartFileSystem\SmartFileInfo;
+use VendorPatches202206\Symplify\Astral\Exception\ShouldNotHappenException;
+use VendorPatches202206\Symplify\ComposerJsonManipulator\ComposerJsonFactory;
+use VendorPatches202206\Symplify\ComposerJsonManipulator\FileSystem\JsonFileManager;
+use VendorPatches202206\Symplify\ComposerJsonManipulator\ValueObject\ComposerJson;
+use VendorPatches202206\Symplify\PackageBuilder\Yaml\ParametersMerger;
+use VendorPatches202206\Symplify\SmartFileSystem\SmartFileInfo;
 /**
  * @see \Symplify\VendorPatches\Tests\Composer\ComposerPatchesConfigurationUpdater\ComposerPatchesConfigurationUpdaterTest
  */

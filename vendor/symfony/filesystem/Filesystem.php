@@ -8,11 +8,11 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220613\Symfony\Component\Filesystem;
+namespace VendorPatches202206\Symfony\Component\Filesystem;
 
-use VendorPatches20220613\Symfony\Component\Filesystem\Exception\FileNotFoundException;
-use VendorPatches20220613\Symfony\Component\Filesystem\Exception\InvalidArgumentException;
-use VendorPatches20220613\Symfony\Component\Filesystem\Exception\IOException;
+use VendorPatches202206\Symfony\Component\Filesystem\Exception\FileNotFoundException;
+use VendorPatches202206\Symfony\Component\Filesystem\Exception\InvalidArgumentException;
+use VendorPatches202206\Symfony\Component\Filesystem\Exception\IOException;
 /**
  * Provides basic utility to manipulate the file system.
  *

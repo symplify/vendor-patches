@@ -34,7 +34,7 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorPatches20220613\\Symfony\\Contracts\\Service\\": ""
+            "VendorPatches202206\\Symfony\\Contracts\\Service\\": ""
         }
     },
     "minimum-stability": "dev",

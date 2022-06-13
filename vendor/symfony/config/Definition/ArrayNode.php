@@ -8,11 +8,11 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches20220613\Symfony\Component\Config\Definition;
+namespace VendorPatches202206\Symfony\Component\Config\Definition;
 
-use VendorPatches20220613\Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
-use VendorPatches20220613\Symfony\Component\Config\Definition\Exception\InvalidTypeException;
-use VendorPatches20220613\Symfony\Component\Config\Definition\Exception\UnsetKeyException;
+use VendorPatches202206\Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
+use VendorPatches202206\Symfony\Component\Config\Definition\Exception\InvalidTypeException;
+use VendorPatches202206\Symfony\Component\Config\Definition\Exception\UnsetKeyException;
 /**
  * Represents an Array node in the config tree.
  *

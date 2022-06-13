@@ -5,9 +5,9 @@
  * Copyright (c) 2004 David Grudl (https://davidgrudl.com)
  */
 declare (strict_types=1);
-namespace VendorPatches20220613\Nette\Utils;
+namespace VendorPatches202206\Nette\Utils;
 
-use VendorPatches20220613\Nette;
+use VendorPatches202206\Nette;
 /**
  * PHP type reflection.
  */

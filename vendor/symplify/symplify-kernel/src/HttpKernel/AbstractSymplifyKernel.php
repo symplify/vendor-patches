@@ -1,18 +1,18 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches20220613\Symplify\SymplifyKernel\HttpKernel;
+namespace VendorPatches202206\Symplify\SymplifyKernel\HttpKernel;
 
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Container;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\ContainerInterface;
-use VendorPatches20220613\Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
-use VendorPatches20220613\Symplify\AutowireArrayParameter\DependencyInjection\CompilerPass\AutowireArrayParameterCompilerPass;
-use VendorPatches20220613\Symplify\SymplifyKernel\Config\Loader\ParameterMergingLoaderFactory;
-use VendorPatches20220613\Symplify\SymplifyKernel\ContainerBuilderFactory;
-use VendorPatches20220613\Symplify\SymplifyKernel\Contract\LightKernelInterface;
-use VendorPatches20220613\Symplify\SymplifyKernel\Exception\ShouldNotHappenException;
-use VendorPatches20220613\Symplify\SymplifyKernel\ValueObject\SymplifyKernelConfig;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Container;
+use VendorPatches202206\Symfony\Component\DependencyInjection\ContainerInterface;
+use VendorPatches202206\Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
+use VendorPatches202206\Symplify\AutowireArrayParameter\DependencyInjection\CompilerPass\AutowireArrayParameterCompilerPass;
+use VendorPatches202206\Symplify\SymplifyKernel\Config\Loader\ParameterMergingLoaderFactory;
+use VendorPatches202206\Symplify\SymplifyKernel\ContainerBuilderFactory;
+use VendorPatches202206\Symplify\SymplifyKernel\Contract\LightKernelInterface;
+use VendorPatches202206\Symplify\SymplifyKernel\Exception\ShouldNotHappenException;
+use VendorPatches202206\Symplify\SymplifyKernel\ValueObject\SymplifyKernelConfig;
 /**
  * @api
  */
@@ -37,7 +37,7 @@ abstract class AbstractSymplifyKernel implements LightKernelInterface
         $this->container = $containerBuilder;
         return $containerBuilder;
     }
-    public function getContainer() : \VendorPatches20220613\Psr\Container\ContainerInterface
+    public function getContainer() : \VendorPatches202206\Psr\Container\ContainerInterface
     {
         if (!$this->container instanceof Container) {
             throw new ShouldNotHappenException();

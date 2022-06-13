@@ -1,14 +1,14 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches20220613\Symplify\SmartFileSystem;
+namespace VendorPatches202206\Symplify\SmartFileSystem;
 
-use VendorPatches20220613\Nette\Utils\Strings;
-use VendorPatches20220613\Symfony\Component\Finder\SplFileInfo;
-use VendorPatches20220613\Symplify\EasyTesting\PHPUnit\StaticPHPUnitEnvironment;
-use VendorPatches20220613\Symplify\EasyTesting\StaticFixtureSplitter;
-use VendorPatches20220613\Symplify\SmartFileSystem\Exception\DirectoryNotFoundException;
-use VendorPatches20220613\Symplify\SmartFileSystem\Exception\FileNotFoundException;
+use VendorPatches202206\Nette\Utils\Strings;
+use VendorPatches202206\Symfony\Component\Finder\SplFileInfo;
+use VendorPatches202206\Symplify\EasyTesting\PHPUnit\StaticPHPUnitEnvironment;
+use VendorPatches202206\Symplify\EasyTesting\StaticFixtureSplitter;
+use VendorPatches202206\Symplify\SmartFileSystem\Exception\DirectoryNotFoundException;
+use VendorPatches202206\Symplify\SmartFileSystem\Exception\FileNotFoundException;
 /**
  * @see \Symplify\SmartFileSystem\Tests\SmartFileInfo\SmartFileInfoTest
  */

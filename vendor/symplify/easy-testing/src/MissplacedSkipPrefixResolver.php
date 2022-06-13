@@ -1,13 +1,13 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches20220613\Symplify\EasyTesting;
+namespace VendorPatches202206\Symplify\EasyTesting;
 
-use VendorPatches20220613\Nette\Utils\Strings;
-use VendorPatches20220613\Symplify\EasyTesting\ValueObject\IncorrectAndMissingSkips;
-use VendorPatches20220613\Symplify\EasyTesting\ValueObject\Prefix;
-use VendorPatches20220613\Symplify\EasyTesting\ValueObject\SplitLine;
-use VendorPatches20220613\Symplify\SmartFileSystem\SmartFileInfo;
+use VendorPatches202206\Nette\Utils\Strings;
+use VendorPatches202206\Symplify\EasyTesting\ValueObject\IncorrectAndMissingSkips;
+use VendorPatches202206\Symplify\EasyTesting\ValueObject\Prefix;
+use VendorPatches202206\Symplify\EasyTesting\ValueObject\SplitLine;
+use VendorPatches202206\Symplify\SmartFileSystem\SmartFileInfo;
 /**
  * @see \Symplify\EasyTesting\Tests\MissingSkipPrefixResolver\MissingSkipPrefixResolverTest
  */
