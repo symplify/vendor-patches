@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit1a0396d5d7d1993217629652fc091323
+class ComposerStaticInitb2aa3dea418c76c7d075472f4c4a6a1a
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -665,7 +665,6 @@ class ComposerStaticInit1a0396d5d7d1993217629652fc091323
         'VendorPatches202206\\Symplify\\PackageBuilder\\Composer\\VendorDirProvider' => __DIR__ . '/..' . '/symplify/package-builder/src/Composer/VendorDirProvider.php',
         'VendorPatches202206\\Symplify\\PackageBuilder\\Configuration\\StaticEolConfiguration' => __DIR__ . '/..' . '/symplify/package-builder/src/Configuration/StaticEolConfiguration.php',
         'VendorPatches202206\\Symplify\\PackageBuilder\\Console\\Command\\AbstractSymplifyCommand' => __DIR__ . '/..' . '/symplify/package-builder/src/Console/Command/AbstractSymplifyCommand.php',
-        'VendorPatches202206\\Symplify\\PackageBuilder\\Console\\Command\\CommandNaming' => __DIR__ . '/..' . '/symplify/package-builder/src/Console/Command/CommandNaming.php',
         'VendorPatches202206\\Symplify\\PackageBuilder\\Console\\Formatter\\ColorConsoleDiffFormatter' => __DIR__ . '/..' . '/symplify/package-builder/src/Console/Formatter/ColorConsoleDiffFormatter.php',
         'VendorPatches202206\\Symplify\\PackageBuilder\\Console\\Input\\StaticInputDetector' => __DIR__ . '/..' . '/symplify/package-builder/src/Console/Input/StaticInputDetector.php',
         'VendorPatches202206\\Symplify\\PackageBuilder\\Console\\Output\\ConsoleDiffer' => __DIR__ . '/..' . '/symplify/package-builder/src/Console/Output/ConsoleDiffer.php',
@@ -718,9 +717,9 @@ class ComposerStaticInit1a0396d5d7d1993217629652fc091323
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit1a0396d5d7d1993217629652fc091323::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit1a0396d5d7d1993217629652fc091323::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit1a0396d5d7d1993217629652fc091323::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitb2aa3dea418c76c7d075472f4c4a6a1a::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitb2aa3dea418c76c7d075472f4c4a6a1a::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitb2aa3dea418c76c7d075472f4c4a6a1a::$classMap;
 
         }, null, ClassLoader::class);
     }
