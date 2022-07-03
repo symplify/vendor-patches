@@ -8,11 +8,11 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202206\Symfony\Component\DependencyInjection;
+namespace VendorPatches202207\Symfony\Component\DependencyInjection;
 
-use VendorPatches202206\Symfony\Component\DependencyInjection\Exception\EnvNotFoundException;
-use VendorPatches202206\Symfony\Component\DependencyInjection\Exception\ParameterCircularReferenceException;
-use VendorPatches202206\Symfony\Component\DependencyInjection\Exception\RuntimeException;
+use VendorPatches202207\Symfony\Component\DependencyInjection\Exception\EnvNotFoundException;
+use VendorPatches202207\Symfony\Component\DependencyInjection\Exception\ParameterCircularReferenceException;
+use VendorPatches202207\Symfony\Component\DependencyInjection\Exception\RuntimeException;
 /**
  * @author Nicolas Grekas <p@tchwork.com>
  */

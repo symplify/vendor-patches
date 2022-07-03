@@ -1,10 +1,10 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches202206\Symplify\EasyTesting\DataProvider;
+namespace VendorPatches202207\Symplify\EasyTesting\DataProvider;
 
-use VendorPatches202206\Symplify\SmartFileSystem\SmartFileInfo;
-use VendorPatches202206\Symplify\SmartFileSystem\SmartFileSystem;
+use VendorPatches202207\Symplify\SmartFileSystem\SmartFileInfo;
+use VendorPatches202207\Symplify\SmartFileSystem\SmartFileSystem;
 /**
  * @api
  */

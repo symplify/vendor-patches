@@ -8,11 +8,11 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202206\Symfony\Contracts\Service\Test;
+namespace VendorPatches202207\Symfony\Contracts\Service\Test;
 
-use VendorPatches202206\PHPUnit\Framework\TestCase;
-use VendorPatches202206\Psr\Container\ContainerInterface;
-use VendorPatches202206\Symfony\Contracts\Service\ServiceLocatorTrait;
+use VendorPatches202207\PHPUnit\Framework\TestCase;
+use VendorPatches202207\Psr\Container\ContainerInterface;
+use VendorPatches202207\Symfony\Contracts\Service\ServiceLocatorTrait;
 abstract class ServiceLocatorTest extends TestCase
 {
     protected function getServiceLocator(array $factories) : ContainerInterface
@@ -59,7 +59,7 @@ abstract class ServiceLocatorTest extends TestCase
     public function testThrowsOnUndefinedInternalService()
     {
         if (!$this->getExpectedException()) {
-            $this->expectException(\VendorPatches202206\Psr\Container\NotFoundExceptionInterface::class);
+            $this->expectException(\VendorPatches202207\Psr\Container\NotFoundExceptionInterface::class);
             $this->expectExceptionMessage('The service "foo" has a dependency on a non-existent service "bar". This locator only knows about the "foo" service.');
         }
         $locator = $this->getServiceLocator(['foo' => function () use(&$locator) {
@@ -69,7 +69,7 @@ abstract class ServiceLocatorTest extends TestCase
     }
     public function testThrowsOnCircularReference()
     {
-        $this->expectException(\VendorPatches202206\Psr\Container\ContainerExceptionInterface::class);
+        $this->expectException(\VendorPatches202207\Psr\Container\ContainerExceptionInterface::class);
         $this->expectExceptionMessage('Circular reference detected for service "bar", path: "bar -> baz -> bar".');
         $locator = $this->getServiceLocator(['foo' => function () use(&$locator) {
             return $locator->get('bar');

@@ -17,12 +17,12 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorPatches202206\\Symplify\\SymplifyKernel\\": "src"
+            "VendorPatches202207\\Symplify\\SymplifyKernel\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorPatches202206\\Symplify\\SymplifyKernel\\Tests\\": "tests"
+            "VendorPatches202207\\Symplify\\SymplifyKernel\\Tests\\": "tests"
         }
     },
     "extra": {

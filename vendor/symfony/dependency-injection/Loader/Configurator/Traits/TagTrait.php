@@ -8,9 +8,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202206\Symfony\Component\DependencyInjection\Loader\Configurator\Traits;
+namespace VendorPatches202207\Symfony\Component\DependencyInjection\Loader\Configurator\Traits;
 
-use VendorPatches202206\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
+use VendorPatches202207\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
 trait TagTrait
 {
     /**

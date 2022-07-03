@@ -23,12 +23,12 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorPatches202206\\cweagans\\Composer\\": "src"
+            "VendorPatches202207\\cweagans\\Composer\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorPatches202206\\cweagans\\Composer\\Tests\\": "tests"
+            "VendorPatches202207\\cweagans\\Composer\\Tests\\": "tests"
         }
     }
 }

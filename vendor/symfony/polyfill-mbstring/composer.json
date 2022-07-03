@@ -29,7 +29,7 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorPatches202206\\Symfony\\Polyfill\\Mbstring\\": ""
+            "VendorPatches202207\\Symfony\\Polyfill\\Mbstring\\": ""
         },
         "files": [
             "bootstrap.php"

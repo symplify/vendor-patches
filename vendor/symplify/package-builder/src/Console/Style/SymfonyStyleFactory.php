@@ -1,15 +1,15 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches202206\Symplify\PackageBuilder\Console\Style;
+namespace VendorPatches202207\Symplify\PackageBuilder\Console\Style;
 
-use VendorPatches202206\Symfony\Component\Console\Application;
-use VendorPatches202206\Symfony\Component\Console\Input\ArgvInput;
-use VendorPatches202206\Symfony\Component\Console\Output\ConsoleOutput;
-use VendorPatches202206\Symfony\Component\Console\Output\OutputInterface;
-use VendorPatches202206\Symfony\Component\Console\Style\SymfonyStyle;
-use VendorPatches202206\Symplify\EasyTesting\PHPUnit\StaticPHPUnitEnvironment;
-use VendorPatches202206\Symplify\PackageBuilder\Reflection\PrivatesCaller;
+use VendorPatches202207\Symfony\Component\Console\Application;
+use VendorPatches202207\Symfony\Component\Console\Input\ArgvInput;
+use VendorPatches202207\Symfony\Component\Console\Output\ConsoleOutput;
+use VendorPatches202207\Symfony\Component\Console\Output\OutputInterface;
+use VendorPatches202207\Symfony\Component\Console\Style\SymfonyStyle;
+use VendorPatches202207\Symplify\EasyTesting\PHPUnit\StaticPHPUnitEnvironment;
+use VendorPatches202207\Symplify\PackageBuilder\Reflection\PrivatesCaller;
 /**
  * @api
  */

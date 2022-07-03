@@ -8,12 +8,12 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202206\Symfony\Component\Console\Completion;
+namespace VendorPatches202207\Symfony\Component\Console\Completion;
 
-use VendorPatches202206\Symfony\Component\Console\Exception\RuntimeException;
-use VendorPatches202206\Symfony\Component\Console\Input\ArgvInput;
-use VendorPatches202206\Symfony\Component\Console\Input\InputDefinition;
-use VendorPatches202206\Symfony\Component\Console\Input\InputOption;
+use VendorPatches202207\Symfony\Component\Console\Exception\RuntimeException;
+use VendorPatches202207\Symfony\Component\Console\Input\ArgvInput;
+use VendorPatches202207\Symfony\Component\Console\Input\InputDefinition;
+use VendorPatches202207\Symfony\Component\Console\Input\InputOption;
 /**
  * An input specialized for shell completion.
  *

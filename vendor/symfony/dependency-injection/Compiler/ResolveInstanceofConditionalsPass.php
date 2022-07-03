@@ -8,13 +8,13 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202206\Symfony\Component\DependencyInjection\Compiler;
+namespace VendorPatches202207\Symfony\Component\DependencyInjection\Compiler;
 
-use VendorPatches202206\Symfony\Component\DependencyInjection\ChildDefinition;
-use VendorPatches202206\Symfony\Component\DependencyInjection\ContainerBuilder;
-use VendorPatches202206\Symfony\Component\DependencyInjection\Definition;
-use VendorPatches202206\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
-use VendorPatches202206\Symfony\Component\DependencyInjection\Exception\RuntimeException;
+use VendorPatches202207\Symfony\Component\DependencyInjection\ChildDefinition;
+use VendorPatches202207\Symfony\Component\DependencyInjection\ContainerBuilder;
+use VendorPatches202207\Symfony\Component\DependencyInjection\Definition;
+use VendorPatches202207\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
+use VendorPatches202207\Symfony\Component\DependencyInjection\Exception\RuntimeException;
 /**
  * Applies instanceof conditionals to definitions.
  *

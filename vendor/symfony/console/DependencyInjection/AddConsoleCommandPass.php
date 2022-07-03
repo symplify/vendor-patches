@@ -8,18 +8,18 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202206\Symfony\Component\Console\DependencyInjection;
+namespace VendorPatches202207\Symfony\Component\Console\DependencyInjection;
 
-use VendorPatches202206\Symfony\Component\Console\Command\Command;
-use VendorPatches202206\Symfony\Component\Console\Command\LazyCommand;
-use VendorPatches202206\Symfony\Component\Console\CommandLoader\ContainerCommandLoader;
-use VendorPatches202206\Symfony\Component\DependencyInjection\Argument\ServiceClosureArgument;
-use VendorPatches202206\Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
-use VendorPatches202206\Symfony\Component\DependencyInjection\Compiler\ServiceLocatorTagPass;
-use VendorPatches202206\Symfony\Component\DependencyInjection\ContainerBuilder;
-use VendorPatches202206\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
-use VendorPatches202206\Symfony\Component\DependencyInjection\Reference;
-use VendorPatches202206\Symfony\Component\DependencyInjection\TypedReference;
+use VendorPatches202207\Symfony\Component\Console\Command\Command;
+use VendorPatches202207\Symfony\Component\Console\Command\LazyCommand;
+use VendorPatches202207\Symfony\Component\Console\CommandLoader\ContainerCommandLoader;
+use VendorPatches202207\Symfony\Component\DependencyInjection\Argument\ServiceClosureArgument;
+use VendorPatches202207\Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
+use VendorPatches202207\Symfony\Component\DependencyInjection\Compiler\ServiceLocatorTagPass;
+use VendorPatches202207\Symfony\Component\DependencyInjection\ContainerBuilder;
+use VendorPatches202207\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
+use VendorPatches202207\Symfony\Component\DependencyInjection\Reference;
+use VendorPatches202207\Symfony\Component\DependencyInjection\TypedReference;
 /**
  * Registers console commands.
  *

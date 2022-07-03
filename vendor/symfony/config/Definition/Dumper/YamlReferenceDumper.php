@@ -8,17 +8,17 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202206\Symfony\Component\Config\Definition\Dumper;
+namespace VendorPatches202207\Symfony\Component\Config\Definition\Dumper;
 
-use VendorPatches202206\Symfony\Component\Config\Definition\ArrayNode;
-use VendorPatches202206\Symfony\Component\Config\Definition\BaseNode;
-use VendorPatches202206\Symfony\Component\Config\Definition\ConfigurationInterface;
-use VendorPatches202206\Symfony\Component\Config\Definition\EnumNode;
-use VendorPatches202206\Symfony\Component\Config\Definition\NodeInterface;
-use VendorPatches202206\Symfony\Component\Config\Definition\PrototypedArrayNode;
-use VendorPatches202206\Symfony\Component\Config\Definition\ScalarNode;
-use VendorPatches202206\Symfony\Component\Config\Definition\VariableNode;
-use VendorPatches202206\Symfony\Component\Yaml\Inline;
+use VendorPatches202207\Symfony\Component\Config\Definition\ArrayNode;
+use VendorPatches202207\Symfony\Component\Config\Definition\BaseNode;
+use VendorPatches202207\Symfony\Component\Config\Definition\ConfigurationInterface;
+use VendorPatches202207\Symfony\Component\Config\Definition\EnumNode;
+use VendorPatches202207\Symfony\Component\Config\Definition\NodeInterface;
+use VendorPatches202207\Symfony\Component\Config\Definition\PrototypedArrayNode;
+use VendorPatches202207\Symfony\Component\Config\Definition\ScalarNode;
+use VendorPatches202207\Symfony\Component\Config\Definition\VariableNode;
+use VendorPatches202207\Symfony\Component\Yaml\Inline;
 /**
  * Dumps a Yaml reference configuration for the given configuration/node instance.
  *

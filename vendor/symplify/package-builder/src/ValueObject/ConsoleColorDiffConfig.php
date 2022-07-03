@@ -1,7 +1,7 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches202206\Symplify\PackageBuilder\ValueObject;
+namespace VendorPatches202207\Symplify\PackageBuilder\ValueObject;
 
 /**
  * @api

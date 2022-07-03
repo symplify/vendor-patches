@@ -1,20 +1,20 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches202206\Symplify\AutowireArrayParameter\DependencyInjection\CompilerPass;
+namespace VendorPatches202207\Symplify\AutowireArrayParameter\DependencyInjection\CompilerPass;
 
-use VendorPatches202206\Nette\Utils\Strings;
+use VendorPatches202207\Nette\Utils\Strings;
 use ReflectionClass;
 use ReflectionMethod;
-use VendorPatches202206\Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
-use VendorPatches202206\Symfony\Component\DependencyInjection\ContainerBuilder;
-use VendorPatches202206\Symfony\Component\DependencyInjection\Definition;
-use VendorPatches202206\Symfony\Component\DependencyInjection\Reference;
-use VendorPatches202206\Symplify\AutowireArrayParameter\DependencyInjection\DefinitionFinder;
-use VendorPatches202206\Symplify\AutowireArrayParameter\DocBlock\ParamTypeDocBlockResolver;
-use VendorPatches202206\Symplify\AutowireArrayParameter\Skipper\ParameterSkipper;
-use VendorPatches202206\Symplify\AutowireArrayParameter\TypeResolver\ParameterTypeResolver;
-use VendorPatches202206\Symplify\PackageBuilder\ValueObject\MethodName;
+use VendorPatches202207\Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
+use VendorPatches202207\Symfony\Component\DependencyInjection\ContainerBuilder;
+use VendorPatches202207\Symfony\Component\DependencyInjection\Definition;
+use VendorPatches202207\Symfony\Component\DependencyInjection\Reference;
+use VendorPatches202207\Symplify\AutowireArrayParameter\DependencyInjection\DefinitionFinder;
+use VendorPatches202207\Symplify\AutowireArrayParameter\DocBlock\ParamTypeDocBlockResolver;
+use VendorPatches202207\Symplify\AutowireArrayParameter\Skipper\ParameterSkipper;
+use VendorPatches202207\Symplify\AutowireArrayParameter\TypeResolver\ParameterTypeResolver;
+use VendorPatches202207\Symplify\PackageBuilder\ValueObject\MethodName;
 /**
  * @inspiration https://github.com/nette/di/pull/178
  * @see \Symplify\AutowireArrayParameter\Tests\DependencyInjection\CompilerPass\AutowireArrayParameterCompilerPassTest
@@ -33,7 +33,7 @@ final class AutowireArrayParameterCompilerPass implements CompilerPassInterface
      * @var string[]
      * @noRector
      */
-    private $excludedFatalClasses = ['VendorPatches202206\\Symfony\\Component\\Form\\FormExtensionInterface', 'VendorPatches202206\\Symfony\\Component\\Asset\\PackageInterface', 'VendorPatches202206\\Symfony\\Component\\Config\\Loader\\LoaderInterface', 'VendorPatches202206\\Symfony\\Component\\VarDumper\\Dumper\\ContextProvider\\ContextProviderInterface', 'VendorPatches202206\\EasyCorp\\Bundle\\EasyAdminBundle\\Form\\Type\\Configurator\\TypeConfiguratorInterface', 'VendorPatches202206\\Sonata\\CoreBundle\\Model\\Adapter\\AdapterInterface', 'VendorPatches202206\\Sonata\\Doctrine\\Adapter\\AdapterChain', 'VendorPatches202206\\Sonata\\Twig\\Extension\\TemplateExtension', 'VendorPatches202206\\Symfony\\Component\\HttpKernel\\KernelInterface'];
+    private $excludedFatalClasses = ['VendorPatches202207\\Symfony\\Component\\Form\\FormExtensionInterface', 'VendorPatches202207\\Symfony\\Component\\Asset\\PackageInterface', 'VendorPatches202207\\Symfony\\Component\\Config\\Loader\\LoaderInterface', 'VendorPatches202207\\Symfony\\Component\\VarDumper\\Dumper\\ContextProvider\\ContextProviderInterface', 'VendorPatches202207\\EasyCorp\\Bundle\\EasyAdminBundle\\Form\\Type\\Configurator\\TypeConfiguratorInterface', 'VendorPatches202207\\Sonata\\CoreBundle\\Model\\Adapter\\AdapterInterface', 'VendorPatches202207\\Sonata\\Doctrine\\Adapter\\AdapterChain', 'VendorPatches202207\\Sonata\\Twig\\Extension\\TemplateExtension', 'VendorPatches202207\\Symfony\\Component\\HttpKernel\\KernelInterface'];
     /**
      * @var \Symplify\AutowireArrayParameter\DependencyInjection\DefinitionFinder
      */

@@ -8,9 +8,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202206\Symfony\Component\DependencyInjection\Exception;
+namespace VendorPatches202207\Symfony\Component\DependencyInjection\Exception;
 
-use VendorPatches202206\Psr\Container\NotFoundExceptionInterface;
+use VendorPatches202207\Psr\Container\NotFoundExceptionInterface;
 /**
  * This exception is thrown when a non-existent service is requested.
  *

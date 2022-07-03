@@ -8,28 +8,28 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202206\Symfony\Component\DependencyInjection\Loader;
+namespace VendorPatches202207\Symfony\Component\DependencyInjection\Loader;
 
-use VendorPatches202206\Symfony\Component\DependencyInjection\Alias;
-use VendorPatches202206\Symfony\Component\DependencyInjection\Argument\AbstractArgument;
-use VendorPatches202206\Symfony\Component\DependencyInjection\Argument\BoundArgument;
-use VendorPatches202206\Symfony\Component\DependencyInjection\Argument\IteratorArgument;
-use VendorPatches202206\Symfony\Component\DependencyInjection\Argument\ServiceClosureArgument;
-use VendorPatches202206\Symfony\Component\DependencyInjection\Argument\ServiceLocatorArgument;
-use VendorPatches202206\Symfony\Component\DependencyInjection\Argument\TaggedIteratorArgument;
-use VendorPatches202206\Symfony\Component\DependencyInjection\ChildDefinition;
-use VendorPatches202206\Symfony\Component\DependencyInjection\ContainerBuilder;
-use VendorPatches202206\Symfony\Component\DependencyInjection\ContainerInterface;
-use VendorPatches202206\Symfony\Component\DependencyInjection\Definition;
-use VendorPatches202206\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
-use VendorPatches202206\Symfony\Component\DependencyInjection\Exception\RuntimeException;
-use VendorPatches202206\Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
-use VendorPatches202206\Symfony\Component\DependencyInjection\Reference;
-use VendorPatches202206\Symfony\Component\ExpressionLanguage\Expression;
-use VendorPatches202206\Symfony\Component\Yaml\Exception\ParseException;
-use VendorPatches202206\Symfony\Component\Yaml\Parser as YamlParser;
-use VendorPatches202206\Symfony\Component\Yaml\Tag\TaggedValue;
-use VendorPatches202206\Symfony\Component\Yaml\Yaml;
+use VendorPatches202207\Symfony\Component\DependencyInjection\Alias;
+use VendorPatches202207\Symfony\Component\DependencyInjection\Argument\AbstractArgument;
+use VendorPatches202207\Symfony\Component\DependencyInjection\Argument\BoundArgument;
+use VendorPatches202207\Symfony\Component\DependencyInjection\Argument\IteratorArgument;
+use VendorPatches202207\Symfony\Component\DependencyInjection\Argument\ServiceClosureArgument;
+use VendorPatches202207\Symfony\Component\DependencyInjection\Argument\ServiceLocatorArgument;
+use VendorPatches202207\Symfony\Component\DependencyInjection\Argument\TaggedIteratorArgument;
+use VendorPatches202207\Symfony\Component\DependencyInjection\ChildDefinition;
+use VendorPatches202207\Symfony\Component\DependencyInjection\ContainerBuilder;
+use VendorPatches202207\Symfony\Component\DependencyInjection\ContainerInterface;
+use VendorPatches202207\Symfony\Component\DependencyInjection\Definition;
+use VendorPatches202207\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
+use VendorPatches202207\Symfony\Component\DependencyInjection\Exception\RuntimeException;
+use VendorPatches202207\Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
+use VendorPatches202207\Symfony\Component\DependencyInjection\Reference;
+use VendorPatches202207\Symfony\Component\ExpressionLanguage\Expression;
+use VendorPatches202207\Symfony\Component\Yaml\Exception\ParseException;
+use VendorPatches202207\Symfony\Component\Yaml\Parser as YamlParser;
+use VendorPatches202207\Symfony\Component\Yaml\Tag\TaggedValue;
+use VendorPatches202207\Symfony\Component\Yaml\Yaml;
 /**
  * YamlFileLoader loads YAML files service definitions.
  *
@@ -553,7 +553,7 @@ class YamlFileLoader extends FileLoader
      */
     protected function loadFile(string $file) : ?array
     {
-        if (!\class_exists(\VendorPatches202206\Symfony\Component\Yaml\Parser::class)) {
+        if (!\class_exists(\VendorPatches202207\Symfony\Component\Yaml\Parser::class)) {
             throw new RuntimeException('Unable to load YAML config files as the Symfony Yaml Component is not installed.');
         }
         if (!\stream_is_local($file)) {

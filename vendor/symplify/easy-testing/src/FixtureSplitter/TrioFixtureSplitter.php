@@ -1,13 +1,13 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches202206\Symplify\EasyTesting\FixtureSplitter;
+namespace VendorPatches202207\Symplify\EasyTesting\FixtureSplitter;
 
-use VendorPatches202206\Nette\Utils\Strings;
-use VendorPatches202206\Symplify\EasyTesting\ValueObject\FixtureSplit\TrioContent;
-use VendorPatches202206\Symplify\EasyTesting\ValueObject\SplitLine;
-use VendorPatches202206\Symplify\SmartFileSystem\SmartFileInfo;
-use VendorPatches202206\Symplify\SymplifyKernel\Exception\ShouldNotHappenException;
+use VendorPatches202207\Nette\Utils\Strings;
+use VendorPatches202207\Symplify\EasyTesting\ValueObject\FixtureSplit\TrioContent;
+use VendorPatches202207\Symplify\EasyTesting\ValueObject\SplitLine;
+use VendorPatches202207\Symplify\SmartFileSystem\SmartFileInfo;
+use VendorPatches202207\Symplify\SymplifyKernel\Exception\ShouldNotHappenException;
 /**
  * @api
  */

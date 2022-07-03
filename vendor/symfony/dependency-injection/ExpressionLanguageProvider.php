@@ -8,10 +8,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202206\Symfony\Component\DependencyInjection;
+namespace VendorPatches202207\Symfony\Component\DependencyInjection;
 
-use VendorPatches202206\Symfony\Component\ExpressionLanguage\ExpressionFunction;
-use VendorPatches202206\Symfony\Component\ExpressionLanguage\ExpressionFunctionProviderInterface;
+use VendorPatches202207\Symfony\Component\ExpressionLanguage\ExpressionFunction;
+use VendorPatches202207\Symfony\Component\ExpressionLanguage\ExpressionFunctionProviderInterface;
 /**
  * Define some ExpressionLanguage functions.
  *

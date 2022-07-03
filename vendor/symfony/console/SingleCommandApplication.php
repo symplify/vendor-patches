@@ -8,11 +8,11 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202206\Symfony\Component\Console;
+namespace VendorPatches202207\Symfony\Component\Console;
 
-use VendorPatches202206\Symfony\Component\Console\Command\Command;
-use VendorPatches202206\Symfony\Component\Console\Input\InputInterface;
-use VendorPatches202206\Symfony\Component\Console\Output\OutputInterface;
+use VendorPatches202207\Symfony\Component\Console\Command\Command;
+use VendorPatches202207\Symfony\Component\Console\Input\InputInterface;
+use VendorPatches202207\Symfony\Component\Console\Output\OutputInterface;
 /**
  * @author Grégoire Pineau <lyrixx@lyrixx.info>
  */

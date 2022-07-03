@@ -8,9 +8,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202206\Symfony\Component\Config\Definition\Builder;
+namespace VendorPatches202207\Symfony\Component\Config\Definition\Builder;
 
-use VendorPatches202206\Symfony\Component\Config\Definition\NodeInterface;
+use VendorPatches202207\Symfony\Component\Config\Definition\NodeInterface;
 /**
  * This is the entry class for building a config tree.
  *

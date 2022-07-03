@@ -8,9 +8,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202206\Symfony\Component\Console\CI;
+namespace VendorPatches202207\Symfony\Component\Console\CI;
 
-use VendorPatches202206\Symfony\Component\Console\Output\OutputInterface;
+use VendorPatches202207\Symfony\Component\Console\Output\OutputInterface;
 /**
  * Utility class for Github actions.
  *

@@ -1,13 +1,13 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches202206\Symplify\AutowireArrayParameter\Skipper;
+namespace VendorPatches202207\Symplify\AutowireArrayParameter\Skipper;
 
 use ReflectionMethod;
 use ReflectionNamedType;
 use ReflectionParameter;
-use VendorPatches202206\Symfony\Component\DependencyInjection\Definition;
-use VendorPatches202206\Symplify\AutowireArrayParameter\TypeResolver\ParameterTypeResolver;
+use VendorPatches202207\Symfony\Component\DependencyInjection\Definition;
+use VendorPatches202207\Symplify\AutowireArrayParameter\TypeResolver\ParameterTypeResolver;
 final class ParameterSkipper
 {
     /**
@@ -15,7 +15,7 @@ final class ParameterSkipper
      *
      * @var string[]
      */
-    private const DEFAULT_EXCLUDED_FATAL_CLASSES = ['VendorPatches202206\\Symfony\\Component\\Form\\FormExtensionInterface', 'VendorPatches202206\\Symfony\\Component\\Asset\\PackageInterface', 'VendorPatches202206\\Symfony\\Component\\Config\\Loader\\LoaderInterface', 'VendorPatches202206\\Symfony\\Component\\VarDumper\\Dumper\\ContextProvider\\ContextProviderInterface', 'VendorPatches202206\\EasyCorp\\Bundle\\EasyAdminBundle\\Form\\Type\\Configurator\\TypeConfiguratorInterface', 'VendorPatches202206\\Sonata\\CoreBundle\\Model\\Adapter\\AdapterInterface', 'VendorPatches202206\\Sonata\\Doctrine\\Adapter\\AdapterChain', 'VendorPatches202206\\Sonata\\Twig\\Extension\\TemplateExtension'];
+    private const DEFAULT_EXCLUDED_FATAL_CLASSES = ['VendorPatches202207\\Symfony\\Component\\Form\\FormExtensionInterface', 'VendorPatches202207\\Symfony\\Component\\Asset\\PackageInterface', 'VendorPatches202207\\Symfony\\Component\\Config\\Loader\\LoaderInterface', 'VendorPatches202207\\Symfony\\Component\\VarDumper\\Dumper\\ContextProvider\\ContextProviderInterface', 'VendorPatches202207\\EasyCorp\\Bundle\\EasyAdminBundle\\Form\\Type\\Configurator\\TypeConfiguratorInterface', 'VendorPatches202207\\Sonata\\CoreBundle\\Model\\Adapter\\AdapterInterface', 'VendorPatches202207\\Sonata\\Doctrine\\Adapter\\AdapterChain', 'VendorPatches202207\\Sonata\\Twig\\Extension\\TemplateExtension'];
     /**
      * @var string[]
      */

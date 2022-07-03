@@ -40,7 +40,7 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorPatches202206\\Symfony\\Component\\String\\": ""
+            "VendorPatches202207\\Symfony\\Component\\String\\": ""
         },
         "files": [
             "Resources\/functions.php"

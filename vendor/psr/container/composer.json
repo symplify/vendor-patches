@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorPatches202206\\Psr\\Container\\": "src\/"
+            "VendorPatches202207\\Psr\\Container\\": "src\/"
         }
     },
     "extra": {

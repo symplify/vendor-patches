@@ -8,12 +8,12 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202206\Symfony\Component\Console\Event;
+namespace VendorPatches202207\Symfony\Component\Console\Event;
 
-use VendorPatches202206\Symfony\Component\Console\Command\Command;
-use VendorPatches202206\Symfony\Component\Console\Input\InputInterface;
-use VendorPatches202206\Symfony\Component\Console\Output\OutputInterface;
-use VendorPatches202206\Symfony\Contracts\EventDispatcher\Event;
+use VendorPatches202207\Symfony\Component\Console\Command\Command;
+use VendorPatches202207\Symfony\Component\Console\Input\InputInterface;
+use VendorPatches202207\Symfony\Component\Console\Output\OutputInterface;
+use VendorPatches202207\Symfony\Contracts\EventDispatcher\Event;
 /**
  * Allows to inspect input and output of a command.
  *

@@ -1,7 +1,7 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches202206\Symplify\EasyTesting\PHPUnit;
+namespace VendorPatches202207\Symplify\EasyTesting\PHPUnit;
 
 /**
  * @api
@@ -13,6 +13,6 @@ final class StaticPHPUnitEnvironment
      */
     public static function isPHPUnitRun() : bool
     {
-        return \defined('VendorPatches202206\\PHPUNIT_COMPOSER_INSTALL') || \defined('VendorPatches202206\\__PHPUNIT_PHAR__');
+        return \defined('VendorPatches202207\\PHPUNIT_COMPOSER_INSTALL') || \defined('VendorPatches202207\\__PHPUNIT_PHAR__');
     }
 }

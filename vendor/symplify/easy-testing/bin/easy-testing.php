@@ -1,10 +1,10 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches202206;
+namespace VendorPatches202207;
 
-use VendorPatches202206\Symplify\EasyTesting\Kernel\EasyTestingKernel;
-use VendorPatches202206\Symplify\SymplifyKernel\ValueObject\KernelBootAndApplicationRun;
+use VendorPatches202207\Symplify\EasyTesting\Kernel\EasyTestingKernel;
+use VendorPatches202207\Symplify\SymplifyKernel\ValueObject\KernelBootAndApplicationRun;
 $possibleAutoloadPaths = [
     // dependency
     __DIR__ . '/../../../autoload.php',

@@ -8,13 +8,13 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202206\Symfony\Component\DependencyInjection\Compiler;
+namespace VendorPatches202207\Symfony\Component\DependencyInjection\Compiler;
 
-use VendorPatches202206\Symfony\Component\DependencyInjection\Argument\ArgumentInterface;
-use VendorPatches202206\Symfony\Component\DependencyInjection\ContainerBuilder;
-use VendorPatches202206\Symfony\Component\DependencyInjection\Definition;
-use VendorPatches202206\Symfony\Component\DependencyInjection\Exception\ServiceCircularReferenceException;
-use VendorPatches202206\Symfony\Component\DependencyInjection\Reference;
+use VendorPatches202207\Symfony\Component\DependencyInjection\Argument\ArgumentInterface;
+use VendorPatches202207\Symfony\Component\DependencyInjection\ContainerBuilder;
+use VendorPatches202207\Symfony\Component\DependencyInjection\Definition;
+use VendorPatches202207\Symfony\Component\DependencyInjection\Exception\ServiceCircularReferenceException;
+use VendorPatches202207\Symfony\Component\DependencyInjection\Reference;
 /**
  * Inline service definitions where this is possible.
  *
