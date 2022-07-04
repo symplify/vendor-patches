@@ -4,6 +4,9 @@ declare (strict_types=1);
 namespace VendorPatches202207\Symplify\EasyTesting\ValueObject;
 
 use VendorPatches202207\Symplify\SmartFileSystem\SmartFileInfo;
+/**
+ * @api
+ */
 final class InputFileInfoAndExpected
 {
     /**
