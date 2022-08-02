@@ -8,25 +8,25 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202207\Symfony\Component\Console\Style;
+namespace VendorPatches202208\Symfony\Component\Console\Style;
 
-use VendorPatches202207\Symfony\Component\Console\Exception\InvalidArgumentException;
-use VendorPatches202207\Symfony\Component\Console\Exception\RuntimeException;
-use VendorPatches202207\Symfony\Component\Console\Formatter\OutputFormatter;
-use VendorPatches202207\Symfony\Component\Console\Helper\Helper;
-use VendorPatches202207\Symfony\Component\Console\Helper\ProgressBar;
-use VendorPatches202207\Symfony\Component\Console\Helper\SymfonyQuestionHelper;
-use VendorPatches202207\Symfony\Component\Console\Helper\Table;
-use VendorPatches202207\Symfony\Component\Console\Helper\TableCell;
-use VendorPatches202207\Symfony\Component\Console\Helper\TableSeparator;
-use VendorPatches202207\Symfony\Component\Console\Input\InputInterface;
-use VendorPatches202207\Symfony\Component\Console\Output\ConsoleOutputInterface;
-use VendorPatches202207\Symfony\Component\Console\Output\OutputInterface;
-use VendorPatches202207\Symfony\Component\Console\Output\TrimmedBufferOutput;
-use VendorPatches202207\Symfony\Component\Console\Question\ChoiceQuestion;
-use VendorPatches202207\Symfony\Component\Console\Question\ConfirmationQuestion;
-use VendorPatches202207\Symfony\Component\Console\Question\Question;
-use VendorPatches202207\Symfony\Component\Console\Terminal;
+use VendorPatches202208\Symfony\Component\Console\Exception\InvalidArgumentException;
+use VendorPatches202208\Symfony\Component\Console\Exception\RuntimeException;
+use VendorPatches202208\Symfony\Component\Console\Formatter\OutputFormatter;
+use VendorPatches202208\Symfony\Component\Console\Helper\Helper;
+use VendorPatches202208\Symfony\Component\Console\Helper\ProgressBar;
+use VendorPatches202208\Symfony\Component\Console\Helper\SymfonyQuestionHelper;
+use VendorPatches202208\Symfony\Component\Console\Helper\Table;
+use VendorPatches202208\Symfony\Component\Console\Helper\TableCell;
+use VendorPatches202208\Symfony\Component\Console\Helper\TableSeparator;
+use VendorPatches202208\Symfony\Component\Console\Input\InputInterface;
+use VendorPatches202208\Symfony\Component\Console\Output\ConsoleOutputInterface;
+use VendorPatches202208\Symfony\Component\Console\Output\OutputInterface;
+use VendorPatches202208\Symfony\Component\Console\Output\TrimmedBufferOutput;
+use VendorPatches202208\Symfony\Component\Console\Question\ChoiceQuestion;
+use VendorPatches202208\Symfony\Component\Console\Question\ConfirmationQuestion;
+use VendorPatches202208\Symfony\Component\Console\Question\Question;
+use VendorPatches202208\Symfony\Component\Console\Terminal;
 /**
  * Output decorator helpers for the Symfony Style Guide.
  *
@@ -376,16 +376,16 @@ class SymfonyStyle extends OutputStyle
         $chars = \substr(\str_replace(\PHP_EOL, "\n", $this->bufferedOutput->fetch()), -2);
         if (!isset($chars[0])) {
             $this->newLine();
-            //empty history, so we should start with a new line.
+            // empty history, so we should start with a new line.
             return;
         }
-        //Prepend new line for each non LF chars (This means no blank line was output before)
+        // Prepend new line for each non LF chars (This means no blank line was output before)
         $this->newLine(2 - \substr_count($chars, "\n"));
     }
     private function autoPrependText() : void
     {
         $fetched = $this->bufferedOutput->fetch();
-        //Prepend new line if last char isn't EOL:
+        // Prepend new line if last char isn't EOL:
         if (\substr_compare($fetched, "\n", -\strlen("\n")) !== 0) {
             $this->newLine();
         }

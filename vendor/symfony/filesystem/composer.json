@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorPatches202207\\Symfony\\Component\\Filesystem\\": ""
+            "VendorPatches202208\\Symfony\\Component\\Filesystem\\": ""
         },
         "exclude-from-classmap": [
             "\/Tests\/"

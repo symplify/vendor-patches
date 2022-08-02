@@ -8,16 +8,16 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202207\Symfony\Component\Console\Command;
+namespace VendorPatches202208\Symfony\Component\Console\Command;
 
-use VendorPatches202207\Symfony\Component\Console\Completion\CompletionInput;
-use VendorPatches202207\Symfony\Component\Console\Completion\CompletionSuggestions;
-use VendorPatches202207\Symfony\Component\Console\Descriptor\ApplicationDescription;
-use VendorPatches202207\Symfony\Component\Console\Helper\DescriptorHelper;
-use VendorPatches202207\Symfony\Component\Console\Input\InputArgument;
-use VendorPatches202207\Symfony\Component\Console\Input\InputInterface;
-use VendorPatches202207\Symfony\Component\Console\Input\InputOption;
-use VendorPatches202207\Symfony\Component\Console\Output\OutputInterface;
+use VendorPatches202208\Symfony\Component\Console\Completion\CompletionInput;
+use VendorPatches202208\Symfony\Component\Console\Completion\CompletionSuggestions;
+use VendorPatches202208\Symfony\Component\Console\Descriptor\ApplicationDescription;
+use VendorPatches202208\Symfony\Component\Console\Helper\DescriptorHelper;
+use VendorPatches202208\Symfony\Component\Console\Input\InputArgument;
+use VendorPatches202208\Symfony\Component\Console\Input\InputInterface;
+use VendorPatches202208\Symfony\Component\Console\Input\InputOption;
+use VendorPatches202208\Symfony\Component\Console\Output\OutputInterface;
 /**
  * HelpCommand displays the help for a given command.
  *

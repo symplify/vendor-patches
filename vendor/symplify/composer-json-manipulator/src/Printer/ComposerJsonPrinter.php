@@ -1,11 +1,11 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches202207\Symplify\ComposerJsonManipulator\Printer;
+namespace VendorPatches202208\Symplify\ComposerJsonManipulator\Printer;
 
-use VendorPatches202207\Symplify\ComposerJsonManipulator\FileSystem\JsonFileManager;
-use VendorPatches202207\Symplify\ComposerJsonManipulator\ValueObject\ComposerJson;
-use VendorPatches202207\Symplify\SmartFileSystem\SmartFileInfo;
+use VendorPatches202208\Symplify\ComposerJsonManipulator\FileSystem\JsonFileManager;
+use VendorPatches202208\Symplify\ComposerJsonManipulator\ValueObject\ComposerJson;
+use VendorPatches202208\Symplify\SmartFileSystem\SmartFileInfo;
 /**
  * @api
  */

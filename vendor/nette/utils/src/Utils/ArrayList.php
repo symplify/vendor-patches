@@ -5,9 +5,9 @@
  * Copyright (c) 2004 David Grudl (https://davidgrudl.com)
  */
 declare (strict_types=1);
-namespace VendorPatches202207\Nette\Utils;
+namespace VendorPatches202208\Nette\Utils;
 
-use VendorPatches202207\Nette;
+use VendorPatches202208\Nette;
 /**
  * Provides the base class for a generic list (items can be accessed by index).
  * @template T

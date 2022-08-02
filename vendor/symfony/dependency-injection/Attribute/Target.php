@@ -8,9 +8,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202207\Symfony\Component\DependencyInjection\Attribute;
+namespace VendorPatches202208\Symfony\Component\DependencyInjection\Attribute;
 
-use VendorPatches202207\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
+use VendorPatches202208\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
 /**
  * An attribute to tell how a dependency is used and hint named autowiring aliases.
  *

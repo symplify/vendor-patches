@@ -8,10 +8,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202207\Symfony\Component\Console\Input;
+namespace VendorPatches202208\Symfony\Component\Console\Input;
 
-use VendorPatches202207\Symfony\Component\Console\Exception\InvalidArgumentException;
-use VendorPatches202207\Symfony\Component\Console\Exception\LogicException;
+use VendorPatches202208\Symfony\Component\Console\Exception\InvalidArgumentException;
+use VendorPatches202208\Symfony\Component\Console\Exception\LogicException;
 /**
  * A InputDefinition represents a set of valid command line arguments and options.
  *

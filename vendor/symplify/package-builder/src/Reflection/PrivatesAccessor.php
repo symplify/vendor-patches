@@ -1,11 +1,11 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches202207\Symplify\PackageBuilder\Reflection;
+namespace VendorPatches202208\Symplify\PackageBuilder\Reflection;
 
 use ReflectionProperty;
-use VendorPatches202207\Symplify\PackageBuilder\Exception\InvalidPrivatePropertyTypeException;
-use VendorPatches202207\Symplify\PackageBuilder\Exception\MissingPrivatePropertyException;
+use VendorPatches202208\Symplify\PackageBuilder\Exception\InvalidPrivatePropertyTypeException;
+use VendorPatches202208\Symplify\PackageBuilder\Exception\MissingPrivatePropertyException;
 /**
  * @api
  * @see \Symplify\PackageBuilder\Tests\Reflection\PrivatesAccessorTest

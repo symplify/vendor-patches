@@ -8,19 +8,19 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202207\Symfony\Component\DependencyInjection\Compiler;
+namespace VendorPatches202208\Symfony\Component\DependencyInjection\Compiler;
 
-use VendorPatches202207\Psr\Container\ContainerInterface as PsrContainerInterface;
-use VendorPatches202207\Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use VendorPatches202207\Symfony\Component\DependencyInjection\Argument\BoundArgument;
-use VendorPatches202207\Symfony\Component\DependencyInjection\ContainerInterface;
-use VendorPatches202207\Symfony\Component\DependencyInjection\Definition;
-use VendorPatches202207\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
-use VendorPatches202207\Symfony\Component\DependencyInjection\Reference;
-use VendorPatches202207\Symfony\Component\DependencyInjection\TypedReference;
-use VendorPatches202207\Symfony\Component\HttpFoundation\Session\SessionInterface;
-use VendorPatches202207\Symfony\Contracts\Service\ServiceProviderInterface;
-use VendorPatches202207\Symfony\Contracts\Service\ServiceSubscriberInterface;
+use VendorPatches202208\Psr\Container\ContainerInterface as PsrContainerInterface;
+use VendorPatches202208\Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use VendorPatches202208\Symfony\Component\DependencyInjection\Argument\BoundArgument;
+use VendorPatches202208\Symfony\Component\DependencyInjection\ContainerInterface;
+use VendorPatches202208\Symfony\Component\DependencyInjection\Definition;
+use VendorPatches202208\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
+use VendorPatches202208\Symfony\Component\DependencyInjection\Reference;
+use VendorPatches202208\Symfony\Component\DependencyInjection\TypedReference;
+use VendorPatches202208\Symfony\Component\HttpFoundation\Session\SessionInterface;
+use VendorPatches202208\Symfony\Contracts\Service\ServiceProviderInterface;
+use VendorPatches202208\Symfony\Contracts\Service\ServiceSubscriberInterface;
 /**
  * Compiler pass to register tagged services that require a service locator.
  *

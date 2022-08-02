@@ -8,10 +8,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202207\Symfony\Component\Config\Resource;
+namespace VendorPatches202208\Symfony\Component\Config\Resource;
 
-use VendorPatches202207\Symfony\Component\Finder\Finder;
-use VendorPatches202207\Symfony\Component\Finder\Glob;
+use VendorPatches202208\Symfony\Component\Finder\Finder;
+use VendorPatches202208\Symfony\Component\Finder\Glob;
 /**
  * GlobResource represents a set of resources stored on the filesystem.
  *

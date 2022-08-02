@@ -8,12 +8,12 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202207\Symfony\Component\Config\Definition;
+namespace VendorPatches202208\Symfony\Component\Config\Definition;
 
-use VendorPatches202207\Symfony\Component\Config\Definition\Exception\DuplicateKeyException;
-use VendorPatches202207\Symfony\Component\Config\Definition\Exception\Exception;
-use VendorPatches202207\Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
-use VendorPatches202207\Symfony\Component\Config\Definition\Exception\UnsetKeyException;
+use VendorPatches202208\Symfony\Component\Config\Definition\Exception\DuplicateKeyException;
+use VendorPatches202208\Symfony\Component\Config\Definition\Exception\Exception;
+use VendorPatches202208\Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
+use VendorPatches202208\Symfony\Component\Config\Definition\Exception\UnsetKeyException;
 /**
  * Represents a prototyped Array node in the config tree.
  *

@@ -8,20 +8,20 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202207\Symfony\Component\DependencyInjection\Compiler;
+namespace VendorPatches202208\Symfony\Component\DependencyInjection\Compiler;
 
-use VendorPatches202207\Symfony\Component\Config\Resource\ClassExistenceResource;
-use VendorPatches202207\Symfony\Component\DependencyInjection\Argument\ServiceLocatorArgument;
-use VendorPatches202207\Symfony\Component\DependencyInjection\Argument\TaggedIteratorArgument;
-use VendorPatches202207\Symfony\Component\DependencyInjection\Attribute\TaggedIterator;
-use VendorPatches202207\Symfony\Component\DependencyInjection\Attribute\TaggedLocator;
-use VendorPatches202207\Symfony\Component\DependencyInjection\Attribute\Target;
-use VendorPatches202207\Symfony\Component\DependencyInjection\ContainerBuilder;
-use VendorPatches202207\Symfony\Component\DependencyInjection\Definition;
-use VendorPatches202207\Symfony\Component\DependencyInjection\Exception\AutowiringFailedException;
-use VendorPatches202207\Symfony\Component\DependencyInjection\Exception\RuntimeException;
-use VendorPatches202207\Symfony\Component\DependencyInjection\LazyProxy\ProxyHelper;
-use VendorPatches202207\Symfony\Component\DependencyInjection\TypedReference;
+use VendorPatches202208\Symfony\Component\Config\Resource\ClassExistenceResource;
+use VendorPatches202208\Symfony\Component\DependencyInjection\Argument\ServiceLocatorArgument;
+use VendorPatches202208\Symfony\Component\DependencyInjection\Argument\TaggedIteratorArgument;
+use VendorPatches202208\Symfony\Component\DependencyInjection\Attribute\TaggedIterator;
+use VendorPatches202208\Symfony\Component\DependencyInjection\Attribute\TaggedLocator;
+use VendorPatches202208\Symfony\Component\DependencyInjection\Attribute\Target;
+use VendorPatches202208\Symfony\Component\DependencyInjection\ContainerBuilder;
+use VendorPatches202208\Symfony\Component\DependencyInjection\Definition;
+use VendorPatches202208\Symfony\Component\DependencyInjection\Exception\AutowiringFailedException;
+use VendorPatches202208\Symfony\Component\DependencyInjection\Exception\RuntimeException;
+use VendorPatches202208\Symfony\Component\DependencyInjection\LazyProxy\ProxyHelper;
+use VendorPatches202208\Symfony\Component\DependencyInjection\TypedReference;
 /**
  * Inspects existing service definitions and wires the autowired ones using the type hints of their classes.
  *

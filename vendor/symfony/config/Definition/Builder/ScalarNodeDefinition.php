@@ -8,9 +8,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202207\Symfony\Component\Config\Definition\Builder;
+namespace VendorPatches202208\Symfony\Component\Config\Definition\Builder;
 
-use VendorPatches202207\Symfony\Component\Config\Definition\ScalarNode;
+use VendorPatches202208\Symfony\Component\Config\Definition\ScalarNode;
 /**
  * This class provides a fluent interface for defining a node.
  *
@@ -21,7 +21,7 @@ class ScalarNodeDefinition extends VariableNodeDefinition
     /**
      * Instantiate a Node.
      */
-    protected function instantiateNode() : \VendorPatches202207\Symfony\Component\Config\Definition\VariableNode
+    protected function instantiateNode() : \VendorPatches202208\Symfony\Component\Config\Definition\VariableNode
     {
         return new ScalarNode($this->name, $this->parent, $this->pathSeparator);
     }

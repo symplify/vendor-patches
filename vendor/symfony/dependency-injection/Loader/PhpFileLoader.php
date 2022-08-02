@@ -8,19 +8,19 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202207\Symfony\Component\DependencyInjection\Loader;
+namespace VendorPatches202208\Symfony\Component\DependencyInjection\Loader;
 
-use VendorPatches202207\Symfony\Component\Config\Builder\ConfigBuilderGenerator;
-use VendorPatches202207\Symfony\Component\Config\Builder\ConfigBuilderGeneratorInterface;
-use VendorPatches202207\Symfony\Component\Config\Builder\ConfigBuilderInterface;
-use VendorPatches202207\Symfony\Component\Config\FileLocatorInterface;
-use VendorPatches202207\Symfony\Component\DependencyInjection\Attribute\When;
-use VendorPatches202207\Symfony\Component\DependencyInjection\Container;
-use VendorPatches202207\Symfony\Component\DependencyInjection\ContainerBuilder;
-use VendorPatches202207\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
-use VendorPatches202207\Symfony\Component\DependencyInjection\Extension\ConfigurationExtensionInterface;
-use VendorPatches202207\Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
-use VendorPatches202207\Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use VendorPatches202208\Symfony\Component\Config\Builder\ConfigBuilderGenerator;
+use VendorPatches202208\Symfony\Component\Config\Builder\ConfigBuilderGeneratorInterface;
+use VendorPatches202208\Symfony\Component\Config\Builder\ConfigBuilderInterface;
+use VendorPatches202208\Symfony\Component\Config\FileLocatorInterface;
+use VendorPatches202208\Symfony\Component\DependencyInjection\Attribute\When;
+use VendorPatches202208\Symfony\Component\DependencyInjection\Container;
+use VendorPatches202208\Symfony\Component\DependencyInjection\ContainerBuilder;
+use VendorPatches202208\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
+use VendorPatches202208\Symfony\Component\DependencyInjection\Extension\ConfigurationExtensionInterface;
+use VendorPatches202208\Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
+use VendorPatches202208\Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 /**
  * PhpFileLoader loads service definitions from a PHP file.
  *

@@ -1,11 +1,11 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches202207\Symplify\ComposerJsonManipulator\Json;
+namespace VendorPatches202208\Symplify\ComposerJsonManipulator\Json;
 
-use VendorPatches202207\Nette\Utils\Strings;
-use VendorPatches202207\Symplify\ComposerJsonManipulator\ValueObject\Option;
-use VendorPatches202207\Symplify\PackageBuilder\Parameter\ParameterProvider;
+use VendorPatches202208\Nette\Utils\Strings;
+use VendorPatches202208\Symplify\ComposerJsonManipulator\ValueObject\Option;
+use VendorPatches202208\Symplify\PackageBuilder\Parameter\ParameterProvider;
 final class JsonInliner
 {
     /**

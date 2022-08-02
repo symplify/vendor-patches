@@ -8,11 +8,11 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202207\Symfony\Component\Console\Output;
+namespace VendorPatches202208\Symfony\Component\Console\Output;
 
-use VendorPatches202207\Symfony\Component\Console\Formatter\OutputFormatterInterface;
-use VendorPatches202207\Symfony\Component\Console\Helper\Helper;
-use VendorPatches202207\Symfony\Component\Console\Terminal;
+use VendorPatches202208\Symfony\Component\Console\Formatter\OutputFormatterInterface;
+use VendorPatches202208\Symfony\Component\Console\Helper\Helper;
+use VendorPatches202208\Symfony\Component\Console\Terminal;
 /**
  * @author Pierre du Plessis <pdples@gmail.com>
  * @author Gabriel Ostrolucký <gabriel.ostrolucky@gmail.com>

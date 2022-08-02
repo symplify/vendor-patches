@@ -4,10 +4,10 @@
  * @file
  * Dispatch events when patches are applied.
  */
-namespace VendorPatches202207\cweagans\Composer;
+namespace VendorPatches202208\cweagans\Composer;
 
-use VendorPatches202207\Composer\EventDispatcher\Event;
-use VendorPatches202207\Composer\Package\PackageInterface;
+use VendorPatches202208\Composer\EventDispatcher\Event;
+use VendorPatches202208\Composer\Package\PackageInterface;
 class PatchEvent extends Event
 {
     /**

@@ -1,15 +1,15 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches202207\Symplify\EasyTesting\DataProvider;
+namespace VendorPatches202208\Symplify\EasyTesting\DataProvider;
 
 use Iterator;
-use VendorPatches202207\Nette\Utils\Strings;
-use VendorPatches202207\Symfony\Component\Finder\Finder;
-use VendorPatches202207\Symfony\Component\Finder\SplFileInfo;
-use VendorPatches202207\Symplify\SmartFileSystem\Exception\FileNotFoundException;
-use VendorPatches202207\Symplify\SmartFileSystem\SmartFileInfo;
-use VendorPatches202207\Symplify\SymplifyKernel\Exception\ShouldNotHappenException;
+use VendorPatches202208\Nette\Utils\Strings;
+use VendorPatches202208\Symfony\Component\Finder\Finder;
+use VendorPatches202208\Symfony\Component\Finder\SplFileInfo;
+use VendorPatches202208\Symplify\SmartFileSystem\Exception\FileNotFoundException;
+use VendorPatches202208\Symplify\SmartFileSystem\SmartFileInfo;
+use VendorPatches202208\Symplify\SymplifyKernel\Exception\ShouldNotHappenException;
 /**
  * @api
  * @see \Symplify\EasyTesting\Tests\DataProvider\StaticFixtureFinder\StaticFixtureFinderTest

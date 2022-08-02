@@ -13,12 +13,12 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorPatches202207\\Symplify\\AutowireArrayParameter\\": "src"
+            "VendorPatches202208\\Symplify\\AutowireArrayParameter\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorPatches202207\\Symplify\\AutowireArrayParameter\\Tests\\": "tests"
+            "VendorPatches202208\\Symplify\\AutowireArrayParameter\\Tests\\": "tests"
         }
     },
     "extra": {

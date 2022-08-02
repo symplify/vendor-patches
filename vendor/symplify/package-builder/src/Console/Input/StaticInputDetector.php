@@ -1,9 +1,9 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches202207\Symplify\PackageBuilder\Console\Input;
+namespace VendorPatches202208\Symplify\PackageBuilder\Console\Input;
 
-use VendorPatches202207\Symfony\Component\Console\Input\ArgvInput;
+use VendorPatches202208\Symfony\Component\Console\Input\ArgvInput;
 /**
  * @api
  */
