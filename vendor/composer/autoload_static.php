@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitbe08003c16df58c656c851934b698b07
+class ComposerStaticInit42dcd92d80e206566bfcaf403c71d08b
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -148,6 +148,7 @@ class ComposerStaticInitbe08003c16df58c656c851934b698b07
         'Symplify\\VendorPatches\\Console\\GenerateCommandReporter' => __DIR__ . '/../..' . '/src/Console/GenerateCommandReporter.php',
         'Symplify\\VendorPatches\\Console\\VendorPatchesApplication' => __DIR__ . '/../..' . '/src/Console/VendorPatchesApplication.php',
         'Symplify\\VendorPatches\\Differ\\PatchDiffer' => __DIR__ . '/../..' . '/src/Differ/PatchDiffer.php',
+        'Symplify\\VendorPatches\\Exception\\ComposerPatchingException' => __DIR__ . '/../..' . '/src/Exception/ComposerPatchingException.php',
         'Symplify\\VendorPatches\\FileSystem\\PathResolver' => __DIR__ . '/../..' . '/src/FileSystem/PathResolver.php',
         'Symplify\\VendorPatches\\Finder\\OldToNewFilesFinder' => __DIR__ . '/../..' . '/src/Finder/OldToNewFilesFinder.php',
         'Symplify\\VendorPatches\\Kernel\\VendorPatchesKernel' => __DIR__ . '/../..' . '/src/Kernel/VendorPatchesKernel.php',
@@ -716,9 +717,9 @@ class ComposerStaticInitbe08003c16df58c656c851934b698b07
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitbe08003c16df58c656c851934b698b07::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitbe08003c16df58c656c851934b698b07::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitbe08003c16df58c656c851934b698b07::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit42dcd92d80e206566bfcaf403c71d08b::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit42dcd92d80e206566bfcaf403c71d08b::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit42dcd92d80e206566bfcaf403c71d08b::$classMap;
 
         }, null, ClassLoader::class);
     }

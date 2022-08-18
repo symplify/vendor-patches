@@ -15,6 +15,7 @@ return array(
     'Symplify\\VendorPatches\\Console\\GenerateCommandReporter' => $baseDir . '/src/Console/GenerateCommandReporter.php',
     'Symplify\\VendorPatches\\Console\\VendorPatchesApplication' => $baseDir . '/src/Console/VendorPatchesApplication.php',
     'Symplify\\VendorPatches\\Differ\\PatchDiffer' => $baseDir . '/src/Differ/PatchDiffer.php',
+    'Symplify\\VendorPatches\\Exception\\ComposerPatchingException' => $baseDir . '/src/Exception/ComposerPatchingException.php',
     'Symplify\\VendorPatches\\FileSystem\\PathResolver' => $baseDir . '/src/FileSystem/PathResolver.php',
     'Symplify\\VendorPatches\\Finder\\OldToNewFilesFinder' => $baseDir . '/src/Finder/OldToNewFilesFinder.php',
     'Symplify\\VendorPatches\\Kernel\\VendorPatchesKernel' => $baseDir . '/src/Kernel/VendorPatchesKernel.php',
