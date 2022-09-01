@@ -8,17 +8,17 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202208\Symfony\Component\DependencyInjection\Compiler;
+namespace VendorPatches202209\Symfony\Component\DependencyInjection\Compiler;
 
-use VendorPatches202208\Symfony\Component\DependencyInjection\Alias;
-use VendorPatches202208\Symfony\Component\DependencyInjection\Argument\ServiceClosureArgument;
-use VendorPatches202208\Symfony\Component\DependencyInjection\Argument\ServiceLocatorArgument;
-use VendorPatches202208\Symfony\Component\DependencyInjection\Argument\TaggedIteratorArgument;
-use VendorPatches202208\Symfony\Component\DependencyInjection\ContainerBuilder;
-use VendorPatches202208\Symfony\Component\DependencyInjection\Definition;
-use VendorPatches202208\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
-use VendorPatches202208\Symfony\Component\DependencyInjection\Reference;
-use VendorPatches202208\Symfony\Component\DependencyInjection\ServiceLocator;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Alias;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Argument\ServiceClosureArgument;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Argument\ServiceLocatorArgument;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Argument\TaggedIteratorArgument;
+use VendorPatches202209\Symfony\Component\DependencyInjection\ContainerBuilder;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Definition;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Reference;
+use VendorPatches202209\Symfony\Component\DependencyInjection\ServiceLocator;
 /**
  * Applies the "container.service_locator" tag by wrapping references into ServiceClosureArgument instances.
  *

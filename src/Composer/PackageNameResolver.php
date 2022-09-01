@@ -3,10 +3,10 @@
 declare (strict_types=1);
 namespace Symplify\VendorPatches\Composer;
 
-use VendorPatches202208\Symplify\SmartFileSystem\FileSystemGuard;
-use VendorPatches202208\Symplify\SmartFileSystem\Json\JsonFileSystem;
-use VendorPatches202208\Symplify\SmartFileSystem\SmartFileInfo;
-use VendorPatches202208\Symplify\SymplifyKernel\Exception\ShouldNotHappenException;
+use VendorPatches202209\Symplify\SmartFileSystem\FileSystemGuard;
+use VendorPatches202209\Symplify\SmartFileSystem\Json\JsonFileSystem;
+use VendorPatches202209\Symplify\SmartFileSystem\SmartFileInfo;
+use VendorPatches202209\Symplify\SymplifyKernel\Exception\ShouldNotHappenException;
 use Symplify\VendorPatches\FileSystem\PathResolver;
 /**
  * @see \Symplify\VendorPatches\Tests\Composer\PackageNameResolverTest

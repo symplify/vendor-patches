@@ -8,13 +8,13 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202208\Symfony\Component\Console\Logger;
+namespace VendorPatches202209\Symfony\Component\Console\Logger;
 
-use VendorPatches202208\Psr\Log\AbstractLogger;
-use VendorPatches202208\Psr\Log\InvalidArgumentException;
-use VendorPatches202208\Psr\Log\LogLevel;
-use VendorPatches202208\Symfony\Component\Console\Output\ConsoleOutputInterface;
-use VendorPatches202208\Symfony\Component\Console\Output\OutputInterface;
+use VendorPatches202209\Psr\Log\AbstractLogger;
+use VendorPatches202209\Psr\Log\InvalidArgumentException;
+use VendorPatches202209\Psr\Log\LogLevel;
+use VendorPatches202209\Symfony\Component\Console\Output\ConsoleOutputInterface;
+use VendorPatches202209\Symfony\Component\Console\Output\OutputInterface;
 /**
  * PSR-3 compliant console logger.
  *

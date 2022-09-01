@@ -1,14 +1,14 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches202208\Symplify\PackageBuilder\Console\Style;
+namespace VendorPatches202209\Symplify\PackageBuilder\Console\Style;
 
-use VendorPatches202208\Symfony\Component\Console\Application;
-use VendorPatches202208\Symfony\Component\Console\Input\ArgvInput;
-use VendorPatches202208\Symfony\Component\Console\Output\ConsoleOutput;
-use VendorPatches202208\Symfony\Component\Console\Output\OutputInterface;
-use VendorPatches202208\Symfony\Component\Console\Style\SymfonyStyle;
-use VendorPatches202208\Symplify\PackageBuilder\Reflection\PrivatesCaller;
+use VendorPatches202209\Symfony\Component\Console\Application;
+use VendorPatches202209\Symfony\Component\Console\Input\ArgvInput;
+use VendorPatches202209\Symfony\Component\Console\Output\ConsoleOutput;
+use VendorPatches202209\Symfony\Component\Console\Output\OutputInterface;
+use VendorPatches202209\Symfony\Component\Console\Style\SymfonyStyle;
+use VendorPatches202209\Symplify\PackageBuilder\Reflection\PrivatesCaller;
 /**
  * @api
  */
@@ -47,6 +47,6 @@ final class SymfonyStyleFactory
      */
     private function isPHPUnitRun() : bool
     {
-        return \defined('VendorPatches202208\\PHPUNIT_COMPOSER_INSTALL') || \defined('VendorPatches202208\\__PHPUNIT_PHAR__');
+        return \defined('VendorPatches202209\\PHPUNIT_COMPOSER_INSTALL') || \defined('VendorPatches202209\\__PHPUNIT_PHAR__');
     }
 }

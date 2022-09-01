@@ -8,10 +8,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202208\Symfony\Component\DependencyInjection;
+namespace VendorPatches202209\Symfony\Component\DependencyInjection;
 
-use VendorPatches202208\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
-use VendorPatches202208\Symfony\Component\DependencyInjection\Exception\OutOfBoundsException;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Exception\OutOfBoundsException;
 /**
  * This definition extends another definition.
  *

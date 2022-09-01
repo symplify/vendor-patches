@@ -8,12 +8,12 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202208\Symfony\Component\DependencyInjection\Compiler;
+namespace VendorPatches202209\Symfony\Component\DependencyInjection\Compiler;
 
-use VendorPatches202208\Psr\Container\ContainerInterface;
-use VendorPatches202208\Symfony\Component\DependencyInjection\Definition;
-use VendorPatches202208\Symfony\Component\DependencyInjection\Reference;
-use VendorPatches202208\Symfony\Contracts\Service\ServiceProviderInterface;
+use VendorPatches202209\Psr\Container\ContainerInterface;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Definition;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Reference;
+use VendorPatches202209\Symfony\Contracts\Service\ServiceProviderInterface;
 /**
  * Compiler pass to inject their service locator to service subscribers.
  *

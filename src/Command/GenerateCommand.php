@@ -3,10 +3,10 @@
 declare (strict_types=1);
 namespace Symplify\VendorPatches\Command;
 
-use VendorPatches202208\Symfony\Component\Console\Input\InputInterface;
-use VendorPatches202208\Symfony\Component\Console\Output\OutputInterface;
-use VendorPatches202208\Symplify\PackageBuilder\Composer\VendorDirProvider;
-use VendorPatches202208\Symplify\PackageBuilder\Console\Command\AbstractSymplifyCommand;
+use VendorPatches202209\Symfony\Component\Console\Input\InputInterface;
+use VendorPatches202209\Symfony\Component\Console\Output\OutputInterface;
+use VendorPatches202209\Symplify\PackageBuilder\Composer\VendorDirProvider;
+use VendorPatches202209\Symplify\PackageBuilder\Console\Command\AbstractSymplifyCommand;
 use Symplify\VendorPatches\Composer\ComposerPatchesConfigurationUpdater;
 use Symplify\VendorPatches\Console\GenerateCommandReporter;
 use Symplify\VendorPatches\Differ\PatchDiffer;

@@ -8,14 +8,14 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202208\Symfony\Component\DependencyInjection\Compiler;
+namespace VendorPatches202209\Symfony\Component\DependencyInjection\Compiler;
 
-use VendorPatches202208\Symfony\Component\DependencyInjection\Argument\ArgumentInterface;
-use VendorPatches202208\Symfony\Component\DependencyInjection\Argument\IteratorArgument;
-use VendorPatches202208\Symfony\Component\DependencyInjection\ContainerBuilder;
-use VendorPatches202208\Symfony\Component\DependencyInjection\ContainerInterface;
-use VendorPatches202208\Symfony\Component\DependencyInjection\Definition;
-use VendorPatches202208\Symfony\Component\DependencyInjection\Reference;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Argument\ArgumentInterface;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Argument\IteratorArgument;
+use VendorPatches202209\Symfony\Component\DependencyInjection\ContainerBuilder;
+use VendorPatches202209\Symfony\Component\DependencyInjection\ContainerInterface;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Definition;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Reference;
 /**
  * Run this pass before passes that need to know more about the relation of
  * your services.

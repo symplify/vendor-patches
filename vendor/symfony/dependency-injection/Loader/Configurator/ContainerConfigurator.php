@@ -8,19 +8,19 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202208\Symfony\Component\DependencyInjection\Loader\Configurator;
+namespace VendorPatches202209\Symfony\Component\DependencyInjection\Loader\Configurator;
 
-use VendorPatches202208\Symfony\Component\Config\Loader\ParamConfigurator;
-use VendorPatches202208\Symfony\Component\DependencyInjection\Argument\AbstractArgument;
-use VendorPatches202208\Symfony\Component\DependencyInjection\Argument\IteratorArgument;
-use VendorPatches202208\Symfony\Component\DependencyInjection\Argument\ServiceLocatorArgument;
-use VendorPatches202208\Symfony\Component\DependencyInjection\Argument\TaggedIteratorArgument;
-use VendorPatches202208\Symfony\Component\DependencyInjection\ContainerBuilder;
-use VendorPatches202208\Symfony\Component\DependencyInjection\Definition;
-use VendorPatches202208\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
-use VendorPatches202208\Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
-use VendorPatches202208\Symfony\Component\DependencyInjection\Loader\PhpFileLoader;
-use VendorPatches202208\Symfony\Component\ExpressionLanguage\Expression;
+use VendorPatches202209\Symfony\Component\Config\Loader\ParamConfigurator;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Argument\AbstractArgument;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Argument\IteratorArgument;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Argument\ServiceLocatorArgument;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Argument\TaggedIteratorArgument;
+use VendorPatches202209\Symfony\Component\DependencyInjection\ContainerBuilder;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Definition;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Loader\PhpFileLoader;
+use VendorPatches202209\Symfony\Component\ExpressionLanguage\Expression;
 /**
  * @author Nicolas Grekas <p@tchwork.com>
  */

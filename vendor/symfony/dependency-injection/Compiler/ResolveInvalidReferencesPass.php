@@ -8,17 +8,17 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202208\Symfony\Component\DependencyInjection\Compiler;
+namespace VendorPatches202209\Symfony\Component\DependencyInjection\Compiler;
 
-use VendorPatches202208\Symfony\Component\DependencyInjection\Argument\ArgumentInterface;
-use VendorPatches202208\Symfony\Component\DependencyInjection\Argument\ServiceClosureArgument;
-use VendorPatches202208\Symfony\Component\DependencyInjection\ContainerBuilder;
-use VendorPatches202208\Symfony\Component\DependencyInjection\ContainerInterface;
-use VendorPatches202208\Symfony\Component\DependencyInjection\Definition;
-use VendorPatches202208\Symfony\Component\DependencyInjection\Exception\RuntimeException;
-use VendorPatches202208\Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
-use VendorPatches202208\Symfony\Component\DependencyInjection\Reference;
-use VendorPatches202208\Symfony\Component\DependencyInjection\TypedReference;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Argument\ArgumentInterface;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Argument\ServiceClosureArgument;
+use VendorPatches202209\Symfony\Component\DependencyInjection\ContainerBuilder;
+use VendorPatches202209\Symfony\Component\DependencyInjection\ContainerInterface;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Definition;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Exception\RuntimeException;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Reference;
+use VendorPatches202209\Symfony\Component\DependencyInjection\TypedReference;
 /**
  * Emulates the invalid behavior if the reference is not found within the
  * container.

@@ -3,9 +3,9 @@
 declare (strict_types=1);
 namespace Symplify\VendorPatches\FileSystem;
 
-use VendorPatches202208\Nette\Utils\Strings;
-use VendorPatches202208\Symplify\SmartFileSystem\SmartFileInfo;
-use VendorPatches202208\Symplify\SymplifyKernel\Exception\ShouldNotHappenException;
+use VendorPatches202209\Nette\Utils\Strings;
+use VendorPatches202209\Symplify\SmartFileSystem\SmartFileInfo;
+use VendorPatches202209\Symplify\SymplifyKernel\Exception\ShouldNotHappenException;
 final class PathResolver
 {
     /**

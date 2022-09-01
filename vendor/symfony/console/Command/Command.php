@@ -8,21 +8,21 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202208\Symfony\Component\Console\Command;
+namespace VendorPatches202209\Symfony\Component\Console\Command;
 
-use VendorPatches202208\Symfony\Component\Console\Application;
-use VendorPatches202208\Symfony\Component\Console\Attribute\AsCommand;
-use VendorPatches202208\Symfony\Component\Console\Completion\CompletionInput;
-use VendorPatches202208\Symfony\Component\Console\Completion\CompletionSuggestions;
-use VendorPatches202208\Symfony\Component\Console\Exception\ExceptionInterface;
-use VendorPatches202208\Symfony\Component\Console\Exception\InvalidArgumentException;
-use VendorPatches202208\Symfony\Component\Console\Exception\LogicException;
-use VendorPatches202208\Symfony\Component\Console\Helper\HelperSet;
-use VendorPatches202208\Symfony\Component\Console\Input\InputArgument;
-use VendorPatches202208\Symfony\Component\Console\Input\InputDefinition;
-use VendorPatches202208\Symfony\Component\Console\Input\InputInterface;
-use VendorPatches202208\Symfony\Component\Console\Input\InputOption;
-use VendorPatches202208\Symfony\Component\Console\Output\OutputInterface;
+use VendorPatches202209\Symfony\Component\Console\Application;
+use VendorPatches202209\Symfony\Component\Console\Attribute\AsCommand;
+use VendorPatches202209\Symfony\Component\Console\Completion\CompletionInput;
+use VendorPatches202209\Symfony\Component\Console\Completion\CompletionSuggestions;
+use VendorPatches202209\Symfony\Component\Console\Exception\ExceptionInterface;
+use VendorPatches202209\Symfony\Component\Console\Exception\InvalidArgumentException;
+use VendorPatches202209\Symfony\Component\Console\Exception\LogicException;
+use VendorPatches202209\Symfony\Component\Console\Helper\HelperSet;
+use VendorPatches202209\Symfony\Component\Console\Input\InputArgument;
+use VendorPatches202209\Symfony\Component\Console\Input\InputDefinition;
+use VendorPatches202209\Symfony\Component\Console\Input\InputInterface;
+use VendorPatches202209\Symfony\Component\Console\Input\InputOption;
+use VendorPatches202209\Symfony\Component\Console\Output\OutputInterface;
 /**
  * Base class for all commands.
  *
@@ -260,7 +260,7 @@ class Command
                         \cli_set_process_title($this->processTitle);
                     }
                 }
-            } elseif (\function_exists('VendorPatches202208\\setproctitle')) {
+            } elseif (\function_exists('VendorPatches202209\\setproctitle')) {
                 setproctitle($this->processTitle);
             } elseif (OutputInterface::VERBOSITY_VERY_VERBOSE === $output->getVerbosity()) {
                 $output->writeln('<comment>Install the proctitle PECL to be able to change the process title.</comment>');

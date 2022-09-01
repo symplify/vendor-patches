@@ -8,9 +8,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202208\Symfony\Component\Console\Helper;
+namespace VendorPatches202209\Symfony\Component\Console\Helper;
 
-use VendorPatches202208\Symfony\Component\Console\Formatter\OutputFormatter;
+use VendorPatches202209\Symfony\Component\Console\Formatter\OutputFormatter;
 /**
  * The Formatter class provides helpers to format messages.
  *

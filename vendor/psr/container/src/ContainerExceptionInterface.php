@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorPatches202208\Psr\Container;
+namespace VendorPatches202209\Psr\Container;
 
 use Throwable;
 /**

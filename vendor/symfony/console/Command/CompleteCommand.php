@@ -8,17 +8,17 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202208\Symfony\Component\Console\Command;
+namespace VendorPatches202209\Symfony\Component\Console\Command;
 
-use VendorPatches202208\Symfony\Component\Console\Completion\CompletionInput;
-use VendorPatches202208\Symfony\Component\Console\Completion\CompletionSuggestions;
-use VendorPatches202208\Symfony\Component\Console\Completion\Output\BashCompletionOutput;
-use VendorPatches202208\Symfony\Component\Console\Completion\Output\CompletionOutputInterface;
-use VendorPatches202208\Symfony\Component\Console\Exception\CommandNotFoundException;
-use VendorPatches202208\Symfony\Component\Console\Exception\ExceptionInterface;
-use VendorPatches202208\Symfony\Component\Console\Input\InputInterface;
-use VendorPatches202208\Symfony\Component\Console\Input\InputOption;
-use VendorPatches202208\Symfony\Component\Console\Output\OutputInterface;
+use VendorPatches202209\Symfony\Component\Console\Completion\CompletionInput;
+use VendorPatches202209\Symfony\Component\Console\Completion\CompletionSuggestions;
+use VendorPatches202209\Symfony\Component\Console\Completion\Output\BashCompletionOutput;
+use VendorPatches202209\Symfony\Component\Console\Completion\Output\CompletionOutputInterface;
+use VendorPatches202209\Symfony\Component\Console\Exception\CommandNotFoundException;
+use VendorPatches202209\Symfony\Component\Console\Exception\ExceptionInterface;
+use VendorPatches202209\Symfony\Component\Console\Input\InputInterface;
+use VendorPatches202209\Symfony\Component\Console\Input\InputOption;
+use VendorPatches202209\Symfony\Component\Console\Output\OutputInterface;
 /**
  * Responsible for providing the values to the shell completion.
  *

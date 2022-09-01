@@ -8,10 +8,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202208\Symfony\Component\Config\Definition\Builder;
+namespace VendorPatches202209\Symfony\Component\Config\Definition\Builder;
 
-use VendorPatches202208\Symfony\Component\Config\Definition\NodeInterface;
-use VendorPatches202208\Symfony\Component\Config\Definition\VariableNode;
+use VendorPatches202209\Symfony\Component\Config\Definition\NodeInterface;
+use VendorPatches202209\Symfony\Component\Config\Definition\VariableNode;
 /**
  * This class provides a fluent interface for defining a node.
  *

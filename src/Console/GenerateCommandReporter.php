@@ -3,7 +3,7 @@
 declare (strict_types=1);
 namespace Symplify\VendorPatches\Console;
 
-use VendorPatches202208\Symfony\Component\Console\Style\SymfonyStyle;
+use VendorPatches202209\Symfony\Component\Console\Style\SymfonyStyle;
 use Symplify\VendorPatches\ValueObject\OldAndNewFileInfo;
 final class GenerateCommandReporter
 {

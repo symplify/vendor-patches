@@ -8,17 +8,17 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202208\Symfony\Component\DependencyInjection\Loader\Configurator;
+namespace VendorPatches202209\Symfony\Component\DependencyInjection\Loader\Configurator;
 
-use VendorPatches202208\Symfony\Component\Config\Loader\ParamConfigurator;
-use VendorPatches202208\Symfony\Component\DependencyInjection\Argument\AbstractArgument;
-use VendorPatches202208\Symfony\Component\DependencyInjection\Argument\ArgumentInterface;
-use VendorPatches202208\Symfony\Component\DependencyInjection\Argument\ServiceClosureArgument;
-use VendorPatches202208\Symfony\Component\DependencyInjection\Definition;
-use VendorPatches202208\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
-use VendorPatches202208\Symfony\Component\DependencyInjection\Parameter;
-use VendorPatches202208\Symfony\Component\DependencyInjection\Reference;
-use VendorPatches202208\Symfony\Component\ExpressionLanguage\Expression;
+use VendorPatches202209\Symfony\Component\Config\Loader\ParamConfigurator;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Argument\AbstractArgument;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Argument\ArgumentInterface;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Argument\ServiceClosureArgument;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Definition;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Parameter;
+use VendorPatches202209\Symfony\Component\DependencyInjection\Reference;
+use VendorPatches202209\Symfony\Component\ExpressionLanguage\Expression;
 abstract class AbstractConfigurator
 {
     public const FACTORY = 'unknown';

@@ -8,10 +8,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202208\Symfony\Component\Console\Tester\Constraint;
+namespace VendorPatches202209\Symfony\Component\Console\Tester\Constraint;
 
-use VendorPatches202208\PHPUnit\Framework\Constraint\Constraint;
-use VendorPatches202208\Symfony\Component\Console\Command\Command;
+use VendorPatches202209\PHPUnit\Framework\Constraint\Constraint;
+use VendorPatches202209\Symfony\Component\Console\Command\Command;
 final class CommandIsSuccessful extends Constraint
 {
     /**
