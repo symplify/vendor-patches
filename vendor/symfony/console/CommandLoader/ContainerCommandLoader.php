@@ -8,11 +8,11 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202209\Symfony\Component\Console\CommandLoader;
+namespace VendorPatches202210\Symfony\Component\Console\CommandLoader;
 
-use VendorPatches202209\Psr\Container\ContainerInterface;
-use VendorPatches202209\Symfony\Component\Console\Command\Command;
-use VendorPatches202209\Symfony\Component\Console\Exception\CommandNotFoundException;
+use VendorPatches202210\Psr\Container\ContainerInterface;
+use VendorPatches202210\Symfony\Component\Console\Command\Command;
+use VendorPatches202210\Symfony\Component\Console\Exception\CommandNotFoundException;
 /**
  * Loads commands from a PSR-11 container.
  *

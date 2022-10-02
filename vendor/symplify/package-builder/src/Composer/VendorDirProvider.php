@@ -1,9 +1,9 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches202209\Symplify\PackageBuilder\Composer;
+namespace VendorPatches202210\Symplify\PackageBuilder\Composer;
 
-use VendorPatches202209\Composer\Autoload\ClassLoader;
+use VendorPatches202210\Composer\Autoload\ClassLoader;
 use ReflectionClass;
 /**
  * @api

@@ -8,15 +8,15 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202209\Symfony\Component\Console\Helper;
+namespace VendorPatches202210\Symfony\Component\Console\Helper;
 
-use VendorPatches202209\Symfony\Component\Console\Descriptor\DescriptorInterface;
-use VendorPatches202209\Symfony\Component\Console\Descriptor\JsonDescriptor;
-use VendorPatches202209\Symfony\Component\Console\Descriptor\MarkdownDescriptor;
-use VendorPatches202209\Symfony\Component\Console\Descriptor\TextDescriptor;
-use VendorPatches202209\Symfony\Component\Console\Descriptor\XmlDescriptor;
-use VendorPatches202209\Symfony\Component\Console\Exception\InvalidArgumentException;
-use VendorPatches202209\Symfony\Component\Console\Output\OutputInterface;
+use VendorPatches202210\Symfony\Component\Console\Descriptor\DescriptorInterface;
+use VendorPatches202210\Symfony\Component\Console\Descriptor\JsonDescriptor;
+use VendorPatches202210\Symfony\Component\Console\Descriptor\MarkdownDescriptor;
+use VendorPatches202210\Symfony\Component\Console\Descriptor\TextDescriptor;
+use VendorPatches202210\Symfony\Component\Console\Descriptor\XmlDescriptor;
+use VendorPatches202210\Symfony\Component\Console\Exception\InvalidArgumentException;
+use VendorPatches202210\Symfony\Component\Console\Output\OutputInterface;
 /**
  * This class adds helper method to describe objects in various formats.
  *

@@ -4,7 +4,7 @@
  * @file
  * Dispatch events when patches are applied.
  */
-namespace VendorPatches202209\cweagans\Composer;
+namespace VendorPatches202210\cweagans\Composer;
 
 class PatchEvents
 {

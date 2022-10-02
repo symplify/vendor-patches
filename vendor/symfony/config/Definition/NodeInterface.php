@@ -8,11 +8,11 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202209\Symfony\Component\Config\Definition;
+namespace VendorPatches202210\Symfony\Component\Config\Definition;
 
-use VendorPatches202209\Symfony\Component\Config\Definition\Exception\ForbiddenOverwriteException;
-use VendorPatches202209\Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
-use VendorPatches202209\Symfony\Component\Config\Definition\Exception\InvalidTypeException;
+use VendorPatches202210\Symfony\Component\Config\Definition\Exception\ForbiddenOverwriteException;
+use VendorPatches202210\Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
+use VendorPatches202210\Symfony\Component\Config\Definition\Exception\InvalidTypeException;
 /**
  * Common Interface among all nodes.
  *

@@ -3,10 +3,10 @@
 declare (strict_types=1);
 namespace Symplify\VendorPatches\Differ;
 
-use VendorPatches202209\Nette\Utils\Strings;
-use VendorPatches202209\SebastianBergmann\Diff\Differ;
-use VendorPatches202209\Symplify\SmartFileSystem\SmartFileInfo;
-use VendorPatches202209\Symplify\SymplifyKernel\Exception\ShouldNotHappenException;
+use VendorPatches202210\Nette\Utils\Strings;
+use VendorPatches202210\SebastianBergmann\Diff\Differ;
+use VendorPatches202210\Symplify\SmartFileSystem\SmartFileInfo;
+use VendorPatches202210\Symplify\SymplifyKernel\Exception\ShouldNotHappenException;
 use Symplify\VendorPatches\ValueObject\OldAndNewFileInfo;
 /**
  * @see \Symplify\VendorPatches\Tests\Differ\PatchDifferTest

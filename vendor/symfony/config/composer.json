@@ -37,7 +37,7 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorPatches202209\\Symfony\\Component\\Config\\": ""
+            "VendorPatches202210\\Symfony\\Component\\Config\\": ""
         },
         "exclude-from-classmap": [
             "\/Tests\/"

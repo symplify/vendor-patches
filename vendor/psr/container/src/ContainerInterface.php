@@ -1,7 +1,7 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches202209\Psr\Container;
+namespace VendorPatches202210\Psr\Container;
 
 /**
  * Describes the interface of a container that exposes methods to read its entries.

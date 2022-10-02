@@ -8,14 +8,14 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202209\Symfony\Component\Console\Helper;
+namespace VendorPatches202210\Symfony\Component\Console\Helper;
 
-use VendorPatches202209\Symfony\Component\Console\Cursor;
-use VendorPatches202209\Symfony\Component\Console\Exception\LogicException;
-use VendorPatches202209\Symfony\Component\Console\Output\ConsoleOutputInterface;
-use VendorPatches202209\Symfony\Component\Console\Output\ConsoleSectionOutput;
-use VendorPatches202209\Symfony\Component\Console\Output\OutputInterface;
-use VendorPatches202209\Symfony\Component\Console\Terminal;
+use VendorPatches202210\Symfony\Component\Console\Cursor;
+use VendorPatches202210\Symfony\Component\Console\Exception\LogicException;
+use VendorPatches202210\Symfony\Component\Console\Output\ConsoleOutputInterface;
+use VendorPatches202210\Symfony\Component\Console\Output\ConsoleSectionOutput;
+use VendorPatches202210\Symfony\Component\Console\Output\OutputInterface;
+use VendorPatches202210\Symfony\Component\Console\Terminal;
 /**
  * The ProgressBar provides helpers to display progress output.
  *

@@ -8,15 +8,15 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202209\Symfony\Component\DependencyInjection\Extension;
+namespace VendorPatches202210\Symfony\Component\DependencyInjection\Extension;
 
-use VendorPatches202209\Symfony\Component\Config\Definition\ConfigurationInterface;
-use VendorPatches202209\Symfony\Component\Config\Definition\Processor;
-use VendorPatches202209\Symfony\Component\DependencyInjection\Container;
-use VendorPatches202209\Symfony\Component\DependencyInjection\ContainerBuilder;
-use VendorPatches202209\Symfony\Component\DependencyInjection\Exception\BadMethodCallException;
-use VendorPatches202209\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
-use VendorPatches202209\Symfony\Component\DependencyInjection\Exception\LogicException;
+use VendorPatches202210\Symfony\Component\Config\Definition\ConfigurationInterface;
+use VendorPatches202210\Symfony\Component\Config\Definition\Processor;
+use VendorPatches202210\Symfony\Component\DependencyInjection\Container;
+use VendorPatches202210\Symfony\Component\DependencyInjection\ContainerBuilder;
+use VendorPatches202210\Symfony\Component\DependencyInjection\Exception\BadMethodCallException;
+use VendorPatches202210\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
+use VendorPatches202210\Symfony\Component\DependencyInjection\Exception\LogicException;
 /**
  * Provides useful features shared by many extensions.
  *

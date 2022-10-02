@@ -8,15 +8,15 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202209\Symfony\Component\DependencyInjection\Dumper;
+namespace VendorPatches202210\Symfony\Component\DependencyInjection\Dumper;
 
-use VendorPatches202209\Symfony\Component\DependencyInjection\Argument\ArgumentInterface;
-use VendorPatches202209\Symfony\Component\DependencyInjection\ContainerBuilder;
-use VendorPatches202209\Symfony\Component\DependencyInjection\Definition;
-use VendorPatches202209\Symfony\Component\DependencyInjection\Exception\ParameterNotFoundException;
-use VendorPatches202209\Symfony\Component\DependencyInjection\Parameter;
-use VendorPatches202209\Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
-use VendorPatches202209\Symfony\Component\DependencyInjection\Reference;
+use VendorPatches202210\Symfony\Component\DependencyInjection\Argument\ArgumentInterface;
+use VendorPatches202210\Symfony\Component\DependencyInjection\ContainerBuilder;
+use VendorPatches202210\Symfony\Component\DependencyInjection\Definition;
+use VendorPatches202210\Symfony\Component\DependencyInjection\Exception\ParameterNotFoundException;
+use VendorPatches202210\Symfony\Component\DependencyInjection\Parameter;
+use VendorPatches202210\Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
+use VendorPatches202210\Symfony\Component\DependencyInjection\Reference;
 /**
  * GraphvizDumper dumps a service container as a graphviz file.
  *
