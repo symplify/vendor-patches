@@ -19,7 +19,13 @@ use VendorPatches202210\Symfony\Component\DependencyInjection\Exception\ServiceN
  */
 final class ReverseContainer
 {
+    /**
+     * @var \Symfony\Component\DependencyInjection\Container
+     */
     private $serviceContainer;
+    /**
+     * @var \Psr\Container\ContainerInterface
+     */
     private $reversibleLocator;
     /**
      * @var string

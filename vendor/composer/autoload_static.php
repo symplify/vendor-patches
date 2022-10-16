@@ -4,13 +4,12 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit7fabcdd6cd6441bfa7a55fec5199833c
+class ComposerStaticInit36bfb3ab644b31f942edfb57002c2ea1
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
-        '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
         'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
@@ -26,7 +25,6 @@ class ComposerStaticInit7fabcdd6cd6441bfa7a55fec5199833c
             'VendorPatches202210\\Symplify\\PackageBuilder\\' => 44,
             'VendorPatches202210\\Symplify\\ComposerJsonManipulator\\' => 53,
             'VendorPatches202210\\Symplify\\AutowireArrayParameter\\' => 52,
-            'VendorPatches202210\\Symfony\\Polyfill\\Php81\\' => 43,
             'VendorPatches202210\\Symfony\\Polyfill\\Mbstring\\' => 46,
             'VendorPatches202210\\Symfony\\Polyfill\\Intl\\Normalizer\\' => 53,
             'VendorPatches202210\\Symfony\\Polyfill\\Intl\\Grapheme\\' => 51,
@@ -74,10 +72,6 @@ class ComposerStaticInit7fabcdd6cd6441bfa7a55fec5199833c
         'VendorPatches202210\\Symplify\\AutowireArrayParameter\\' => 
         array (
             0 => __DIR__ . '/..' . '/symplify/autowire-array-parameter/src',
-        ),
-        'VendorPatches202210\\Symfony\\Polyfill\\Php81\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-php81',
         ),
         'VendorPatches202210\\Symfony\\Polyfill\\Mbstring\\' => 
         array (
@@ -136,7 +130,6 @@ class ComposerStaticInit7fabcdd6cd6441bfa7a55fec5199833c
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',
-        'ReturnTypeWillChange' => __DIR__ . '/..' . '/symfony/polyfill-php81/Resources/stubs/ReturnTypeWillChange.php',
         'Symplify\\VendorPatches\\Command\\GenerateCommand' => __DIR__ . '/../..' . '/src/Command/GenerateCommand.php',
         'Symplify\\VendorPatches\\Composer\\ComposerPatchesConfigurationUpdater' => __DIR__ . '/../..' . '/src/Composer/ComposerPatchesConfigurationUpdater.php',
         'Symplify\\VendorPatches\\Composer\\PackageNameResolver' => __DIR__ . '/../..' . '/src/Composer/PackageNameResolver.php',
@@ -243,7 +236,10 @@ class ComposerStaticInit7fabcdd6cd6441bfa7a55fec5199833c
         'VendorPatches202210\\Symfony\\Component\\Config\\Definition\\Builder\\TreeBuilder' => __DIR__ . '/..' . '/symfony/config/Definition/Builder/TreeBuilder.php',
         'VendorPatches202210\\Symfony\\Component\\Config\\Definition\\Builder\\ValidationBuilder' => __DIR__ . '/..' . '/symfony/config/Definition/Builder/ValidationBuilder.php',
         'VendorPatches202210\\Symfony\\Component\\Config\\Definition\\Builder\\VariableNodeDefinition' => __DIR__ . '/..' . '/symfony/config/Definition/Builder/VariableNodeDefinition.php',
+        'VendorPatches202210\\Symfony\\Component\\Config\\Definition\\ConfigurableInterface' => __DIR__ . '/..' . '/symfony/config/Definition/ConfigurableInterface.php',
+        'VendorPatches202210\\Symfony\\Component\\Config\\Definition\\Configuration' => __DIR__ . '/..' . '/symfony/config/Definition/Configuration.php',
         'VendorPatches202210\\Symfony\\Component\\Config\\Definition\\ConfigurationInterface' => __DIR__ . '/..' . '/symfony/config/Definition/ConfigurationInterface.php',
+        'VendorPatches202210\\Symfony\\Component\\Config\\Definition\\Configurator\\DefinitionConfigurator' => __DIR__ . '/..' . '/symfony/config/Definition/Configurator/DefinitionConfigurator.php',
         'VendorPatches202210\\Symfony\\Component\\Config\\Definition\\Dumper\\XmlReferenceDumper' => __DIR__ . '/..' . '/symfony/config/Definition/Dumper/XmlReferenceDumper.php',
         'VendorPatches202210\\Symfony\\Component\\Config\\Definition\\Dumper\\YamlReferenceDumper' => __DIR__ . '/..' . '/symfony/config/Definition/Dumper/YamlReferenceDumper.php',
         'VendorPatches202210\\Symfony\\Component\\Config\\Definition\\EnumNode' => __DIR__ . '/..' . '/symfony/config/Definition/EnumNode.php',
@@ -256,6 +252,7 @@ class ComposerStaticInit7fabcdd6cd6441bfa7a55fec5199833c
         'VendorPatches202210\\Symfony\\Component\\Config\\Definition\\Exception\\UnsetKeyException' => __DIR__ . '/..' . '/symfony/config/Definition/Exception/UnsetKeyException.php',
         'VendorPatches202210\\Symfony\\Component\\Config\\Definition\\FloatNode' => __DIR__ . '/..' . '/symfony/config/Definition/FloatNode.php',
         'VendorPatches202210\\Symfony\\Component\\Config\\Definition\\IntegerNode' => __DIR__ . '/..' . '/symfony/config/Definition/IntegerNode.php',
+        'VendorPatches202210\\Symfony\\Component\\Config\\Definition\\Loader\\DefinitionFileLoader' => __DIR__ . '/..' . '/symfony/config/Definition/Loader/DefinitionFileLoader.php',
         'VendorPatches202210\\Symfony\\Component\\Config\\Definition\\NodeInterface' => __DIR__ . '/..' . '/symfony/config/Definition/NodeInterface.php',
         'VendorPatches202210\\Symfony\\Component\\Config\\Definition\\NumericNode' => __DIR__ . '/..' . '/symfony/config/Definition/NumericNode.php',
         'VendorPatches202210\\Symfony\\Component\\Config\\Definition\\Processor' => __DIR__ . '/..' . '/symfony/config/Definition/Processor.php',
@@ -311,6 +308,7 @@ class ComposerStaticInit7fabcdd6cd6441bfa7a55fec5199833c
         'VendorPatches202210\\Symfony\\Component\\Console\\Completion\\CompletionSuggestions' => __DIR__ . '/..' . '/symfony/console/Completion/CompletionSuggestions.php',
         'VendorPatches202210\\Symfony\\Component\\Console\\Completion\\Output\\BashCompletionOutput' => __DIR__ . '/..' . '/symfony/console/Completion/Output/BashCompletionOutput.php',
         'VendorPatches202210\\Symfony\\Component\\Console\\Completion\\Output\\CompletionOutputInterface' => __DIR__ . '/..' . '/symfony/console/Completion/Output/CompletionOutputInterface.php',
+        'VendorPatches202210\\Symfony\\Component\\Console\\Completion\\Output\\FishCompletionOutput' => __DIR__ . '/..' . '/symfony/console/Completion/Output/FishCompletionOutput.php',
         'VendorPatches202210\\Symfony\\Component\\Console\\Completion\\Suggestion' => __DIR__ . '/..' . '/symfony/console/Completion/Suggestion.php',
         'VendorPatches202210\\Symfony\\Component\\Console\\ConsoleEvents' => __DIR__ . '/..' . '/symfony/console/ConsoleEvents.php',
         'VendorPatches202210\\Symfony\\Component\\Console\\Cursor' => __DIR__ . '/..' . '/symfony/console/Cursor.php',
@@ -408,9 +406,12 @@ class ComposerStaticInit7fabcdd6cd6441bfa7a55fec5199833c
         'VendorPatches202210\\Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator' => __DIR__ . '/..' . '/symfony/dependency-injection/Argument/ServiceLocator.php',
         'VendorPatches202210\\Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocatorArgument' => __DIR__ . '/..' . '/symfony/dependency-injection/Argument/ServiceLocatorArgument.php',
         'VendorPatches202210\\Symfony\\Component\\DependencyInjection\\Argument\\TaggedIteratorArgument' => __DIR__ . '/..' . '/symfony/dependency-injection/Argument/TaggedIteratorArgument.php',
+        'VendorPatches202210\\Symfony\\Component\\DependencyInjection\\Attribute\\AsDecorator' => __DIR__ . '/..' . '/symfony/dependency-injection/Attribute/AsDecorator.php',
         'VendorPatches202210\\Symfony\\Component\\DependencyInjection\\Attribute\\AsTaggedItem' => __DIR__ . '/..' . '/symfony/dependency-injection/Attribute/AsTaggedItem.php',
         'VendorPatches202210\\Symfony\\Component\\DependencyInjection\\Attribute\\Autoconfigure' => __DIR__ . '/..' . '/symfony/dependency-injection/Attribute/Autoconfigure.php',
         'VendorPatches202210\\Symfony\\Component\\DependencyInjection\\Attribute\\AutoconfigureTag' => __DIR__ . '/..' . '/symfony/dependency-injection/Attribute/AutoconfigureTag.php',
+        'VendorPatches202210\\Symfony\\Component\\DependencyInjection\\Attribute\\Autowire' => __DIR__ . '/..' . '/symfony/dependency-injection/Attribute/Autowire.php',
+        'VendorPatches202210\\Symfony\\Component\\DependencyInjection\\Attribute\\MapDecorated' => __DIR__ . '/..' . '/symfony/dependency-injection/Attribute/MapDecorated.php',
         'VendorPatches202210\\Symfony\\Component\\DependencyInjection\\Attribute\\TaggedIterator' => __DIR__ . '/..' . '/symfony/dependency-injection/Attribute/TaggedIterator.php',
         'VendorPatches202210\\Symfony\\Component\\DependencyInjection\\Attribute\\TaggedLocator' => __DIR__ . '/..' . '/symfony/dependency-injection/Attribute/TaggedLocator.php',
         'VendorPatches202210\\Symfony\\Component\\DependencyInjection\\Attribute\\Target' => __DIR__ . '/..' . '/symfony/dependency-injection/Attribute/Target.php',
@@ -421,6 +422,7 @@ class ComposerStaticInit7fabcdd6cd6441bfa7a55fec5199833c
         'VendorPatches202210\\Symfony\\Component\\DependencyInjection\\Compiler\\AnalyzeServiceReferencesPass' => __DIR__ . '/..' . '/symfony/dependency-injection/Compiler/AnalyzeServiceReferencesPass.php',
         'VendorPatches202210\\Symfony\\Component\\DependencyInjection\\Compiler\\AttributeAutoconfigurationPass' => __DIR__ . '/..' . '/symfony/dependency-injection/Compiler/AttributeAutoconfigurationPass.php',
         'VendorPatches202210\\Symfony\\Component\\DependencyInjection\\Compiler\\AutoAliasServicePass' => __DIR__ . '/..' . '/symfony/dependency-injection/Compiler/AutoAliasServicePass.php',
+        'VendorPatches202210\\Symfony\\Component\\DependencyInjection\\Compiler\\AutowireAsDecoratorPass' => __DIR__ . '/..' . '/symfony/dependency-injection/Compiler/AutowireAsDecoratorPass.php',
         'VendorPatches202210\\Symfony\\Component\\DependencyInjection\\Compiler\\AutowirePass' => __DIR__ . '/..' . '/symfony/dependency-injection/Compiler/AutowirePass.php',
         'VendorPatches202210\\Symfony\\Component\\DependencyInjection\\Compiler\\AutowireRequiredMethodsPass' => __DIR__ . '/..' . '/symfony/dependency-injection/Compiler/AutowireRequiredMethodsPass.php',
         'VendorPatches202210\\Symfony\\Component\\DependencyInjection\\Compiler\\AutowireRequiredPropertiesPass' => __DIR__ . '/..' . '/symfony/dependency-injection/Compiler/AutowireRequiredPropertiesPass.php',
@@ -501,9 +503,12 @@ class ComposerStaticInit7fabcdd6cd6441bfa7a55fec5199833c
         'VendorPatches202210\\Symfony\\Component\\DependencyInjection\\Exception\\ServiceNotFoundException' => __DIR__ . '/..' . '/symfony/dependency-injection/Exception/ServiceNotFoundException.php',
         'VendorPatches202210\\Symfony\\Component\\DependencyInjection\\ExpressionLanguage' => __DIR__ . '/..' . '/symfony/dependency-injection/ExpressionLanguage.php',
         'VendorPatches202210\\Symfony\\Component\\DependencyInjection\\ExpressionLanguageProvider' => __DIR__ . '/..' . '/symfony/dependency-injection/ExpressionLanguageProvider.php',
+        'VendorPatches202210\\Symfony\\Component\\DependencyInjection\\Extension\\AbstractExtension' => __DIR__ . '/..' . '/symfony/dependency-injection/Extension/AbstractExtension.php',
+        'VendorPatches202210\\Symfony\\Component\\DependencyInjection\\Extension\\ConfigurableExtensionInterface' => __DIR__ . '/..' . '/symfony/dependency-injection/Extension/ConfigurableExtensionInterface.php',
         'VendorPatches202210\\Symfony\\Component\\DependencyInjection\\Extension\\ConfigurationExtensionInterface' => __DIR__ . '/..' . '/symfony/dependency-injection/Extension/ConfigurationExtensionInterface.php',
         'VendorPatches202210\\Symfony\\Component\\DependencyInjection\\Extension\\Extension' => __DIR__ . '/..' . '/symfony/dependency-injection/Extension/Extension.php',
         'VendorPatches202210\\Symfony\\Component\\DependencyInjection\\Extension\\ExtensionInterface' => __DIR__ . '/..' . '/symfony/dependency-injection/Extension/ExtensionInterface.php',
+        'VendorPatches202210\\Symfony\\Component\\DependencyInjection\\Extension\\ExtensionTrait' => __DIR__ . '/..' . '/symfony/dependency-injection/Extension/ExtensionTrait.php',
         'VendorPatches202210\\Symfony\\Component\\DependencyInjection\\Extension\\PrependExtensionInterface' => __DIR__ . '/..' . '/symfony/dependency-injection/Extension/PrependExtensionInterface.php',
         'VendorPatches202210\\Symfony\\Component\\DependencyInjection\\LazyProxy\\Instantiator\\InstantiatorInterface' => __DIR__ . '/..' . '/symfony/dependency-injection/LazyProxy/Instantiator/InstantiatorInterface.php',
         'VendorPatches202210\\Symfony\\Component\\DependencyInjection\\LazyProxy\\Instantiator\\RealServiceInstantiator' => __DIR__ . '/..' . '/symfony/dependency-injection/LazyProxy/Instantiator/RealServiceInstantiator.php',
@@ -616,12 +621,10 @@ class ComposerStaticInit7fabcdd6cd6441bfa7a55fec5199833c
         'VendorPatches202210\\Symfony\\Contracts\\Service\\ServiceProviderInterface' => __DIR__ . '/..' . '/symfony/service-contracts/ServiceProviderInterface.php',
         'VendorPatches202210\\Symfony\\Contracts\\Service\\ServiceSubscriberInterface' => __DIR__ . '/..' . '/symfony/service-contracts/ServiceSubscriberInterface.php',
         'VendorPatches202210\\Symfony\\Contracts\\Service\\ServiceSubscriberTrait' => __DIR__ . '/..' . '/symfony/service-contracts/ServiceSubscriberTrait.php',
-        'VendorPatches202210\\Symfony\\Contracts\\Service\\Test\\ServiceLocatorTest' => __DIR__ . '/..' . '/symfony/service-contracts/Test/ServiceLocatorTest.php',
         'VendorPatches202210\\Symfony\\Polyfill\\Ctype\\Ctype' => __DIR__ . '/..' . '/symfony/polyfill-ctype/Ctype.php',
         'VendorPatches202210\\Symfony\\Polyfill\\Intl\\Grapheme\\Grapheme' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/Grapheme.php',
         'VendorPatches202210\\Symfony\\Polyfill\\Intl\\Normalizer\\Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Normalizer.php',
         'VendorPatches202210\\Symfony\\Polyfill\\Mbstring\\Mbstring' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/Mbstring.php',
-        'VendorPatches202210\\Symfony\\Polyfill\\Php81\\Php81' => __DIR__ . '/..' . '/symfony/polyfill-php81/Php81.php',
         'VendorPatches202210\\Symplify\\AutowireArrayParameter\\DependencyInjection\\CompilerPass\\AutowireArrayParameterCompilerPass' => __DIR__ . '/..' . '/symplify/autowire-array-parameter/src/DependencyInjection/CompilerPass/AutowireArrayParameterCompilerPass.php',
         'VendorPatches202210\\Symplify\\AutowireArrayParameter\\DependencyInjection\\DefinitionFinder' => __DIR__ . '/..' . '/symplify/autowire-array-parameter/src/DependencyInjection/DefinitionFinder.php',
         'VendorPatches202210\\Symplify\\AutowireArrayParameter\\DocBlock\\ParamTypeDocBlockResolver' => __DIR__ . '/..' . '/symplify/autowire-array-parameter/src/DocBlock/ParamTypeDocBlockResolver.php',
@@ -693,9 +696,9 @@ class ComposerStaticInit7fabcdd6cd6441bfa7a55fec5199833c
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit7fabcdd6cd6441bfa7a55fec5199833c::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit7fabcdd6cd6441bfa7a55fec5199833c::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit7fabcdd6cd6441bfa7a55fec5199833c::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit36bfb3ab644b31f942edfb57002c2ea1::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit36bfb3ab644b31f942edfb57002c2ea1::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit36bfb3ab644b31f942edfb57002c2ea1::$classMap;
 
         }, null, ClassLoader::class);
     }

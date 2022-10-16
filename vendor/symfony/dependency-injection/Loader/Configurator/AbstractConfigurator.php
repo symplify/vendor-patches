@@ -11,6 +11,7 @@
 namespace VendorPatches202210\Symfony\Component\DependencyInjection\Loader\Configurator;
 
 use VendorPatches202210\Symfony\Component\Config\Loader\ParamConfigurator;
+use VendorPatches202210\Symfony\Component\DependencyInjection\Alias;
 use VendorPatches202210\Symfony\Component\DependencyInjection\Argument\AbstractArgument;
 use VendorPatches202210\Symfony\Component\DependencyInjection\Argument\ArgumentInterface;
 use VendorPatches202210\Symfony\Component\DependencyInjection\Argument\ServiceClosureArgument;
@@ -26,7 +27,8 @@ abstract class AbstractConfigurator
      * @var callable(mixed, bool)|null
      */
     public static $valuePreProcessor;
-    /** @internal */
+    /** @internal
+     * @var \Symfony\Component\DependencyInjection\Definition|\Symfony\Component\DependencyInjection\Alias|null */
     protected $definition = null;
     public function __call(string $method, array $args)
     {

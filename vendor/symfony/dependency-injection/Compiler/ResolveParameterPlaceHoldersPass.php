@@ -13,6 +13,7 @@ namespace VendorPatches202210\Symfony\Component\DependencyInjection\Compiler;
 use VendorPatches202210\Symfony\Component\DependencyInjection\ContainerBuilder;
 use VendorPatches202210\Symfony\Component\DependencyInjection\Definition;
 use VendorPatches202210\Symfony\Component\DependencyInjection\Exception\ParameterNotFoundException;
+use VendorPatches202210\Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 /**
  * Resolves all parameter placeholders "%somevalue%" to their real values.
  *
@@ -20,6 +21,9 @@ use VendorPatches202210\Symfony\Component\DependencyInjection\Exception\Paramete
  */
 class ResolveParameterPlaceHoldersPass extends AbstractRecursivePass
 {
+    /**
+     * @var \Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface
+     */
     private $bag;
     /**
      * @var bool

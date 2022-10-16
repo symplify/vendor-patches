@@ -20,6 +20,9 @@ use VendorPatches202210\Symfony\Component\Console\Exception\CommandNotFoundExcep
  */
 class ContainerCommandLoader implements CommandLoaderInterface
 {
+    /**
+     * @var \Psr\Container\ContainerInterface
+     */
     private $container;
     /**
      * @var mixed[]
