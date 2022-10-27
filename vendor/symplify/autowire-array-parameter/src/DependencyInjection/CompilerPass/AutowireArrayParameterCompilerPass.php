@@ -30,9 +30,10 @@ final class AutowireArrayParameterCompilerPass implements CompilerPassInterface
      * Classes that create circular dependencies
      *
      * @var string[]
-     * @noRector
+     * @noRector \Rector\Privatization\Rector\Property\ChangeReadOnlyPropertyWithDefaultValueToConstantRector
+     * @noRector \Rector\Php55\Rector\String_\StringClassNameToClassConstantRector
      */
-    private array $excludedFatalClasses = ['VendorPatches202210\\Symfony\\Component\\Form\\FormExtensionInterface', 'VendorPatches202210\\Symfony\\Component\\Asset\\PackageInterface', 'VendorPatches202210\\Symfony\\Component\\Config\\Loader\\LoaderInterface', 'VendorPatches202210\\Symfony\\Component\\VarDumper\\Dumper\\ContextProvider\\ContextProviderInterface', 'VendorPatches202210\\EasyCorp\\Bundle\\EasyAdminBundle\\Form\\Type\\Configurator\\TypeConfiguratorInterface', 'VendorPatches202210\\Sonata\\CoreBundle\\Model\\Adapter\\AdapterInterface', 'VendorPatches202210\\Sonata\\Doctrine\\Adapter\\AdapterChain', 'VendorPatches202210\\Sonata\\Twig\\Extension\\TemplateExtension', 'VendorPatches202210\\Symfony\\Component\\HttpKernel\\KernelInterface'];
+    private $excludedFatalClasses = ['VendorPatches202210\\Symfony\\Component\\Form\\FormExtensionInterface', 'VendorPatches202210\\Symfony\\Component\\Asset\\PackageInterface', 'VendorPatches202210\\Symfony\\Component\\Config\\Loader\\LoaderInterface', 'VendorPatches202210\\Symfony\\Component\\VarDumper\\Dumper\\ContextProvider\\ContextProviderInterface', 'VendorPatches202210\\EasyCorp\\Bundle\\EasyAdminBundle\\Form\\Type\\Configurator\\TypeConfiguratorInterface', 'VendorPatches202210\\Sonata\\CoreBundle\\Model\\Adapter\\AdapterInterface', 'VendorPatches202210\\Sonata\\Doctrine\\Adapter\\AdapterChain', 'VendorPatches202210\\Sonata\\Twig\\Extension\\TemplateExtension', 'VendorPatches202210\\Symfony\\Component\\HttpKernel\\KernelInterface'];
     /**
      * @var \Symplify\AutowireArrayParameter\DependencyInjection\DefinitionFinder
      */
