@@ -27,7 +27,7 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorPatches202210\\Symfony\\Polyfill\\Intl\\Grapheme\\": ""
+            "VendorPatches202211\\Symfony\\Polyfill\\Intl\\Grapheme\\": ""
         },
         "files": [
             "bootstrap.php"

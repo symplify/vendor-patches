@@ -8,14 +8,14 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202210\Symfony\Component\Console\Input;
+namespace VendorPatches202211\Symfony\Component\Console\Input;
 
-use VendorPatches202210\Symfony\Component\Console\Command\Command;
-use VendorPatches202210\Symfony\Component\Console\Completion\CompletionInput;
-use VendorPatches202210\Symfony\Component\Console\Completion\CompletionSuggestions;
-use VendorPatches202210\Symfony\Component\Console\Completion\Suggestion;
-use VendorPatches202210\Symfony\Component\Console\Exception\InvalidArgumentException;
-use VendorPatches202210\Symfony\Component\Console\Exception\LogicException;
+use VendorPatches202211\Symfony\Component\Console\Command\Command;
+use VendorPatches202211\Symfony\Component\Console\Completion\CompletionInput;
+use VendorPatches202211\Symfony\Component\Console\Completion\CompletionSuggestions;
+use VendorPatches202211\Symfony\Component\Console\Completion\Suggestion;
+use VendorPatches202211\Symfony\Component\Console\Exception\InvalidArgumentException;
+use VendorPatches202211\Symfony\Component\Console\Exception\LogicException;
 /**
  * Represents a command line argument.
  *

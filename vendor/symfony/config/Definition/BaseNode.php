@@ -8,13 +8,13 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202210\Symfony\Component\Config\Definition;
+namespace VendorPatches202211\Symfony\Component\Config\Definition;
 
-use VendorPatches202210\Symfony\Component\Config\Definition\Exception\Exception;
-use VendorPatches202210\Symfony\Component\Config\Definition\Exception\ForbiddenOverwriteException;
-use VendorPatches202210\Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
-use VendorPatches202210\Symfony\Component\Config\Definition\Exception\InvalidTypeException;
-use VendorPatches202210\Symfony\Component\Config\Definition\Exception\UnsetKeyException;
+use VendorPatches202211\Symfony\Component\Config\Definition\Exception\Exception;
+use VendorPatches202211\Symfony\Component\Config\Definition\Exception\ForbiddenOverwriteException;
+use VendorPatches202211\Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
+use VendorPatches202211\Symfony\Component\Config\Definition\Exception\InvalidTypeException;
+use VendorPatches202211\Symfony\Component\Config\Definition\Exception\UnsetKeyException;
 /**
  * The base node class.
  *

@@ -8,14 +8,14 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202210\Symfony\Component\Console\Helper;
+namespace VendorPatches202211\Symfony\Component\Console\Helper;
 
-use VendorPatches202210\Symfony\Component\Console\Exception\InvalidArgumentException;
-use VendorPatches202210\Symfony\Component\Console\Exception\RuntimeException;
-use VendorPatches202210\Symfony\Component\Console\Formatter\OutputFormatter;
-use VendorPatches202210\Symfony\Component\Console\Formatter\WrappableOutputFormatterInterface;
-use VendorPatches202210\Symfony\Component\Console\Output\ConsoleSectionOutput;
-use VendorPatches202210\Symfony\Component\Console\Output\OutputInterface;
+use VendorPatches202211\Symfony\Component\Console\Exception\InvalidArgumentException;
+use VendorPatches202211\Symfony\Component\Console\Exception\RuntimeException;
+use VendorPatches202211\Symfony\Component\Console\Formatter\OutputFormatter;
+use VendorPatches202211\Symfony\Component\Console\Formatter\WrappableOutputFormatterInterface;
+use VendorPatches202211\Symfony\Component\Console\Output\ConsoleSectionOutput;
+use VendorPatches202211\Symfony\Component\Console\Output\OutputInterface;
 /**
  * Provides helpers to display a table.
  *

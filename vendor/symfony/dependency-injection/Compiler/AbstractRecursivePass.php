@@ -8,17 +8,17 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202210\Symfony\Component\DependencyInjection\Compiler;
+namespace VendorPatches202211\Symfony\Component\DependencyInjection\Compiler;
 
-use VendorPatches202210\Symfony\Component\DependencyInjection\Argument\ArgumentInterface;
-use VendorPatches202210\Symfony\Component\DependencyInjection\ChildDefinition;
-use VendorPatches202210\Symfony\Component\DependencyInjection\ContainerBuilder;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Definition;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Exception\LogicException;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Exception\RuntimeException;
-use VendorPatches202210\Symfony\Component\DependencyInjection\ExpressionLanguage;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Reference;
-use VendorPatches202210\Symfony\Component\ExpressionLanguage\Expression;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Argument\ArgumentInterface;
+use VendorPatches202211\Symfony\Component\DependencyInjection\ChildDefinition;
+use VendorPatches202211\Symfony\Component\DependencyInjection\ContainerBuilder;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Definition;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Exception\LogicException;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Exception\RuntimeException;
+use VendorPatches202211\Symfony\Component\DependencyInjection\ExpressionLanguage;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Reference;
+use VendorPatches202211\Symfony\Component\ExpressionLanguage\Expression;
 /**
  * @author Nicolas Grekas <p@tchwork.com>
  */

@@ -3,9 +3,9 @@
 declare (strict_types=1);
 namespace Symplify\VendorPatches\Finder;
 
-use VendorPatches202210\Symfony\Component\Finder\Finder;
-use VendorPatches202210\Symplify\SmartFileSystem\Finder\FinderSanitizer;
-use VendorPatches202210\Symplify\SmartFileSystem\SmartFileInfo;
+use VendorPatches202211\Symfony\Component\Finder\Finder;
+use VendorPatches202211\Symplify\SmartFileSystem\Finder\FinderSanitizer;
+use VendorPatches202211\Symplify\SmartFileSystem\SmartFileInfo;
 use Symplify\VendorPatches\Composer\PackageNameResolver;
 use Symplify\VendorPatches\ValueObject\OldAndNewFileInfo;
 final class OldToNewFilesFinder

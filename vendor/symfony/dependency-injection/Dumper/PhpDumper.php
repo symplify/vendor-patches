@@ -8,40 +8,40 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202210\Symfony\Component\DependencyInjection\Dumper;
+namespace VendorPatches202211\Symfony\Component\DependencyInjection\Dumper;
 
-use VendorPatches202210\Composer\Autoload\ClassLoader;
-use VendorPatches202210\Symfony\Component\Debug\DebugClassLoader as LegacyDebugClassLoader;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Argument\AbstractArgument;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Argument\ArgumentInterface;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Argument\IteratorArgument;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Argument\ServiceClosureArgument;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Argument\ServiceLocator;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Argument\ServiceLocatorArgument;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Compiler\AnalyzeServiceReferencesPass;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Compiler\CheckCircularReferencesPass;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Compiler\ServiceReferenceGraphNode;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Container;
-use VendorPatches202210\Symfony\Component\DependencyInjection\ContainerBuilder;
-use VendorPatches202210\Symfony\Component\DependencyInjection\ContainerInterface;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Definition;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Exception\EnvParameterException;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Exception\LogicException;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Exception\RuntimeException;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Exception\ServiceCircularReferenceException;
-use VendorPatches202210\Symfony\Component\DependencyInjection\ExpressionLanguage;
-use VendorPatches202210\Symfony\Component\DependencyInjection\LazyProxy\PhpDumper\DumperInterface as ProxyDumper;
-use VendorPatches202210\Symfony\Component\DependencyInjection\LazyProxy\PhpDumper\NullDumper;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Loader\FileLoader;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Parameter;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Reference;
-use VendorPatches202210\Symfony\Component\DependencyInjection\ServiceLocator as BaseServiceLocator;
-use VendorPatches202210\Symfony\Component\DependencyInjection\TypedReference;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Variable;
-use VendorPatches202210\Symfony\Component\ErrorHandler\DebugClassLoader;
-use VendorPatches202210\Symfony\Component\ExpressionLanguage\Expression;
-use VendorPatches202210\Symfony\Component\HttpKernel\Kernel;
+use VendorPatches202211\Composer\Autoload\ClassLoader;
+use VendorPatches202211\Symfony\Component\Debug\DebugClassLoader as LegacyDebugClassLoader;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Argument\AbstractArgument;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Argument\ArgumentInterface;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Argument\IteratorArgument;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Argument\ServiceClosureArgument;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Argument\ServiceLocator;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Argument\ServiceLocatorArgument;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Compiler\AnalyzeServiceReferencesPass;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Compiler\CheckCircularReferencesPass;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Compiler\ServiceReferenceGraphNode;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Container;
+use VendorPatches202211\Symfony\Component\DependencyInjection\ContainerBuilder;
+use VendorPatches202211\Symfony\Component\DependencyInjection\ContainerInterface;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Definition;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Exception\EnvParameterException;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Exception\LogicException;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Exception\RuntimeException;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Exception\ServiceCircularReferenceException;
+use VendorPatches202211\Symfony\Component\DependencyInjection\ExpressionLanguage;
+use VendorPatches202211\Symfony\Component\DependencyInjection\LazyProxy\PhpDumper\DumperInterface as ProxyDumper;
+use VendorPatches202211\Symfony\Component\DependencyInjection\LazyProxy\PhpDumper\NullDumper;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Loader\FileLoader;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Parameter;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Reference;
+use VendorPatches202211\Symfony\Component\DependencyInjection\ServiceLocator as BaseServiceLocator;
+use VendorPatches202211\Symfony\Component\DependencyInjection\TypedReference;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Variable;
+use VendorPatches202211\Symfony\Component\ErrorHandler\DebugClassLoader;
+use VendorPatches202211\Symfony\Component\ExpressionLanguage\Expression;
+use VendorPatches202211\Symfony\Component\HttpKernel\Kernel;
 /**
  * PhpDumper dumps a service container as a PHP class.
  *
@@ -268,8 +268,8 @@ class PhpDumper extends Dumper
             $fileTemplate = <<<EOF
 <?php
 
-use VendorPatches202210\\Symfony\\Component\\DependencyInjection\\Argument\\RewindableGenerator;
-use VendorPatches202210\\Symfony\\Component\\DependencyInjection\\Exception\\RuntimeException;
+use VendorPatches202211\\Symfony\\Component\\DependencyInjection\\Argument\\RewindableGenerator;
+use VendorPatches202211\\Symfony\\Component\\DependencyInjection\\Exception\\RuntimeException;
 
 /*{$this->docStar}
  * @internal This class has been auto-generated by the Symfony Dependency Injection Component.
@@ -338,7 +338,7 @@ EOF;
 // This file has been auto-generated by the Symfony Dependency Injection Component
 // You can reference it in the "opcache.preload" php.ini setting on PHP >= 7.4 when preloading is desired
 
-use VendorPatches202210\\Symfony\\Component\\DependencyInjection\\Dumper\\Preloader;
+use VendorPatches202211\\Symfony\\Component\\DependencyInjection\\Dumper\\Preloader;
 
 if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
     return;
@@ -1064,14 +1064,14 @@ EOTXT
         $code = <<<EOF
 <?php
 {$namespaceLine}
-use VendorPatches202210\\Symfony\\Component\\DependencyInjection\\Argument\\RewindableGenerator;
-use VendorPatches202210\\Symfony\\Component\\DependencyInjection\\ContainerInterface;
-use VendorPatches202210\\Symfony\\Component\\DependencyInjection\\Container;
-use VendorPatches202210\\Symfony\\Component\\DependencyInjection\\Exception\\InvalidArgumentException;
-use VendorPatches202210\\Symfony\\Component\\DependencyInjection\\Exception\\LogicException;
-use VendorPatches202210\\Symfony\\Component\\DependencyInjection\\Exception\\RuntimeException;
-use VendorPatches202210\\Symfony\\Component\\DependencyInjection\\ParameterBag\\FrozenParameterBag;
-use VendorPatches202210\\Symfony\\Component\\DependencyInjection\\ParameterBag\\ParameterBagInterface;
+use VendorPatches202211\\Symfony\\Component\\DependencyInjection\\Argument\\RewindableGenerator;
+use VendorPatches202211\\Symfony\\Component\\DependencyInjection\\ContainerInterface;
+use VendorPatches202211\\Symfony\\Component\\DependencyInjection\\Container;
+use VendorPatches202211\\Symfony\\Component\\DependencyInjection\\Exception\\InvalidArgumentException;
+use VendorPatches202211\\Symfony\\Component\\DependencyInjection\\Exception\\LogicException;
+use VendorPatches202211\\Symfony\\Component\\DependencyInjection\\Exception\\RuntimeException;
+use VendorPatches202211\\Symfony\\Component\\DependencyInjection\\ParameterBag\\FrozenParameterBag;
+use VendorPatches202211\\Symfony\\Component\\DependencyInjection\\ParameterBag\\ParameterBagInterface;
 
 /*{$this->docStar}
  * @internal This class has been auto-generated by the Symfony Dependency Injection Component.
@@ -1820,7 +1820,7 @@ EOF;
     private function getExpressionLanguage() : ExpressionLanguage
     {
         if (!isset($this->expressionLanguage)) {
-            if (!\class_exists(\VendorPatches202210\Symfony\Component\ExpressionLanguage\ExpressionLanguage::class)) {
+            if (!\class_exists(\VendorPatches202211\Symfony\Component\ExpressionLanguage\ExpressionLanguage::class)) {
                 throw new LogicException('Unable to use expressions as the Symfony ExpressionLanguage component is not installed.');
             }
             $providers = $this->container->getExpressionLanguageProviders();

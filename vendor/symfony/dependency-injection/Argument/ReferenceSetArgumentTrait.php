@@ -8,11 +8,11 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202210\Symfony\Component\DependencyInjection\Argument;
+namespace VendorPatches202211\Symfony\Component\DependencyInjection\Argument;
 
 trigger_deprecation('symfony/dependency-injection', '6.1', '"%s" is deprecated.', ReferenceSetArgumentTrait::class);
-use VendorPatches202210\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Reference;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Reference;
 /**
  * @author Titouan Galopin <galopintitouan@gmail.com>
  * @author Nicolas Grekas <p@tchwork.com>

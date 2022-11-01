@@ -8,21 +8,21 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202210\Symfony\Component\DependencyInjection\Extension;
+namespace VendorPatches202211\Symfony\Component\DependencyInjection\Extension;
 
-use VendorPatches202210\Symfony\Component\Config\Builder\ConfigBuilderGenerator;
-use VendorPatches202210\Symfony\Component\Config\FileLocator;
-use VendorPatches202210\Symfony\Component\Config\Loader\DelegatingLoader;
-use VendorPatches202210\Symfony\Component\Config\Loader\LoaderResolver;
-use VendorPatches202210\Symfony\Component\DependencyInjection\ContainerBuilder;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Loader\ClosureLoader;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Loader\DirectoryLoader;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Loader\GlobFileLoader;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Loader\IniFileLoader;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Loader\PhpFileLoader;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
+use VendorPatches202211\Symfony\Component\Config\Builder\ConfigBuilderGenerator;
+use VendorPatches202211\Symfony\Component\Config\FileLocator;
+use VendorPatches202211\Symfony\Component\Config\Loader\DelegatingLoader;
+use VendorPatches202211\Symfony\Component\Config\Loader\LoaderResolver;
+use VendorPatches202211\Symfony\Component\DependencyInjection\ContainerBuilder;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Loader\ClosureLoader;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Loader\DirectoryLoader;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Loader\GlobFileLoader;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Loader\IniFileLoader;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Loader\PhpFileLoader;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 /**
  * @author Yonel Ceruto <yonelceruto@gmail.com>
  */

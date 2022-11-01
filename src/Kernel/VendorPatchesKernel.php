@@ -3,9 +3,9 @@
 declare (strict_types=1);
 namespace Symplify\VendorPatches\Kernel;
 
-use VendorPatches202210\Psr\Container\ContainerInterface;
-use VendorPatches202210\Symplify\ComposerJsonManipulator\ValueObject\ComposerJsonManipulatorConfig;
-use VendorPatches202210\Symplify\SymplifyKernel\HttpKernel\AbstractSymplifyKernel;
+use VendorPatches202211\Psr\Container\ContainerInterface;
+use VendorPatches202211\Symplify\ComposerJsonManipulator\ValueObject\ComposerJsonManipulatorConfig;
+use VendorPatches202211\Symplify\SymplifyKernel\HttpKernel\AbstractSymplifyKernel;
 final class VendorPatchesKernel extends AbstractSymplifyKernel
 {
     /**

@@ -8,18 +8,18 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202210\Symfony\Component\Config\Definition\Dumper;
+namespace VendorPatches202211\Symfony\Component\Config\Definition\Dumper;
 
-use VendorPatches202210\Symfony\Component\Config\Definition\ArrayNode;
-use VendorPatches202210\Symfony\Component\Config\Definition\BaseNode;
-use VendorPatches202210\Symfony\Component\Config\Definition\BooleanNode;
-use VendorPatches202210\Symfony\Component\Config\Definition\ConfigurationInterface;
-use VendorPatches202210\Symfony\Component\Config\Definition\EnumNode;
-use VendorPatches202210\Symfony\Component\Config\Definition\FloatNode;
-use VendorPatches202210\Symfony\Component\Config\Definition\IntegerNode;
-use VendorPatches202210\Symfony\Component\Config\Definition\NodeInterface;
-use VendorPatches202210\Symfony\Component\Config\Definition\PrototypedArrayNode;
-use VendorPatches202210\Symfony\Component\Config\Definition\ScalarNode;
+use VendorPatches202211\Symfony\Component\Config\Definition\ArrayNode;
+use VendorPatches202211\Symfony\Component\Config\Definition\BaseNode;
+use VendorPatches202211\Symfony\Component\Config\Definition\BooleanNode;
+use VendorPatches202211\Symfony\Component\Config\Definition\ConfigurationInterface;
+use VendorPatches202211\Symfony\Component\Config\Definition\EnumNode;
+use VendorPatches202211\Symfony\Component\Config\Definition\FloatNode;
+use VendorPatches202211\Symfony\Component\Config\Definition\IntegerNode;
+use VendorPatches202211\Symfony\Component\Config\Definition\NodeInterface;
+use VendorPatches202211\Symfony\Component\Config\Definition\PrototypedArrayNode;
+use VendorPatches202211\Symfony\Component\Config\Definition\ScalarNode;
 /**
  * Dumps an XML reference configuration for the given configuration/node instance.
  *

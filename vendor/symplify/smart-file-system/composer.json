@@ -14,12 +14,12 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorPatches202210\\Symplify\\SmartFileSystem\\": "src"
+            "VendorPatches202211\\Symplify\\SmartFileSystem\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorPatches202210\\Symplify\\SmartFileSystem\\Tests\\": "tests"
+            "VendorPatches202211\\Symplify\\SmartFileSystem\\Tests\\": "tests"
         }
     },
     "extra": {

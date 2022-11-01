@@ -28,7 +28,7 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorPatches202210\\Symfony\\Polyfill\\Ctype\\": ""
+            "VendorPatches202211\\Symfony\\Polyfill\\Ctype\\": ""
         },
         "files": [
             "bootstrap.php"

@@ -8,15 +8,15 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202210\Symfony\Component\Console\Descriptor;
+namespace VendorPatches202211\Symfony\Component\Console\Descriptor;
 
-use VendorPatches202210\Symfony\Component\Console\Application;
-use VendorPatches202210\Symfony\Component\Console\Command\Command;
-use VendorPatches202210\Symfony\Component\Console\Exception\InvalidArgumentException;
-use VendorPatches202210\Symfony\Component\Console\Input\InputArgument;
-use VendorPatches202210\Symfony\Component\Console\Input\InputDefinition;
-use VendorPatches202210\Symfony\Component\Console\Input\InputOption;
-use VendorPatches202210\Symfony\Component\Console\Output\OutputInterface;
+use VendorPatches202211\Symfony\Component\Console\Application;
+use VendorPatches202211\Symfony\Component\Console\Command\Command;
+use VendorPatches202211\Symfony\Component\Console\Exception\InvalidArgumentException;
+use VendorPatches202211\Symfony\Component\Console\Input\InputArgument;
+use VendorPatches202211\Symfony\Component\Console\Input\InputDefinition;
+use VendorPatches202211\Symfony\Component\Console\Input\InputOption;
+use VendorPatches202211\Symfony\Component\Console\Output\OutputInterface;
 /**
  * @author Jean-François Simon <jeanfrancois.simon@sensiolabs.com>
  *

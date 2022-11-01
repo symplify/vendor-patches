@@ -46,7 +46,7 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorPatches202210\\Symfony\\Component\\DependencyInjection\\": ""
+            "VendorPatches202211\\Symfony\\Component\\DependencyInjection\\": ""
         },
         "exclude-from-classmap": [
             "\/Tests\/"

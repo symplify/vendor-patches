@@ -8,13 +8,13 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202210\Symfony\Component\DependencyInjection\Extension;
+namespace VendorPatches202211\Symfony\Component\DependencyInjection\Extension;
 
-use VendorPatches202210\Symfony\Component\Config\Definition\Configuration;
-use VendorPatches202210\Symfony\Component\Config\Definition\ConfigurationInterface;
-use VendorPatches202210\Symfony\Component\Config\Definition\Configurator\DefinitionConfigurator;
-use VendorPatches202210\Symfony\Component\DependencyInjection\ContainerBuilder;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use VendorPatches202211\Symfony\Component\Config\Definition\Configuration;
+use VendorPatches202211\Symfony\Component\Config\Definition\ConfigurationInterface;
+use VendorPatches202211\Symfony\Component\Config\Definition\Configurator\DefinitionConfigurator;
+use VendorPatches202211\Symfony\Component\DependencyInjection\ContainerBuilder;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 /**
  * An Extension that provides configuration hooks.
  *

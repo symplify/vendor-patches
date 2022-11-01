@@ -1,19 +1,19 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches202210;
+namespace VendorPatches202211;
 
-use VendorPatches202210\Symfony\Component\Console\Style\SymfonyStyle;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use VendorPatches202210\Symplify\PackageBuilder\Console\Style\SymfonyStyleFactory;
-use VendorPatches202210\Symplify\PackageBuilder\Parameter\ParameterProvider;
-use VendorPatches202210\Symplify\PackageBuilder\Reflection\PrivatesAccessor;
-use VendorPatches202210\Symplify\SmartFileSystem\FileSystemFilter;
-use VendorPatches202210\Symplify\SmartFileSystem\FileSystemGuard;
-use VendorPatches202210\Symplify\SmartFileSystem\Finder\FinderSanitizer;
-use VendorPatches202210\Symplify\SmartFileSystem\Finder\SmartFinder;
-use VendorPatches202210\Symplify\SmartFileSystem\SmartFileSystem;
-use function VendorPatches202210\Symfony\Component\DependencyInjection\Loader\Configurator\service;
+use VendorPatches202211\Symfony\Component\Console\Style\SymfonyStyle;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use VendorPatches202211\Symplify\PackageBuilder\Console\Style\SymfonyStyleFactory;
+use VendorPatches202211\Symplify\PackageBuilder\Parameter\ParameterProvider;
+use VendorPatches202211\Symplify\PackageBuilder\Reflection\PrivatesAccessor;
+use VendorPatches202211\Symplify\SmartFileSystem\FileSystemFilter;
+use VendorPatches202211\Symplify\SmartFileSystem\FileSystemGuard;
+use VendorPatches202211\Symplify\SmartFileSystem\Finder\FinderSanitizer;
+use VendorPatches202211\Symplify\SmartFileSystem\Finder\SmartFinder;
+use VendorPatches202211\Symplify\SmartFileSystem\SmartFileSystem;
+use function VendorPatches202211\Symfony\Component\DependencyInjection\Loader\Configurator\service;
 return static function (ContainerConfigurator $containerConfigurator) : void {
     $services = $containerConfigurator->services();
     $services->defaults()->public()->autowire();

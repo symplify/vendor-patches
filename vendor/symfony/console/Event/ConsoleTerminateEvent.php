@@ -8,11 +8,11 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202210\Symfony\Component\Console\Event;
+namespace VendorPatches202211\Symfony\Component\Console\Event;
 
-use VendorPatches202210\Symfony\Component\Console\Command\Command;
-use VendorPatches202210\Symfony\Component\Console\Input\InputInterface;
-use VendorPatches202210\Symfony\Component\Console\Output\OutputInterface;
+use VendorPatches202211\Symfony\Component\Console\Command\Command;
+use VendorPatches202211\Symfony\Component\Console\Input\InputInterface;
+use VendorPatches202211\Symfony\Component\Console\Output\OutputInterface;
 /**
  * Allows to manipulate the exit code of a command after its execution.
  *

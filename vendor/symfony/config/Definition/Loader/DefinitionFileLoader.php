@@ -8,13 +8,13 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202210\Symfony\Component\Config\Definition\Loader;
+namespace VendorPatches202211\Symfony\Component\Config\Definition\Loader;
 
-use VendorPatches202210\Symfony\Component\Config\Definition\Builder\TreeBuilder;
-use VendorPatches202210\Symfony\Component\Config\Definition\Configurator\DefinitionConfigurator;
-use VendorPatches202210\Symfony\Component\Config\FileLocatorInterface;
-use VendorPatches202210\Symfony\Component\Config\Loader\FileLoader;
-use VendorPatches202210\Symfony\Component\DependencyInjection\ContainerBuilder;
+use VendorPatches202211\Symfony\Component\Config\Definition\Builder\TreeBuilder;
+use VendorPatches202211\Symfony\Component\Config\Definition\Configurator\DefinitionConfigurator;
+use VendorPatches202211\Symfony\Component\Config\FileLocatorInterface;
+use VendorPatches202211\Symfony\Component\Config\Loader\FileLoader;
+use VendorPatches202211\Symfony\Component\DependencyInjection\ContainerBuilder;
 /**
  * DefinitionFileLoader loads config definitions from a PHP file.
  *

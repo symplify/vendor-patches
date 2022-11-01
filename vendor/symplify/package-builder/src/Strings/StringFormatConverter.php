@@ -1,9 +1,9 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches202210\Symplify\PackageBuilder\Strings;
+namespace VendorPatches202211\Symplify\PackageBuilder\Strings;
 
-use VendorPatches202210\Nette\Utils\Strings;
+use VendorPatches202211\Nette\Utils\Strings;
 /**
  * @api
  * @see \Symplify\PackageBuilder\Tests\Strings\StringFormatConverterTest

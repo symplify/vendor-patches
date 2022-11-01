@@ -8,24 +8,24 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202210\Symfony\Component\DependencyInjection\Compiler;
+namespace VendorPatches202211\Symfony\Component\DependencyInjection\Compiler;
 
-use VendorPatches202210\Symfony\Component\Config\Resource\ClassExistenceResource;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Argument\ServiceLocatorArgument;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Argument\TaggedIteratorArgument;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Attribute\Autowire;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Attribute\MapDecorated;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Attribute\TaggedIterator;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Attribute\TaggedLocator;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Attribute\Target;
-use VendorPatches202210\Symfony\Component\DependencyInjection\ContainerBuilder;
-use VendorPatches202210\Symfony\Component\DependencyInjection\ContainerInterface;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Definition;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Exception\AutowiringFailedException;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Exception\RuntimeException;
-use VendorPatches202210\Symfony\Component\DependencyInjection\LazyProxy\ProxyHelper;
-use VendorPatches202210\Symfony\Component\DependencyInjection\Reference;
-use VendorPatches202210\Symfony\Component\DependencyInjection\TypedReference;
+use VendorPatches202211\Symfony\Component\Config\Resource\ClassExistenceResource;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Argument\ServiceLocatorArgument;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Argument\TaggedIteratorArgument;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Attribute\Autowire;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Attribute\MapDecorated;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Attribute\TaggedIterator;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Attribute\TaggedLocator;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Attribute\Target;
+use VendorPatches202211\Symfony\Component\DependencyInjection\ContainerBuilder;
+use VendorPatches202211\Symfony\Component\DependencyInjection\ContainerInterface;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Definition;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Exception\AutowiringFailedException;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Exception\RuntimeException;
+use VendorPatches202211\Symfony\Component\DependencyInjection\LazyProxy\ProxyHelper;
+use VendorPatches202211\Symfony\Component\DependencyInjection\Reference;
+use VendorPatches202211\Symfony\Component\DependencyInjection\TypedReference;
 /**
  * Inspects existing service definitions and wires the autowired ones using the type hints of their classes.
  *

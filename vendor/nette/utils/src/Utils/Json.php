@@ -5,9 +5,9 @@
  * Copyright (c) 2004 David Grudl (https://davidgrudl.com)
  */
 declare (strict_types=1);
-namespace VendorPatches202210\Nette\Utils;
+namespace VendorPatches202211\Nette\Utils;
 
-use VendorPatches202210\Nette;
+use VendorPatches202211\Nette;
 /**
  * JSON encoder and decoder.
  */
