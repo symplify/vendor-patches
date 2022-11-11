@@ -3,7 +3,6 @@
 declare (strict_types=1);
 namespace VendorPatches202211\Symplify\SmartFileSystem\Finder;
 
-use VendorPatches202211\Nette\Utils\Finder as NetteFinder;
 use SplFileInfo;
 use VendorPatches202211\Symfony\Component\Finder\Finder as SymfonyFinder;
 use VendorPatches202211\Symfony\Component\Finder\SplFileInfo as SymfonySplFileInfo;
@@ -14,7 +13,7 @@ use VendorPatches202211\Symplify\SmartFileSystem\SmartFileInfo;
 final class FinderSanitizer
 {
     /**
-     * @param NetteFinder|SymfonyFinder|mixed[] $files
+     * @param SymfonyFinder|mixed[] $files
      * @return SmartFileInfo[]
      */
     public function sanitize($files) : array
