@@ -1261,7 +1261,7 @@
             "dist": {
                 "type": "path",
                 "url": "..\/..\/packages\/autowire-array-parameter",
-                "reference": "63399c6edd8f048b3c013af9ab0e3f5150e46870"
+                "reference": "06720899190ce485e99b81fe4c739b9f82a582ba"
             },
             "require": {
                 "nette\/utils": "^3.2",
@@ -1273,7 +1273,6 @@
                 "symplify\/composer-json-manipulator": "<11.1.17",
                 "symplify\/config-transformer": "<11.1.17",
                 "symplify\/easy-ci": "<11.1.17",
-                "symplify\/easy-coding-standard": "<11.1.17",
                 "symplify\/easy-parallel": "<11.1.17",
                 "symplify\/easy-testing": "<11.1.17",
                 "symplify\/monorepo-builder": "<11.1.17",
@@ -1327,7 +1326,7 @@
             "dist": {
                 "type": "path",
                 "url": "..\/..\/packages\/composer-json-manipulator",
-                "reference": "84bf3a127752cf475949202fd0e9e271540febba"
+                "reference": "3ddecfe85e6912bddc30f16045f542ec20630803"
             },
             "require": {
                 "nette\/utils": "^3.2",
@@ -1344,7 +1343,6 @@
                 "symplify\/coding-standard": "<11.1.17",
                 "symplify\/config-transformer": "<11.1.17",
                 "symplify\/easy-ci": "<11.1.17",
-                "symplify\/easy-coding-standard": "<11.1.17",
                 "symplify\/easy-parallel": "<11.1.17",
                 "symplify\/easy-testing": "<11.1.17",
                 "symplify\/monorepo-builder": "<11.1.17",
@@ -1394,7 +1392,7 @@
             "dist": {
                 "type": "path",
                 "url": "..\/..\/packages\/package-builder",
-                "reference": "feb951c999b5bea38f5a5174c8aaf1850d234c74"
+                "reference": "51afac36bcd7055e16f39013fce182dfd83b6ab8"
             },
             "require": {
                 "nette\/utils": "^3.2",
@@ -1411,7 +1409,6 @@
                 "symplify\/composer-json-manipulator": "<11.1.17",
                 "symplify\/config-transformer": "<11.1.17",
                 "symplify\/easy-ci": "<11.1.17",
-                "symplify\/easy-coding-standard": "<11.1.17",
                 "symplify\/easy-parallel": "<11.1.17",
                 "symplify\/easy-testing": "<11.1.17",
                 "symplify\/monorepo-builder": "<11.1.17",
@@ -1463,7 +1460,7 @@
             "dist": {
                 "type": "path",
                 "url": "..\/..\/packages\/smart-file-system",
-                "reference": "3dd6b0fb1faa7764f8d1fd21e795bb6aeba1200b"
+                "reference": "727e5ce8b216343058d883930772f83f496c64ad"
             },
             "require": {
                 "nette\/utils": "^3.2",
@@ -1477,7 +1474,6 @@
                 "symplify\/composer-json-manipulator": "<11.1.17",
                 "symplify\/config-transformer": "<11.1.17",
                 "symplify\/easy-ci": "<11.1.17",
-                "symplify\/easy-coding-standard": "<11.1.17",
                 "symplify\/easy-parallel": "<11.1.17",
                 "symplify\/easy-testing": "<11.1.17",
                 "symplify\/monorepo-builder": "<11.1.17",
@@ -1528,7 +1524,7 @@
             "dist": {
                 "type": "path",
                 "url": "..\/..\/packages\/symplify-kernel",
-                "reference": "74a57187ffc66df8acaebeb57f61de07a4a54514"
+                "reference": "65ad672c2f9d41ce484740cd7625b8f2ae47100f"
             },
             "require": {
                 "php": ">=8.1",
@@ -1544,7 +1540,6 @@
                 "symplify\/composer-json-manipulator": "<11.1.17",
                 "symplify\/config-transformer": "<11.1.17",
                 "symplify\/easy-ci": "<11.1.17",
-                "symplify\/easy-coding-standard": "<11.1.17",
                 "symplify\/easy-parallel": "<11.1.17",
                 "symplify\/easy-testing": "<11.1.17",
                 "symplify\/monorepo-builder": "<11.1.17",
