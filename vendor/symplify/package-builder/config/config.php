@@ -1,14 +1,14 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches202211;
+namespace VendorPatches202212;
 
-use VendorPatches202211\SebastianBergmann\Diff\Differ;
-use VendorPatches202211\Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use VendorPatches202211\Symplify\PackageBuilder\Console\Formatter\ColorConsoleDiffFormatter;
-use VendorPatches202211\Symplify\PackageBuilder\Console\Output\ConsoleDiffer;
-use VendorPatches202211\Symplify\PackageBuilder\Diff\Output\CompleteUnifiedDiffOutputBuilderFactory;
-use VendorPatches202211\Symplify\PackageBuilder\Reflection\PrivatesAccessor;
+use VendorPatches202212\SebastianBergmann\Diff\Differ;
+use VendorPatches202212\Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use VendorPatches202212\Symplify\PackageBuilder\Console\Formatter\ColorConsoleDiffFormatter;
+use VendorPatches202212\Symplify\PackageBuilder\Console\Output\ConsoleDiffer;
+use VendorPatches202212\Symplify\PackageBuilder\Diff\Output\CompleteUnifiedDiffOutputBuilderFactory;
+use VendorPatches202212\Symplify\PackageBuilder\Reflection\PrivatesAccessor;
 return static function (ContainerConfigurator $containerConfigurator) : void {
     $services = $containerConfigurator->services();
     $services->defaults()->public()->autowire();

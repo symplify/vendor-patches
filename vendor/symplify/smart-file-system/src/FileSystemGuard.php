@@ -1,10 +1,10 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches202211\Symplify\SmartFileSystem;
+namespace VendorPatches202212\Symplify\SmartFileSystem;
 
-use VendorPatches202211\Symplify\SmartFileSystem\Exception\DirectoryNotFoundException;
-use VendorPatches202211\Symplify\SmartFileSystem\Exception\FileNotFoundException;
+use VendorPatches202212\Symplify\SmartFileSystem\Exception\DirectoryNotFoundException;
+use VendorPatches202212\Symplify\SmartFileSystem\Exception\FileNotFoundException;
 final class FileSystemGuard
 {
     public function ensureFileExists(string $file, string $location) : void

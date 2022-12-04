@@ -8,23 +8,23 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202211\Symfony\Component\DependencyInjection\Compiler;
+namespace VendorPatches202212\Symfony\Component\DependencyInjection\Compiler;
 
-use VendorPatches202211\Symfony\Component\DependencyInjection\Argument\IteratorArgument;
-use VendorPatches202211\Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
-use VendorPatches202211\Symfony\Component\DependencyInjection\Argument\ServiceClosureArgument;
-use VendorPatches202211\Symfony\Component\DependencyInjection\Argument\ServiceLocatorArgument;
-use VendorPatches202211\Symfony\Component\DependencyInjection\Container;
-use VendorPatches202211\Symfony\Component\DependencyInjection\Definition;
-use VendorPatches202211\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
-use VendorPatches202211\Symfony\Component\DependencyInjection\Exception\InvalidParameterTypeException;
-use VendorPatches202211\Symfony\Component\DependencyInjection\Exception\RuntimeException;
-use VendorPatches202211\Symfony\Component\DependencyInjection\ExpressionLanguage;
-use VendorPatches202211\Symfony\Component\DependencyInjection\Parameter;
-use VendorPatches202211\Symfony\Component\DependencyInjection\ParameterBag\EnvPlaceholderParameterBag;
-use VendorPatches202211\Symfony\Component\DependencyInjection\Reference;
-use VendorPatches202211\Symfony\Component\DependencyInjection\ServiceLocator;
-use VendorPatches202211\Symfony\Component\ExpressionLanguage\Expression;
+use VendorPatches202212\Symfony\Component\DependencyInjection\Argument\IteratorArgument;
+use VendorPatches202212\Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
+use VendorPatches202212\Symfony\Component\DependencyInjection\Argument\ServiceClosureArgument;
+use VendorPatches202212\Symfony\Component\DependencyInjection\Argument\ServiceLocatorArgument;
+use VendorPatches202212\Symfony\Component\DependencyInjection\Container;
+use VendorPatches202212\Symfony\Component\DependencyInjection\Definition;
+use VendorPatches202212\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
+use VendorPatches202212\Symfony\Component\DependencyInjection\Exception\InvalidParameterTypeException;
+use VendorPatches202212\Symfony\Component\DependencyInjection\Exception\RuntimeException;
+use VendorPatches202212\Symfony\Component\DependencyInjection\ExpressionLanguage;
+use VendorPatches202212\Symfony\Component\DependencyInjection\Parameter;
+use VendorPatches202212\Symfony\Component\DependencyInjection\ParameterBag\EnvPlaceholderParameterBag;
+use VendorPatches202212\Symfony\Component\DependencyInjection\Reference;
+use VendorPatches202212\Symfony\Component\DependencyInjection\ServiceLocator;
+use VendorPatches202212\Symfony\Component\ExpressionLanguage\Expression;
 /**
  * Checks whether injected parameters are compatible with type declarations.
  *
@@ -64,7 +64,6 @@ final class CheckTypeDeclarationsPass extends AbstractRecursivePass
         $this->skippedIds = $skippedIds;
     }
     /**
-     * {@inheritdoc}
      * @param mixed $value
      * @return mixed
      */

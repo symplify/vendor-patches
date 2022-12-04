@@ -8,19 +8,16 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202211\Symfony\Component\DependencyInjection\Compiler;
+namespace VendorPatches202212\Symfony\Component\DependencyInjection\Compiler;
 
-use VendorPatches202211\Symfony\Component\DependencyInjection\ChildDefinition;
-use VendorPatches202211\Symfony\Component\DependencyInjection\ContainerBuilder;
-use VendorPatches202211\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
+use VendorPatches202212\Symfony\Component\DependencyInjection\ChildDefinition;
+use VendorPatches202212\Symfony\Component\DependencyInjection\ContainerBuilder;
+use VendorPatches202212\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
 /**
  * @author Nicolas Grekas <p@tchwork.com>
  */
 class ResolveClassPass implements CompilerPassInterface
 {
-    /**
-     * {@inheritdoc}
-     */
     public function process(ContainerBuilder $container)
     {
         foreach ($container->getDefinitions() as $id => $definition) {

@@ -8,16 +8,16 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202211\Symfony\Component\DependencyInjection;
+namespace VendorPatches202212\Symfony\Component\DependencyInjection;
 
-use VendorPatches202211\Psr\Container\ContainerExceptionInterface;
-use VendorPatches202211\Psr\Container\NotFoundExceptionInterface;
-use VendorPatches202211\Symfony\Component\DependencyInjection\Exception\RuntimeException;
-use VendorPatches202211\Symfony\Component\DependencyInjection\Exception\ServiceCircularReferenceException;
-use VendorPatches202211\Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
-use VendorPatches202211\Symfony\Contracts\Service\ServiceLocatorTrait;
-use VendorPatches202211\Symfony\Contracts\Service\ServiceProviderInterface;
-use VendorPatches202211\Symfony\Contracts\Service\ServiceSubscriberInterface;
+use VendorPatches202212\Psr\Container\ContainerExceptionInterface;
+use VendorPatches202212\Psr\Container\NotFoundExceptionInterface;
+use VendorPatches202212\Symfony\Component\DependencyInjection\Exception\RuntimeException;
+use VendorPatches202212\Symfony\Component\DependencyInjection\Exception\ServiceCircularReferenceException;
+use VendorPatches202212\Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
+use VendorPatches202212\Symfony\Contracts\Service\ServiceLocatorTrait;
+use VendorPatches202212\Symfony\Contracts\Service\ServiceProviderInterface;
+use VendorPatches202212\Symfony\Contracts\Service\ServiceSubscriberInterface;
 /**
  * @author Robin Chalas <robin.chalas@gmail.com>
  * @author Nicolas Grekas <p@tchwork.com>
@@ -36,7 +36,6 @@ class ServiceLocator implements ServiceProviderInterface, \Countable
      */
     private $container;
     /**
-     * {@inheritdoc}
      * @return mixed
      */
     public function get(string $id)

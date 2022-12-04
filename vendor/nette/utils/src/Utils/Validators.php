@@ -5,9 +5,9 @@
  * Copyright (c) 2004 David Grudl (https://davidgrudl.com)
  */
 declare (strict_types=1);
-namespace VendorPatches202211\Nette\Utils;
+namespace VendorPatches202212\Nette\Utils;
 
-use VendorPatches202211\Nette;
+use VendorPatches202212\Nette;
 /**
  * Validation utilities.
  */

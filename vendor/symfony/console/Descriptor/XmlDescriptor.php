@@ -8,13 +8,13 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202211\Symfony\Component\Console\Descriptor;
+namespace VendorPatches202212\Symfony\Component\Console\Descriptor;
 
-use VendorPatches202211\Symfony\Component\Console\Application;
-use VendorPatches202211\Symfony\Component\Console\Command\Command;
-use VendorPatches202211\Symfony\Component\Console\Input\InputArgument;
-use VendorPatches202211\Symfony\Component\Console\Input\InputDefinition;
-use VendorPatches202211\Symfony\Component\Console\Input\InputOption;
+use VendorPatches202212\Symfony\Component\Console\Application;
+use VendorPatches202212\Symfony\Component\Console\Command\Command;
+use VendorPatches202212\Symfony\Component\Console\Input\InputArgument;
+use VendorPatches202212\Symfony\Component\Console\Input\InputDefinition;
+use VendorPatches202212\Symfony\Component\Console\Input\InputOption;
 /**
  * XML descriptor.
  *
@@ -95,37 +95,22 @@ class XmlDescriptor extends Descriptor
         }
         return $dom;
     }
-    /**
-     * {@inheritdoc}
-     */
     protected function describeInputArgument(InputArgument $argument, array $options = [])
     {
         $this->writeDocument($this->getInputArgumentDocument($argument));
     }
-    /**
-     * {@inheritdoc}
-     */
     protected function describeInputOption(InputOption $option, array $options = [])
     {
         $this->writeDocument($this->getInputOptionDocument($option));
     }
-    /**
-     * {@inheritdoc}
-     */
     protected function describeInputDefinition(InputDefinition $definition, array $options = [])
     {
         $this->writeDocument($this->getInputDefinitionDocument($definition));
     }
-    /**
-     * {@inheritdoc}
-     */
     protected function describeCommand(Command $command, array $options = [])
     {
         $this->writeDocument($this->getCommandDocument($command, $options['short'] ?? \false));
     }
-    /**
-     * {@inheritdoc}
-     */
     protected function describeApplication(Application $application, array $options = [])
     {
         $this->writeDocument($this->getApplicationDocument($application, $options['namespace'] ?? null, $options['short'] ?? \false));

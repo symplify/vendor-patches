@@ -1,9 +1,9 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches202211\Symplify\AutowireArrayParameter\DocBlock;
+namespace VendorPatches202212\Symplify\AutowireArrayParameter\DocBlock;
 
-use VendorPatches202211\Nette\Utils\Strings;
+use VendorPatches202212\Nette\Utils\Strings;
 /**
  * @see \Symplify\AutowireArrayParameter\Tests\DocBlock\ParamTypeDocBlockResolverTest
  */

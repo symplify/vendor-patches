@@ -8,15 +8,15 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202211\Symfony\Component\DependencyInjection\Loader\Configurator;
+namespace VendorPatches202212\Symfony\Component\DependencyInjection\Loader\Configurator;
 
-use VendorPatches202211\Symfony\Component\DependencyInjection\Alias;
-use VendorPatches202211\Symfony\Component\DependencyInjection\ChildDefinition;
-use VendorPatches202211\Symfony\Component\DependencyInjection\ContainerBuilder;
-use VendorPatches202211\Symfony\Component\DependencyInjection\Definition;
-use VendorPatches202211\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
-use VendorPatches202211\Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
-use VendorPatches202211\Symfony\Component\DependencyInjection\Loader\PhpFileLoader;
+use VendorPatches202212\Symfony\Component\DependencyInjection\Alias;
+use VendorPatches202212\Symfony\Component\DependencyInjection\ChildDefinition;
+use VendorPatches202212\Symfony\Component\DependencyInjection\ContainerBuilder;
+use VendorPatches202212\Symfony\Component\DependencyInjection\Definition;
+use VendorPatches202212\Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
+use VendorPatches202212\Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
+use VendorPatches202212\Symfony\Component\DependencyInjection\Loader\PhpFileLoader;
 /**
  * @author Nicolas Grekas <p@tchwork.com>
  */
@@ -132,7 +132,7 @@ class ServicesConfigurator extends AbstractConfigurator
      */
     public final function load(string $namespace, string $resource) : PrototypeConfigurator
     {
-        return new PrototypeConfigurator($this, $this->loader, $this->defaults, $namespace, $resource, \true);
+        return new PrototypeConfigurator($this, $this->loader, $this->defaults, $namespace, $resource, \true, $this->path);
     }
     /**
      * Gets an already defined service definition.

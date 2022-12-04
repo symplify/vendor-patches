@@ -8,9 +8,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202211\Symfony\Component\Console\Helper;
+namespace VendorPatches202212\Symfony\Component\Console\Helper;
 
-use VendorPatches202211\Symfony\Component\Console\Formatter\OutputFormatter;
+use VendorPatches202212\Symfony\Component\Console\Formatter\OutputFormatter;
 /**
  * The Formatter class provides helpers to format messages.
  *
@@ -64,9 +64,6 @@ class FormatterHelper extends Helper
         }
         return self::substr($message, 0, $length) . $suffix;
     }
-    /**
-     * {@inheritdoc}
-     */
     public function getName() : string
     {
         return 'formatter';

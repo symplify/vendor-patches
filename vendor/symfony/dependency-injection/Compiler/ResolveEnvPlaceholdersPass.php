@@ -8,9 +8,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202211\Symfony\Component\DependencyInjection\Compiler;
+namespace VendorPatches202212\Symfony\Component\DependencyInjection\Compiler;
 
-use VendorPatches202211\Symfony\Component\DependencyInjection\Definition;
+use VendorPatches202212\Symfony\Component\DependencyInjection\Definition;
 /**
  * Replaces env var placeholders by their current values.
  */

@@ -8,13 +8,13 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202211\Symfony\Component\Config\Definition;
+namespace VendorPatches202212\Symfony\Component\Config\Definition;
 
-use VendorPatches202211\Symfony\Component\Config\Definition\Builder\TreeBuilder;
-use VendorPatches202211\Symfony\Component\Config\Definition\Configurator\DefinitionConfigurator;
-use VendorPatches202211\Symfony\Component\Config\Definition\Loader\DefinitionFileLoader;
-use VendorPatches202211\Symfony\Component\Config\FileLocator;
-use VendorPatches202211\Symfony\Component\DependencyInjection\ContainerBuilder;
+use VendorPatches202212\Symfony\Component\Config\Definition\Builder\TreeBuilder;
+use VendorPatches202212\Symfony\Component\Config\Definition\Configurator\DefinitionConfigurator;
+use VendorPatches202212\Symfony\Component\Config\Definition\Loader\DefinitionFileLoader;
+use VendorPatches202212\Symfony\Component\Config\FileLocator;
+use VendorPatches202212\Symfony\Component\DependencyInjection\ContainerBuilder;
 /**
  * @author Yonel Ceruto <yonelceruto@gmail.com>
  *

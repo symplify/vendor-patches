@@ -8,10 +8,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202211\Symfony\Component\Console\Output;
+namespace VendorPatches202212\Symfony\Component\Console\Output;
 
-use VendorPatches202211\Symfony\Component\Console\Exception\InvalidArgumentException;
-use VendorPatches202211\Symfony\Component\Console\Formatter\OutputFormatterInterface;
+use VendorPatches202212\Symfony\Component\Console\Exception\InvalidArgumentException;
+use VendorPatches202212\Symfony\Component\Console\Formatter\OutputFormatterInterface;
 /**
  * A BufferedOutput that keeps only the last N chars.
  *
@@ -44,9 +44,6 @@ class TrimmedBufferOutput extends Output
         $this->buffer = '';
         return $content;
     }
-    /**
-     * {@inheritdoc}
-     */
     protected function doWrite(string $message, bool $newline)
     {
         $this->buffer .= $message;

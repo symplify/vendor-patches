@@ -8,20 +8,20 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202211\Symfony\Component\Finder;
+namespace VendorPatches202212\Symfony\Component\Finder;
 
-use VendorPatches202211\Symfony\Component\Finder\Comparator\DateComparator;
-use VendorPatches202211\Symfony\Component\Finder\Comparator\NumberComparator;
-use VendorPatches202211\Symfony\Component\Finder\Exception\DirectoryNotFoundException;
-use VendorPatches202211\Symfony\Component\Finder\Iterator\CustomFilterIterator;
-use VendorPatches202211\Symfony\Component\Finder\Iterator\DateRangeFilterIterator;
-use VendorPatches202211\Symfony\Component\Finder\Iterator\DepthRangeFilterIterator;
-use VendorPatches202211\Symfony\Component\Finder\Iterator\ExcludeDirectoryFilterIterator;
-use VendorPatches202211\Symfony\Component\Finder\Iterator\FilecontentFilterIterator;
-use VendorPatches202211\Symfony\Component\Finder\Iterator\FilenameFilterIterator;
-use VendorPatches202211\Symfony\Component\Finder\Iterator\LazyIterator;
-use VendorPatches202211\Symfony\Component\Finder\Iterator\SizeRangeFilterIterator;
-use VendorPatches202211\Symfony\Component\Finder\Iterator\SortableIterator;
+use VendorPatches202212\Symfony\Component\Finder\Comparator\DateComparator;
+use VendorPatches202212\Symfony\Component\Finder\Comparator\NumberComparator;
+use VendorPatches202212\Symfony\Component\Finder\Exception\DirectoryNotFoundException;
+use VendorPatches202212\Symfony\Component\Finder\Iterator\CustomFilterIterator;
+use VendorPatches202212\Symfony\Component\Finder\Iterator\DateRangeFilterIterator;
+use VendorPatches202212\Symfony\Component\Finder\Iterator\DepthRangeFilterIterator;
+use VendorPatches202212\Symfony\Component\Finder\Iterator\ExcludeDirectoryFilterIterator;
+use VendorPatches202212\Symfony\Component\Finder\Iterator\FilecontentFilterIterator;
+use VendorPatches202212\Symfony\Component\Finder\Iterator\FilenameFilterIterator;
+use VendorPatches202212\Symfony\Component\Finder\Iterator\LazyIterator;
+use VendorPatches202212\Symfony\Component\Finder\Iterator\SizeRangeFilterIterator;
+use VendorPatches202212\Symfony\Component\Finder\Iterator\SortableIterator;
 /**
  * Finder allows to build rules to find files and directories.
  *
@@ -445,6 +445,20 @@ class Finder implements \IteratorAggregate, \Countable
         return $this;
     }
     /**
+     * Sorts files and directories by extension.
+     *
+     * This can be slow as all the matching files and directories must be retrieved for comparison.
+     *
+     * @return $this
+     *
+     * @see SortableIterator
+     */
+    public function sortByExtension()
+    {
+        $this->sort = Iterator\SortableIterator::SORT_BY_EXTENSION;
+        return $this;
+    }
+    /**
      * Sorts files and directories by name.
      *
      * This can be slow as all the matching files and directories must be retrieved for comparison.
@@ -456,6 +470,34 @@ class Finder implements \IteratorAggregate, \Countable
     public function sortByName(bool $useNaturalSort = \false)
     {
         $this->sort = $useNaturalSort ? Iterator\SortableIterator::SORT_BY_NAME_NATURAL : Iterator\SortableIterator::SORT_BY_NAME;
+        return $this;
+    }
+    /**
+     * Sorts files and directories by name case insensitive.
+     *
+     * This can be slow as all the matching files and directories must be retrieved for comparison.
+     *
+     * @return $this
+     *
+     * @see SortableIterator
+     */
+    public function sortByCaseInsensitiveName(bool $useNaturalSort = \false)
+    {
+        $this->sort = $useNaturalSort ? Iterator\SortableIterator::SORT_BY_NAME_NATURAL_CASE_INSENSITIVE : Iterator\SortableIterator::SORT_BY_NAME_CASE_INSENSITIVE;
+        return $this;
+    }
+    /**
+     * Sorts files and directories by size.
+     *
+     * This can be slow as all the matching files and directories must be retrieved for comparison.
+     *
+     * @return $this
+     *
+     * @see SortableIterator
+     */
+    public function sortBySize()
+    {
+        $this->sort = Iterator\SortableIterator::SORT_BY_SIZE;
         return $this;
     }
     /**

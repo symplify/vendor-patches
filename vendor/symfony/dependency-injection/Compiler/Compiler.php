@@ -8,10 +8,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202211\Symfony\Component\DependencyInjection\Compiler;
+namespace VendorPatches202212\Symfony\Component\DependencyInjection\Compiler;
 
-use VendorPatches202211\Symfony\Component\DependencyInjection\ContainerBuilder;
-use VendorPatches202211\Symfony\Component\DependencyInjection\Exception\EnvParameterException;
+use VendorPatches202212\Symfony\Component\DependencyInjection\ContainerBuilder;
+use VendorPatches202212\Symfony\Component\DependencyInjection\Exception\EnvParameterException;
 /**
  * This class is used to remove circular dependencies between individual passes.
  *

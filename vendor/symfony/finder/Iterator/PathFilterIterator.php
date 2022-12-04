@@ -8,9 +8,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202211\Symfony\Component\Finder\Iterator;
+namespace VendorPatches202212\Symfony\Component\Finder\Iterator;
 
-use VendorPatches202211\Symfony\Component\Finder\SplFileInfo;
+use VendorPatches202212\Symfony\Component\Finder\SplFileInfo;
 /**
  * PathFilterIterator filters files by path patterns (e.g. some/special/dir).
  *

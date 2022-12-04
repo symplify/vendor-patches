@@ -1,16 +1,16 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches202211\Symplify\PackageBuilder\Console\Command;
+namespace VendorPatches202212\Symplify\PackageBuilder\Console\Command;
 
-use VendorPatches202211\Symfony\Component\Console\Command\Command;
-use VendorPatches202211\Symfony\Component\Console\Input\InputOption;
-use VendorPatches202211\Symfony\Component\Console\Style\SymfonyStyle;
-use VendorPatches202211\Symfony\Contracts\Service\Attribute\Required;
-use VendorPatches202211\Symplify\PackageBuilder\ValueObject\Option;
-use VendorPatches202211\Symplify\SmartFileSystem\FileSystemGuard;
-use VendorPatches202211\Symplify\SmartFileSystem\Finder\SmartFinder;
-use VendorPatches202211\Symplify\SmartFileSystem\SmartFileSystem;
+use VendorPatches202212\Symfony\Component\Console\Command\Command;
+use VendorPatches202212\Symfony\Component\Console\Input\InputOption;
+use VendorPatches202212\Symfony\Component\Console\Style\SymfonyStyle;
+use VendorPatches202212\Symfony\Contracts\Service\Attribute\Required;
+use VendorPatches202212\Symplify\PackageBuilder\ValueObject\Option;
+use VendorPatches202212\Symplify\SmartFileSystem\FileSystemGuard;
+use VendorPatches202212\Symplify\SmartFileSystem\Finder\SmartFinder;
+use VendorPatches202212\Symplify\SmartFileSystem\SmartFileSystem;
 abstract class AbstractSymplifyCommand extends Command
 {
     /**

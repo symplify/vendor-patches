@@ -1,7 +1,7 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches202211\Symplify\ComposerJsonManipulator\ValueObject;
+namespace VendorPatches202212\Symplify\ComposerJsonManipulator\ValueObject;
 
 /**
  * @api

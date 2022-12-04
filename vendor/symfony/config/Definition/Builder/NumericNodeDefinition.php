@@ -8,9 +8,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202211\Symfony\Component\Config\Definition\Builder;
+namespace VendorPatches202212\Symfony\Component\Config\Definition\Builder;
 
-use VendorPatches202211\Symfony\Component\Config\Definition\Exception\InvalidDefinitionException;
+use VendorPatches202212\Symfony\Component\Config\Definition\Exception\InvalidDefinitionException;
 /**
  * Abstract class that contains common code of integer and float node definitions.
  *
@@ -53,8 +53,6 @@ abstract class NumericNodeDefinition extends ScalarNodeDefinition
         return $this;
     }
     /**
-     * {@inheritdoc}
-     *
      * @throws InvalidDefinitionException
      * @return $this
      */

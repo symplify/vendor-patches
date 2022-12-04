@@ -3,8 +3,8 @@
 declare (strict_types=1);
 namespace Symplify\VendorPatches\Console;
 
-use VendorPatches202211\Symfony\Component\Console\Application;
-use VendorPatches202211\Symfony\Component\Console\Command\Command;
+use VendorPatches202212\Symfony\Component\Console\Application;
+use VendorPatches202212\Symfony\Component\Console\Command\Command;
 final class VendorPatchesApplication extends Application
 {
     /**

@@ -1,12 +1,12 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches202211\Symplify\SmartFileSystem\Finder;
+namespace VendorPatches202212\Symplify\SmartFileSystem\Finder;
 
 use SplFileInfo;
-use VendorPatches202211\Symfony\Component\Finder\Finder as SymfonyFinder;
-use VendorPatches202211\Symfony\Component\Finder\SplFileInfo as SymfonySplFileInfo;
-use VendorPatches202211\Symplify\SmartFileSystem\SmartFileInfo;
+use VendorPatches202212\Symfony\Component\Finder\Finder as SymfonyFinder;
+use VendorPatches202212\Symfony\Component\Finder\SplFileInfo as SymfonySplFileInfo;
+use VendorPatches202212\Symplify\SmartFileSystem\SmartFileInfo;
 /**
  * @see \Symplify\SmartFileSystem\Tests\Finder\FinderSanitizer\FinderSanitizerTest
  */

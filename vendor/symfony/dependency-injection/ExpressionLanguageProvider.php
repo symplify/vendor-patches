@@ -8,11 +8,11 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202211\Symfony\Component\DependencyInjection;
+namespace VendorPatches202212\Symfony\Component\DependencyInjection;
 
-use VendorPatches202211\Symfony\Component\DependencyInjection\Exception\LogicException;
-use VendorPatches202211\Symfony\Component\ExpressionLanguage\ExpressionFunction;
-use VendorPatches202211\Symfony\Component\ExpressionLanguage\ExpressionFunctionProviderInterface;
+use VendorPatches202212\Symfony\Component\DependencyInjection\Exception\LogicException;
+use VendorPatches202212\Symfony\Component\ExpressionLanguage\ExpressionFunction;
+use VendorPatches202212\Symfony\Component\ExpressionLanguage\ExpressionFunctionProviderInterface;
 /**
  * Define some ExpressionLanguage functions.
  *

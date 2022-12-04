@@ -1,13 +1,13 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorPatches202211\Symplify\ComposerJsonManipulator;
+namespace VendorPatches202212\Symplify\ComposerJsonManipulator;
 
-use VendorPatches202211\Nette\Utils\Json;
-use VendorPatches202211\Symplify\ComposerJsonManipulator\FileSystem\JsonFileManager;
-use VendorPatches202211\Symplify\ComposerJsonManipulator\ValueObject\ComposerJson;
-use VendorPatches202211\Symplify\ComposerJsonManipulator\ValueObject\ComposerJsonSection;
-use VendorPatches202211\Symplify\SmartFileSystem\SmartFileInfo;
+use VendorPatches202212\Nette\Utils\Json;
+use VendorPatches202212\Symplify\ComposerJsonManipulator\FileSystem\JsonFileManager;
+use VendorPatches202212\Symplify\ComposerJsonManipulator\ValueObject\ComposerJson;
+use VendorPatches202212\Symplify\ComposerJsonManipulator\ValueObject\ComposerJsonSection;
+use VendorPatches202212\Symplify\SmartFileSystem\SmartFileInfo;
 /**
  * @api
  * @see \Symplify\ComposerJsonManipulator\Tests\ComposerJsonFactory\ComposerJsonFactoryTest

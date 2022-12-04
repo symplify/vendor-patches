@@ -8,11 +8,11 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202211\Symfony\Component\Console\Tester;
+namespace VendorPatches202212\Symfony\Component\Console\Tester;
 
-use VendorPatches202211\Symfony\Component\Console\Command\Command;
-use VendorPatches202211\Symfony\Component\Console\Completion\CompletionInput;
-use VendorPatches202211\Symfony\Component\Console\Completion\CompletionSuggestions;
+use VendorPatches202212\Symfony\Component\Console\Command\Command;
+use VendorPatches202212\Symfony\Component\Console\Completion\CompletionInput;
+use VendorPatches202212\Symfony\Component\Console\Completion\CompletionSuggestions;
 /**
  * Eases the testing of command completion.
  *

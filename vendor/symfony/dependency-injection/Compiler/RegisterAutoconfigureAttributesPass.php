@@ -8,12 +8,12 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorPatches202211\Symfony\Component\DependencyInjection\Compiler;
+namespace VendorPatches202212\Symfony\Component\DependencyInjection\Compiler;
 
-use VendorPatches202211\Symfony\Component\DependencyInjection\Attribute\Autoconfigure;
-use VendorPatches202211\Symfony\Component\DependencyInjection\ContainerBuilder;
-use VendorPatches202211\Symfony\Component\DependencyInjection\Definition;
-use VendorPatches202211\Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
+use VendorPatches202212\Symfony\Component\DependencyInjection\Attribute\Autoconfigure;
+use VendorPatches202212\Symfony\Component\DependencyInjection\ContainerBuilder;
+use VendorPatches202212\Symfony\Component\DependencyInjection\Definition;
+use VendorPatches202212\Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 /**
  * Reads #[Autoconfigure] attributes on definitions that are autoconfigured
  * and don't have the "container.ignore_attributes" tag.
@@ -23,9 +23,6 @@ use VendorPatches202211\Symfony\Component\DependencyInjection\Loader\YamlFileLoa
 final class RegisterAutoconfigureAttributesPass implements CompilerPassInterface
 {
     private static $registerForAutoconfiguration;
-    /**
-     * {@inheritdoc}
-     */
     public function process(ContainerBuilder $container)
     {
         foreach ($container->getDefinitions() as $id => $definition) {
