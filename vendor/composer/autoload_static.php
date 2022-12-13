@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit088f9c5eae3f11f608cc888e9b228d8f
+class ComposerStaticInitebeb535b24b136fe6677e82951b63d92
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -30,7 +30,6 @@ class ComposerStaticInit088f9c5eae3f11f608cc888e9b228d8f
             'VendorPatches202212\\Symfony\\Polyfill\\Intl\\Grapheme\\' => 51,
             'VendorPatches202212\\Symfony\\Polyfill\\Ctype\\' => 43,
             'VendorPatches202212\\Symfony\\Contracts\\Service\\' => 46,
-            'VendorPatches202212\\Symfony\\Component\\VarExporter\\' => 50,
             'VendorPatches202212\\Symfony\\Component\\String\\' => 45,
             'VendorPatches202212\\Symfony\\Component\\Finder\\' => 45,
             'VendorPatches202212\\Symfony\\Component\\Filesystem\\' => 49,
@@ -93,10 +92,6 @@ class ComposerStaticInit088f9c5eae3f11f608cc888e9b228d8f
         'VendorPatches202212\\Symfony\\Contracts\\Service\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/service-contracts',
-        ),
-        'VendorPatches202212\\Symfony\\Component\\VarExporter\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/var-exporter',
         ),
         'VendorPatches202212\\Symfony\\Component\\String\\' => 
         array (
@@ -520,10 +515,8 @@ class ComposerStaticInit088f9c5eae3f11f608cc888e9b228d8f
         'VendorPatches202212\\Symfony\\Component\\DependencyInjection\\Extension\\ExtensionTrait' => __DIR__ . '/..' . '/symfony/dependency-injection/Extension/ExtensionTrait.php',
         'VendorPatches202212\\Symfony\\Component\\DependencyInjection\\Extension\\PrependExtensionInterface' => __DIR__ . '/..' . '/symfony/dependency-injection/Extension/PrependExtensionInterface.php',
         'VendorPatches202212\\Symfony\\Component\\DependencyInjection\\LazyProxy\\Instantiator\\InstantiatorInterface' => __DIR__ . '/..' . '/symfony/dependency-injection/LazyProxy/Instantiator/InstantiatorInterface.php',
-        'VendorPatches202212\\Symfony\\Component\\DependencyInjection\\LazyProxy\\Instantiator\\LazyServiceInstantiator' => __DIR__ . '/..' . '/symfony/dependency-injection/LazyProxy/Instantiator/LazyServiceInstantiator.php',
         'VendorPatches202212\\Symfony\\Component\\DependencyInjection\\LazyProxy\\Instantiator\\RealServiceInstantiator' => __DIR__ . '/..' . '/symfony/dependency-injection/LazyProxy/Instantiator/RealServiceInstantiator.php',
         'VendorPatches202212\\Symfony\\Component\\DependencyInjection\\LazyProxy\\PhpDumper\\DumperInterface' => __DIR__ . '/..' . '/symfony/dependency-injection/LazyProxy/PhpDumper/DumperInterface.php',
-        'VendorPatches202212\\Symfony\\Component\\DependencyInjection\\LazyProxy\\PhpDumper\\LazyServiceDumper' => __DIR__ . '/..' . '/symfony/dependency-injection/LazyProxy/PhpDumper/LazyServiceDumper.php',
         'VendorPatches202212\\Symfony\\Component\\DependencyInjection\\LazyProxy\\PhpDumper\\NullDumper' => __DIR__ . '/..' . '/symfony/dependency-injection/LazyProxy/PhpDumper/NullDumper.php',
         'VendorPatches202212\\Symfony\\Component\\DependencyInjection\\LazyProxy\\ProxyHelper' => __DIR__ . '/..' . '/symfony/dependency-injection/LazyProxy/ProxyHelper.php',
         'VendorPatches202212\\Symfony\\Component\\DependencyInjection\\Loader\\ClosureLoader' => __DIR__ . '/..' . '/symfony/dependency-injection/Loader/ClosureLoader.php',
@@ -625,24 +618,6 @@ class ComposerStaticInit088f9c5eae3f11f608cc888e9b228d8f
         'VendorPatches202212\\Symfony\\Component\\String\\Slugger\\AsciiSlugger' => __DIR__ . '/..' . '/symfony/string/Slugger/AsciiSlugger.php',
         'VendorPatches202212\\Symfony\\Component\\String\\Slugger\\SluggerInterface' => __DIR__ . '/..' . '/symfony/string/Slugger/SluggerInterface.php',
         'VendorPatches202212\\Symfony\\Component\\String\\UnicodeString' => __DIR__ . '/..' . '/symfony/string/UnicodeString.php',
-        'VendorPatches202212\\Symfony\\Component\\VarExporter\\Exception\\ClassNotFoundException' => __DIR__ . '/..' . '/symfony/var-exporter/Exception/ClassNotFoundException.php',
-        'VendorPatches202212\\Symfony\\Component\\VarExporter\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/symfony/var-exporter/Exception/ExceptionInterface.php',
-        'VendorPatches202212\\Symfony\\Component\\VarExporter\\Exception\\LogicException' => __DIR__ . '/..' . '/symfony/var-exporter/Exception/LogicException.php',
-        'VendorPatches202212\\Symfony\\Component\\VarExporter\\Exception\\NotInstantiableTypeException' => __DIR__ . '/..' . '/symfony/var-exporter/Exception/NotInstantiableTypeException.php',
-        'VendorPatches202212\\Symfony\\Component\\VarExporter\\Hydrator' => __DIR__ . '/..' . '/symfony/var-exporter/Hydrator.php',
-        'VendorPatches202212\\Symfony\\Component\\VarExporter\\Instantiator' => __DIR__ . '/..' . '/symfony/var-exporter/Instantiator.php',
-        'VendorPatches202212\\Symfony\\Component\\VarExporter\\Internal\\Exporter' => __DIR__ . '/..' . '/symfony/var-exporter/Internal/Exporter.php',
-        'VendorPatches202212\\Symfony\\Component\\VarExporter\\Internal\\Hydrator' => __DIR__ . '/..' . '/symfony/var-exporter/Internal/Hydrator.php',
-        'VendorPatches202212\\Symfony\\Component\\VarExporter\\Internal\\LazyObjectRegistry' => __DIR__ . '/..' . '/symfony/var-exporter/Internal/LazyObjectRegistry.php',
-        'VendorPatches202212\\Symfony\\Component\\VarExporter\\Internal\\LazyObjectState' => __DIR__ . '/..' . '/symfony/var-exporter/Internal/LazyObjectState.php',
-        'VendorPatches202212\\Symfony\\Component\\VarExporter\\Internal\\Reference' => __DIR__ . '/..' . '/symfony/var-exporter/Internal/Reference.php',
-        'VendorPatches202212\\Symfony\\Component\\VarExporter\\Internal\\Registry' => __DIR__ . '/..' . '/symfony/var-exporter/Internal/Registry.php',
-        'VendorPatches202212\\Symfony\\Component\\VarExporter\\Internal\\Values' => __DIR__ . '/..' . '/symfony/var-exporter/Internal/Values.php',
-        'VendorPatches202212\\Symfony\\Component\\VarExporter\\LazyGhostTrait' => __DIR__ . '/..' . '/symfony/var-exporter/LazyGhostTrait.php',
-        'VendorPatches202212\\Symfony\\Component\\VarExporter\\LazyObjectInterface' => __DIR__ . '/..' . '/symfony/var-exporter/LazyObjectInterface.php',
-        'VendorPatches202212\\Symfony\\Component\\VarExporter\\LazyProxyTrait' => __DIR__ . '/..' . '/symfony/var-exporter/LazyProxyTrait.php',
-        'VendorPatches202212\\Symfony\\Component\\VarExporter\\ProxyHelper' => __DIR__ . '/..' . '/symfony/var-exporter/ProxyHelper.php',
-        'VendorPatches202212\\Symfony\\Component\\VarExporter\\VarExporter' => __DIR__ . '/..' . '/symfony/var-exporter/VarExporter.php',
         'VendorPatches202212\\Symfony\\Contracts\\Service\\Attribute\\Required' => __DIR__ . '/..' . '/symfony/service-contracts/Attribute/Required.php',
         'VendorPatches202212\\Symfony\\Contracts\\Service\\Attribute\\SubscribedService' => __DIR__ . '/..' . '/symfony/service-contracts/Attribute/SubscribedService.php',
         'VendorPatches202212\\Symfony\\Contracts\\Service\\ResetInterface' => __DIR__ . '/..' . '/symfony/service-contracts/ResetInterface.php',
@@ -725,9 +700,9 @@ class ComposerStaticInit088f9c5eae3f11f608cc888e9b228d8f
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit088f9c5eae3f11f608cc888e9b228d8f::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit088f9c5eae3f11f608cc888e9b228d8f::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit088f9c5eae3f11f608cc888e9b228d8f::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitebeb535b24b136fe6677e82951b63d92::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitebeb535b24b136fe6677e82951b63d92::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitebeb535b24b136fe6677e82951b63d92::$classMap;
 
         }, null, ClassLoader::class);
     }

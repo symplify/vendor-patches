@@ -18,7 +18,6 @@ return array(
     'VendorPatches202212\\Symfony\\Polyfill\\Intl\\Grapheme\\' => array($vendorDir . '/symfony/polyfill-intl-grapheme'),
     'VendorPatches202212\\Symfony\\Polyfill\\Ctype\\' => array($vendorDir . '/symfony/polyfill-ctype'),
     'VendorPatches202212\\Symfony\\Contracts\\Service\\' => array($vendorDir . '/symfony/service-contracts'),
-    'VendorPatches202212\\Symfony\\Component\\VarExporter\\' => array($vendorDir . '/symfony/var-exporter'),
     'VendorPatches202212\\Symfony\\Component\\String\\' => array($vendorDir . '/symfony/string'),
     'VendorPatches202212\\Symfony\\Component\\Finder\\' => array($vendorDir . '/symfony/finder'),
     'VendorPatches202212\\Symfony\\Component\\Filesystem\\' => array($vendorDir . '/symfony/filesystem'),
