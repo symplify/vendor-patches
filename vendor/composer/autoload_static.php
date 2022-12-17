@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit770e474089a97c91c21923ce8f57d203
+class ComposerStaticInitc2dd21df94e86e7d01407c943c740007
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -23,7 +23,6 @@ class ComposerStaticInit770e474089a97c91c21923ce8f57d203
             'VendorPatches202212\\Symplify\\SymplifyKernel\\' => 44,
             'VendorPatches202212\\Symplify\\SmartFileSystem\\' => 45,
             'VendorPatches202212\\Symplify\\PackageBuilder\\' => 44,
-            'VendorPatches202212\\Symplify\\ComposerJsonManipulator\\' => 53,
             'VendorPatches202212\\Symplify\\AutowireArrayParameter\\' => 52,
             'VendorPatches202212\\Symfony\\Polyfill\\Mbstring\\' => 46,
             'VendorPatches202212\\Symfony\\Polyfill\\Intl\\Normalizer\\' => 53,
@@ -64,10 +63,6 @@ class ComposerStaticInit770e474089a97c91c21923ce8f57d203
         'VendorPatches202212\\Symplify\\PackageBuilder\\' => 
         array (
             0 => __DIR__ . '/..' . '/symplify/package-builder/src',
-        ),
-        'VendorPatches202212\\Symplify\\ComposerJsonManipulator\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symplify/composer-json-manipulator/src',
         ),
         'VendorPatches202212\\Symplify\\AutowireArrayParameter\\' => 
         array (
@@ -136,7 +131,6 @@ class ComposerStaticInit770e474089a97c91c21923ce8f57d203
         'Symplify\\VendorPatches\\Console\\GenerateCommandReporter' => __DIR__ . '/../..' . '/src/Console/GenerateCommandReporter.php',
         'Symplify\\VendorPatches\\Console\\VendorPatchesApplication' => __DIR__ . '/../..' . '/src/Console/VendorPatchesApplication.php',
         'Symplify\\VendorPatches\\Differ\\PatchDiffer' => __DIR__ . '/../..' . '/src/Differ/PatchDiffer.php',
-        'Symplify\\VendorPatches\\Exception\\ComposerPatchingException' => __DIR__ . '/../..' . '/src/Exception/ComposerPatchingException.php',
         'Symplify\\VendorPatches\\FileSystem\\PathResolver' => __DIR__ . '/../..' . '/src/FileSystem/PathResolver.php',
         'Symplify\\VendorPatches\\Finder\\OldToNewFilesFinder' => __DIR__ . '/../..' . '/src/Finder/OldToNewFilesFinder.php',
         'Symplify\\VendorPatches\\Kernel\\VendorPatchesKernel' => __DIR__ . '/../..' . '/src/Kernel/VendorPatchesKernel.php',
@@ -635,16 +629,6 @@ class ComposerStaticInit770e474089a97c91c21923ce8f57d203
         'VendorPatches202212\\Symplify\\AutowireArrayParameter\\Exception\\DependencyInjection\\DefinitionForTypeNotFoundException' => __DIR__ . '/..' . '/symplify/autowire-array-parameter/src/Exception/DependencyInjection/DefinitionForTypeNotFoundException.php',
         'VendorPatches202212\\Symplify\\AutowireArrayParameter\\Skipper\\ParameterSkipper' => __DIR__ . '/..' . '/symplify/autowire-array-parameter/src/Skipper/ParameterSkipper.php',
         'VendorPatches202212\\Symplify\\AutowireArrayParameter\\TypeResolver\\ParameterTypeResolver' => __DIR__ . '/..' . '/symplify/autowire-array-parameter/src/TypeResolver/ParameterTypeResolver.php',
-        'VendorPatches202212\\Symplify\\ComposerJsonManipulator\\ComposerJsonFactory' => __DIR__ . '/..' . '/symplify/composer-json-manipulator/src/ComposerJsonFactory.php',
-        'VendorPatches202212\\Symplify\\ComposerJsonManipulator\\FileSystem\\JsonFileManager' => __DIR__ . '/..' . '/symplify/composer-json-manipulator/src/FileSystem/JsonFileManager.php',
-        'VendorPatches202212\\Symplify\\ComposerJsonManipulator\\Json\\JsonCleaner' => __DIR__ . '/..' . '/symplify/composer-json-manipulator/src/Json/JsonCleaner.php',
-        'VendorPatches202212\\Symplify\\ComposerJsonManipulator\\Json\\JsonInliner' => __DIR__ . '/..' . '/symplify/composer-json-manipulator/src/Json/JsonInliner.php',
-        'VendorPatches202212\\Symplify\\ComposerJsonManipulator\\Printer\\ComposerJsonPrinter' => __DIR__ . '/..' . '/symplify/composer-json-manipulator/src/Printer/ComposerJsonPrinter.php',
-        'VendorPatches202212\\Symplify\\ComposerJsonManipulator\\Sorter\\ComposerPackageSorter' => __DIR__ . '/..' . '/symplify/composer-json-manipulator/src/Sorter/ComposerPackageSorter.php',
-        'VendorPatches202212\\Symplify\\ComposerJsonManipulator\\ValueObject\\ComposerJson' => __DIR__ . '/..' . '/symplify/composer-json-manipulator/src/ValueObject/ComposerJson.php',
-        'VendorPatches202212\\Symplify\\ComposerJsonManipulator\\ValueObject\\ComposerJsonManipulatorConfig' => __DIR__ . '/..' . '/symplify/composer-json-manipulator/src/ValueObject/ComposerJsonManipulatorConfig.php',
-        'VendorPatches202212\\Symplify\\ComposerJsonManipulator\\ValueObject\\ComposerJsonSection' => __DIR__ . '/..' . '/symplify/composer-json-manipulator/src/ValueObject/ComposerJsonSection.php',
-        'VendorPatches202212\\Symplify\\ComposerJsonManipulator\\ValueObject\\Option' => __DIR__ . '/..' . '/symplify/composer-json-manipulator/src/ValueObject/Option.php',
         'VendorPatches202212\\Symplify\\PackageBuilder\\Composer\\VendorDirProvider' => __DIR__ . '/..' . '/symplify/package-builder/src/Composer/VendorDirProvider.php',
         'VendorPatches202212\\Symplify\\PackageBuilder\\Configuration\\StaticEolConfiguration' => __DIR__ . '/..' . '/symplify/package-builder/src/Configuration/StaticEolConfiguration.php',
         'VendorPatches202212\\Symplify\\PackageBuilder\\Console\\Command\\AbstractSymplifyCommand' => __DIR__ . '/..' . '/symplify/package-builder/src/Console/Command/AbstractSymplifyCommand.php',
@@ -700,9 +684,9 @@ class ComposerStaticInit770e474089a97c91c21923ce8f57d203
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit770e474089a97c91c21923ce8f57d203::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit770e474089a97c91c21923ce8f57d203::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit770e474089a97c91c21923ce8f57d203::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitc2dd21df94e86e7d01407c943c740007::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitc2dd21df94e86e7d01407c943c740007::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitc2dd21df94e86e7d01407c943c740007::$classMap;
 
         }, null, ClassLoader::class);
     }

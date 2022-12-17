@@ -3,46 +3,33 @@
 declare (strict_types=1);
 namespace Symplify\VendorPatches\Composer;
 
-use VendorPatches202212\Symplify\ComposerJsonManipulator\ComposerJsonFactory;
-use VendorPatches202212\Symplify\ComposerJsonManipulator\FileSystem\JsonFileManager;
-use VendorPatches202212\Symplify\ComposerJsonManipulator\ValueObject\ComposerJson;
+use VendorPatches202212\Nette\Utils\FileSystem;
+use VendorPatches202212\Nette\Utils\Json;
 use VendorPatches202212\Symplify\PackageBuilder\Yaml\ParametersMerger;
-use VendorPatches202212\Symplify\SmartFileSystem\SmartFileInfo;
-use Symplify\VendorPatches\Exception\ComposerPatchingException;
 /**
  * @see \Symplify\VendorPatches\Tests\Composer\ComposerPatchesConfigurationUpdater\ComposerPatchesConfigurationUpdaterTest
  */
 final class ComposerPatchesConfigurationUpdater
 {
     /**
-     * @var \Symplify\ComposerJsonManipulator\ComposerJsonFactory
-     */
-    private $composerJsonFactory;
-    /**
-     * @var \Symplify\ComposerJsonManipulator\FileSystem\JsonFileManager
-     */
-    private $jsonFileManager;
-    /**
      * @var \Symplify\PackageBuilder\Yaml\ParametersMerger
      */
     private $parametersMerger;
-    public function __construct(ComposerJsonFactory $composerJsonFactory, JsonFileManager $jsonFileManager, ParametersMerger $parametersMerger)
+    public function __construct(ParametersMerger $parametersMerger)
     {
-        $this->composerJsonFactory = $composerJsonFactory;
-        $this->jsonFileManager = $jsonFileManager;
         $this->parametersMerger = $parametersMerger;
     }
     /**
      * @param mixed[] $composerExtraPatches
+     * @return mixed[]
      */
-    public function updateComposerJson(string $composerJsonFilePath, array $composerExtraPatches) : ComposerJson
+    public function updateComposerJson(string $composerJsonFilePath, array $composerExtraPatches) : array
     {
-        $extra = ['patches' => $composerExtraPatches];
-        $composerJson = $this->composerJsonFactory->createFromFilePath($composerJsonFilePath);
+        $addedComposerJson = ['extra' => ['patches' => $composerExtraPatches]];
+        $composerFileContents = FileSystem::read($composerJsonFilePath);
+        $composerJson = Json::decode($composerFileContents, Json::FORCE_ARRAY);
         // merge "extra" section - deep merge is needed, so original patches are included
-        $newExtra = $this->parametersMerger->merge($composerJson->getExtra(), $extra);
-        $composerJson->setExtra($newExtra);
-        return $composerJson;
+        return $this->parametersMerger->merge($composerJson, $addedComposerJson);
     }
     /**
      * @param mixed[] $composerExtraPatches
@@ -50,10 +37,8 @@ final class ComposerPatchesConfigurationUpdater
     public function updateComposerJsonAndPrint(string $composerJsonFilePath, array $composerExtraPatches) : void
     {
         $composerJson = $this->updateComposerJson($composerJsonFilePath, $composerExtraPatches);
-        $fileInfo = $composerJson->getFileInfo();
-        if (!$fileInfo instanceof SmartFileInfo) {
-            throw new ComposerPatchingException();
-        }
-        $this->jsonFileManager->printComposerJsonToFilePath($composerJson, $fileInfo->getRealPath());
+        // print composer.json
+        $composerJsonFileContents = Json::encode($composerJson, Json::PRETTY);
+        FileSystem::write($composerJsonFilePath, $composerJsonFileContents);
     }
 }
