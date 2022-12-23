@@ -20,6 +20,7 @@ final class ComposerPatchesConfigurationUpdater
         $this->parametersMerger = $parametersMerger;
     }
     /**
+     * @api
      * @param mixed[] $composerExtraPatches
      * @return mixed[]
      */
