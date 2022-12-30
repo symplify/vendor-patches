@@ -1,50 +1,45 @@
 <?php
 
-declare (strict_types=1);
+declare(strict_types=1);
+
 namespace Symplify\VendorPatches\Composer;
 
-use VendorPatches202212\Symplify\SmartFileSystem\FileSystemGuard;
-use VendorPatches202212\Symplify\SmartFileSystem\Json\JsonFileSystem;
-use VendorPatches202212\Symplify\SmartFileSystem\SmartFileInfo;
-use VendorPatches202212\Symplify\SymplifyKernel\Exception\ShouldNotHappenException;
+use Symplify\SmartFileSystem\FileSystemGuard;
+use Symplify\SmartFileSystem\Json\JsonFileSystem;
+use Symplify\SmartFileSystem\SmartFileInfo;
+use Symplify\SymplifyKernel\Exception\ShouldNotHappenException;
 use Symplify\VendorPatches\FileSystem\PathResolver;
+
 /**
  * @see \Symplify\VendorPatches\Tests\Composer\PackageNameResolverTest
  */
 final class PackageNameResolver
 {
-    /**
-     * @var \Symplify\SmartFileSystem\Json\JsonFileSystem
-     */
-    private $jsonFileSystem;
-    /**
-     * @var \Symplify\VendorPatches\FileSystem\PathResolver
-     */
-    private $pathResolver;
-    /**
-     * @var \Symplify\SmartFileSystem\FileSystemGuard
-     */
-    private $fileSystemGuard;
-    public function __construct(JsonFileSystem $jsonFileSystem, PathResolver $pathResolver, FileSystemGuard $fileSystemGuard)
-    {
-        $this->jsonFileSystem = $jsonFileSystem;
-        $this->pathResolver = $pathResolver;
-        $this->fileSystemGuard = $fileSystemGuard;
+    public function __construct(
+        private JsonFileSystem $jsonFileSystem,
+        private PathResolver $pathResolver,
+        private FileSystemGuard $fileSystemGuard
+    ) {
     }
-    public function resolveFromFileInfo(SmartFileInfo $vendorFile) : string
+
+    public function resolveFromFileInfo(SmartFileInfo $vendorFile): string
     {
         $packageComposerJsonFilePath = $this->getPackageComposerJsonFilePath($vendorFile);
+
         $composerJson = $this->jsonFileSystem->loadFilePathToJson($packageComposerJsonFilePath);
-        if (!isset($composerJson['name'])) {
+        if (! isset($composerJson['name'])) {
             throw new ShouldNotHappenException();
         }
+
         return $composerJson['name'];
     }
-    private function getPackageComposerJsonFilePath(SmartFileInfo $vendorFileInfo) : string
+
+    private function getPackageComposerJsonFilePath(SmartFileInfo $vendorFileInfo): string
     {
         $vendorPackageDirectory = $this->pathResolver->resolveVendorDirectory($vendorFileInfo);
         $packageComposerJsonFilePath = $vendorPackageDirectory . '/composer.json';
         $this->fileSystemGuard->ensureFileExists($packageComposerJsonFilePath, __METHOD__);
+
         return $packageComposerJsonFilePath;
     }
 }
