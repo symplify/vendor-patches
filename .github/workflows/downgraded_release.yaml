@@ -37,7 +37,7 @@ jobs:
             -   run: rector-local/vendor/bin/rector process bin src vendor --config build/rector-downgrade-php-72.php --ansi
 
             # fix coding standard, so code looks nice
-            -   run: bin/ecs check src --fix --ansi
+            -   run: vendor/bin/ecs check src --fix --ansi
 
             # clear the dev files
             -   run: rm -rf tests ecs.php phpstan.neon phpunit.xml .gitignore .editorconfig
