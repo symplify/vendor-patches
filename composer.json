@@ -19,7 +19,9 @@
         "rector/rector": "*",
         "phpstan/phpstan": "^1.9",
         "symplify/easy-coding-standard": "11.1.29.72",
-        "symplify/easy-ci": "^11.1"
+        "symplify/easy-ci": "^11.1",
+        "symplify/phpstan-extensions": "^11.1",
+        "phpstan/extension-installer": "^1.2"
     },
     "autoload": {
         "psr-4": {
@@ -40,7 +42,8 @@
     "config": {
         "platform-check": false,
         "allow-plugins": {
-            "cweagans/composer-patches": true
+            "cweagans/composer-patches": true,
+            "phpstan/extension-installer": true
         }
     },
     "scripts": {
