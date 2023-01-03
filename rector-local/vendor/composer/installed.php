@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'name' => '__root__',
+        'pretty_version' => '11.1.30',
+        'version' => '11.1.30.0',
+        'reference' => '30fdacf674d8cb48128dc561244008ebc42c47fe',
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => true,
+    ),
+    'versions' => array(
+        '__root__' => array(
+            'pretty_version' => '11.1.30',
+            'version' => '11.1.30.0',
+            'reference' => '30fdacf674d8cb48128dc561244008ebc42c47fe',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'phpstan/phpstan' => array(
+            'pretty_version' => '1.9.5',
+            'version' => '1.9.5.0',
+            'reference' => '4d18c5d98965029c2aa1ccbd91dc22e7ba8c5034',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phpstan/phpstan',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'rector/rector' => array(
+            'pretty_version' => '0.15.2',
+            'version' => '0.15.2.0',
+            'reference' => '5bc89fa73d0be2769e02e49a0e924c95b1842093',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../rector/rector',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+    ),
+);
