@@ -25,17 +25,24 @@ final class ComposerPatchesConfigurationUpdater
      */
     public function updateComposerJson(string $composerJsonFilePath, array $composerExtraPatches): array
     {
-        $addedComposerJson = [
-            'extra' => [
-                'patches' => $composerExtraPatches,
-            ],
-        ];
-
         $composerFileContents = FileSystem::read($composerJsonFilePath);
         $composerJson = Json::decode($composerFileContents, Json::FORCE_ARRAY);
 
         // merge "extra" section - deep merge is needed, so original patches are included
-        return $this->parametersMerger->merge($composerJson, $addedComposerJson);
+        if (isset($composerJson['extra'])) {
+            $composerJson['extra'] = $this->parametersMerger->merge($composerJson['extra'], [
+                'patches' => $composerExtraPatches,
+            ]);
+
+            return $composerJson;
+        }
+
+        // new, put the patches last
+        $composerJson['extra'] = [
+            'patches' => $composerExtraPatches,
+        ];
+
+        return $composerJson;
     }
 
     /**
