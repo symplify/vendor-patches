@@ -2,62 +2,16 @@
     "name": "symplify/vendor-patches",
     "description": "Generate vendor patches for packages with single command",
     "license": "MIT",
+    "require": {
+        "php": ">=7.2",
+        "cweagans/composer-patches": "^1.7"
+    },
     "bin": [
         "bin/vendor-patches"
     ],
-    "require": {
-        "php": ">=8.1",
-        "nette/utils": "^3.2",
-        "symfony/console": "^6.2",
-        "symfony/dependency-injection": "6.1.*",
-        "sebastian/diff": "^4.0|^5.0",
-        "cweagans/composer-patches": "^1.7",
-        "symplify/symplify-kernel": "^11.2"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^9.5.26",
-        "rector/rector": "*",
-        "phpstan/phpstan": "^1.9",
-        "symplify/easy-coding-standard": "11.1.29.72",
-        "symplify/easy-ci": "^11.1",
-        "symplify/phpstan-extensions": "^11.1",
-        "phpstan/extension-installer": "^1.2",
-        "php-parallel-lint/php-parallel-lint": "^1.3",
-        "symplify/monorepo-builder": "^11.1",
-        "tomasvotruba/type-coverage": "^0.0.7",
-        "tomasvotruba/cognitive-complexity": "^0.0.5",
-        "tomasvotruba/unused-public": "^0.0.34"
-    },
-    "autoload": {
-        "psr-4": {
-            "Symplify\\VendorPatches\\": "src"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Symplify\\VendorPatches\\Tests\\": "tests"
-        }
-    },
     "extra": {
-        "enable-patching": true,
         "branch-alias": {
-            "dev-main": "11.2-dev"
+            "dev-main": "10.3-dev"
         }
-    },
-    "config": {
-        "platform-check": false,
-        "allow-plugins": {
-            "cweagans/composer-patches": true,
-            "phpstan/extension-installer": true
-        }
-    },
-    "scripts": {
-        "check-cs": "vendor/bin/ecs check --ansi",
-        "fix-cs": "vendor/bin/ecs check --fix --ansi",
-        "phpstan": "vendor/bin/phpstan analyse --ansi  --error-format symplify",
-        "rector": "vendor/bin/rector process --dry-run --ansi",
-        "release": "vendor/bin/monorepo-builder release patch --ansi"
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }
