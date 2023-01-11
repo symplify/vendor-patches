@@ -21,17 +21,9 @@ return static function (RectorConfig $rectorConfig): void {
         PHPUnitSetList::PHPUNIT_CODE_QUALITY,
     ]);
 
-    $rectorConfig->paths([
-        __DIR__ . '/config',
-        __DIR__ . '/src',
-        __DIR__ . '/tests',
-    ]);
+    $rectorConfig->paths([__DIR__ . '/config', __DIR__ . '/src', __DIR__ . '/tests']);
 
     $rectorConfig->importNames();
 
-    $rectorConfig->skip([
-        '*/scoper.php',
-        '*/Source/*',
-        '*/Fixture/*',
-    ]);
+    $rectorConfig->skip(['*/scoper.php', '*/Source/*', '*/Fixture/*']);
 };
