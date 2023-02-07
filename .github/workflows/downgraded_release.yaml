@@ -36,7 +36,7 @@ jobs:
             -   run: rector-local/vendor/bin/rector process bin src vendor --config build/rector-downgrade-php-72.php --ansi
 
             # clear the dev files
-            -   run: rm -rf tests ecs.php phpstan.neon phpunit.xml .gitignore .editorconfig
+            -   run: rm -rf tests ecs.php phpstan.neon phpunit.xml .gitignore .editorconfig rector-local
 
             # prefix and scope
             -   run: sh prefix-code.sh
