@@ -1,27 +1,23 @@
 <?php
 
-declare(strict_types=1);
-
+declare (strict_types=1);
 namespace Symplify\VendorPatches\Console;
 
-use Symfony\Component\Console\Style\SymfonyStyle;
+use VendorPatches202302\Symfony\Component\Console\Style\SymfonyStyle;
 use Symplify\VendorPatches\ValueObject\OldAndNewFileInfo;
-
 final class GenerateCommandReporter
 {
-    public function __construct(
-        private SymfonyStyle $symfonyStyle
-    ) {
-    }
-
-    public function reportIdenticalNewAndOldFile(OldAndNewFileInfo $oldAndNewFileInfo): void
+    /**
+     * @var \Symfony\Component\Console\Style\SymfonyStyle
+     */
+    private $symfonyStyle;
+    public function __construct(SymfonyStyle $symfonyStyle)
     {
-        $message = sprintf(
-            'Files "%s" and "%s" have the same content. Did you forgot to change it?',
-            $oldAndNewFileInfo->getOldFileRelativePath(),
-            $oldAndNewFileInfo->getNewFileRelativePath()
-        );
-
+        $this->symfonyStyle = $symfonyStyle;
+    }
+    public function reportIdenticalNewAndOldFile(OldAndNewFileInfo $oldAndNewFileInfo) : void
+    {
+        $message = \sprintf('Files "%s" and "%s" have the same content. Did you forgot to change it?', $oldAndNewFileInfo->getOldFileRelativePath(), $oldAndNewFileInfo->getNewFileRelativePath());
         $this->symfonyStyle->warning($message);
     }
 }
