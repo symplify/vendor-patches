@@ -8,10 +8,5 @@
     },
     "bin": [
         "bin/vendor-patches"
-    ],
-    "extra": {
-        "branch-alias": {
-            "dev-main": "10.3-dev"
-        }
-    }
+    ]
 }

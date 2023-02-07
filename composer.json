@@ -38,10 +38,7 @@
         }
     },
     "extra": {
-        "enable-patching": true,
-        "branch-alias": {
-            "dev-main": "11.2-dev"
-        }
+        "enable-patching": true
     },
     "config": {
         "platform-check": false,
@@ -56,7 +53,5 @@
         "phpstan": "vendor/bin/phpstan analyse --ansi  --error-format symplify",
         "rector": "vendor/bin/rector process --dry-run --ansi",
         "release": "vendor/bin/monorepo-builder release patch --ansi"
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }
