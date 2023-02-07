@@ -40,6 +40,7 @@ jobs:
 
             # prefix and scope
             -   run: sh prefix-code.sh
+            -   run: rm php-scoper.phar
 
             # copy PHP 7.2 composer + workflows
             -   run: cp -r build/target-repository/. .
