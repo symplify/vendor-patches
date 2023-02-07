@@ -11,6 +11,7 @@ return static function (RectorConfig $rectorConfig): void {
     $rectorConfig->sets([
         SetList::CODE_QUALITY,
         SetList::DEAD_CODE,
+        PHPUnitSetList::PHPUNIT_100,
         // @todo bump to PHP 8.1
         LevelSetList::UP_TO_PHP_80,
         SetList::CODING_STYLE,
