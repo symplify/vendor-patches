@@ -18,7 +18,7 @@ final class PathResolver
 
     public function resolveVendorDirectory(SmartFileInfo $fileInfo): string
     {
-        $match = Strings::match($fileInfo->getRealPath(), self::VENDOR_PACKAGE_DIRECTORY_REGEX);
+        $match = Strings::match(str_replace('\\', '/', $fileInfo->getRealPath()), self::VENDOR_PACKAGE_DIRECTORY_REGEX);
         if (! isset($match['vendor_package_directory'])) {
             throw new ShouldNotHappenException('Could not resolve vendor package directory');
         }
