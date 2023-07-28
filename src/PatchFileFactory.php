@@ -5,15 +5,17 @@ declare(strict_types=1);
 namespace Symplify\VendorPatches;
 
 use Nette\Utils\Strings;
-use Symplify\VendorPatches\ValueObject\OldAndNewFileInfo;
+use Symplify\VendorPatches\FileSystem\PathResolver;
+use Symplify\VendorPatches\ValueObject\OldAndNewFile;
 
 final class PatchFileFactory
 {
-    public function createPatchFilePath(OldAndNewFileInfo $oldAndNewFileInfo, string $vendorDirectory): string
+    public function createPatchFilePath(OldAndNewFile $oldAndNewFileInfo, string $vendorDirectory): string
     {
-        $newFileInfo = $oldAndNewFileInfo->getNewFileInfo();
-
-        $inVendorRelativeFilePath = $newFileInfo->getRelativeFilePathFromDirectory($vendorDirectory);
+        $inVendorRelativeFilePath = PathResolver::getRelativeFilePathFromDirectory(
+            $vendorDirectory,
+            $oldAndNewFileInfo->getNewFilePath()
+        );
 
         $relativeFilePathWithoutSuffix = Strings::lower($inVendorRelativeFilePath);
         $pathFileName = Strings::webalize($relativeFilePathWithoutSuffix) . '.patch';

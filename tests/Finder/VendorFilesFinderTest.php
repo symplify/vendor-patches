@@ -4,24 +4,16 @@ declare(strict_types=1);
 
 namespace Symplify\VendorPatches\Tests\Finder;
 
-use Symplify\PackageBuilder\Testing\AbstractKernelTestCase;
 use Symplify\VendorPatches\Finder\OldToNewFilesFinder;
-use Symplify\VendorPatches\Kernel\VendorPatchesKernel;
+use Symplify\VendorPatches\Tests\AbstractTestCase;
 
-final class VendorFilesFinderTest extends AbstractKernelTestCase
+final class VendorFilesFinderTest extends AbstractTestCase
 {
-    private OldToNewFilesFinder $oldToNewFilesFinder;
-
-    protected function setUp(): void
-    {
-        $this->bootKernel(VendorPatchesKernel::class);
-
-        $this->oldToNewFilesFinder = $this->getService(OldToNewFilesFinder::class);
-    }
-
     public function test(): void
     {
-        $files = $this->oldToNewFilesFinder->find(__DIR__ . '/VendorFilesFinderSource');
+        $oldToNewFilesFinder = $this->make(OldToNewFilesFinder::class);
+
+        $files = $oldToNewFilesFinder->find(__DIR__ . '/VendorFilesFinderSource');
         $this->assertCount(2, $files);
     }
 }

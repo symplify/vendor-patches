@@ -4,27 +4,19 @@ declare(strict_types=1);
 
 namespace Symplify\VendorPatches\Tests\Composer;
 
-use Symplify\PackageBuilder\Testing\AbstractKernelTestCase;
-use Symplify\SmartFileSystem\SmartFileInfo;
 use Symplify\VendorPatches\Composer\PackageNameResolver;
-use Symplify\VendorPatches\Kernel\VendorPatchesKernel;
+use Symplify\VendorPatches\Tests\AbstractTestCase;
 
-final class PackageNameResolverTest extends AbstractKernelTestCase
+final class PackageNameResolverTest extends AbstractTestCase
 {
-    private PackageNameResolver $packageNameResolver;
-
-    protected function setUp(): void
-    {
-        $this->bootKernel(VendorPatchesKernel::class);
-
-        $this->packageNameResolver = $this->getService(PackageNameResolver::class);
-    }
-
     public function test(): void
     {
-        $fileInfo = new SmartFileInfo(__DIR__ . '/PackageNameResolverSource/vendor/some/pac.kage/composer.json');
+        $packageNameResolver = $this->make(PackageNameResolver::class);
 
-        $packageName = $this->packageNameResolver->resolveFromFileInfo($fileInfo);
+        $packageName = $packageNameResolver->resolveFromFilePath(
+            __DIR__ . '/PackageNameResolverSource/vendor/some/pac.kage/composer.json'
+        );
+
         $this->assertSame('some/name', $packageName);
     }
 }
