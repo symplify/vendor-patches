@@ -37,33 +37,30 @@ final class GenerateCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $projectVendorDirectory = getcwd() . '/vendor';
-        if (! file_exists($projectVendorDirectory)) {
-            $projectVendorDirectory = VendorDirProvider::provide();
-        }
+        $projectVendorDirectory = $this->resolveProjectVendorDirectory();
 
-        $oldAndNewFileInfos = $this->oldToNewFilesFinder->find($projectVendorDirectory);
+        $oldAndNewFiles = $this->oldToNewFilesFinder->find($projectVendorDirectory);
 
         $composerExtraPatches = [];
         $addedPatchFilesByPackageName = [];
 
-        foreach ($oldAndNewFileInfos as $oldAndNewFileInfo) {
-            if ($oldAndNewFileInfo->areContentsIdentical()) {
-                $this->generateCommandReporter->reportIdenticalNewAndOldFile($oldAndNewFileInfo);
+        foreach ($oldAndNewFiles as $oldAndNewFile) {
+            if ($oldAndNewFile->areContentsIdentical()) {
+                $this->generateCommandReporter->reportIdenticalNewAndOldFile($oldAndNewFile);
                 continue;
             }
 
             // write into patches file
             $patchFileRelativePath = $this->patchFileFactory->createPatchFilePath(
-                $oldAndNewFileInfo,
+                $oldAndNewFile,
                 $projectVendorDirectory
             );
-            $composerExtraPatches[$oldAndNewFileInfo->getPackageName()][] = $patchFileRelativePath;
+            $composerExtraPatches[$oldAndNewFile->getPackageName()][] = $patchFileRelativePath;
 
             $patchFileAbsolutePath = dirname($projectVendorDirectory) . DIRECTORY_SEPARATOR . $patchFileRelativePath;
 
             // dump the patch
-            $patchDiff = $this->patchDiffer->diff($oldAndNewFileInfo);
+            $patchDiff = $this->patchDiffer->diff($oldAndNewFile);
 
             if (is_file($patchFileAbsolutePath)) {
                 $message = sprintf('File "%s" was updated', $patchFileRelativePath);
@@ -75,13 +72,15 @@ final class GenerateCommand extends Command
 
             FileSystem::write($patchFileAbsolutePath, $patchDiff);
 
-            $addedPatchFilesByPackageName[$oldAndNewFileInfo->getPackageName()][] = $patchFileRelativePath;
+            $addedPatchFilesByPackageName[$oldAndNewFile->getPackageName()][] = $patchFileRelativePath;
         }
 
-        $this->composerPatchesConfigurationUpdater->updateComposerJsonAndPrint(
-            getcwd() . '/composer.json',
-            $composerExtraPatches
-        );
+        if ($composerExtraPatches !== []) {
+            $this->composerPatchesConfigurationUpdater->updateComposerJsonAndPrint(
+                getcwd() . '/composer.json',
+                $composerExtraPatches
+            );
+        }
 
         if ($addedPatchFilesByPackageName !== []) {
             $message = sprintf('Great! %d new patch files added', count($addedPatchFilesByPackageName));
@@ -91,5 +90,15 @@ final class GenerateCommand extends Command
         }
 
         return self::SUCCESS;
+    }
+
+    private function resolveProjectVendorDirectory(): string
+    {
+        $projectVendorDirectory = getcwd() . '/vendor';
+        if (file_exists($projectVendorDirectory)) {
+            return $projectVendorDirectory;
+        }
+
+        return VendorDirProvider::provide();
     }
 }

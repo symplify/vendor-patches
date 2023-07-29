@@ -19,7 +19,9 @@ final class PackageNameResolver
     {
         $packageComposerJsonFilePath = $this->getPackageComposerJsonFilePath($vendorFile);
 
-        $composerJson = Json::decode(FileSystem::read($packageComposerJsonFilePath), Json::FORCE_ARRAY);
+        $packageComposerContents = FileSystem::read($packageComposerJsonFilePath);
+
+        $composerJson = Json::decode($packageComposerContents, Json::FORCE_ARRAY);
         if (! isset($composerJson['name'])) {
             throw new ShouldNotHappenException();
         }

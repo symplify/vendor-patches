@@ -6,6 +6,7 @@ namespace Symplify\VendorPatches\Differ;
 
 use Nette\Utils\Strings;
 use SebastianBergmann\Diff\Differ;
+use Symplify\VendorPatches\Exception\ShouldNotHappenException;
 use Symplify\VendorPatches\ValueObject\OldAndNewFile;
 
 /**
@@ -38,23 +39,21 @@ final class PatchDiffer
 
     public function diff(OldAndNewFile $oldAndNewFile): string
     {
-        $oldFileInfo = $oldAndNewFile->getOldFilePath();
-        $newFileInfo = $oldAndNewFile->getNewFilePath();
-
         $diff = $this->differ->diff($oldAndNewFile->getOldFileContents(), $oldAndNewFile->getNewFileContents());
 
-        $patchedFileRelativePath = $this->resolveFileInfoPathRelativeFilePath($newFileInfo);
+        $newFilePath = $oldAndNewFile->getNewFilePath();
+        $patchedFileRelativePath = $this->resolveRelativeFilePath($newFilePath);
 
         $clearedDiff = Strings::replace($diff, self::START_ORIGINAL_REGEX, '--- /dev/null');
         return Strings::replace($clearedDiff, self::START_NEW_REGEX, '+++ ' . $patchedFileRelativePath);
     }
 
-    private function resolveFileInfoPathRelativeFilePath(string $beforeFilePath): string
+    private function resolveRelativeFilePath(string $beforeFilePath): string
     {
         $match = Strings::match($beforeFilePath, self::LOCAL_PATH_REGEX);
 
         if (! isset($match['local_path'])) {
-            throw new \Symplify\VendorPatches\Exception\ShouldNotHappenException();
+            throw new ShouldNotHappenException();
         }
 
         return '../' . $match['local_path'];

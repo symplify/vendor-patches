@@ -8,13 +8,16 @@ use Nette\Utils\Strings;
 use Symplify\VendorPatches\FileSystem\PathResolver;
 use Symplify\VendorPatches\ValueObject\OldAndNewFile;
 
+/**
+ * @see \Symplify\VendorPatches\Tests\PatchFileFactory\PatchFileFactoryTest
+ */
 final class PatchFileFactory
 {
-    public function createPatchFilePath(OldAndNewFile $oldAndNewFileInfo, string $vendorDirectory): string
+    public function createPatchFilePath(OldAndNewFile $oldAndNewFile, string $vendorDirectory): string
     {
         $inVendorRelativeFilePath = PathResolver::getRelativeFilePathFromDirectory(
-            $vendorDirectory,
-            $oldAndNewFileInfo->getNewFilePath()
+            $oldAndNewFile->getNewFilePath(),
+            $vendorDirectory
         );
 
         $relativeFilePathWithoutSuffix = Strings::lower($inVendorRelativeFilePath);

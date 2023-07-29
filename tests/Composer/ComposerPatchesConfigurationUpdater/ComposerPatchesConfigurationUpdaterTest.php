@@ -9,18 +9,11 @@ use Symplify\VendorPatches\Tests\AbstractTestCase;
 
 final class ComposerPatchesConfigurationUpdaterTest extends AbstractTestCase
 {
-    private ComposerPatchesConfigurationUpdater $composerPatchesConfigurationUpdater;
-
-    protected function setUp(): void
-    {
-        parent::setUp();
-
-        $this->composerPatchesConfigurationUpdater = $this->make(ComposerPatchesConfigurationUpdater::class);
-    }
-
     public function test(): void
     {
-        $composerJson = $this->composerPatchesConfigurationUpdater->updateComposerJson(
+        $composerPatchesConfigurationUpdater = $this->make(ComposerPatchesConfigurationUpdater::class);
+
+        $composerJson = $composerPatchesConfigurationUpdater->updateComposerJson(
             __DIR__ . '/Fixture/already_has_patches.json',
             [
                 'some_package' => ['some.patch'],

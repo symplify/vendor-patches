@@ -20,34 +20,32 @@ final class OldToNewFilesFinder
      */
     public function find(string $directory): array
     {
-        $oldAndNewFileInfos = [];
+        $oldAndNewFiles = [];
 
-        $oldFilePaths = $this->findSmartFileInfosInDirectory($directory);
+        $oldFilePaths = $this->findFilePathsInDirectory($directory);
 
         foreach ($oldFilePaths as $oldFilePath) {
-            $oldStrrPos = (int) strrpos((string) $oldFilePath, '.old');
-            if (strlen((string) $oldFilePath) - $oldStrrPos !== 4) {
+            $oldStrrPos = (int) strrpos($oldFilePath, '.old');
+            if (strlen($oldFilePath) - $oldStrrPos !== 4) {
                 continue;
             }
 
-            $newFilePath = substr((string) $oldFilePath, 0, $oldStrrPos);
+            $newFilePath = substr($oldFilePath, 0, $oldStrrPos);
             if (! file_exists($newFilePath)) {
                 continue;
             }
 
-            //$newFileInfo = new SmartFileInfo($newFilePath);
             $packageName = $this->packageNameResolver->resolveFromFilePath($newFilePath);
-
-            $oldAndNewFileInfos[] = new OldAndNewFile($oldFilePath, $newFilePath, $packageName);
+            $oldAndNewFiles[] = new OldAndNewFile($oldFilePath, $newFilePath, $packageName);
         }
 
-        return $oldAndNewFileInfos;
+        return $oldAndNewFiles;
     }
 
     /**
      * @return string[]
      */
-    private function findSmartFileInfosInDirectory(string $directory): array
+    private function findFilePathsInDirectory(string $directory): array
     {
         $finder = Finder::create()
             ->in($directory)

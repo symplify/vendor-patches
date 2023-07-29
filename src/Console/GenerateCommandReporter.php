@@ -14,12 +14,12 @@ final class GenerateCommandReporter
     ) {
     }
 
-    public function reportIdenticalNewAndOldFile(OldAndNewFile $oldAndNewFileInfo): void
+    public function reportIdenticalNewAndOldFile(OldAndNewFile $oldAndNewFile): void
     {
         $message = sprintf(
             'Files "%s" and "%s" have the same content. Did you forgot to change it?',
-            $oldAndNewFileInfo->getOldFilePath(),
-            $oldAndNewFileInfo->getNewFilePath()
+            $oldAndNewFile->getOldFilePath(),
+            $oldAndNewFile->getNewFilePath()
         );
 
         $this->symfonyStyle->warning($message);

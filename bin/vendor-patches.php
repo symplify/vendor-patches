@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use Symplify\SymplifyKernel\ValueObject\KernelBootAndApplicationRun;
-use Symplify\VendorPatches\Kernel\VendorPatchesKernel;
+use Symfony\Component\Console\Application;
+use Symplify\VendorPatches\DependencyInjection\ContainerFactory;
 
 $possibleAutoloadPaths = [
     __DIR__ . '/../autoload.php',
@@ -27,5 +27,10 @@ if (file_exists($scoperAutoloadFilepath)) {
 }
 
 
-$kernelBootAndApplicationRun = new KernelBootAndApplicationRun(VendorPatchesKernel::class);
-$kernelBootAndApplicationRun->run();
+$containerFactory = new ContainerFactory();
+$container = $containerFactory->create();
+
+$application = $container->make(Application::class);
+
+$statusCode = $application->run();
+exit($statusCode);
