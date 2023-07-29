@@ -4,29 +4,24 @@ declare(strict_types=1);
 
 namespace Symplify\VendorPatches\Composer;
 
-use Symplify\SmartFileSystem\FileSystemGuard;
-use Symplify\SmartFileSystem\Json\JsonFileSystem;
-use Symplify\SmartFileSystem\SmartFileInfo;
-use Symplify\SymplifyKernel\Exception\ShouldNotHappenException;
+use Nette\Utils\FileSystem;
+use Nette\Utils\Json;
+use Symplify\VendorPatches\Exception\ShouldNotHappenException;
 use Symplify\VendorPatches\FileSystem\PathResolver;
+use Webmozart\Assert\Assert;
 
 /**
  * @see \Symplify\VendorPatches\Tests\Composer\PackageNameResolverTest
  */
 final class PackageNameResolver
 {
-    public function __construct(
-        private JsonFileSystem $jsonFileSystem,
-        private PathResolver $pathResolver,
-        private FileSystemGuard $fileSystemGuard
-    ) {
-    }
-
-    public function resolveFromFileInfo(SmartFileInfo $vendorFile): string
+    public function resolveFromFilePath(string $vendorFile): string
     {
         $packageComposerJsonFilePath = $this->getPackageComposerJsonFilePath($vendorFile);
 
-        $composerJson = $this->jsonFileSystem->loadFilePathToJson($packageComposerJsonFilePath);
+        $packageComposerContents = FileSystem::read($packageComposerJsonFilePath);
+
+        $composerJson = Json::decode($packageComposerContents, Json::FORCE_ARRAY);
         if (! isset($composerJson['name'])) {
             throw new ShouldNotHappenException();
         }
@@ -34,11 +29,12 @@ final class PackageNameResolver
         return $composerJson['name'];
     }
 
-    private function getPackageComposerJsonFilePath(SmartFileInfo $vendorFileInfo): string
+    private function getPackageComposerJsonFilePath(string $vendorFilePath): string
     {
-        $vendorPackageDirectory = $this->pathResolver->resolveVendorDirectory($vendorFileInfo);
+        $vendorPackageDirectory = PathResolver::resolveVendorDirectory($vendorFilePath);
+
         $packageComposerJsonFilePath = $vendorPackageDirectory . '/composer.json';
-        $this->fileSystemGuard->ensureFileExists($packageComposerJsonFilePath, __METHOD__);
+        Assert::fileExists($packageComposerJsonFilePath);
 
         return $packageComposerJsonFilePath;
     }

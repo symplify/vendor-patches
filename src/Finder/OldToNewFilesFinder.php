@@ -5,52 +5,47 @@ declare(strict_types=1);
 namespace Symplify\VendorPatches\Finder;
 
 use Symfony\Component\Finder\Finder;
-use Symplify\SmartFileSystem\Finder\FinderSanitizer;
-use Symplify\SmartFileSystem\SmartFileInfo;
 use Symplify\VendorPatches\Composer\PackageNameResolver;
-use Symplify\VendorPatches\ValueObject\OldAndNewFileInfo;
+use Symplify\VendorPatches\ValueObject\OldAndNewFile;
 
 final class OldToNewFilesFinder
 {
     public function __construct(
-        private FinderSanitizer $finderSanitizer,
-        private PackageNameResolver $packageNameResolver
+        private readonly PackageNameResolver $packageNameResolver
     ) {
     }
 
     /**
-     * @return OldAndNewFileInfo[]
+     * @return OldAndNewFile[]
      */
     public function find(string $directory): array
     {
-        $oldAndNewFileInfos = [];
-        $oldFileInfos = $this->findSmartFileInfosInDirectory($directory);
+        $oldAndNewFiles = [];
 
-        foreach ($oldFileInfos as $oldFileInfo) {
-            $oldRealPath = $oldFileInfo->getRealPath();
-            $oldStrrPos = (int) strrpos($oldRealPath, '.old');
-            if (strlen($oldRealPath) - $oldStrrPos !== 4) {
+        $oldFilePaths = $this->findFilePathsInDirectory($directory);
+
+        foreach ($oldFilePaths as $oldFilePath) {
+            $oldStrrPos = (int) strrpos($oldFilePath, '.old');
+            if (strlen($oldFilePath) - $oldStrrPos !== 4) {
                 continue;
             }
 
-            $newFilePath = substr($oldRealPath, 0, $oldStrrPos);
+            $newFilePath = substr($oldFilePath, 0, $oldStrrPos);
             if (! file_exists($newFilePath)) {
                 continue;
             }
 
-            $newFileInfo = new SmartFileInfo($newFilePath);
-            $packageName = $this->packageNameResolver->resolveFromFileInfo($newFileInfo);
-
-            $oldAndNewFileInfos[] = new OldAndNewFileInfo($oldFileInfo, $newFileInfo, $packageName);
+            $packageName = $this->packageNameResolver->resolveFromFilePath($newFilePath);
+            $oldAndNewFiles[] = new OldAndNewFile($oldFilePath, $newFilePath, $packageName);
         }
 
-        return $oldAndNewFileInfos;
+        return $oldAndNewFiles;
     }
 
     /**
-     * @return SmartFileInfo[]
+     * @return string[]
      */
-    private function findSmartFileInfosInDirectory(string $directory): array
+    private function findFilePathsInDirectory(string $directory): array
     {
         $finder = Finder::create()
             ->in($directory)
@@ -60,6 +55,7 @@ final class OldToNewFilesFinder
             ->exclude('ocramius/')
             ->name('*.old');
 
-        return $this->finderSanitizer->sanitize($finder);
+        $fileInfos = iterator_to_array($finder->getIterator());
+        return array_keys($fileInfos);
     }
 }

@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Symplify\VendorPatches\FileSystem;
 
 use Nette\Utils\Strings;
-use Symplify\SmartFileSystem\SmartFileInfo;
-use Symplify\SymplifyKernel\Exception\ShouldNotHappenException;
+use Symplify\VendorPatches\Exception\ShouldNotHappenException;
+use Webmozart\Assert\Assert;
 
 final class PathResolver
 {
@@ -16,13 +16,21 @@ final class PathResolver
      */
     private const VENDOR_PACKAGE_DIRECTORY_REGEX = '#^(?<vendor_package_directory>.*?vendor\/(\w|\.|\-)+\/(\w|\.|\-)+)\/#si';
 
-    public function resolveVendorDirectory(SmartFileInfo $fileInfo): string
+    public static function resolveVendorDirectory(string $filePath): string
     {
-        $match = Strings::match($fileInfo->getRealPath(), self::VENDOR_PACKAGE_DIRECTORY_REGEX);
+        $match = Strings::match($filePath, self::VENDOR_PACKAGE_DIRECTORY_REGEX);
         if (! isset($match['vendor_package_directory'])) {
             throw new ShouldNotHappenException('Could not resolve vendor package directory');
         }
 
         return $match['vendor_package_directory'];
+    }
+
+    public static function getRelativeFilePathFromDirectory(string $filePath, string $directory): string
+    {
+        Assert::directory($directory);
+
+        // get relative path from directory
+        return Strings::replace($filePath, '#^' . preg_quote($directory, '#') . '#');
     }
 }

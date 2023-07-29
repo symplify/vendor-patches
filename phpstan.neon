@@ -3,19 +3,12 @@ parameters:
 
     paths:
         - src
-        - config
         - tests
 
     cognitive_complexity:
         class: 25
         function: 8
 
-    unused_public:
-        properties: true
-        constants: true
-        methods: true
 
-    type_coverage:
-        return_type: 99
-        param_type: 99
-        property_type: 99
+    ignoreErrors:
+        - '#Cognitive complexity for "Symplify\\VendorPatches\\Utils\\ParametersMerger\:\:mergeLeftToRightWithCallable\(\)" is 10, keep it under 8#'

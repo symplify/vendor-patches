@@ -4,25 +4,27 @@ declare(strict_types=1);
 
 namespace Symplify\VendorPatches\Command;
 
+use Nette\Utils\FileSystem;
+use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Symplify\PackageBuilder\Composer\VendorDirProvider;
-use Symplify\PackageBuilder\Console\Command\AbstractSymplifyCommand;
+use Symfony\Component\Console\Style\SymfonyStyle;
 use Symplify\VendorPatches\Composer\ComposerPatchesConfigurationUpdater;
 use Symplify\VendorPatches\Console\GenerateCommandReporter;
 use Symplify\VendorPatches\Differ\PatchDiffer;
 use Symplify\VendorPatches\Finder\OldToNewFilesFinder;
 use Symplify\VendorPatches\PatchFileFactory;
+use Symplify\VendorPatches\VendorDirProvider;
 
-final class GenerateCommand extends AbstractSymplifyCommand
+final class GenerateCommand extends Command
 {
     public function __construct(
-        private OldToNewFilesFinder $oldToNewFilesFinder,
-        private PatchDiffer $patchDiffer,
-        private ComposerPatchesConfigurationUpdater $composerPatchesConfigurationUpdater,
-        private VendorDirProvider $vendorDirProvider,
-        private PatchFileFactory $patchFileFactory,
-        private GenerateCommandReporter $generateCommandReporter
+        private readonly OldToNewFilesFinder $oldToNewFilesFinder,
+        private readonly PatchDiffer $patchDiffer,
+        private readonly ComposerPatchesConfigurationUpdater $composerPatchesConfigurationUpdater,
+        private readonly PatchFileFactory $patchFileFactory,
+        private readonly GenerateCommandReporter $generateCommandReporter,
+        private readonly SymfonyStyle $symfonyStyle,
     ) {
         parent::__construct();
     }
@@ -35,33 +37,30 @@ final class GenerateCommand extends AbstractSymplifyCommand
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $projectVendorDirectory = getcwd() . '/vendor';
-        if (! file_exists($projectVendorDirectory)) {
-            $projectVendorDirectory = $this->vendorDirProvider->provide();
-        }
+        $projectVendorDirectory = $this->resolveProjectVendorDirectory();
 
-        $oldAndNewFileInfos = $this->oldToNewFilesFinder->find($projectVendorDirectory);
+        $oldAndNewFiles = $this->oldToNewFilesFinder->find($projectVendorDirectory);
 
         $composerExtraPatches = [];
         $addedPatchFilesByPackageName = [];
 
-        foreach ($oldAndNewFileInfos as $oldAndNewFileInfo) {
-            if ($oldAndNewFileInfo->isContentIdentical()) {
-                $this->generateCommandReporter->reportIdenticalNewAndOldFile($oldAndNewFileInfo);
+        foreach ($oldAndNewFiles as $oldAndNewFile) {
+            if ($oldAndNewFile->areContentsIdentical()) {
+                $this->generateCommandReporter->reportIdenticalNewAndOldFile($oldAndNewFile);
                 continue;
             }
 
             // write into patches file
             $patchFileRelativePath = $this->patchFileFactory->createPatchFilePath(
-                $oldAndNewFileInfo,
+                $oldAndNewFile,
                 $projectVendorDirectory
             );
-            $composerExtraPatches[$oldAndNewFileInfo->getPackageName()][] = $patchFileRelativePath;
+            $composerExtraPatches[$oldAndNewFile->getPackageName()][] = $patchFileRelativePath;
 
             $patchFileAbsolutePath = dirname($projectVendorDirectory) . DIRECTORY_SEPARATOR . $patchFileRelativePath;
 
             // dump the patch
-            $patchDiff = $this->patchDiffer->diff($oldAndNewFileInfo);
+            $patchDiff = $this->patchDiffer->diff($oldAndNewFile);
 
             if (is_file($patchFileAbsolutePath)) {
                 $message = sprintf('File "%s" was updated', $patchFileRelativePath);
@@ -71,15 +70,17 @@ final class GenerateCommand extends AbstractSymplifyCommand
                 $this->symfonyStyle->note($message);
             }
 
-            $this->smartFileSystem->dumpFile($patchFileAbsolutePath, $patchDiff);
+            FileSystem::write($patchFileAbsolutePath, $patchDiff);
 
-            $addedPatchFilesByPackageName[$oldAndNewFileInfo->getPackageName()][] = $patchFileRelativePath;
+            $addedPatchFilesByPackageName[$oldAndNewFile->getPackageName()][] = $patchFileRelativePath;
         }
 
-        $this->composerPatchesConfigurationUpdater->updateComposerJsonAndPrint(
-            getcwd() . '/composer.json',
-            $composerExtraPatches
-        );
+        if ($composerExtraPatches !== []) {
+            $this->composerPatchesConfigurationUpdater->updateComposerJsonAndPrint(
+                getcwd() . '/composer.json',
+                $composerExtraPatches
+            );
+        }
 
         if ($addedPatchFilesByPackageName !== []) {
             $message = sprintf('Great! %d new patch files added', count($addedPatchFilesByPackageName));
@@ -89,5 +90,15 @@ final class GenerateCommand extends AbstractSymplifyCommand
         }
 
         return self::SUCCESS;
+    }
+
+    private function resolveProjectVendorDirectory(): string
+    {
+        $projectVendorDirectory = getcwd() . '/vendor';
+        if (file_exists($projectVendorDirectory)) {
+            return $projectVendorDirectory;
+        }
+
+        return VendorDirProvider::provide();
     }
 }

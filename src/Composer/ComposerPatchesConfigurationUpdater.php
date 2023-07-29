@@ -6,7 +6,7 @@ namespace Symplify\VendorPatches\Composer;
 
 use Nette\Utils\FileSystem;
 use Nette\Utils\Json;
-use Symplify\PackageBuilder\Yaml\ParametersMerger;
+use Symplify\VendorPatches\Utils\ParametersMerger;
 
 /**
  * @see \Symplify\VendorPatches\Tests\Composer\ComposerPatchesConfigurationUpdater\ComposerPatchesConfigurationUpdaterTest
@@ -14,7 +14,7 @@ use Symplify\PackageBuilder\Yaml\ParametersMerger;
 final class ComposerPatchesConfigurationUpdater
 {
     public function __construct(
-        private ParametersMerger $parametersMerger
+        private readonly ParametersMerger $parametersMerger
     ) {
     }
 

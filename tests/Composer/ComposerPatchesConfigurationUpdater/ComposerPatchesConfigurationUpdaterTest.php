@@ -4,23 +4,16 @@ declare(strict_types=1);
 
 namespace Symplify\VendorPatches\Tests\Composer\ComposerPatchesConfigurationUpdater;
 
-use Symplify\PackageBuilder\Testing\AbstractKernelTestCase;
 use Symplify\VendorPatches\Composer\ComposerPatchesConfigurationUpdater;
-use Symplify\VendorPatches\Kernel\VendorPatchesKernel;
+use Symplify\VendorPatches\Tests\AbstractTestCase;
 
-final class ComposerPatchesConfigurationUpdaterTest extends AbstractKernelTestCase
+final class ComposerPatchesConfigurationUpdaterTest extends AbstractTestCase
 {
-    private ComposerPatchesConfigurationUpdater $composerPatchesConfigurationUpdater;
-
-    protected function setUp(): void
-    {
-        $this->bootKernel(VendorPatchesKernel::class);
-        $this->composerPatchesConfigurationUpdater = $this->getService(ComposerPatchesConfigurationUpdater::class);
-    }
-
     public function test(): void
     {
-        $composerJson = $this->composerPatchesConfigurationUpdater->updateComposerJson(
+        $composerPatchesConfigurationUpdater = $this->make(ComposerPatchesConfigurationUpdater::class);
+
+        $composerJson = $composerPatchesConfigurationUpdater->updateComposerJson(
             __DIR__ . '/Fixture/already_has_patches.json',
             [
                 'some_package' => ['some.patch'],

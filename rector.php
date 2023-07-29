@@ -12,8 +12,7 @@ return static function (RectorConfig $rectorConfig): void {
         SetList::CODE_QUALITY,
         SetList::DEAD_CODE,
         PHPUnitSetList::PHPUNIT_100,
-        // @todo bump to PHP 8.1
-        LevelSetList::UP_TO_PHP_80,
+        LevelSetList::UP_TO_PHP_81,
         SetList::CODING_STYLE,
         SetList::TYPE_DECLARATION,
         SetList::NAMING,
@@ -22,7 +21,7 @@ return static function (RectorConfig $rectorConfig): void {
         PHPUnitSetList::PHPUNIT_CODE_QUALITY,
     ]);
 
-    $rectorConfig->paths([__DIR__ . '/config', __DIR__ . '/src', __DIR__ . '/tests']);
+    $rectorConfig->paths([__DIR__ . '/src', __DIR__ . '/tests']);
 
     $rectorConfig->importNames();
 

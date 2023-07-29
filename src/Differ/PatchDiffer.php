@@ -6,9 +6,8 @@ namespace Symplify\VendorPatches\Differ;
 
 use Nette\Utils\Strings;
 use SebastianBergmann\Diff\Differ;
-use Symplify\SmartFileSystem\SmartFileInfo;
-use Symplify\SymplifyKernel\Exception\ShouldNotHappenException;
-use Symplify\VendorPatches\ValueObject\OldAndNewFileInfo;
+use Symplify\VendorPatches\Exception\ShouldNotHappenException;
+use Symplify\VendorPatches\ValueObject\OldAndNewFile;
 
 /**
  * @see \Symplify\VendorPatches\Tests\Differ\PatchDifferTest
@@ -34,26 +33,25 @@ final class PatchDiffer
     private const START_NEW_REGEX = '#^\+\+\+ New#m';
 
     public function __construct(
-        private Differ $differ
+        private readonly Differ $differ
     ) {
     }
 
-    public function diff(OldAndNewFileInfo $oldAndNewFileInfo): string
+    public function diff(OldAndNewFile $oldAndNewFile): string
     {
-        $oldFileInfo = $oldAndNewFileInfo->getOldFileInfo();
-        $newFileInfo = $oldAndNewFileInfo->getNewFileInfo();
+        $diff = $this->differ->diff($oldAndNewFile->getOldFileContents(), $oldAndNewFile->getNewFileContents());
 
-        $diff = $this->differ->diff($oldFileInfo->getContents(), $newFileInfo->getContents());
-
-        $patchedFileRelativePath = $this->resolveFileInfoPathRelativeFilePath($newFileInfo);
+        $newFilePath = $oldAndNewFile->getNewFilePath();
+        $patchedFileRelativePath = $this->resolveRelativeFilePath($newFilePath);
 
         $clearedDiff = Strings::replace($diff, self::START_ORIGINAL_REGEX, '--- /dev/null');
         return Strings::replace($clearedDiff, self::START_NEW_REGEX, '+++ ' . $patchedFileRelativePath);
     }
 
-    private function resolveFileInfoPathRelativeFilePath(SmartFileInfo $beforeFileInfo): string
+    private function resolveRelativeFilePath(string $beforeFilePath): string
     {
-        $match = Strings::match($beforeFileInfo->getRealPath(), self::LOCAL_PATH_REGEX);
+        $match = Strings::match($beforeFilePath, self::LOCAL_PATH_REGEX);
+
         if (! isset($match['local_path'])) {
             throw new ShouldNotHappenException();
         }
