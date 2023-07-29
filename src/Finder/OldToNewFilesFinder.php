@@ -8,6 +8,9 @@ use Symfony\Component\Finder\Finder;
 use Symplify\VendorPatches\Composer\PackageNameResolver;
 use Symplify\VendorPatches\ValueObject\OldAndNewFile;
 
+/**
+ * @see \Symplify\VendorPatches\Tests\Finder\OldToNewFilesFinderTest
+ */
 final class OldToNewFilesFinder
 {
     public function __construct(
