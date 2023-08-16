@@ -16,6 +16,16 @@ final class PathResolver
      */
     private const VENDOR_PACKAGE_DIRECTORY_REGEX = '#^(?<vendor_package_directory>.*?vendor\/(\w|\.|\-)+\/(\w|\.|\-)+)\/#si';
 
+    public static function getAbsoluteRootPath(): string
+    {
+        return getenv('SystemDrive', true) . DIRECTORY_SEPARATOR;
+    }
+
+    public static function getProjectRootPath(): string
+    {
+        return getcwd() . DIRECTORY_SEPARATOR;
+    }
+
     public static function resolveVendorDirectory(string $filePath): string
     {
         $match = Strings::match($filePath, self::VENDOR_PACKAGE_DIRECTORY_REGEX);

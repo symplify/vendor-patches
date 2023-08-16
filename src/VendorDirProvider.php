@@ -6,20 +6,21 @@ namespace Symplify\VendorPatches;
 
 use Composer\Autoload\ClassLoader;
 use ReflectionClass;
+use Symplify\VendorPatches\FileSystem\PathResolver;
 use Webmozart\Assert\Assert;
 
 final class VendorDirProvider
 {
     public static function provide(): string
     {
-        $rootFolder = getenv('SystemDrive', true) . DIRECTORY_SEPARATOR;
+        $absoluteRootPath = PathResolver::getAbsoluteRootPath();
 
         $path = __DIR__;
-        while (! \str_ends_with($path, 'vendor') && $path !== $rootFolder) {
+        while (! \str_ends_with($path, 'vendor') && $path !== $absoluteRootPath) {
             $path = dirname($path);
         }
 
-        if ($path !== $rootFolder) {
+        if ($path !== $absoluteRootPath) {
             return $path;
         }
 
