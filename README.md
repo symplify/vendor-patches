@@ -42,17 +42,22 @@ Only `*.php` file is loaded, not the `*.php.old` one. This way you can **be sure
 vendor/bin/vendor-patches generate
 ```
 
-This tool will generate **patch files for all files created this** way in `/patches` directory:
+This tool will generate **patch files for all vendor files modified this way**.
+
+By default, they will be created in the `patches` subdirectory of your repository,
+but you can override this using the environment variable `VENDOR_PATCHES_OUTPUT_PATH`.
+If its value is an absolute path, it must describe a path within the repository.
+If a relative path, it will be relative to the repository root.
 
 ```bash
-/patches/nette-di-di-extensions-injectextension.php.patch
+patches/nette-di-di-extensions-injectextension.php.patch
 ```
 
-The patch path is based on original file path, so **the patch name is always unique**.
+Each patch file name is based on the original file path, so **it is always unique**.
 
 <br>
 
-Also, it will add configuration for `cweagans/composer-patches` to your `composer.json`:
+Also, `generate` will add configuration for `cweagans/composer-patches` to your `composer.json`:
 
 ```json
 {

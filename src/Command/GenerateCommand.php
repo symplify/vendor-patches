@@ -12,6 +12,7 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 use Symplify\VendorPatches\Composer\ComposerPatchesConfigurationUpdater;
 use Symplify\VendorPatches\Console\GenerateCommandReporter;
 use Symplify\VendorPatches\Differ\PatchDiffer;
+use Symplify\VendorPatches\FileSystem\PathResolver;
 use Symplify\VendorPatches\Finder\OldToNewFilesFinder;
 use Symplify\VendorPatches\PatchFileFactory;
 use Symplify\VendorPatches\VendorDirProvider;
@@ -77,7 +78,7 @@ final class GenerateCommand extends Command
 
         if ($composerExtraPatches !== []) {
             $this->composerPatchesConfigurationUpdater->updateComposerJsonAndPrint(
-                getcwd() . '/composer.json',
+                PathResolver::getProjectRootPath() . 'composer.json',
                 $composerExtraPatches
             );
         }
@@ -94,7 +95,7 @@ final class GenerateCommand extends Command
 
     private function resolveProjectVendorDirectory(): string
     {
-        $projectVendorDirectory = getcwd() . '/vendor';
+        $projectVendorDirectory = PathResolver::getProjectRootPath() . 'vendor';
         if (file_exists($projectVendorDirectory)) {
             return $projectVendorDirectory;
         }
