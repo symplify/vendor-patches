@@ -50,7 +50,7 @@ final class PatchDiffer
 
     private function resolveRelativeFilePath(string $beforeFilePath): string
     {
-        $match = Strings::match($beforeFilePath, self::LOCAL_PATH_REGEX);
+        $match = Strings::match(str_replace('\\', '/', $beforeFilePath), self::LOCAL_PATH_REGEX);
 
         if (! isset($match['local_path'])) {
             throw new ShouldNotHappenException();

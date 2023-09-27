@@ -18,7 +18,7 @@ final class PathResolver
 
     public static function resolveVendorDirectory(string $filePath): string
     {
-        $match = Strings::match($filePath, self::VENDOR_PACKAGE_DIRECTORY_REGEX);
+        $match = Strings::match(str_replace('\\', '/', $filePath), self::VENDOR_PACKAGE_DIRECTORY_REGEX);
         if (! isset($match['vendor_package_directory'])) {
             throw new ShouldNotHappenException('Could not resolve vendor package directory');
         }
