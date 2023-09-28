@@ -6,6 +6,7 @@ namespace Symplify\VendorPatches\Tests\PatchFileFactory;
 
 use Symplify\VendorPatches\PatchFileFactory;
 use Symplify\VendorPatches\Tests\AbstractTestCase;
+use Symplify\VendorPatches\Utils\FileSystemHelper;
 use Symplify\VendorPatches\ValueObject\OldAndNewFile;
 
 final class PatchFileFactoryTest extends AbstractTestCase
@@ -21,6 +22,6 @@ final class PatchFileFactoryTest extends AbstractTestCase
         );
 
         $pathFilePath = $patchFileFactory->createPatchFilePath($oldAndNewFile, __DIR__ . '/Fixture');
-        $this->assertSame('patches/some-new-file-php.patch', $pathFilePath);
+        $this->assertSame('patches/some-new-file-php.patch', FileSystemHelper::normalizePath($pathFilePath));
     }
 }

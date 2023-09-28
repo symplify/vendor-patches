@@ -7,6 +7,7 @@ namespace Symplify\VendorPatches\Differ;
 use Nette\Utils\Strings;
 use SebastianBergmann\Diff\Differ;
 use Symplify\VendorPatches\Exception\ShouldNotHappenException;
+use Symplify\VendorPatches\Utils\FileSystemHelper;
 use Symplify\VendorPatches\ValueObject\OldAndNewFile;
 
 /**
@@ -50,7 +51,7 @@ final class PatchDiffer
 
     private function resolveRelativeFilePath(string $beforeFilePath): string
     {
-        $match = Strings::match($beforeFilePath, self::LOCAL_PATH_REGEX);
+        $match = Strings::match(FileSystemHelper::normalizePath($beforeFilePath), self::LOCAL_PATH_REGEX);
 
         if (! isset($match['local_path'])) {
             throw new ShouldNotHappenException();
