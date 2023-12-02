@@ -8,6 +8,9 @@ Generate vendor patches for packages with single command.
 
 ```bash
 composer require symplify/vendor-patches --dev
+
+# If you are applying patches to production, be sure to also explicitly add cweagans/composer-patches.
+composer require cweagans/composer-patches
 ```
 
 ## Usage
