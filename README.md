@@ -91,6 +91,14 @@ composer install --verbose
 
 <br>
 
+## TroubleShooting
+
+If you are on macOS, and got hang on applying patch, you may need to install `gpatch`, you can install with:
+
+```
+brew install gpatch
+```
+
 ## Report Issues
 
 In case you are experiencing a bug or want to request a new feature head over to the [Symplify monorepo issue tracker](https://github.com/symplify/symplify/issues)
