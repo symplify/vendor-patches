@@ -8,5 +8,10 @@
     },
     "bin": [
         "bin/vendor-patches"
-    ]
+    ],
+    "config": {
+        "allow-plugins": {
+            "cweagans/composer-patches": true
+        }
+    }
 }
