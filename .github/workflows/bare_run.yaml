@@ -23,7 +23,7 @@ jobs:
             # nest to directory to avoid using current repository
             -   run: mkdir nested-directory
 
-            -   run: composer require symplify/vendor-patches:dev-main
+            -   run: composer require symplify/vendor-patches --dev
                 working-directory: nested-directory
 
             -   run: vendor/bin/vendor-patches list --ansi
