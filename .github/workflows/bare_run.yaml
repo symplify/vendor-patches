@@ -20,15 +20,9 @@ jobs:
                 with:
                     php-version: ${{ matrix.php_version }}
 
-            # nest to directory to avoid using current repository
-            -   run: mkdir nested-directory
-
             # allow plugin installing
-            -   run: composer config --no-plugins allow-plugins.cweagans/composer-patches true
-                working-directory: nested-directory
-
             -   run: composer require symplify/vendor-patches --dev
-                working-directory: nested-directory
+                working-directory: tests/bare-directory
 
             -   run: vendor/bin/vendor-patches list --ansi
-                working-directory: nested-directory
+                working-directory: tests/bare-directory
