@@ -37,9 +37,12 @@ final class ContainerFactory
             $application->add($generateCommand);
 
             // hide default commands
-            $application->get('completion')->setHidden(true);
-            $application->get('help')->setHidden(true);
-            $application->get('list')->setHidden(true);
+            $application->get('completion')
+                ->setHidden(true);
+            $application->get('help')
+                ->setHidden(true);
+            $application->get('list')
+                ->setHidden(true);
 
             return $application;
         });
