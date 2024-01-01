@@ -30,11 +30,11 @@ wget https://github.com/humbug/php-scoper/releases/download/0.18.10/php-scoper.p
 note "Running php-scoper"
 
 # Work around possible PHP memory limits
-php -d memory_limit=-1 php-scoper.phar add-prefix bin config src vendor composer.json --config scoper.php --force --ansi --output-dir scoped-code
+php -d memory_limit=-1 php-scoper.phar add-prefix bin src vendor composer.json --config scoper.php --force --ansi --output-dir scoped-code
 
 # the output code is in "/scoped-code", lets move it up
 # the local directories have to be empty to move easily
-rm -r bin config src vendor composer.json
+rm -r bin src vendor composer.json
 mv scoped-code/* .
 
 note "Dumping Composer Autoload"
