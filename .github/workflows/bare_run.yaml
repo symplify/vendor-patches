@@ -2,8 +2,8 @@ name: Bare Run on various PHP versions
 
 on:
     push:
-        tags:
-            - '*.72'
+        branches:
+            - main
 
 jobs:
     bare_run:
@@ -15,12 +15,12 @@ jobs:
                 php_version: ['7.2', '7.3', '7.4', '8.0']
 
         steps:
-            -   uses: actions/checkout@v3
-
             -
                 uses: shivammathur/setup-php@v2
                 with:
                     php-version: ${{ matrix.php_version }}
                     coverage: none
 
-            -   run: php bin/vendor-patches list --ansi
+            -   run:  composer require symplify/vendor-patches:dev-main
+
+            -   run: vendor/bin/vendor-patches list --ansi
