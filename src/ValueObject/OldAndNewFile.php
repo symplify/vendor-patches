@@ -1,49 +1,55 @@
 <?php
 
-declare(strict_types=1);
-
+declare (strict_types=1);
 namespace Symplify\VendorPatches\ValueObject;
 
-use Nette\Utils\FileSystem;
-
+use VendorPatches202401\Nette\Utils\FileSystem;
 final class OldAndNewFile
 {
-    public function __construct(
-        private readonly string $oldFilePath,
-        private readonly string $newFilePath,
-        private readonly string $packageName
-    ) {
+    /**
+     * @readonly
+     * @var string
+     */
+    private $oldFilePath;
+    /**
+     * @readonly
+     * @var string
+     */
+    private $newFilePath;
+    /**
+     * @readonly
+     * @var string
+     */
+    private $packageName;
+    public function __construct(string $oldFilePath, string $newFilePath, string $packageName)
+    {
+        $this->oldFilePath = $oldFilePath;
+        $this->newFilePath = $newFilePath;
+        $this->packageName = $packageName;
     }
-
-    public function getOldFilePath(): string
+    public function getOldFilePath() : string
     {
         return $this->oldFilePath;
     }
-
-    public function getOldFileContents(): string
+    public function getOldFileContents() : string
     {
         return FileSystem::read($this->oldFilePath);
     }
-
-    public function getNewFileContents(): string
+    public function getNewFileContents() : string
     {
         return FileSystem::read($this->newFilePath);
     }
-
-    public function getNewFilePath(): string
+    public function getNewFilePath() : string
     {
         return $this->newFilePath;
     }
-
-    public function areContentsIdentical(): bool
+    public function areContentsIdentical() : bool
     {
         $newFileContents = FileSystem::read($this->newFilePath);
         $oldFileContents = FileSystem::read($this->oldFilePath);
-
         return $newFileContents === $oldFileContents;
     }
-
-    public function getPackageName(): string
+    public function getPackageName() : string
     {
         return $this->packageName;
     }
