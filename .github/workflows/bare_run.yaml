@@ -1,9 +1,6 @@
-name: Bare Run on various PHP versions
+name: Bare Run
 
-on:
-    push:
-        branches:
-            - main
+on: [pull_request, push]
 
 jobs:
     bare_run:
@@ -15,16 +12,12 @@ jobs:
                 php_version: ['7.2', '7.3', '7.4', '8.0']
 
         steps:
+            -   uses: actions/checkout@v2
+
             -
                 uses: shivammathur/setup-php@v2
                 with:
                     php-version: ${{ matrix.php_version }}
+                    coverage: none
 
-            # nest to directory to avoid using current repository
-            -   run: mkdir nested-directory
-
-            -   run: composer require symplify/vendor-patches --dev
-                working-directory: nested-directory
-
-            -   run: vendor/bin/vendor-patches list --ansi
-                working-directory: nested-directory
+            -   run: php bin/vendor-patches list --ansi

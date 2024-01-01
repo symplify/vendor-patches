@@ -1,38 +1,30 @@
 <?php
 
-declare(strict_types=1);
-
+declare (strict_types=1);
 namespace Symplify\VendorPatches;
 
-use Composer\Autoload\ClassLoader;
+use VendorPatches202401\Composer\Autoload\ClassLoader;
 use ReflectionClass;
-use Webmozart\Assert\Assert;
-
+use VendorPatches202401\Webmozart\Assert\Assert;
 final class VendorDirProvider
 {
-    public static function provide(): string
+    public static function provide() : string
     {
-        $rootFolder = getenv('SystemDrive', true) . DIRECTORY_SEPARATOR;
-
+        $rootFolder = \getenv('SystemDrive', \true) . \DIRECTORY_SEPARATOR;
         $path = __DIR__;
-        while (! \str_ends_with($path, 'vendor') && $path !== $rootFolder) {
-            $path = dirname($path);
+        while (\substr_compare($path, 'vendor', -\strlen('vendor')) !== 0 && $path !== $rootFolder) {
+            $path = \dirname($path);
         }
-
         if ($path !== $rootFolder) {
             return $path;
         }
-
         return self::reflectionFallback();
     }
-
-    private static function reflectionFallback(): string
+    private static function reflectionFallback() : string
     {
         $reflectionClass = new ReflectionClass(ClassLoader::class);
-
         $classLoaderFileName = $reflectionClass->getFileName();
         Assert::string($classLoaderFileName);
-
-        return dirname($classLoaderFileName, 2);
+        return \dirname($classLoaderFileName, 2);
     }
 }
