@@ -23,6 +23,6 @@ final class PatchFileFactory
         $relativeFilePathWithoutSuffix = Strings::lower($inVendorRelativeFilePath);
         $pathFileName = Strings::webalize($relativeFilePathWithoutSuffix) . '.patch';
 
-        return 'patches' . DIRECTORY_SEPARATOR . $pathFileName;
+        return 'patches/' . $pathFileName;
     }
 }
