@@ -34,7 +34,6 @@ $polyfillsStubs = array_map(
     ),
 );
 
-
 // see https://github.com/humbug/php-scoper
 return [
     'prefix' => 'VendorPatches' . $timestamp,
