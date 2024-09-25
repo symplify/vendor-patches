@@ -69,7 +69,7 @@ final class ComposerPatchesConfigurationUpdater
 
         // print composer.json
         $composerJsonFileContents = Json::encode($composerJson, Json::PRETTY);
-        FileSystem::write($composerJsonFilePath, $composerJsonFileContents);
+        FileSystem::write($composerJsonFilePath, $composerJsonFileContents, null);
     }
 
     /**
@@ -80,6 +80,6 @@ final class ComposerPatchesConfigurationUpdater
         $patchesFileJson = $this->updatePatchesFileJson($patchesFilePath, $composerExtraPatches);
 
         $patchesFileContents = Json::encode($patchesFileJson, Json::PRETTY);
-        FileSystem::write($patchesFilePath, $patchesFileContents);
+        FileSystem::write($patchesFilePath, $patchesFileContents, null);
     }
 }
