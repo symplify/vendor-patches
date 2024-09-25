@@ -7,6 +7,7 @@ namespace Symplify\VendorPatches\Command;
 use Nette\Utils\FileSystem;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symplify\VendorPatches\Composer\ComposerPatchesConfigurationUpdater;
@@ -18,6 +19,8 @@ use Symplify\VendorPatches\VendorDirProvider;
 
 final class GenerateCommand extends Command
 {
+    public const PATCHES_FILE_OPTION = 'patches_file';
+
     public function __construct(
         private readonly OldToNewFilesFinder $oldToNewFilesFinder,
         private readonly PatchDiffer $patchDiffer,
@@ -33,6 +36,12 @@ final class GenerateCommand extends Command
     {
         $this->setName('generate');
         $this->setDescription('Generate patches from /vendor directory');
+        $this->addOption(
+            self::PATCHES_FILE_OPTION,
+            null,
+            InputOption::VALUE_OPTIONAL,
+            'Path to the patches file, relative to project root'
+        );
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
@@ -76,10 +85,19 @@ final class GenerateCommand extends Command
         }
 
         if ($composerExtraPatches !== []) {
-            $this->composerPatchesConfigurationUpdater->updateComposerJsonAndPrint(
-                getcwd() . '/composer.json',
-                $composerExtraPatches
-            );
+            if ($input->hasOption(self::PATCHES_FILE_OPTION)) {
+                $patchesFilePath = $input->getOption(self::PATCHES_FILE_OPTION);
+
+                $this->composerPatchesConfigurationUpdater->updatePatchesFileJsonAndPrint(
+                    getcwd() . $patchesFilePath,
+                    $composerExtraPatches
+                );
+            } else {
+                $this->composerPatchesConfigurationUpdater->updateComposerJsonAndPrint(
+                    getcwd() . '/composer.json',
+                    $composerExtraPatches
+                );
+            }
         }
 
         if ($addedPatchFilesByPackageName !== []) {
