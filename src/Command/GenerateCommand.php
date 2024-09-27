@@ -19,7 +19,7 @@ use Symplify\VendorPatches\VendorDirProvider;
 
 final class GenerateCommand extends Command
 {
-    public const PATCHES_FILE_OPTION = 'patches_file';
+    public const PATCHES_FILE_OPTION = 'patches-file';
 
     public function __construct(
         private readonly OldToNewFilesFinder $oldToNewFilesFinder,
@@ -85,11 +85,11 @@ final class GenerateCommand extends Command
         }
 
         if ($composerExtraPatches !== []) {
-            if ($input->hasOption(self::PATCHES_FILE_OPTION)) {
-                $patchesFilePath = $input->getOption(self::PATCHES_FILE_OPTION);
+            $patchesFilePath = $input->getOption(self::PATCHES_FILE_OPTION);
 
+            if (is_string($patchesFilePath)) {
                 $this->composerPatchesConfigurationUpdater->updatePatchesFileJsonAndPrint(
-                    getcwd() . $patchesFilePath,
+                    FileSystem::joinPaths(getcwd(), $patchesFilePath),
                     $composerExtraPatches
                 );
             } else {
