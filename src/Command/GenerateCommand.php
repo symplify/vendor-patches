@@ -19,7 +19,7 @@ use Symplify\VendorPatches\VendorDirProvider;
 
 final class GenerateCommand extends Command
 {
-    public const PATCHES_FILE_OPTION = 'patches-file';
+    private const PATCHES_FILE_OPTION = 'patches-file';
 
     public function __construct(
         private readonly OldToNewFilesFinder $oldToNewFilesFinder,
