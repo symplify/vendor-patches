@@ -23,6 +23,21 @@ final class ComposerPatchesConfigurationUpdater
      * @param mixed[] $composerExtraPatches
      * @return mixed[]
      */
+    public function updatePatchesFileJson(string $patchesFilePath, array $composerExtraPatches): array
+    {
+        $patchesFileContents = FileSystem::read($patchesFilePath);
+        $patchesFileJson = Json::decode($patchesFileContents, Json::FORCE_ARRAY);
+
+        return $this->parametersMerger->merge($patchesFileJson, [
+            'patches' => $composerExtraPatches,
+        ]);
+    }
+
+    /**
+     * @api
+     * @param mixed[] $composerExtraPatches
+     * @return mixed[]
+     */
     public function updateComposerJson(string $composerJsonFilePath, array $composerExtraPatches): array
     {
         $composerFileContents = FileSystem::read($composerJsonFilePath);
@@ -54,6 +69,17 @@ final class ComposerPatchesConfigurationUpdater
 
         // print composer.json
         $composerJsonFileContents = Json::encode($composerJson, Json::PRETTY);
-        FileSystem::write($composerJsonFilePath, $composerJsonFileContents);
+        FileSystem::write($composerJsonFilePath, $composerJsonFileContents, null);
+    }
+
+    /**
+     * @param mixed[] $composerExtraPatches
+     */
+    public function updatePatchesFileJsonAndPrint(string $patchesFilePath, array $composerExtraPatches): void
+    {
+        $patchesFileJson = $this->updatePatchesFileJson($patchesFilePath, $composerExtraPatches);
+
+        $patchesFileContents = Json::encode($patchesFileJson, Json::PRETTY);
+        FileSystem::write($patchesFilePath, $patchesFileContents, null);
     }
 }
