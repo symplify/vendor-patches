@@ -69,6 +69,12 @@ Also, it will add configuration for `cweagans/composer-patches` to your `compose
 }
 ```
 
+Optionally, if you use a [patches file](https://docs.cweagans.net/composer-patches/usage/defining-patches/#patches-file) you can specify its path using the `--patches-file` option:
+
+```bash
+vendor/bin/vendor-patches generate --patches-file=patches.json
+```
+
 That's it!
 
 <br>
