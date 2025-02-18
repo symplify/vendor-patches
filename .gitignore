@@ -1,7 +1,0 @@
-composer.lock
-/vendor
-
-.phpunit.cache
-
-# do not make part of release
-php-scoper.phar

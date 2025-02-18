@@ -8,9 +8,6 @@ Generate vendor patches for packages with single command.
 
 ```bash
 composer require symplify/vendor-patches --dev
-
-# If you are applying patches to production, be sure to also explicitly add cweagans/composer-patches.
-composer require cweagans/composer-patches
 ```
 
 ## Usage
@@ -69,12 +66,6 @@ Also, it will add configuration for `cweagans/composer-patches` to your `compose
 }
 ```
 
-Optionally, if you use a [patches file](https://docs.cweagans.net/composer-patches/usage/defining-patches/#patches-file) you can specify its path using the `--patches-file` option:
-
-```bash
-vendor/bin/vendor-patches generate --patches-file=patches.json
-```
-
 That's it!
 
 <br>
@@ -96,14 +87,6 @@ composer install --verbose
 ```
 
 <br>
-
-## TroubleShooting
-
-If you are on macOS, and got hang on applying patch, you may need to install `gpatch`, you can install with:
-
-```
-brew install gpatch
-```
 
 ## Report Issues
 
