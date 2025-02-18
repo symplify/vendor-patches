@@ -115,10 +115,4 @@ If you are on macOS, and got hang on applying patch, you may need to install `gp
 brew install gpatch
 ```
 
-## Report Issues
-
-In case you are experiencing a bug or want to request a new feature head over to the [Symplify monorepo issue tracker](https://github.com/symplify/symplify/issues)
-
-## Contribute
-
-The sources of this package are contained in the Symplify monorepo. We welcome contributions for this package on [symplify/symplify](https://github.com/symplify/symplify).
+<br>
