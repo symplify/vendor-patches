@@ -11,10 +11,10 @@ use Symplify\VendorPatches\Utils\ParametersMerger;
 /**
  * @see \Symplify\VendorPatches\Tests\Composer\ComposerPatchesConfigurationUpdater\ComposerPatchesConfigurationUpdaterTest
  */
-final class ComposerPatchesConfigurationUpdater
+final readonly class ComposerPatchesConfigurationUpdater
 {
     public function __construct(
-        private readonly ParametersMerger $parametersMerger
+        private ParametersMerger $parametersMerger
     ) {
     }
 

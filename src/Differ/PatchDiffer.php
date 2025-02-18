@@ -13,7 +13,7 @@ use Symplify\VendorPatches\ValueObject\OldAndNewFile;
 /**
  * @see \Symplify\VendorPatches\Tests\Differ\PatchDifferTest
  */
-final class PatchDiffer
+final readonly class PatchDiffer
 {
     /**
      * @see https://regex101.com/r/0O5NO1/4
@@ -34,7 +34,7 @@ final class PatchDiffer
     private const START_NEW_REGEX = '#^\+\+\+ New#m';
 
     public function __construct(
-        private readonly Differ $differ
+        private Differ $differ
     ) {
     }
 

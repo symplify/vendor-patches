@@ -11,10 +11,10 @@ use Symplify\VendorPatches\ValueObject\OldAndNewFile;
 /**
  * @see \Symplify\VendorPatches\Tests\Finder\OldToNewFilesFinderTest
  */
-final class OldToNewFilesFinder
+final readonly class OldToNewFilesFinder
 {
     public function __construct(
-        private readonly PackageNameResolver $packageNameResolver
+        private PackageNameResolver $packageNameResolver
     ) {
     }
 

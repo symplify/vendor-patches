@@ -6,12 +6,12 @@ namespace Symplify\VendorPatches\ValueObject;
 
 use Nette\Utils\FileSystem;
 
-final class OldAndNewFile
+final readonly class OldAndNewFile
 {
     public function __construct(
-        private readonly string $oldFilePath,
-        private readonly string $newFilePath,
-        private readonly string $packageName
+        private string $oldFilePath,
+        private string $newFilePath,
+        private string $packageName
     ) {
     }
 
