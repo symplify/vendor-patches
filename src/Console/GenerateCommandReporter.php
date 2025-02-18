@@ -7,10 +7,10 @@ namespace Symplify\VendorPatches\Console;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symplify\VendorPatches\ValueObject\OldAndNewFile;
 
-final class GenerateCommandReporter
+final readonly class GenerateCommandReporter
 {
     public function __construct(
-        private readonly SymfonyStyle $symfonyStyle
+        private SymfonyStyle $symfonyStyle
     ) {
     }
 

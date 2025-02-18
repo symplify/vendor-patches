@@ -9,21 +9,21 @@
         "php": ">=8.2",
         "nette/utils": "^3.2",
         "symfony/console": "^6.4",
-        "sebastian/diff": "^5.1",
-        "cweagans/composer-patches": "^1.7",
-        "illuminate/container": "^10.39",
         "symfony/finder": "^6.4",
+        "sebastian/diff": "^6.0",
+        "cweagans/composer-patches": "^1.7",
+        "illuminate/container": "^11.0",
         "webmozart/assert": "^1.11"
     },
     "require-dev": {
-        "phpunit/phpunit": "^10.5",
-        "rector/rector": "^1.2.5",
-        "phpstan/phpstan": "^1.10.50",
-        "symplify/easy-coding-standard": "^12.0",
-        "symplify/phpstan-extensions": "^11.1",
-        "phpstan/extension-installer": "^1.2",
+        "phpunit/phpunit": "^11.5",
+        "rector/rector": "^2.0",
+        "phpstan/phpstan": "^2.1",
+        "phpecs/phpecs": "^2.0",
+        "symplify/phpstan-extensions": "^12.0",
+        "phpstan/extension-installer": "^1.4",
         "php-parallel-lint/php-parallel-lint": "^1.3",
-        "tomasvotruba/class-leak": "^0.2"
+        "tomasvotruba/class-leak": "^2.0"
     },
     "autoload": {
         "psr-4": {
@@ -39,6 +39,7 @@
         "enable-patching": true
     },
     "config": {
+        "sort-packages": true,
         "platform-check": false,
         "allow-plugins": {
             "cweagans/composer-patches": true,
