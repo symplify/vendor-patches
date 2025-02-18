@@ -17,4 +17,3 @@ return RectorConfig::configure()
     ->withPhpSets()
     ->withImportNames()
     ->withPaths([__DIR__ . '/src', __DIR__ . '/tests']);
-// $rectorConfig->skip(['*/scoper.php', '*/Source/*', '*/Fixture/*']);
