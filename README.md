@@ -13,9 +13,13 @@ composer require symplify/vendor-patches --dev
 composer require cweagans/composer-patches
 ```
 
+<br>
+
 ## Usage
 
 How to create [a patch for a file in `/vendor`](https://tomasvotruba.com/blog/2020/07/02/how-to-patch-package-in-vendor-yet-allow-its-updates/)?
+
+<br>
 
 ### 1. Create a Copy of `/vendor` file you Want To Change with `*.old` Suffix
 
@@ -26,6 +30,8 @@ vendor/nette/di/src/DI/Extensions/InjectExtension.php
 # copy of the file
 vendor/nette/di/src/DI/Extensions/InjectExtension.php.old
 ```
+
+<br>
 
 ### 2. Open the original file and change the lines you need:
 
@@ -38,6 +44,8 @@ vendor/nette/di/src/DI/Extensions/InjectExtension.php.old
 ```
 
 Only `*.php` file is loaded, not the `*.php.old` one. This way you can **be sure the new code** is working before you generate patches.
+
+<br>
 
 ### 3. Run `generate` command 🥳️
 
@@ -68,6 +76,8 @@ Also, it will add configuration for `cweagans/composer-patches` to your `compose
     }
 }
 ```
+
+<br>
 
 Optionally, if you use a [patches file](https://docs.cweagans.net/composer-patches/usage/defining-patches/#patches-file) you can specify its path using the `--patches-file` option:
 
