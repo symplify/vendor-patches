@@ -50,7 +50,7 @@ final class ContainerFactory
         // differ
         $container->singleton(
             UnifiedDiffOutputBuilder::class,
-            static fn (): UnifiedDiffOutputBuilder => new UnifiedDiffOutputBuilder("--- Original\n+++ New\n", true)
+            static fn (): UnifiedDiffOutputBuilder => new UnifiedDiffOutputBuilder('', true)
         );
 
         $container->singleton(
