@@ -115,4 +115,10 @@ If you are on macOS, and got hang on applying patch, you may need to install `gp
 brew install gpatch
 ```
 
+and register to `.bash_profile` or `.zshrc` (if you're using [oh-my-zsh](https://ohmyz.sh/)):
+
+```
+PATH="/opt/homebrew/opt/gpatch/libexec/gnubin:$PATH"
+```
+
 <br>
