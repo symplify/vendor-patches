@@ -8,18 +8,11 @@ Generate vendor patches for packages with single command.
 
 ```bash
 composer require symplify/vendor-patches --dev
-
-# If you are applying patches to production, be sure to also explicitly add cweagans/composer-patches.
-composer require cweagans/composer-patches
 ```
-
-<br>
 
 ## Usage
 
 How to create [a patch for a file in `/vendor`](https://tomasvotruba.com/blog/2020/07/02/how-to-patch-package-in-vendor-yet-allow-its-updates/)?
-
-<br>
 
 ### 1. Create a Copy of `/vendor` file you Want To Change with `*.old` Suffix
 
@@ -30,8 +23,6 @@ vendor/nette/di/src/DI/Extensions/InjectExtension.php
 # copy of the file
 vendor/nette/di/src/DI/Extensions/InjectExtension.php.old
 ```
-
-<br>
 
 ### 2. Open the original file and change the lines you need:
 
@@ -44,8 +35,6 @@ vendor/nette/di/src/DI/Extensions/InjectExtension.php.old
 ```
 
 Only `*.php` file is loaded, not the `*.php.old` one. This way you can **be sure the new code** is working before you generate patches.
-
-<br>
 
 ### 3. Run `generate` command 🥳️
 
@@ -77,20 +66,6 @@ Also, it will add configuration for `cweagans/composer-patches` to your `compose
 }
 ```
 
-<br>
-
-Optionally, if you use a [patches file](https://docs.cweagans.net/composer-patches/usage/defining-patches/#patches-file) you can specify its path using the `--patches-file` option:
-
-```bash
-vendor/bin/vendor-patches generate --patches-file=patches.json
-```
-
-You can choose to write the patches to a different folder than the default 'patches' folder by specifying the folder name using the `--patches-folder` option:
-
-```bash
-vendor/bin/vendor-patches generate --patches-folder=patches-composer
-```
-
 That's it!
 
 <br>
@@ -113,18 +88,10 @@ composer install --verbose
 
 <br>
 
-## TroubleShooting
+## Report Issues
 
-If you are on macOS, and got hang on applying patch, you may need to install `gpatch`, you can install with:
+In case you are experiencing a bug or want to request a new feature head over to the [Symplify monorepo issue tracker](https://github.com/symplify/symplify/issues)
 
-```
-brew install gpatch
-```
+## Contribute
 
-and register to `.bash_profile` or `.zshrc` (if you're using [oh-my-zsh](https://ohmyz.sh/)):
-
-```
-PATH="/opt/homebrew/opt/gpatch/libexec/gnubin:$PATH"
-```
-
-<br>
+The sources of this package are contained in the Symplify monorepo. We welcome contributions for this package on [symplify/symplify](https://github.com/symplify/symplify).
