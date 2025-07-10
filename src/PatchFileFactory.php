@@ -14,7 +14,7 @@ use Symplify\VendorPatches\ValueObject\OldAndNewFile;
 final class PatchFileFactory
 {
     private string $outputFolder = 'patches';
-    
+
     public function createPatchFilePath(OldAndNewFile $oldAndNewFile, string $vendorDirectory): string
     {
         $inVendorRelativeFilePath = PathResolver::getRelativeFilePathFromDirectory(
@@ -27,8 +27,8 @@ final class PatchFileFactory
 
         return $this->outputFolder . '/' . $pathFileName;
     }
-    
-    public function setOutputFolder(string $outputDirectory) : void
+
+    public function setOutputFolder(string $outputDirectory): void
     {
         $this->outputFolder = $outputDirectory;
     }
