@@ -20,6 +20,7 @@ use Symplify\VendorPatches\VendorDirProvider;
 final class GenerateCommand extends Command
 {
     private const PATCHES_FILE_OPTION = 'patches-file';
+    private const PATCHES_OUTPUT_OPTION = 'patches-folder';
 
     public function __construct(
         private readonly OldToNewFilesFinder $oldToNewFilesFinder,
@@ -42,6 +43,13 @@ final class GenerateCommand extends Command
             InputOption::VALUE_OPTIONAL,
             'Path to the patches file, relative to project root'
         );
+        
+        $this->addOption(
+            self::PATCHES_OUTPUT_OPTION, 
+            null, 
+            InputOption::VALUE_OPTIONAL, 
+            'Folder for the to the output patches.'
+        );
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
@@ -52,7 +60,12 @@ final class GenerateCommand extends Command
 
         $composerExtraPatches = [];
         $addedPatchFilesByPackageName = [];
-
+        
+        $patchesOutputFolder = $input->getOption(self::PATCHES_OUTPUT_OPTION);
+        if (is_string($patchesOutputFolder)) {
+            $this->patchFileFactory->setOutputFolder($patchesOutputFolder);
+        }
+        
         foreach ($oldAndNewFiles as $oldAndNewFile) {
             if ($oldAndNewFile->areContentsIdentical()) {
                 $this->generateCommandReporter->reportIdenticalNewAndOldFile($oldAndNewFile);
