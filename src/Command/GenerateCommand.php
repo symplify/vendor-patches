@@ -48,7 +48,7 @@ final class GenerateCommand extends Command
             self::PATCHES_OUTPUT_OPTION, 
             null, 
             InputOption::VALUE_OPTIONAL, 
-            'Folder for the to the output patches.'
+            'Folder to output the patches to.'
         );
     }
 

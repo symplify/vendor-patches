@@ -85,6 +85,12 @@ Optionally, if you use a [patches file](https://docs.cweagans.net/composer-patch
 vendor/bin/vendor-patches generate --patches-file=patches.json
 ```
 
+You can choose to write the patches to a different folder than the default 'patches' folder by specifying the folder name using the `--patches-folder` option:
+
+```bash
+vendor/bin/vendor-patches generate --patches-folder=patches-composer
+```
+
 That's it!
 
 <br>

@@ -13,7 +13,7 @@ use Symplify\VendorPatches\ValueObject\OldAndNewFile;
  */
 final class PatchFileFactory
 {
-    private  $outputFolder = 'patches';
+    private string $outputFolder = 'patches';
     
     public function createPatchFilePath(OldAndNewFile $oldAndNewFile, string $vendorDirectory): string
     {
