@@ -11,7 +11,7 @@
         "symfony/console": "^6.4",
         "symfony/finder": "^6.4",
         "sebastian/diff": "^6.0",
-        "cweagans/composer-patches": "^1.7",
+        "cweagans/composer-patches": "^1.7 || ^2.0",
         "illuminate/container": "^11.0",
         "webmozart/assert": "^1.11"
     },
