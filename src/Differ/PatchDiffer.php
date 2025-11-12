@@ -16,22 +16,10 @@ use Symplify\VendorPatches\ValueObject\OldAndNewFile;
 final readonly class PatchDiffer
 {
     /**
-     * @see https://regex101.com/r/0O5NO1/4
+     * @see https://regex101.com/r/n2NXxy/2
      * @var string
      */
-    private const LOCAL_PATH_REGEX = '#vendor\/[^\/]+\/[^\/]+\/(?<local_path>.*?)$#is';
-
-    /**
-     * @see https://regex101.com/r/vNa7PO/1
-     * @var string
-     */
-    private const START_ORIGINAL_REGEX = '#^--- Original#';
-
-    /**
-     * @see https://regex101.com/r/o8C90E/1
-     * @var string
-     */
-    private const START_NEW_REGEX = '#^\+\+\+ New#m';
+    private const LOCAL_PATH_REGEX = '#vendor/[^/]+/[^/]+/(?<local_path>.+)$#';
 
     public function __construct(
         private Differ $differ
@@ -41,12 +29,9 @@ final readonly class PatchDiffer
     public function diff(OldAndNewFile $oldAndNewFile): string
     {
         $diff = $this->differ->diff($oldAndNewFile->getOldFileContents(), $oldAndNewFile->getNewFileContents());
+        $patchedFileRelativePath = $this->resolveRelativeFilePath($oldAndNewFile->getNewFilePath());
 
-        $newFilePath = $oldAndNewFile->getNewFilePath();
-        $patchedFileRelativePath = $this->resolveRelativeFilePath($newFilePath);
-
-        $clearedDiff = Strings::replace($diff, self::START_ORIGINAL_REGEX, '--- /dev/null');
-        return Strings::replace($clearedDiff, self::START_NEW_REGEX, '+++ ' . $patchedFileRelativePath);
+        return "--- a/{$patchedFileRelativePath}\n+++ b/{$patchedFileRelativePath}\n{$diff}";
     }
 
     private function resolveRelativeFilePath(string $beforeFilePath): string
@@ -57,6 +42,6 @@ final readonly class PatchDiffer
             throw new ShouldNotHappenException();
         }
 
-        return '../' . $match['local_path'];
+        return $match['local_path'];
     }
 }
