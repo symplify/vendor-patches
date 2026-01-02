@@ -12,39 +12,33 @@ jobs:
             fail-fast: false
             matrix:
                 actions:
-                    -
-                        name: 'PHPStan'
+                    -   name: 'PHPStan'
                         run: composer phpstan --ansi
 
-                    -
-                        name: 'Composer Validate'
+                    -   name: 'Composer Validate'
                         run: composer validate --ansi
 
-                    -
-                        name: 'Rector'
+                    -   name: 'Rector'
                         run: composer rector --ansi
 
-                    -
-                        name: 'Coding Standard'
+                    -   name: 'Coding Standard'
                         run: composer fix-cs --ansi
 
-                    -
-                        name: 'Tests'
-                        run: vendor/bin/phpunit
+                    -   name: 'Tests'
+                        run: composer test --ansi
 
-                    -
-                        name: 'PHP Linter'
-                        run: vendor/bin/parallel-lint src tests
+                    -   name: 'PHP Linter'
+                        run: composer parallel-lint --ansi
 
-                    -
-                        name: 'Check Active Classes'
-                        run: vendor/bin/class-leak check bin src --ansi
+                    -   name: 'Check Active Classes'
+                        run: composer class-leak --ansi
 
         name: ${{ matrix.actions.name }}
         runs-on: ubuntu-latest
 
         steps:
-            -   uses: actions/checkout@v3
+            -   uses: actions/checkout@v6
+
             # see https://github.com/shivammathur/setup-php
             -   uses: shivammathur/setup-php@v2
                 with:
@@ -52,6 +46,6 @@ jobs:
                     coverage: none
 
             # composer install cache - https://github.com/ramsey/composer-install
-            -   uses: "ramsey/composer-install@v2"
+            -   uses: ramsey/composer-install@v3
 
             -   run: ${{ matrix.actions.run }}

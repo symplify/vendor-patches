@@ -50,8 +50,12 @@
     },
     "scripts": {
         "check-cs": "vendor/bin/ecs check --ansi",
+        "class-leak": "vendor/bin/class-leak check bin src --ansi",
         "fix-cs": "vendor/bin/ecs check --fix --ansi",
-        "phpstan": "vendor/bin/phpstan analyse --ansi  --error-format symplify",
-        "rector": "vendor/bin/rector process --dry-run --ansi"
+        "parallel-lint": "vendor/bin/parallel-lint src tests",
+        "phpstan": "vendor/bin/phpstan analyse --ansi --error-format symplify",
+        "rector": "vendor/bin/rector process --dry-run --ansi",
+        "rector-fix": "vendor/bin/rector process --ansi",
+        "test": "vendor/bin/phpunit"
     }
 }
