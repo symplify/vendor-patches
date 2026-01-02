@@ -22,6 +22,12 @@ final readonly class PatchDiffer
     private const LOCAL_PATH_REGEX = '#vendor\/[^\/]+\/[^\/]+\/(?<local_path>.*?)$#is';
 
     /**
+     * @see https://regex101.com/r/ARznJR/1
+     * @var string
+     */
+    private const END_NEW_REGEX = '#\.old$#m';
+
+    /**
      * @see https://regex101.com/r/vNa7PO/1
      * @var string
      */
@@ -42,11 +48,15 @@ final readonly class PatchDiffer
     {
         $diff = $this->differ->diff($oldAndNewFile->getOldFileContents(), $oldAndNewFile->getNewFileContents());
 
-        $newFilePath = $oldAndNewFile->getNewFilePath();
-        $patchedFileRelativePath = $this->resolveRelativeFilePath($newFilePath);
+        $oldFilePath = Strings::replace($oldAndNewFile->getOldFilePath(), self::END_NEW_REGEX);
+        $patchedOldFileRelativePath = $this->resolveRelativeFilePath($oldFilePath);
 
-        $clearedDiff = Strings::replace($diff, self::START_ORIGINAL_REGEX, '--- /dev/null');
-        return Strings::replace($clearedDiff, self::START_NEW_REGEX, '+++ ' . $patchedFileRelativePath);
+        $newFilePath = $oldAndNewFile->getNewFilePath();
+        $patchedNewFileRelativePath = $this->resolveRelativeFilePath($newFilePath);
+
+        $clearedDiff = Strings::replace($diff, self::START_ORIGINAL_REGEX, '--- ' . $patchedOldFileRelativePath);
+
+        return Strings::replace($clearedDiff, self::START_NEW_REGEX, '+++ ' . $patchedNewFileRelativePath);
     }
 
     private function resolveRelativeFilePath(string $beforeFilePath): string
