@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Symplify\VendorPatches\Console;
 
-use Symfony\Component\Console\Style\SymfonyStyle;
+use Entropy\Console\Output\OutputPrinter;
 use Symplify\VendorPatches\ValueObject\OldAndNewFile;
 
 final readonly class GenerateCommandReporter
 {
     public function __construct(
-        private SymfonyStyle $symfonyStyle
+        private OutputPrinter $outputPrinter
     ) {
     }
 
@@ -22,6 +22,6 @@ final readonly class GenerateCommandReporter
             $oldAndNewFile->getNewFilePath()
         );
 
-        $this->symfonyStyle->warning($message);
+        $this->outputPrinter->orangeBackground($message);
     }
 }

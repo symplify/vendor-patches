@@ -9,7 +9,7 @@ use Entropy\Utils\FileSystem;
 use Symplify\VendorPatches\Tests\Composer\ComposerPatchesConfigurationUpdater\ComposerPatchesConfigurationUpdaterTest;
 use Symplify\VendorPatches\Utils\ParametersMerger;
 
-#[RelatedTest(ComposerPatchesConfigurationUpdaterTest::class)]
+#[RelatedTest(testClass: ComposerPatchesConfigurationUpdaterTest::class)]
 final readonly class ComposerPatchesConfigurationUpdater
 {
     public function __construct(

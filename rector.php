@@ -17,5 +17,6 @@ return RectorConfig::configure()
         earlyReturn: true,
     )
     ->withPhpSets()
+    ->withRootFiles()
     ->withImportNames()
-    ->withPaths([__DIR__ . '/src', __DIR__ . '/tests']);
+    ->withPaths([__DIR__ . '/bin', __DIR__ . '/src', __DIR__ . '/tests']);

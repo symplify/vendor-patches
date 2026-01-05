@@ -28,10 +28,10 @@ jobs:
                         run: composer test --ansi
 
                     -   name: 'PHP Linter'
-                        run: composer parallel-lint --ansi
+                        run: vendor/bin/parallel-lint bin src tests
 
                     -   name: 'Check Active Classes'
-                        run: composer class-leak --ansi
+                        run: vendor/bin/class-leak check bin src --ansi --skip-type="\Entropy\Console\Contract\CommandInterface"
 
         name: ${{ matrix.actions.name }}
         runs-on: ubuntu-latest
