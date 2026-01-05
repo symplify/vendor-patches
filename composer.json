@@ -8,6 +8,7 @@
     "require": {
         "php": ">=8.3",
         "nette/utils": "^4.0",
+        "entropy/entropy": "dev-main",
         "symfony/console": "^6.4",
         "symfony/finder": "^7.0",
         "sebastian/diff": "^6.0|^7.0",
