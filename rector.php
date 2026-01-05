@@ -8,6 +8,8 @@ return RectorConfig::configure()
     ->withPreparedSets(
         codeQuality: true,
         typeDeclarations: true,
+        typeDeclarationDocblocks: true,
+        codingStyle: true,
         deadCode: true,
         phpunitCodeQuality: true,
         naming: true,
