@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Symplify\VendorPatches\Command;
 
-use Entropy\Console\Enum\ExitCode;
 use Entropy\Console\Contract\CommandInterface;
+use Entropy\Console\Enum\ExitCode;
 use Entropy\Console\Output\OutputPrinter;
 use Entropy\Utils\FileSystem;
 use Symplify\VendorPatches\Composer\ComposerPatchesConfigurationUpdater;

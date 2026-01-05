@@ -10,7 +10,7 @@
         "entropy/entropy": "dev-main",
         "symfony/finder": "^7.4",
         "sebastian/diff": "^7.0",
-        "cweagans/composer-patches": "^1.7 || ^2.0",
+        "cweagans/composer-patches": "^1.7.3 || ^2.0",
         "webmozart/assert": "^2.0"
     },
     "require-dev": {
@@ -19,8 +19,8 @@
         "phpecs/phpecs": "^2.3",
         "phpstan/extension-installer": "^1.4",
         "phpstan/phpstan": "^2.1.33",
-        "phpunit/phpunit": "^12.5",
-        "rector/jack": "^0.5",
+        "phpunit/phpunit": "^12.5.4",
+        "rector/jack": "^0.5.1",
         "rector/rector": "^2.3",
         "shipmonk/composer-dependency-analyser": "^1.8",
         "symplify/phpstan-extensions": "^12.0",
@@ -49,9 +49,7 @@
     },
     "scripts": {
         "check-cs": "vendor/bin/ecs check --ansi",
-        "class-leak": "vendor/bin/class-leak check bin src --ansi",
         "fix-cs": "vendor/bin/ecs check --fix --ansi",
-        "parallel-lint": "vendor/bin/parallel-lint src tests",
         "phpstan": "vendor/bin/phpstan analyse --ansi --error-format symplify",
         "rector": "vendor/bin/rector process --dry-run --ansi",
         "rector-fix": "vendor/bin/rector process --ansi",
