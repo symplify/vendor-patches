@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Symplify\VendorPatches\Command;
 
+use Entropy\Console\Enum\ExitCode;
 use Entropy\Console\Contract\CommandInterface;
 use Entropy\Console\Output\OutputPrinter;
 use Entropy\Utils\FileSystem;
@@ -14,17 +15,15 @@ use Symplify\VendorPatches\Finder\OldToNewFilesFinder;
 use Symplify\VendorPatches\PatchFileFactory;
 use Symplify\VendorPatches\VendorDirProvider;
 
-final class GenerateCommand implements CommandInterface
+final readonly class GenerateCommand implements CommandInterface
 {
-    private const string PATCHES_FILE_OPTION = 'patches-file';
-
     public function __construct(
-        private readonly OldToNewFilesFinder $oldToNewFilesFinder,
-        private readonly PatchDiffer $patchDiffer,
-        private readonly ComposerPatchesConfigurationUpdater $composerPatchesConfigurationUpdater,
-        private readonly PatchFileFactory $patchFileFactory,
-        private readonly GenerateCommandReporter $generateCommandReporter,
-        private readonly OutputPrinter $outputPrinter,
+        private OldToNewFilesFinder $oldToNewFilesFinder,
+        private PatchDiffer $patchDiffer,
+        private ComposerPatchesConfigurationUpdater $composerPatchesConfigurationUpdater,
+        private PatchFileFactory $patchFileFactory,
+        private GenerateCommandReporter $generateCommandReporter,
+        private OutputPrinter $outputPrinter,
     ) {
     }
 
@@ -104,7 +103,7 @@ final class GenerateCommand implements CommandInterface
             $this->outputPrinter->greenBackground('No new patches were added');
         }
 
-        return \Entropy\Console\Enum\ExitCode::SUCCESS;
+        return ExitCode::SUCCESS;
     }
 
     public function getName(): string

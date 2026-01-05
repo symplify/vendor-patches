@@ -10,7 +10,7 @@ use Symplify\VendorPatches\FileSystem\PathResolver;
 use Symplify\VendorPatches\Tests\PatchFileFactory\PatchFileFactoryTest;
 use Symplify\VendorPatches\ValueObject\OldAndNewFile;
 
-#[RelatedTest(PatchFileFactoryTest::class)]
+#[RelatedTest(testClass: PatchFileFactoryTest::class)]
 final class PatchFileFactory
 {
     private string $outputFolder = 'patches';

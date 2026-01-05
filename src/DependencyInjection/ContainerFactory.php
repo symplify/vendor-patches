@@ -10,7 +10,7 @@ use SebastianBergmann\Diff\Output\UnifiedDiffOutputBuilder;
 
 final class ContainerFactory
 {
-    public function create(): Container
+    public static function create(): Container
     {
         $container = new Container();
 

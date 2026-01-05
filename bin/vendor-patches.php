@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-use Symfony\Component\Console\Application;
 use Symplify\VendorPatches\DependencyInjection\ContainerFactory;
 
 $possibleAutoloadPaths = [
@@ -27,10 +26,9 @@ if (file_exists($scoperAutoloadFilepath)) {
 }
 
 
-$containerFactory = new ContainerFactory();
-$container = $containerFactory->create();
+$container = ContainerFactory::create();
 
-$application = $container->make(Application::class);
+$application = $container->make(\Entropy\Console\ConsoleApplication::class);
 
-$statusCode = $application->run();
-exit($statusCode);
+$exitCode = $application->run($argv);
+exit($exitCode);

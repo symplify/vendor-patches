@@ -14,6 +14,7 @@
         "webmozart/assert": "^2.0"
     },
     "require-dev": {
+        "symplify/phpstan-rules": "^14.9.11",
         "php-parallel-lint/php-parallel-lint": "^1.4",
         "phpecs/phpecs": "^2.3",
         "phpstan/extension-installer": "^1.4",
