@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Symplify\VendorPatches\Differ;
 
-use Nette\Utils\Strings;
+use Entropy\Utils\Regex;
 use SebastianBergmann\Diff\Differ;
 use Symplify\VendorPatches\Exception\ShouldNotHappenException;
 use Symplify\VendorPatches\Utils\FileSystemHelper;
@@ -44,20 +44,20 @@ final readonly class PatchDiffer
     {
         $diff = $this->differ->diff($oldAndNewFile->getOldFileContents(), $oldAndNewFile->getNewFileContents());
 
-        $oldFilePath = Strings::replace($oldAndNewFile->getOldFilePath(), self::END_NEW_REGEX);
+        $oldFilePath = Regex::replace($oldAndNewFile->getOldFilePath(), self::END_NEW_REGEX, '');
         $patchedOldFileRelativePath = $this->resolveRelativeFilePath($oldFilePath);
 
         $newFilePath = $oldAndNewFile->getNewFilePath();
         $patchedNewFileRelativePath = $this->resolveRelativeFilePath($newFilePath);
 
-        $clearedDiff = Strings::replace($diff, self::START_ORIGINAL_REGEX, '--- ' . $patchedOldFileRelativePath);
+        $clearedDiff = Regex::replace($diff, self::START_ORIGINAL_REGEX, '--- ' . $patchedOldFileRelativePath);
 
-        return Strings::replace($clearedDiff, self::START_NEW_REGEX, '+++ ' . $patchedNewFileRelativePath);
+        return Regex::replace($clearedDiff, self::START_NEW_REGEX, '+++ ' . $patchedNewFileRelativePath);
     }
 
     private function resolveRelativeFilePath(string $beforeFilePath): string
     {
-        $match = Strings::match(FileSystemHelper::normalizePath($beforeFilePath), self::LOCAL_PATH_REGEX);
+        $match = Regex::match(FileSystemHelper::normalizePath($beforeFilePath), self::LOCAL_PATH_REGEX);
 
         if (! isset($match['local_path'])) {
             throw new ShouldNotHappenException();
