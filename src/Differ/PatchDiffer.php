@@ -17,27 +17,23 @@ final readonly class PatchDiffer
 {
     /**
      * @see https://regex101.com/r/0O5NO1/4
-     * @var string
      */
-    private const LOCAL_PATH_REGEX = '#vendor\/[^\/]+\/[^\/]+\/(?<local_path>.*?)$#is';
+    private const string LOCAL_PATH_REGEX = '#vendor\/[^\/]+\/[^\/]+\/(?<local_path>.*?)$#is';
 
     /**
      * @see https://regex101.com/r/ARznJR/1
-     * @var string
      */
-    private const END_NEW_REGEX = '#\.old$#m';
+    private const string END_NEW_REGEX = '#\.old$#m';
 
     /**
      * @see https://regex101.com/r/vNa7PO/1
-     * @var string
      */
-    private const START_ORIGINAL_REGEX = '#^--- Original#';
+    private const string START_ORIGINAL_REGEX = '#^--- Original#';
 
     /**
      * @see https://regex101.com/r/o8C90E/1
-     * @var string
      */
-    private const START_NEW_REGEX = '#^\+\+\+ New#m';
+    private const string START_NEW_REGEX = '#^\+\+\+ New#m';
 
     public function __construct(
         private Differ $differ
