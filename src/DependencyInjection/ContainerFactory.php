@@ -20,17 +20,17 @@ final class ContainerFactory
      */
     public function create(): Container
     {
-        $container = new Container();
+        $container = new \Entropy\Container\Container();
 
         // console
-        $container->singleton(SymfonyStyle::class, static function (): SymfonyStyle {
+        $container->service(SymfonyStyle::class, static function (): SymfonyStyle {
             $arrayInput = new ArrayInput([]);
             $consoleOutput = new ConsoleOutput();
             return new SymfonyStyle($arrayInput, $consoleOutput);
         });
 
         // application
-        $container->singleton(Application::class, static function (Container $container): Application {
+        $container->service(Application::class, static function (Container $container): Application {
             $application = new Application();
 
             $generateCommand = $container->make(GenerateCommand::class);
@@ -48,12 +48,12 @@ final class ContainerFactory
         });
 
         // differ
-        $container->singleton(
+        $container->service(
             UnifiedDiffOutputBuilder::class,
             static fn (): UnifiedDiffOutputBuilder => new UnifiedDiffOutputBuilder("--- Original\n+++ New\n", true)
         );
 
-        $container->singleton(
+        $container->service(
             Differ::class,
             static fn (Container $container): Differ => new Differ($container->make(UnifiedDiffOutputBuilder::class))
         );
