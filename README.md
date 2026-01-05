@@ -115,6 +115,33 @@ composer install --verbose
 
 ## TroubleShooting
 
+### Upgrading from older versions of cweagans/composer-patches (pre 2.0.0)
+
+If you are upgrading `cweagans/composer-patches` to 2.0.0 and newer versions, you may need to adjust your patches to ensure compatibility.
+
+The new version requires that `--- /dev/null` needs to be replaced with `--- <file-path>` in your patch files.
+
+For example, if you have a old patch file that starts with:
+
+```diff
+--- /dev/null
++++ ../src/SomeFile.php
+@@ -0,0 +1,10 @@
++<?php
++// some code
+``` 
+You need to change it to:
+
+```diff
+--- ../src/SomeFile.php
++++ ../src/SomeFile.php
+@@ -0,0 +1,10 @@
++<?php
++// some code
+```
+
+### macOS
+
 If you are on macOS, and got hang on applying patch, you may need to install `gpatch`, you can install with:
 
 ```
