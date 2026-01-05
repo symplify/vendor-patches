@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Symplify\VendorPatches\DependencyInjection;
 
-use Illuminate\Container\Container;
+use Entropy\Container\Container;
 use SebastianBergmann\Diff\Differ;
 use SebastianBergmann\Diff\Output\UnifiedDiffOutputBuilder;
 use Symfony\Component\Console\Application;
@@ -15,12 +15,9 @@ use Symplify\VendorPatches\Command\GenerateCommand;
 
 final class ContainerFactory
 {
-    /**
-     * @api used in bin/vendor-patches.php
-     */
     public function create(): Container
     {
-        $container = new \Entropy\Container\Container();
+        $container = new Container();
 
         // console
         $container->service(SymfonyStyle::class, static function (): SymfonyStyle {
