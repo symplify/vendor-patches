@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Symplify\VendorPatches\ValueObject;
 
-use Nette\Utils\FileSystem;
+use Entropy\Utils\FileSystem;
 
 final readonly class OldAndNewFile
 {

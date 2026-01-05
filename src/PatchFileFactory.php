@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Symplify\VendorPatches;
 
-use Nette\Utils\Strings;
+use Entropy\Attributes\RelatedTest;
+use Entropy\Utils\Strings;
 use Symplify\VendorPatches\FileSystem\PathResolver;
+use Symplify\VendorPatches\Tests\PatchFileFactory\PatchFileFactoryTest;
 use Symplify\VendorPatches\ValueObject\OldAndNewFile;
 
-/**
- * @see \Symplify\VendorPatches\Tests\PatchFileFactory\PatchFileFactoryTest
- */
+#[RelatedTest(PatchFileFactoryTest::class)]
 final class PatchFileFactory
 {
     private string $outputFolder = 'patches';
@@ -22,7 +22,7 @@ final class PatchFileFactory
             $vendorDirectory
         );
 
-        $relativeFilePathWithoutSuffix = Strings::lower($inVendorRelativeFilePath);
+        $relativeFilePathWithoutSuffix = strtolower($inVendorRelativeFilePath);
         $pathFileName = Strings::webalize($relativeFilePathWithoutSuffix) . '.patch';
 
         return $this->outputFolder . '/' . $pathFileName;

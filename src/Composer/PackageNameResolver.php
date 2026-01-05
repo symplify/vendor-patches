@@ -4,8 +4,7 @@ declare(strict_types=1);
 
 namespace Symplify\VendorPatches\Composer;
 
-use Nette\Utils\FileSystem;
-use Nette\Utils\Json;
+use Entropy\Utils\FileSystem;
 use Symplify\VendorPatches\Exception\ShouldNotHappenException;
 use Symplify\VendorPatches\FileSystem\PathResolver;
 use Webmozart\Assert\Assert;
@@ -19,9 +18,7 @@ final class PackageNameResolver
     {
         $packageComposerJsonFilePath = $this->getPackageComposerJsonFilePath($vendorFile);
 
-        $packageComposerContents = FileSystem::read($packageComposerJsonFilePath);
-
-        $composerJson = Json::decode($packageComposerContents, Json::FORCE_ARRAY);
+        $composerJson = FileSystem::loadFileToJson($packageComposerJsonFilePath);
         if (! isset($composerJson['name'])) {
             throw new ShouldNotHappenException();
         }

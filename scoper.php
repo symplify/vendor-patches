@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use Entropy\Utils\Regex;
 use Isolated\Symfony\Component\Finder\Finder;
 
 require __DIR__ . '/vendor/autoload.php';
@@ -10,7 +11,6 @@ $nowDateTime = new DateTime('now');
 $timestamp = $nowDateTime->format('Ym');
 
 // @see https://github.com/humbug/php-scoper/blob/master/docs/further-reading.md
-use Nette\Utils\Strings;
 
 $polyfillsBootstraps = array_map(
     static fn (SplFileInfo $fileInfo) => $fileInfo->getPathname(),
@@ -49,12 +49,12 @@ return [
     'patchers' => [
         // scope symfony configs
         function (string $filePath, string $prefix, string $content): string {
-            if (! Strings::match($filePath, '#(packages|config|services)\.php$#')) {
+            if (! Regex::match($filePath, '#(packages|config|services)\.php$#')) {
                 return $content;
             }
 
             // fix symfony config load scoping, except EasyCI
-            $content = Strings::replace(
+            $content = Regex::replace(
                 $content,
                 '#load\(\'Symplify\\\\\\\\(?<package_name>[A-Za-z]+)#',
                 function (array $match) use ($prefix) {

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Symplify\VendorPatches\FileSystem;
 
-use Nette\Utils\Strings;
+use Entropy\Utils\Regex;
 use Symplify\VendorPatches\Exception\ShouldNotHappenException;
 use Symplify\VendorPatches\Utils\FileSystemHelper;
 use Webmozart\Assert\Assert;
@@ -18,7 +18,7 @@ final class PathResolver
 
     public static function resolveVendorDirectory(string $filePath): string
     {
-        $match = Strings::match(FileSystemHelper::normalizePath($filePath), self::VENDOR_PACKAGE_DIRECTORY_REGEX);
+        $match = Regex::match(FileSystemHelper::normalizePath($filePath), self::VENDOR_PACKAGE_DIRECTORY_REGEX);
         if (! isset($match['vendor_package_directory'])) {
             throw new ShouldNotHappenException('Could not resolve vendor package directory');
         }
@@ -31,6 +31,6 @@ final class PathResolver
         Assert::directory($directory);
 
         // get relative path from directory
-        return Strings::replace($filePath, '#^' . preg_quote($directory, '#') . '#');
+        return Regex::replace($filePath, '#^' . preg_quote($directory, '#') . '#', '');
     }
 }

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Symplify\VendorPatches\Command;
 
-use Nette\Utils\FileSystem;
+use Entropy\Utils\FileSystem;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
@@ -102,8 +102,13 @@ final class GenerateCommand extends Command
             $patchesFilePath = $input->getOption(self::PATCHES_FILE_OPTION);
 
             if (is_string($patchesFilePath)) {
+                // remove starting '/' if present
+                $patchesFilePath = ltrim($patchesFilePath, '/\\');
+
+                $absolutePatchesFilePath = getcwd() . '/' . $patchesFilePath;
+
                 $this->composerPatchesConfigurationUpdater->updatePatchesFileJsonAndPrint(
-                    FileSystem::joinPaths(getcwd(), $patchesFilePath),
+                    $absolutePatchesFilePath,
                     $composerExtraPatches
                 );
             } else {
