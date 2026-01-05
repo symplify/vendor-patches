@@ -8,7 +8,6 @@
     "require": {
         "php": ">=8.3",
         "entropy/entropy": "dev-main",
-        "symfony/console": "6.3.*",
         "symfony/finder": "^7.4",
         "sebastian/diff": "^7.0",
         "cweagans/composer-patches": "^1.7 || ^2.0",
@@ -18,7 +17,7 @@
         "php-parallel-lint/php-parallel-lint": "^1.4",
         "phpecs/phpecs": "^2.3",
         "phpstan/extension-installer": "^1.4",
-        "phpstan/phpstan": "^2.1",
+        "phpstan/phpstan": "^2.1.33",
         "phpunit/phpunit": "^12.5",
         "rector/jack": "^0.5",
         "rector/rector": "^2.3",
