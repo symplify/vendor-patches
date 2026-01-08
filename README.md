@@ -13,9 +13,13 @@ composer require symplify/vendor-patches --dev
 composer require cweagans/composer-patches
 ```
 
+<br>
+
 ## Usage
 
 How to create [a patch for a file in `/vendor`](https://tomasvotruba.com/blog/2020/07/02/how-to-patch-package-in-vendor-yet-allow-its-updates/)?
+
+<br>
 
 ### 1. Create a Copy of `/vendor` file you Want To Change with `*.old` Suffix
 
@@ -26,6 +30,8 @@ vendor/nette/di/src/DI/Extensions/InjectExtension.php
 # copy of the file
 vendor/nette/di/src/DI/Extensions/InjectExtension.php.old
 ```
+
+<br>
 
 ### 2. Open the original file and change the lines you need:
 
@@ -41,6 +47,8 @@ Only `*.php` file is loaded, not the `*.php.old` one. This way you can **be sure
 
 Make sure to back up other modified files in the vendor/ directory as well as some of the commands below may overwrite them.
 
+<br>
+
 ### 3. Run `generate` command 🥳️
 
 ```bash
@@ -55,6 +63,8 @@ This tool will generate **patch files for all files created this** way in `/patc
 
 The patch path is based on original file path, so **the patch name is always unique**.
 
+<br>
+
 Also, it will add configuration for `cweagans/composer-patches` to your `composer.json`:
 
 ```json
@@ -68,6 +78,8 @@ Also, it will add configuration for `cweagans/composer-patches` to your `compose
     }
 }
 ```
+
+<br>
 
 #### 3.1 When using cweagans/composer-patches v2
 
@@ -95,6 +107,8 @@ composer update --lock
 
 That's it!
 
+<br>
+
 Now all you need to do is run composer:
 
 ```bash
@@ -102,6 +116,8 @@ composer install
 ```
 
 And your patches are applied to your code!
+
+<br>
 
 If not, get more information from composer to find out why:
 
@@ -138,6 +154,8 @@ You can choose to write the patches to a different folder than the default 'patc
 ```bash
 vendor/bin/vendor-patches generate --patches-folder=patches-composer
 ```
+
+<br>
 
 ## TroubleShooting
 
@@ -179,3 +197,5 @@ and register to `.bash_profile` or `.zshrc` (if you're using [oh-my-zsh](https:/
 ```
 PATH="/opt/homebrew/opt/gpatch/libexec/gnubin:$PATH"
 ```
+
+<br>
