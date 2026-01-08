@@ -64,8 +64,14 @@ final readonly class ComposerPatchesConfigurationUpdater
     {
         $composerJson = $this->updateComposerJson($composerJsonFilePath, $composerExtraPatches);
 
+        // force JSON_UNESCAPED_SLASHES to create valid composer.json files
+        $jsonContents = \json_encode(
+            $composerJson,
+            \JSON_THROW_ON_ERROR | \JSON_PRETTY_PRINT | \JSON_UNESCAPED_SLASHES
+        ) . \PHP_EOL;
+
         // print composer.json
-        FileSystem::saveJsonToFile($composerJson, $composerJsonFilePath);
+        FileSystem::write($composerJsonFilePath, $jsonContents);
     }
 
     /**
