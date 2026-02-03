@@ -45,6 +45,8 @@ vendor/nette/di/src/DI/Extensions/InjectExtension.php.old
 
 Only `*.php` file is loaded, not the `*.php.old` one. This way you can **be sure the new code** is working before you generate patches.
 
+Make sure to back up other modified files in the vendor/ directory as well as some of the commands below may overwrite them.
+
 <br>
 
 ### 3. Run `generate` command 🥳️
@@ -79,16 +81,28 @@ Also, it will add configuration for `cweagans/composer-patches` to your `compose
 
 <br>
 
-Optionally, if you use a [patches file](https://docs.cweagans.net/composer-patches/usage/defining-patches/#patches-file) you can specify its path using the `--patches-file` option:
+#### 3.1 When using cweagans/composer-patches v2
+
+`cweagans/composer-patches` v2 requires the execution of 2 additional steps after generating the patches:
+
+Updating the `patches.lock.json` file:
 
 ```bash
-vendor/bin/vendor-patches generate --patches-file=patches.json
+composer patches-relock
 ```
 
-You can choose to write the patches to a different folder than the default 'patches' folder by specifying the folder name using the `--patches-folder` option:
+Applying the new patches:
 
 ```bash
-vendor/bin/vendor-patches generate --patches-folder=patches-composer
+composer patches-repatch
+```
+
+### 4. Final steps
+
+Now you need to do run composer to update the lock file as the checksum of `composer.json` has changed:
+
+```bash
+composer update --lock
 ```
 
 That's it!
@@ -111,6 +125,36 @@ If not, get more information from composer to find out why:
 composer install --verbose
 ```
 
+### Summary
+
+To summarize, the generate workflow is:
+
+```bash
+# generate patches
+vendor/bin/vendor-patches generate 
+# (if using cweagans/composer-patches v2)
+composer patches-relock 
+composer patches-repatch
+# update the lock file
+composer update --lock 
+# install with patches applied
+composer install 
+```
+
+## Patches File and Patches Folder Options
+
+Optionally, if you use a [patches file](https://docs.cweagans.net/composer-patches/usage/defining-patches/#patches-file) you can specify its path using the `--patches-file` option:
+
+```bash
+vendor/bin/vendor-patches generate --patches-file=patches.json
+```
+
+You can choose to write the patches to a different folder than the default 'patches' folder by specifying the folder name using the `--patches-folder` option:
+
+```bash
+vendor/bin/vendor-patches generate --patches-folder=patches-composer
+```
+
 <br>
 
 ## TroubleShooting
@@ -121,7 +165,7 @@ If you are upgrading `cweagans/composer-patches` to 2.0.0 and newer versions, yo
 
 The new version requires that `--- /dev/null` needs to be replaced with `--- <file-path>` in your patch files.
 
-For example, if you have a old patch file that starts with:
+For example, if you have an old patch file that starts with:
 
 ```diff
 --- /dev/null
