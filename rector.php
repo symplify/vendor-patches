@@ -8,6 +8,8 @@ return RectorConfig::configure()
     ->withPreparedSets(
         codeQuality: true,
         typeDeclarations: true,
+        typeDeclarationDocblocks: true,
+        codingStyle: true,
         deadCode: true,
         phpunitCodeQuality: true,
         naming: true,
@@ -15,5 +17,6 @@ return RectorConfig::configure()
         earlyReturn: true,
     )
     ->withPhpSets()
+    ->withRootFiles()
     ->withImportNames()
-    ->withPaths([__DIR__ . '/src', __DIR__ . '/tests']);
+    ->withPaths([__DIR__ . '/bin', __DIR__ . '/src', __DIR__ . '/tests']);

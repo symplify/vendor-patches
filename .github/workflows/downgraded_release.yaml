@@ -12,14 +12,13 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            -   uses: "actions/checkout@v3"
+            -   uses: actions/checkout@v6
                 with:
                     token: ${{ secrets.WORKFLOWS_TOKEN }}
 
-            -
-                uses: "shivammathur/setup-php@v2"
+            -   uses: shivammathur/setup-php@v2
                 with:
-                    php-version: 8.2
+                    php-version: 8.3
                     coverage: none
 
             # invoke patches
@@ -49,15 +48,13 @@ jobs:
             -   run: rm -rf build prefix-code.sh full-tool-build.sh scoper.php rector.php
 
             # setup git user
-            -
-                run: |
+            -   run: |
                     git config user.email "action@github.com"
                     git config user.name "GitHub Action"
 
             # publish to the same repository with a new tag
             # see https://tomasvotruba.com/blog/how-to-release-php-81-and-72-package-in-the-same-repository/
-            -
-                name: "Tag Downgraded Code"
+            -   name: "Tag Downgraded Code"
                 run: |
                     # separate a "git add" to add untracked (new) files too
                     git add --all

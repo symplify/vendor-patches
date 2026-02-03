@@ -4,12 +4,10 @@ declare(strict_types=1);
 
 namespace Symplify\VendorPatches\Command;
 
-use Nette\Utils\FileSystem;
-use Symfony\Component\Console\Command\Command;
-use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Console\Input\InputOption;
-use Symfony\Component\Console\Output\OutputInterface;
-use Symfony\Component\Console\Style\SymfonyStyle;
+use Entropy\Console\Contract\CommandInterface;
+use Entropy\Console\Enum\ExitCode;
+use Entropy\Console\Output\OutputPrinter;
+use Entropy\Utils\FileSystem;
 use Symplify\VendorPatches\Composer\ComposerPatchesConfigurationUpdater;
 use Symplify\VendorPatches\Console\GenerateCommandReporter;
 use Symplify\VendorPatches\Differ\PatchDiffer;
@@ -17,34 +15,25 @@ use Symplify\VendorPatches\Finder\OldToNewFilesFinder;
 use Symplify\VendorPatches\PatchFileFactory;
 use Symplify\VendorPatches\VendorDirProvider;
 
-final class GenerateCommand extends Command
+final readonly class GenerateCommand implements CommandInterface
 {
-    private const PATCHES_FILE_OPTION = 'patches-file';
-
     public function __construct(
-        private readonly OldToNewFilesFinder $oldToNewFilesFinder,
-        private readonly PatchDiffer $patchDiffer,
-        private readonly ComposerPatchesConfigurationUpdater $composerPatchesConfigurationUpdater,
-        private readonly PatchFileFactory $patchFileFactory,
-        private readonly GenerateCommandReporter $generateCommandReporter,
-        private readonly SymfonyStyle $symfonyStyle,
+        private OldToNewFilesFinder $oldToNewFilesFinder,
+        private PatchDiffer $patchDiffer,
+        private ComposerPatchesConfigurationUpdater $composerPatchesConfigurationUpdater,
+        private PatchFileFactory $patchFileFactory,
+        private GenerateCommandReporter $generateCommandReporter,
+        private OutputPrinter $outputPrinter,
     ) {
-        parent::__construct();
     }
 
-    protected function configure(): void
-    {
-        $this->setName('generate');
-        $this->setDescription('Generate patches from /vendor directory');
-        $this->addOption(
-            self::PATCHES_FILE_OPTION,
-            null,
-            InputOption::VALUE_OPTIONAL,
-            'Path to the patches file, relative to project root'
-        );
-    }
-
-    protected function execute(InputInterface $input, OutputInterface $output): int
+    /**
+     * @param string|null $patchesFile Path to the patches file, relative to project root
+     * @param string|null $patchesOutput Folder to output the patches to.
+     *
+     * @return \Entropy\Console\Enum\ExitCode::*
+     */
+    public function run(?string $patchesFile = null, ?string $patchesOutput = null): int
     {
         $projectVendorDirectory = $this->resolveProjectVendorDirectory();
 
@@ -52,6 +41,10 @@ final class GenerateCommand extends Command
 
         $composerExtraPatches = [];
         $addedPatchFilesByPackageName = [];
+
+        if (is_string($patchesOutput)) {
+            $this->patchFileFactory->setOutputFolder($patchesOutput);
+        }
 
         foreach ($oldAndNewFiles as $oldAndNewFile) {
             if ($oldAndNewFile->areContentsIdentical()) {
@@ -73,10 +66,10 @@ final class GenerateCommand extends Command
 
             if (is_file($patchFileAbsolutePath)) {
                 $message = sprintf('File "%s" was updated', $patchFileRelativePath);
-                $this->symfonyStyle->note($message);
+                $this->outputPrinter->yellow($message);
             } else {
                 $message = sprintf('File "%s" was created', $patchFileRelativePath);
-                $this->symfonyStyle->note($message);
+                $this->outputPrinter->yellow($message);
             }
 
             FileSystem::write($patchFileAbsolutePath, $patchDiff);
@@ -85,11 +78,14 @@ final class GenerateCommand extends Command
         }
 
         if ($composerExtraPatches !== []) {
-            $patchesFilePath = $input->getOption(self::PATCHES_FILE_OPTION);
+            if (is_string($patchesFile)) {
+                // remove starting '/' if present
+                $patchesFile = ltrim($patchesFile, '/\\');
 
-            if (is_string($patchesFilePath)) {
+                $absolutePatchesFilePath = getcwd() . '/' . $patchesFile;
+
                 $this->composerPatchesConfigurationUpdater->updatePatchesFileJsonAndPrint(
-                    FileSystem::joinPaths(getcwd(), $patchesFilePath),
+                    $absolutePatchesFilePath,
                     $composerExtraPatches
                 );
             } else {
@@ -102,12 +98,22 @@ final class GenerateCommand extends Command
 
         if ($addedPatchFilesByPackageName !== []) {
             $message = sprintf('Great! %d new patch files added', count($addedPatchFilesByPackageName));
-            $this->symfonyStyle->success($message);
+            $this->outputPrinter->greenBackground($message);
         } else {
-            $this->symfonyStyle->success('No new patches were added');
+            $this->outputPrinter->greenBackground('No new patches were added');
         }
 
-        return self::SUCCESS;
+        return ExitCode::SUCCESS;
+    }
+
+    public function getName(): string
+    {
+        return 'generate';
+    }
+
+    public function getDescription(): string
+    {
+        return 'Generate patches from /vendor directory';
     }
 
     private function resolveProjectVendorDirectory(): string

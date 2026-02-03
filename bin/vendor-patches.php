@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Symfony\Component\Console\Application;
+use Entropy\Console\ConsoleApplication;
 use Symplify\VendorPatches\DependencyInjection\ContainerFactory;
 
 $possibleAutoloadPaths = [
@@ -20,17 +20,14 @@ foreach ($possibleAutoloadPaths as $possibleAutoloadPath) {
     require_once $possibleAutoloadPath;
 }
 
-
 $scoperAutoloadFilepath = __DIR__ . '/../vendor/scoper-autoload.php';
 if (file_exists($scoperAutoloadFilepath)) {
     require_once $scoperAutoloadFilepath;
 }
 
+$container = ContainerFactory::create();
 
-$containerFactory = new ContainerFactory();
-$container = $containerFactory->create();
+$application = $container->make(ConsoleApplication::class);
 
-$application = $container->make(Application::class);
-
-$statusCode = $application->run();
-exit($statusCode);
+$exitCode = $application->run($argv);
+exit($exitCode);

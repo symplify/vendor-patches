@@ -17,8 +17,7 @@ abstract class AbstractTestCase extends TestCase
      */
     protected function make(string $type): object
     {
-        $containerFactory = new ContainerFactory();
-        $container = $containerFactory->create();
+        $container = ContainerFactory::create();
 
         $service = $container->make($type);
         Assert::isInstanceOf($service, $type);

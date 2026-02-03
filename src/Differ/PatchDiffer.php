@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Symplify\VendorPatches\Differ;
 
-use Nette\Utils\Strings;
+use Entropy\Utils\Regex;
 use SebastianBergmann\Diff\Differ;
 use Symplify\VendorPatches\Exception\ShouldNotHappenException;
 use Symplify\VendorPatches\Utils\FileSystemHelper;
@@ -36,7 +36,7 @@ final readonly class PatchDiffer
 
     private function resolveRelativeFilePath(string $beforeFilePath): string
     {
-        $match = Strings::match(FileSystemHelper::normalizePath($beforeFilePath), self::LOCAL_PATH_REGEX);
+        $match = Regex::match(FileSystemHelper::normalizePath($beforeFilePath), self::LOCAL_PATH_REGEX);
 
         if (! isset($match['local_path'])) {
             throw new ShouldNotHappenException();

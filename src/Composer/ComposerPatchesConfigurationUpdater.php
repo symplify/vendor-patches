@@ -4,13 +4,12 @@ declare(strict_types=1);
 
 namespace Symplify\VendorPatches\Composer;
 
-use Nette\Utils\FileSystem;
-use Nette\Utils\Json;
+use Entropy\Attributes\RelatedTest;
+use Entropy\Utils\FileSystem;
+use Symplify\VendorPatches\Tests\Composer\ComposerPatchesConfigurationUpdater\ComposerPatchesConfigurationUpdaterTest;
 use Symplify\VendorPatches\Utils\ParametersMerger;
 
-/**
- * @see \Symplify\VendorPatches\Tests\Composer\ComposerPatchesConfigurationUpdater\ComposerPatchesConfigurationUpdaterTest
- */
+#[RelatedTest(testClass: ComposerPatchesConfigurationUpdaterTest::class)]
 final readonly class ComposerPatchesConfigurationUpdater
 {
     public function __construct(
@@ -25,8 +24,7 @@ final readonly class ComposerPatchesConfigurationUpdater
      */
     public function updatePatchesFileJson(string $patchesFilePath, array $composerExtraPatches): array
     {
-        $patchesFileContents = FileSystem::read($patchesFilePath);
-        $patchesFileJson = Json::decode($patchesFileContents, Json::FORCE_ARRAY);
+        $patchesFileJson = FileSystem::loadFileToJson($patchesFilePath);
 
         return $this->parametersMerger->merge($patchesFileJson, [
             'patches' => $composerExtraPatches,
@@ -40,8 +38,7 @@ final readonly class ComposerPatchesConfigurationUpdater
      */
     public function updateComposerJson(string $composerJsonFilePath, array $composerExtraPatches): array
     {
-        $composerFileContents = FileSystem::read($composerJsonFilePath);
-        $composerJson = Json::decode($composerFileContents, Json::FORCE_ARRAY);
+        $composerJson = FileSystem::loadFileToJson($composerJsonFilePath);
 
         // merge "extra" section - deep merge is needed, so original patches are included
         if (isset($composerJson['extra'])) {
@@ -67,9 +64,14 @@ final readonly class ComposerPatchesConfigurationUpdater
     {
         $composerJson = $this->updateComposerJson($composerJsonFilePath, $composerExtraPatches);
 
+        // force JSON_UNESCAPED_SLASHES to create valid composer.json files
+        $jsonContents = \json_encode(
+            $composerJson,
+            \JSON_THROW_ON_ERROR | \JSON_PRETTY_PRINT | \JSON_UNESCAPED_SLASHES
+        ) . \PHP_EOL;
+
         // print composer.json
-        $composerJsonFileContents = Json::encode($composerJson, Json::PRETTY);
-        FileSystem::write($composerJsonFilePath, $composerJsonFileContents, null);
+        FileSystem::write($composerJsonFilePath, $jsonContents);
     }
 
     /**
@@ -79,7 +81,6 @@ final readonly class ComposerPatchesConfigurationUpdater
     {
         $patchesFileJson = $this->updatePatchesFileJson($patchesFilePath, $composerExtraPatches);
 
-        $patchesFileContents = Json::encode($patchesFileJson, Json::PRETTY);
-        FileSystem::write($patchesFilePath, $patchesFileContents, null);
+        FileSystem::saveJsonToFile($patchesFileJson, $patchesFilePath);
     }
 }
