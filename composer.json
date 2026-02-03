@@ -11,7 +11,7 @@
         "symfony/finder": "^7.4",
         "sebastian/diff": "^7.0",
         "cweagans/composer-patches": "^1.7.3 || ^2.0",
-        "webmozart/assert": "^2.0"
+        "webmozart/assert": "^2.1"
     },
     "require-dev": {
         "symplify/phpstan-rules": "^14.9.11",
