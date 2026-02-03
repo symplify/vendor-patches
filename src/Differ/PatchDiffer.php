@@ -16,24 +16,10 @@ use Symplify\VendorPatches\ValueObject\OldAndNewFile;
 final readonly class PatchDiffer
 {
     /**
-     * @see https://regex101.com/r/0O5NO1/4
+     * @see https://regex101.com/r/n2NXxy/2
+     * @var string
      */
-    private const string LOCAL_PATH_REGEX = '#vendor\/[^\/]+\/[^\/]+\/(?<local_path>.*?)$#is';
-
-    /**
-     * @see https://regex101.com/r/ARznJR/1
-     */
-    private const string END_NEW_REGEX = '#\.old$#m';
-
-    /**
-     * @see https://regex101.com/r/vNa7PO/1
-     */
-    private const string START_ORIGINAL_REGEX = '#^--- Original#';
-
-    /**
-     * @see https://regex101.com/r/o8C90E/1
-     */
-    private const string START_NEW_REGEX = '#^\+\+\+ New#m';
+    private const LOCAL_PATH_REGEX = '#vendor/[^/]+/[^/]+/(?<local_path>.+)$#';
 
     public function __construct(
         private Differ $differ
@@ -43,16 +29,9 @@ final readonly class PatchDiffer
     public function diff(OldAndNewFile $oldAndNewFile): string
     {
         $diff = $this->differ->diff($oldAndNewFile->getOldFileContents(), $oldAndNewFile->getNewFileContents());
+        $patchedFileRelativePath = $this->resolveRelativeFilePath($oldAndNewFile->getNewFilePath());
 
-        $oldFilePath = Regex::replace($oldAndNewFile->getOldFilePath(), self::END_NEW_REGEX, '');
-        $patchedOldFileRelativePath = $this->resolveRelativeFilePath($oldFilePath);
-
-        $newFilePath = $oldAndNewFile->getNewFilePath();
-        $patchedNewFileRelativePath = $this->resolveRelativeFilePath($newFilePath);
-
-        $clearedDiff = Regex::replace($diff, self::START_ORIGINAL_REGEX, '--- ' . $patchedOldFileRelativePath);
-
-        return Regex::replace($clearedDiff, self::START_NEW_REGEX, '+++ ' . $patchedNewFileRelativePath);
+        return "--- a/{$patchedFileRelativePath}\n+++ b/{$patchedFileRelativePath}\n{$diff}";
     }
 
     private function resolveRelativeFilePath(string $beforeFilePath): string
@@ -63,6 +42,6 @@ final readonly class PatchDiffer
             throw new ShouldNotHappenException();
         }
 
-        return '../' . $match['local_path'];
+        return $match['local_path'];
     }
 }

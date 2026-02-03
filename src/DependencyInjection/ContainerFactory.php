@@ -19,7 +19,7 @@ final class ContainerFactory
         // differ
         $container->service(
             UnifiedDiffOutputBuilder::class,
-            static fn (): UnifiedDiffOutputBuilder => new UnifiedDiffOutputBuilder("--- Original\n+++ New\n", true)
+            static fn (): UnifiedDiffOutputBuilder => new UnifiedDiffOutputBuilder('', true)
         );
 
         $container->service(
