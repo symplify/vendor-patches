@@ -14,7 +14,7 @@ use Webmozart\Assert\Assert;
  */
 final class PackageNameResolver
 {
-    public function resolveFromFilePath(string $vendorFile): string
+    public function resolveFromPackageComposerJson(string $vendorFile): string
     {
         $packageComposerJsonFilePath = $this->getPackageComposerJsonFilePath($vendorFile);
 
@@ -24,6 +24,13 @@ final class PackageNameResolver
         }
 
         return $composerJson['name'];
+    }
+
+    public function resolveFromVendorDirectory(string $vendorFile): string
+    {
+        $vendorPackageDirectory = PathResolver::resolveVendorDirectory($vendorFile);
+
+        return basename(dirname($vendorPackageDirectory)) . '/' . basename($vendorPackageDirectory);
     }
 
     private function getPackageComposerJsonFilePath(string $vendorFilePath): string

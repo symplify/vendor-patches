@@ -143,16 +143,26 @@ composer install
 
 ## Patches File and Patches Folder Options
 
-Optionally, if you use a [patches file](https://docs.cweagans.net/composer-patches/usage/defining-patches/#patches-file) you can specify its path using the `--patches-file` option:
+Optionally, if you use a [patches file](https://docs.cweagans.net/composer-patches/usage/defining-patches/#patches-file) you can specify its path as the first argument:
 
 ```bash
-vendor/bin/vendor-patches generate --patches-file=patches.json
+vendor/bin/vendor-patches generate patches.json
 ```
 
-You can choose to write the patches to a different folder than the default 'patches' folder by specifying the folder name using the `--patches-folder` option:
+You can choose to write the patches to a different folder than the default 'patches' folder by specifying the folder name using the `--patches-output` option:
 
 ```bash
-vendor/bin/vendor-patches generate --patches-folder=patches-composer
+vendor/bin/vendor-patches generate --patches-output=patches-composer
+```
+
+<br>
+
+## Resolve From Directory Option
+
+By default, the package name is read from each package's `composer.json` `name` field. Use `--resolve-from-directory` to derive the package name from its `vendor/<vendor>/<package>` directory instead. Useful for private repositories where the installed directory name differs from the `name` in `composer.json`.
+
+```bash
+vendor/bin/vendor-patches generate --resolve-from-directory
 ```
 
 <br>
