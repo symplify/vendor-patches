@@ -143,10 +143,10 @@ composer install
 
 ## Patches File and Patches Folder Options
 
-Optionally, if you use a [patches file](https://docs.cweagans.net/composer-patches/usage/defining-patches/#patches-file) you can specify its path as the first argument:
+Optionally, if you use a [patches file](https://docs.cweagans.net/composer-patches/usage/defining-patches/#patches-file) you can specify its path using the `--patches-file` option:
 
 ```bash
-vendor/bin/vendor-patches generate patches.json
+vendor/bin/vendor-patches generate --patches-file=patches.json
 ```
 
 You can choose to write the patches to a different folder than the default 'patches' folder by specifying the folder name using the `--patches-output` option:
