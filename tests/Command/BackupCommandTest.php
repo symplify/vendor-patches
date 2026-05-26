@@ -23,6 +23,7 @@ final class BackupCommandTest extends AbstractTestCase
         foreach (glob($this->workDirectory . '/*') ?: [] as $file) {
             unlink($file);
         }
+
         rmdir($this->workDirectory);
     }
 

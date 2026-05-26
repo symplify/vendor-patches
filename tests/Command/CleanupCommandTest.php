@@ -69,9 +69,13 @@ final class CleanupCommandTest extends AbstractTestCase
         }
 
         foreach (scandir($path) ?: [] as $entry) {
-            if ($entry === '.' || $entry === '..') {
+            if ($entry === '.') {
                 continue;
             }
+            if ($entry === '..') {
+                continue;
+            }
+
             $this->removeRecursive($path . '/' . $entry);
         }
 
