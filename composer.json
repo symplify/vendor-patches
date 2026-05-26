@@ -19,7 +19,7 @@
         "phpecs/phpecs": "^2.3",
         "phpstan/extension-installer": "^1.4",
         "phpstan/phpstan": "^2.1.33",
-        "phpunit/phpunit": "^12.5.4",
+        "phpunit/phpunit": "^12.5.8",
         "rector/jack": "^0.5.1",
         "rector/rector": "^2.3",
         "shipmonk/composer-dependency-analyser": "^1.8",
