@@ -47,6 +47,29 @@ final class ComposerPatchesConfigurationUpdaterTest extends AbstractTestCase
         ], $patchesFileJson);
     }
 
+    public function testComposerJsonPreservesExtraKeyOrder(): void
+    {
+        $composerPatchesConfigurationUpdater = $this->make(ComposerPatchesConfigurationUpdater::class);
+
+        $composerJson = $composerPatchesConfigurationUpdater->updateComposerJson(
+            __DIR__ . '/Fixture/composer.extra_with_sibling_keys.json',
+            [
+                'nette/di' => ['nette-di.patch'],
+            ]
+        );
+
+        $this->assertSame([
+            'branch-alias' => [
+                'dev-main' => '1.0-dev',
+            ],
+            'patches' => [
+                'nette/di' => ['nette-di.patch'],
+                'symfony/console' => ['patches/symfony-console-style-symfonystyle-php.patch'],
+            ],
+        ], $composerJson['extra']);
+        $this->assertSame(['branch-alias', 'patches'], array_keys($composerJson['extra']));
+    }
+
     public function testComposerJsonAndPrint(): void
     {
         $composerPatchesConfigurationUpdater = $this->make(ComposerPatchesConfigurationUpdater::class);

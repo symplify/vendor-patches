@@ -40,11 +40,12 @@ final readonly class ComposerPatchesConfigurationUpdater
     {
         $composerJson = FileSystem::loadFileToJson($composerJsonFilePath);
 
-        // merge "extra" section - deep merge is needed, so original patches are included
+        // merge "extra.patches" section - deep merge is needed, so original patches are included
         if (isset($composerJson['extra'])) {
-            $composerJson['extra'] = $this->parametersMerger->merge($composerJson['extra'], [
-                'patches' => $composerExtraPatches,
-            ]);
+            $composerJson['extra']['patches'] = $this->parametersMerger->merge(
+                $composerJson['extra']['patches'] ?? [],
+                $composerExtraPatches
+            );
 
             return $composerJson;
         }
