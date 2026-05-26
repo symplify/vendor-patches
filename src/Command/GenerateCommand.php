@@ -30,14 +30,18 @@ final readonly class GenerateCommand implements CommandInterface
     /**
      * @param string|null $patchesFile Path to the patches file, relative to project root
      * @param string|null $patchesOutput Folder to output the patches to.
+     * @param bool|null $resolveFromDirectory Resolve package name from path in vendor/ instead of the package's composer.json. This is useful for private repositories where the name in the repository differs from the name in composer.json.
      *
      * @return \Entropy\Console\Enum\ExitCode::*
      */
-    public function run(?string $patchesFile = null, ?string $patchesOutput = null): int
-    {
+    public function run(
+        ?string $patchesFile = null,
+        ?string $patchesOutput = null,
+        ?bool $resolveFromDirectory = false
+    ): int {
         $projectVendorDirectory = $this->resolveProjectVendorDirectory();
 
-        $oldAndNewFiles = $this->oldToNewFilesFinder->find($projectVendorDirectory);
+        $oldAndNewFiles = $this->oldToNewFilesFinder->find($projectVendorDirectory, (bool) $resolveFromDirectory);
 
         $composerExtraPatches = [];
         $addedPatchFilesByPackageName = [];

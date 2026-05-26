@@ -21,7 +21,7 @@ final readonly class OldToNewFilesFinder
     /**
      * @return OldAndNewFile[]
      */
-    public function find(string $directory): array
+    public function find(string $directory, bool $resolveFromDirectory = false): array
     {
         $oldAndNewFiles = [];
 
@@ -38,7 +38,12 @@ final readonly class OldToNewFilesFinder
                 continue;
             }
 
-            $packageName = $this->packageNameResolver->resolveFromFilePath($newFilePath);
+            if ($resolveFromDirectory) {
+                $packageName = $this->packageNameResolver->resolveFromVendorDirectory($newFilePath);
+            } else {
+                $packageName = $this->packageNameResolver->resolveFromPackageComposerJson($newFilePath);
+            }
+
             $oldAndNewFiles[] = new OldAndNewFile($oldFilePath, $newFilePath, $packageName);
         }
 
