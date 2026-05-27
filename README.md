@@ -131,14 +131,14 @@ To summarize, the generate workflow is:
 
 ```bash
 # generate patches
-vendor/bin/vendor-patches generate 
+vendor/bin/vendor-patches generate
 # (if using cweagans/composer-patches v2)
-composer patches-relock 
+composer patches-relock
 composer patches-repatch
 # update the lock file
-composer update --lock 
+composer update --lock
 # install with patches applied
-composer install 
+composer install
 ```
 
 ## Patches File and Patches Folder Options
@@ -183,7 +183,7 @@ For example, if you have an old patch file that starts with:
 @@ -0,0 +1,10 @@
 +<?php
 +// some code
-``` 
+```
 You need to change it to:
 
 ```diff
