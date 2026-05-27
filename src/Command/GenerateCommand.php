@@ -30,6 +30,7 @@ final readonly class GenerateCommand implements CommandInterface
     /**
      * @param string|null $patchesFile Path to the patches file, relative to project root
      * @param string|null $patchesOutput Folder to output the patches to.
+     * @param string|null $patchesFolder Alias for --patches-output.
      * @param bool|null $resolveFromDirectory Resolve package name from path in vendor/ instead of the package's composer.json. This is useful for private repositories where the name in the repository differs from the name in composer.json.
      *
      * @return \Entropy\Console\Enum\ExitCode::*
@@ -37,6 +38,8 @@ final readonly class GenerateCommand implements CommandInterface
     public function run(
         ?string $patchesFile = null,
         ?string $patchesOutput = null,
+        // alias for --patches-output, to avoid confusion with the --patches-file option
+        ?string $patchesFolder = null,
         ?bool $resolveFromDirectory = false
     ): int {
         $projectVendorDirectory = $this->resolveProjectVendorDirectory();
@@ -45,6 +48,8 @@ final readonly class GenerateCommand implements CommandInterface
 
         $composerExtraPatches = [];
         $addedPatchFilesByPackageName = [];
+
+        $patchesOutput ??= $patchesFolder;
 
         if (is_string($patchesOutput)) {
             $this->patchFileFactory->setOutputFolder($patchesOutput);
