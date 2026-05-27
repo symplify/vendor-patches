@@ -8,18 +8,11 @@ Generate vendor patches for packages with single command.
 
 ```bash
 composer require symplify/vendor-patches --dev
-
-# If you are applying patches to production, be sure to also explicitly add cweagans/composer-patches.
-composer require cweagans/composer-patches
 ```
-
-<br>
 
 ## Usage
 
 How to create [a patch for a file in `/vendor`](https://tomasvotruba.com/blog/2020/07/02/how-to-patch-package-in-vendor-yet-allow-its-updates/)?
-
-<br>
 
 ### 1. Create a Copy of `/vendor` file you Want To Change with `*.old` Suffix
 
@@ -30,8 +23,6 @@ vendor/nette/di/src/DI/Extensions/InjectExtension.php
 # copy of the file
 vendor/nette/di/src/DI/Extensions/InjectExtension.php.old
 ```
-
-<br>
 
 ### 2. Open the original file and change the lines you need:
 
@@ -44,10 +35,6 @@ vendor/nette/di/src/DI/Extensions/InjectExtension.php.old
 ```
 
 Only `*.php` file is loaded, not the `*.php.old` one. This way you can **be sure the new code** is working before you generate patches.
-
-Make sure to back up other modified files in the vendor/ directory as well as some of the commands below may overwrite them.
-
-<br>
 
 ### 3. Run `generate` command 🥳️
 
@@ -79,32 +66,6 @@ Also, it will add configuration for `cweagans/composer-patches` to your `compose
 }
 ```
 
-<br>
-
-#### 3.1 When using cweagans/composer-patches v2
-
-`cweagans/composer-patches` v2 requires the execution of 2 additional steps after generating the patches:
-
-Updating the `patches.lock.json` file:
-
-```bash
-composer patches-relock
-```
-
-Applying the new patches:
-
-```bash
-composer patches-repatch
-```
-
-### 4. Final steps
-
-Now you need to do run composer to update the lock file as the checksum of `composer.json` has changed:
-
-```bash
-composer update --lock
-```
-
 That's it!
 
 <br>
@@ -125,87 +86,12 @@ If not, get more information from composer to find out why:
 composer install --verbose
 ```
 
-### Summary
-
-To summarize, the generate workflow is:
-
-```bash
-# generate patches
-vendor/bin/vendor-patches generate
-# (if using cweagans/composer-patches v2)
-composer patches-relock
-composer patches-repatch
-# update the lock file
-composer update --lock
-# install with patches applied
-composer install
-```
-
-## Patches File and Patches Folder Options
-
-Optionally, if you use a [patches file](https://docs.cweagans.net/composer-patches/usage/defining-patches/#patches-file) you can specify its path using the `--patches-file` option:
-
-```bash
-vendor/bin/vendor-patches generate --patches-file=patches.json
-```
-
-You can choose to write the patches to a different folder than the default 'patches' folder by specifying the folder name using the `--patches-output` option:
-
-```bash
-vendor/bin/vendor-patches generate --patches-output=patches-composer
-```
-
 <br>
 
-## Resolve From Directory Option
+## Report Issues
 
-By default, the package name is read from each package's `composer.json` `name` field. Use `--resolve-from-directory` to derive the package name from its `vendor/<vendor>/<package>` directory instead. Useful for private repositories where the installed directory name differs from the `name` in `composer.json`.
+In case you are experiencing a bug or want to request a new feature head over to the [Symplify monorepo issue tracker](https://github.com/symplify/symplify/issues)
 
-```bash
-vendor/bin/vendor-patches generate --resolve-from-directory
-```
+## Contribute
 
-<br>
-
-## TroubleShooting
-
-### Upgrading from older versions of cweagans/composer-patches (pre 2.0.0)
-
-If you are upgrading `cweagans/composer-patches` to 2.0.0 and newer versions, you may need to adjust your patches to ensure compatibility.
-
-The new version requires that `--- /dev/null` needs to be replaced with `--- <file-path>` in your patch files.
-
-For example, if you have an old patch file that starts with:
-
-```diff
---- /dev/null
-+++ ../src/SomeFile.php
-@@ -0,0 +1,10 @@
-+<?php
-+// some code
-```
-You need to change it to:
-
-```diff
---- ../src/SomeFile.php
-+++ ../src/SomeFile.php
-@@ -0,0 +1,10 @@
-+<?php
-+// some code
-```
-
-### macOS
-
-If you are on macOS, and got hang on applying patch, you may need to install `gpatch`, you can install with:
-
-```
-brew install gpatch
-```
-
-and register to `.bash_profile` or `.zshrc` (if you're using [oh-my-zsh](https://ohmyz.sh/)):
-
-```
-PATH="/opt/homebrew/opt/gpatch/libexec/gnubin:$PATH"
-```
-
-<br>
+The sources of this package are contained in the Symplify monorepo. We welcome contributions for this package on [symplify/symplify](https://github.com/symplify/symplify).
