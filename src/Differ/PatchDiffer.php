@@ -16,9 +16,9 @@ use Symplify\VendorPatches\ValueObject\OldAndNewFile;
 final readonly class PatchDiffer
 {
     /**
-     * @see https://regex101.com/r/0O5NO1/4
+     * @see https://regex101.com/r/n2NXxy/2
      */
-    private const string LOCAL_PATH_REGEX = '#vendor\/[^\/]+\/[^\/]+\/(?<local_path>.*?)$#is';
+    private const string LOCAL_PATH_REGEX = '#vendor/[^/]+/[^/]+/(?<local_path>.+)$#';
 
     /**
      * @see https://regex101.com/r/ARznJR/1
