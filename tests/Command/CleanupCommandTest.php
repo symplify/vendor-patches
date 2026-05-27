@@ -72,6 +72,7 @@ final class CleanupCommandTest extends AbstractTestCase
             if ($entry === '.') {
                 continue;
             }
+
             if ($entry === '..') {
                 continue;
             }
