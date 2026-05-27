@@ -14,14 +14,14 @@ composer require symplify/vendor-patches --dev
 
 How to create [a patch for a file in `/vendor`](https://tomasvotruba.com/blog/2020/07/02/how-to-patch-package-in-vendor-yet-allow-its-updates/)?
 
-### 1. Create a Copy of `/vendor` file you Want To Change with `*.old` Suffix
+### 1. Create a Copy of `/vendor` file you Want To Change with `*.orig` Suffix
 
 For example, if you edit:
 
 ```bash
 vendor/nette/di/src/DI/Extensions/InjectExtension.php
 # copy of the file
-vendor/nette/di/src/DI/Extensions/InjectExtension.php.old
+vendor/nette/di/src/DI/Extensions/InjectExtension.php.orig
 ```
 
 ### 2. Open the original file and change the lines you need:
@@ -34,7 +34,7 @@ vendor/nette/di/src/DI/Extensions/InjectExtension.php.old
  					$type = Reflection::expandClassName($type, Reflection::getPropertyDeclaringClass($rp));
 ```
 
-Only `*.php` file is loaded, not the `*.php.old` one. This way you can **be sure the new code** is working before you generate patches.
+Only `*.php` file is loaded, not the `*.php.orig` one. This way you can **be sure the new code** is working before you generate patches.
 
 ### 3. Run `generate` command 🥳️
 

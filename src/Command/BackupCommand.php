@@ -16,7 +16,7 @@ final readonly class BackupCommand implements CommandInterface
     }
 
     /**
-     * @param string ...$files Vendor files to back up by copying them to "<path>.old"
+     * @param string ...$files Vendor files to back up by copying them to "<path>.orig"
      *
      * @return \Entropy\Console\Enum\ExitCode::*
      */
@@ -35,7 +35,7 @@ final readonly class BackupCommand implements CommandInterface
                 return ExitCode::ERROR;
             }
 
-            $backupFile = $file . '.old';
+            $backupFile = $file . '.orig';
 
             if (is_file($backupFile)) {
                 $this->outputPrinter->orangeBackground(
@@ -69,6 +69,6 @@ final readonly class BackupCommand implements CommandInterface
 
     public function getDescription(): string
     {
-        return 'Create *.old backup copies of given /vendor files';
+        return 'Create *.orig backup copies of given /vendor files';
     }
 }

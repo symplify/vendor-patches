@@ -26,10 +26,9 @@ final readonly class OldToNewFilesFinder
         $oldAndNewFiles = [];
 
         $oldFilePaths = $this->findFilePathsInDirectory($directory);
-
         foreach ($oldFilePaths as $oldFilePath) {
-            $oldStrrPos = (int) strrpos($oldFilePath, '.old');
-            if (strlen($oldFilePath) - $oldStrrPos !== 4) {
+            $oldStrrPos = strrpos($oldFilePath, '.orig');
+            if (false === $oldFilePath) {
                 continue;
             }
 
@@ -61,7 +60,7 @@ final readonly class OldToNewFilesFinder
             // excluded built files
             ->exclude('composer/')
             ->exclude('ocramius/')
-            ->name('*.old');
+            ->name('*.orig');
 
         $fileInfos = iterator_to_array($finder->getIterator());
         return array_keys($fileInfos);

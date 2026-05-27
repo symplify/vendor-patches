@@ -36,8 +36,8 @@ final class BackupCommandTest extends AbstractTestCase
         $exitCode = $backupCommand->run($sourceFile);
 
         $this->assertSame(ExitCode::SUCCESS, $exitCode);
-        $this->assertFileExists($sourceFile . '.old');
-        $this->assertSame(file_get_contents($sourceFile), file_get_contents($sourceFile . '.old'));
+        $this->assertFileExists($sourceFile . '.orig');
+        $this->assertSame(file_get_contents($sourceFile), file_get_contents($sourceFile . '.orig'));
     }
 
     public function testBacksUpMultipleFiles(): void
@@ -51,8 +51,8 @@ final class BackupCommandTest extends AbstractTestCase
         $exitCode = $backupCommand->run($first, $second);
 
         $this->assertSame(ExitCode::SUCCESS, $exitCode);
-        $this->assertFileExists($first . '.old');
-        $this->assertFileExists($second . '.old');
+        $this->assertFileExists($first . '.orig');
+        $this->assertFileExists($second . '.orig');
     }
 
     public function testReturnsErrorWhenNoFilesProvided(): void
@@ -75,12 +75,12 @@ final class BackupCommandTest extends AbstractTestCase
     {
         $sourceFile = $this->workDirectory . '/Sample.php';
         file_put_contents($sourceFile, '<?php // new content');
-        file_put_contents($sourceFile . '.old', '<?php // original');
+        file_put_contents($sourceFile . '.orig', '<?php // original');
 
         $backupCommand = $this->make(BackupCommand::class);
         $exitCode = $backupCommand->run($sourceFile);
 
         $this->assertSame(ExitCode::SUCCESS, $exitCode);
-        $this->assertSame('<?php // original', file_get_contents($sourceFile . '.old'));
+        $this->assertSame('<?php // original', file_get_contents($sourceFile . '.orig'));
     }
 }

@@ -29,7 +29,7 @@ final readonly class CleanupCommand implements CommandInterface
             ->files()
             ->exclude('composer/')
             ->exclude('ocramius/')
-            ->name('*.old');
+            ->name('*.orig');
 
         $deletedCount = 0;
 
@@ -46,9 +46,9 @@ final readonly class CleanupCommand implements CommandInterface
         }
 
         if ($deletedCount > 0) {
-            $this->outputPrinter->greenBackground(sprintf('%d *.old file(s) removed', $deletedCount));
+            $this->outputPrinter->greenBackground(sprintf('%d *.orig file(s) removed', $deletedCount));
         } else {
-            $this->outputPrinter->greenBackground('No *.old files were found');
+            $this->outputPrinter->greenBackground('No *.orig files were found');
         }
 
         return ExitCode::SUCCESS;
@@ -61,7 +61,7 @@ final readonly class CleanupCommand implements CommandInterface
 
     public function getDescription(): string
     {
-        return 'Remove all *.old backup files from /vendor directory';
+        return 'Remove all *.orig backup files from /vendor directory';
     }
 
     private function resolveProjectVendorDirectory(): string

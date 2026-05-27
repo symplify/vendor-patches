@@ -14,7 +14,7 @@ final class PatchDifferTest extends AbstractTestCase
     {
         $patchDiffer = $this->make(PatchDiffer::class);
 
-        $oldFilePath = __DIR__ . '/PatchDifferSource/vendor/some/package/file.php.old';
+        $oldFilePath = __DIR__ . '/PatchDifferSource/vendor/some/package/file.php.orig';
         $newFilePath = __DIR__ . '/PatchDifferSource/vendor/some/package/file.php';
 
         $oldAndNewFile = new OldAndNewFile($oldFilePath, $newFilePath, 'some/package');

@@ -32,8 +32,8 @@ final class CleanupCommandTest extends AbstractTestCase
     public function testRemovesOldFiles(): void
     {
         $vendorDir = $this->workDirectory . '/vendor';
-        $oldFileA = $vendorDir . '/some/package/src/A.php.old';
-        $oldFileB = $vendorDir . '/some/package/src/B.php.old';
+        $oldFileA = $vendorDir . '/some/package/src/A.php.orig';
+        $oldFileB = $vendorDir . '/some/package/src/B.php.orig';
         $kept = $vendorDir . '/some/package/src/A.php';
 
         file_put_contents($oldFileA, '<?php // old A');
