@@ -13,7 +13,6 @@ final class PathResolver
 {
     /**
      * @see https://regex101.com/r/ABxOlD/1
-     * @var string
      */
     private const string VENDOR_PACKAGE_DIRECTORY_REGEX = '#^(?<vendor_package_directory>.*?vendor/[^/]+/[^/]+)#';
 

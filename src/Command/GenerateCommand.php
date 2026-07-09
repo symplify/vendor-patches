@@ -106,7 +106,8 @@ final readonly class GenerateCommand implements CommandInterface
         }
 
         if ($addedPatchFilesByPackageName !== []) {
-            $message = sprintf('Great! %d new patch files added', count($addedPatchFilesByPackageName));
+            $addedPatchFilesCount = array_sum(array_map(count(...), $addedPatchFilesByPackageName));
+            $message = sprintf('Great! %d new patch files added', $addedPatchFilesCount);
             $this->outputPrinter->greenBackground($message);
         } else {
             $this->outputPrinter->greenBackground('No new patches were added');
