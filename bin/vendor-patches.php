@@ -29,5 +29,5 @@ $container = ContainerFactory::create();
 
 $application = $container->make(ConsoleApplication::class);
 
-$exitCode = $application->run($argv);
+$exitCode = $application->run($_SERVER['argv'] ?? []);
 exit($exitCode);

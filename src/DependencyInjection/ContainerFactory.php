@@ -6,7 +6,7 @@ namespace Symplify\VendorPatches\DependencyInjection;
 
 use Entropy\Container\Container;
 use SebastianBergmann\Diff\Differ;
-use SebastianBergmann\Diff\Output\UnifiedDiffOutputBuilder;
+use SebastianBergmann\Diff\Output\StrictUnifiedDiffOutputBuilder;
 
 final class ContainerFactory
 {
@@ -18,13 +18,16 @@ final class ContainerFactory
 
         // differ
         $container->service(
-            UnifiedDiffOutputBuilder::class,
-            static fn (): UnifiedDiffOutputBuilder => new UnifiedDiffOutputBuilder("--- Original\n+++ New\n", true)
+            StrictUnifiedDiffOutputBuilder::class,
+            static fn (): StrictUnifiedDiffOutputBuilder => new StrictUnifiedDiffOutputBuilder([
+                'fromFile' => 'Original',
+                'toFile' => 'New',
+            ])
         );
 
         $container->service(
             Differ::class,
-            static fn (Container $container): Differ => new Differ($container->make(UnifiedDiffOutputBuilder::class))
+            static fn (Container $container): Differ => new Differ($container->make(StrictUnifiedDiffOutputBuilder::class))
         );
 
         return $container;
