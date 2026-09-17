@@ -52,12 +52,9 @@ final class OldFilesFinder
 
     private static function isInExcludedDirectory(string $filePath): bool
     {
-        foreach (self::EXCLUDED_DIRECTORIES as $excludedDirectory) {
-            if (str_contains($filePath, '/' . $excludedDirectory . '/')) {
-                return true;
-            }
-        }
-
-        return false;
+        return array_any(
+            self::EXCLUDED_DIRECTORIES,
+            fn (string $excludedDirectory): bool => str_contains($filePath, '/' . $excludedDirectory . '/')
+        );
     }
 }
