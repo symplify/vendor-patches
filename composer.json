@@ -17,7 +17,7 @@
         "php-parallel-lint/php-parallel-lint": "^1.4",
         "phpstan/extension-installer": "^1.4",
         "phpstan/phpstan": "^2.2.14",
-        "phpunit/phpunit": "^13.1.14",
+        "phpunit/phpunit": "^12.5.35",
         "rector/jack": "^0.5.1",
         "rector/rector": "^2.3",
         "shipmonk/composer-dependency-analyser": "^1.8",
