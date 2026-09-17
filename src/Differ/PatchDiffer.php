@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Symplify\VendorPatches\Differ;
 
 use Entropy\Utils\Regex;
-use SebastianBergmann\Diff\Differ;
 use Symplify\VendorPatches\Exception\ShouldNotHappenException;
 use Symplify\VendorPatches\Utils\FileSystemHelper;
 use Symplify\VendorPatches\ValueObject\OldAndNewFile;
@@ -36,13 +35,13 @@ final readonly class PatchDiffer
     private const string START_NEW_REGEX = '#^\+\+\+ New#m';
 
     public function __construct(
-        private Differ $differ
+        private UnifiedDiffer $unifiedDiffer
     ) {
     }
 
     public function diff(OldAndNewFile $oldAndNewFile): string
     {
-        $diff = $this->differ->diff($oldAndNewFile->getOldFileContents(), $oldAndNewFile->getNewFileContents());
+        $diff = $this->unifiedDiffer->diff($oldAndNewFile->getOldFileContents(), $oldAndNewFile->getNewFileContents());
 
         $oldFilePath = Regex::replace($oldAndNewFile->getOldFilePath(), self::END_NEW_REGEX, '');
         $patchedOldFileRelativePath = $this->resolveRelativeFilePath($oldFilePath);
