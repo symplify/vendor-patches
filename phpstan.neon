@@ -5,6 +5,7 @@ includes:
     - vendor/symplify/phpstan-rules/config/static-rules.neon
 
 parameters:
+    errorFormat: symplify
     level: 8
 
     paths:
