@@ -6,50 +6,7 @@
         "bin/vendor-patches"
     ],
     "require": {
-        "php": ">=8.4",
-        "cweagans/composer-patches": "^1.7.3 || ^2.0",
-        "entropy/entropy": "^0.4",
-        "webmozart/assert": "^2.1"
-    },
-    "require-dev": {
-        "php-parallel-lint/php-parallel-lint": "^1.4",
-        "phpstan/extension-installer": "^1.4",
-        "phpstan/phpstan": "^2.2.14",
-        "phpunit/phpunit": "^12.5.35",
-        "rector/jack": "^1.0",
-        "rector/rector": "^2.3",
-        "shipmonk/composer-dependency-analyser": "^1.8",
-        "symplify/easy-coding-standard": "^13.3",
-        "symplify/phpstan-rules": "^14.13",
-        "tomasvotruba/class-leak": "^2.1"
-    },
-    "autoload": {
-        "psr-4": {
-            "Symplify\\VendorPatches\\": "src"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Symplify\\VendorPatches\\Tests\\": "tests"
-        }
-    },
-    "extra": {
-        "enable-patching": true
-    },
-    "config": {
-        "sort-packages": true,
-        "platform-check": false,
-        "allow-plugins": {
-            "cweagans/composer-patches": true,
-            "phpstan/extension-installer": true
-        }
-    },
-    "scripts": {
-        "check-cs": "vendor/bin/ecs check --ansi",
-        "fix-cs": "vendor/bin/ecs check --fix --ansi",
-        "phpstan": "vendor/bin/phpstan analyse --ansi",
-        "rector": "vendor/bin/rector process --dry-run --ansi",
-        "rector-fix": "vendor/bin/rector process --ansi",
-        "test": "vendor/bin/phpunit"
+        "php": ">=7.2",
+        "cweagans/composer-patches": "^1.7.3 || ^2.0"
     }
 }

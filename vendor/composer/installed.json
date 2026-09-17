@@ -1,0 +1,257 @@
+{
+    "packages": [
+        {
+            "name": "cweagans\/composer-configurable-plugin",
+            "version": "2.0.0",
+            "version_normalized": "2.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https:\/\/github.com\/cweagans\/composer-configurable-plugin.git",
+                "reference": "15433906511a108a1806710e988629fd24b89974"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https:\/\/api.github.com\/repos\/cweagans\/composer-configurable-plugin\/zipball\/15433906511a108a1806710e988629fd24b89974",
+                "reference": "15433906511a108a1806710e988629fd24b89974",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.0"
+            },
+            "require-dev": {
+                "codeception\/codeception": "~4.0",
+                "codeception\/module-asserts": "^2.0",
+                "composer\/composer": "~2.0",
+                "php-coveralls\/php-coveralls": "~2.0",
+                "php-parallel-lint\/php-parallel-lint": "^1.0.0",
+                "phpro\/grumphp": "^1.8.0",
+                "sebastian\/phpcpd": "^6.0",
+                "squizlabs\/php_codesniffer": "^3.0"
+            },
+            "time": "2023-02-12T04:58:58+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "VendorPatches202609\\cweagans\\Composer\\": "src"
+                }
+            },
+            "notification-url": "https:\/\/packagist.org\/downloads\/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Cameron Eagans",
+                    "email": "me@cweagans.net"
+                }
+            ],
+            "description": "Provides a lightweight configuration system for Composer plugins.",
+            "support": {
+                "issues": "https:\/\/github.com\/cweagans\/composer-configurable-plugin\/issues",
+                "source": "https:\/\/github.com\/cweagans\/composer-configurable-plugin\/tree\/2.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https:\/\/github.com\/cweagans",
+                    "type": "github"
+                }
+            ],
+            "install-path": "..\/cweagans\/composer-configurable-plugin"
+        },
+        {
+            "name": "cweagans\/composer-patches",
+            "version": "2.0.0",
+            "version_normalized": "2.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https:\/\/github.com\/cweagans\/composer-patches.git",
+                "reference": "bfa6018a5f864653d9ed899b902ea72f858a2cf7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https:\/\/api.github.com\/repos\/cweagans\/composer-patches\/zipball\/bfa6018a5f864653d9ed899b902ea72f858a2cf7",
+                "reference": "bfa6018a5f864653d9ed899b902ea72f858a2cf7",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^2.0",
+                "cweagans\/composer-configurable-plugin": "^2.0",
+                "ext-json": "*",
+                "php": ">=8.0.0"
+            },
+            "require-dev": {
+                "codeception\/codeception": "~4.0",
+                "codeception\/module-asserts": "^2.0",
+                "codeception\/module-cli": "^2.0",
+                "codeception\/module-filesystem": "^2.0",
+                "composer\/composer": "~2.0",
+                "php-coveralls\/php-coveralls": "~2.0",
+                "php-parallel-lint\/php-parallel-lint": "^1.0.0",
+                "phpro\/grumphp": "^1.8.0",
+                "sebastian\/phpcpd": "^6.0",
+                "squizlabs\/php_codesniffer": "^4.0"
+            },
+            "time": "2025-10-30T23:44:22+00:00",
+            "type": "composer-plugin",
+            "extra": {
+                "_": "The following two lines ensure that composer-patches is loaded as early as possible.",
+                "class": "cweagans\\Composer\\Plugin\\Patches",
+                "plugin-modifies-downloads": true,
+                "plugin-modifies-install-path": true
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "VendorPatches202609\\cweagans\\Composer\\": "src"
+                }
+            },
+            "notification-url": "https:\/\/packagist.org\/downloads\/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Cameron Eagans",
+                    "email": "me@cweagans.net"
+                }
+            ],
+            "description": "Provides a way to patch Composer packages.",
+            "support": {
+                "issues": "https:\/\/github.com\/cweagans\/composer-patches\/issues",
+                "source": "https:\/\/github.com\/cweagans\/composer-patches\/tree\/2.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https:\/\/github.com\/cweagans",
+                    "type": "github"
+                }
+            ],
+            "install-path": "..\/cweagans\/composer-patches"
+        },
+        {
+            "name": "entropy\/entropy",
+            "version": "0.4.13",
+            "version_normalized": "0.4.13.0",
+            "source": {
+                "type": "git",
+                "url": "https:\/\/github.com\/TomasVotruba\/entropy.git",
+                "reference": "b2c703a93350f49ce67d150bb8560e886be01027"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https:\/\/api.github.com\/repos\/TomasVotruba\/entropy\/zipball\/b2c703a93350f49ce67d150bb8560e886be01027",
+                "reference": "b2c703a93350f49ce67d150bb8560e886be01027",
+                "shasum": ""
+            },
+            "require": {
+                "ext-tokenizer": "*",
+                "php": "^8.4",
+                "webmozart\/assert": "^2.4"
+            },
+            "require-dev": {
+                "phpstan\/extension-installer": "^1.4",
+                "phpstan\/phpstan": "^2.1",
+                "phpunit\/phpunit": "^12.5",
+                "rector\/jack": "^1.0",
+                "rector\/rector": "^2.4",
+                "rector\/swiss-knife": "^2.4",
+                "shipmonk\/composer-dependency-analyser": "^1.8",
+                "symplify\/easy-coding-standard": "^13.1",
+                "symplify\/phpstan-rules": "^14.10",
+                "tomasvotruba\/type-coverage": "^2.2",
+                "tomasvotruba\/unused-public": "^2.2",
+                "tracy\/tracy": "^2.12"
+            },
+            "time": "2026-09-03T19:53:04+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "VendorPatches202609\\Entropy\\": "src"
+                }
+            },
+            "notification-url": "https:\/\/packagist.org\/downloads\/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "Entropy framework",
+            "support": {
+                "issues": "https:\/\/github.com\/TomasVotruba\/entropy\/issues",
+                "source": "https:\/\/github.com\/TomasVotruba\/entropy\/tree\/0.4.13"
+            },
+            "install-path": "..\/entropy\/entropy"
+        },
+        {
+            "name": "webmozart\/assert",
+            "version": "2.4.1",
+            "version_normalized": "2.4.1.0",
+            "source": {
+                "type": "git",
+                "url": "https:\/\/github.com\/webmozarts\/assert.git",
+                "reference": "2ccb7c2e821038c03a3e6e1700c570c158c55f70"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https:\/\/api.github.com\/repos\/webmozarts\/assert\/zipball\/2ccb7c2e821038c03a3e6e1700c570c158c55f70",
+                "reference": "2ccb7c2e821038c03a3e6e1700c570c158c55f70",
+                "shasum": ""
+            },
+            "require": {
+                "ext-ctype": "*",
+                "ext-date": "*",
+                "ext-filter": "*",
+                "php": "^8.2"
+            },
+            "suggest": {
+                "ext-intl": "",
+                "ext-simplexml": "",
+                "ext-spl": ""
+            },
+            "time": "2026-06-15T15:31:57+00:00",
+            "type": "library",
+            "extra": {
+                "psalm": {
+                    "pluginClass": "Webmozart\\Assert\\PsalmPlugin"
+                },
+                "branch-alias": {
+                    "dev-master": "2.0-dev",
+                    "dev-feature\/2-0": "2.0-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "VendorPatches202609\\Webmozart\\Assert\\": "src\/"
+                }
+            },
+            "notification-url": "https:\/\/packagist.org\/downloads\/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bernhard Schussek",
+                    "email": "bschussek@gmail.com"
+                },
+                {
+                    "name": "Woody Gilk",
+                    "email": "woody.gilk@gmail.com"
+                }
+            ],
+            "description": "Assertions to validate method input\/output with nice error messages.",
+            "keywords": [
+                "assert",
+                "check",
+                "validate"
+            ],
+            "support": {
+                "issues": "https:\/\/github.com\/webmozarts\/assert\/issues",
+                "source": "https:\/\/github.com\/webmozarts\/assert\/tree\/2.4.1"
+            },
+            "install-path": "..\/webmozart\/assert"
+        }
+    ],
+    "dev": false,
+    "dev-package-names": []
+}
