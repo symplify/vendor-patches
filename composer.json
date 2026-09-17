@@ -6,7 +6,7 @@
         "bin/vendor-patches"
     ],
     "require": {
-        "php": ">=8.3",
+        "php": ">=8.4",
         "cweagans/composer-patches": "^1.7.3 || ^2.0",
         "entropy/entropy": "^0.4",
         "webmozart/assert": "^2.1"
@@ -20,7 +20,7 @@
         "rector/rector": "^2.3",
         "shipmonk/composer-dependency-analyser": "^1.8",
         "symplify/easy-coding-standard": "^13.3",
-        "symplify/phpstan-rules": "^14.9.11",
+        "symplify/phpstan-rules": "^14.13",
         "tomasvotruba/class-leak": "^2.1"
     },
     "autoload": {
