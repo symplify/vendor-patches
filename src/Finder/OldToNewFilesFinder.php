@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Symplify\VendorPatches\Finder;
 
-use Symfony\Component\Finder\Finder;
 use Symplify\VendorPatches\Composer\PackageNameResolver;
+use Symplify\VendorPatches\FileSystem\OldFilesFinder;
 use Symplify\VendorPatches\ValueObject\OldAndNewFile;
 
 /**
@@ -55,15 +55,6 @@ final readonly class OldToNewFilesFinder
      */
     private function findFilePathsInDirectory(string $directory): array
     {
-        $finder = Finder::create()
-            ->in($directory)
-            ->files()
-            // excluded built files
-            ->exclude('composer/')
-            ->exclude('ocramius/')
-            ->name('*.old');
-
-        $fileInfos = iterator_to_array($finder->getIterator());
-        return array_keys($fileInfos);
+        return OldFilesFinder::findOldFiles($directory);
     }
 }
