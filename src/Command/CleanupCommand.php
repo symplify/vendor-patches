@@ -7,7 +7,7 @@ namespace Symplify\VendorPatches\Command;
 use Entropy\Console\Contract\CommandInterface;
 use Entropy\Console\Enum\ExitCode;
 use Entropy\Console\Output\OutputPrinter;
-use Symfony\Component\Finder\Finder;
+use Symplify\VendorPatches\FileSystem\OldFilesFinder;
 use Symplify\VendorPatches\VendorDirProvider;
 
 final readonly class CleanupCommand implements CommandInterface
@@ -24,24 +24,17 @@ final readonly class CleanupCommand implements CommandInterface
     {
         $projectVendorDirectory = $this->resolveProjectVendorDirectory();
 
-        $finder = Finder::create()
-            ->in($projectVendorDirectory)
-            ->files()
-            ->exclude('composer/')
-            ->exclude('ocramius/')
-            ->name('*.old');
+        $oldFilePaths = OldFilesFinder::findOldFiles($projectVendorDirectory);
 
         $deletedCount = 0;
 
-        foreach ($finder as $fileInfo) {
-            $filePath = $fileInfo->getPathname();
-
-            if (! unlink($filePath)) {
-                $this->outputPrinter->redBackground(sprintf('Failed to remove "%s"', $filePath));
+        foreach ($oldFilePaths as $oldFilePath) {
+            if (! unlink($oldFilePath)) {
+                $this->outputPrinter->redBackground(sprintf('Failed to remove "%s"', $oldFilePath));
                 return ExitCode::ERROR;
             }
 
-            $this->outputPrinter->yellow(sprintf('File "%s" was removed', $filePath));
+            $this->outputPrinter->yellow(sprintf('File "%s" was removed', $oldFilePath));
             ++$deletedCount;
         }
 
