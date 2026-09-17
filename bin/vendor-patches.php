@@ -29,6 +29,5 @@ $container = ContainerFactory::create();
 
 $application = $container->make(ConsoleApplication::class);
 
-/** @phpstan-ignore variable.undefined */
 $exitCode = $application->run($argv);
 exit($exitCode);
