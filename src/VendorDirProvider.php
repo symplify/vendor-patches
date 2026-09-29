@@ -6,10 +6,20 @@ namespace Symplify\VendorPatches;
 
 use Composer\Autoload\ClassLoader;
 use ReflectionClass;
-use Webmozart\Assert\Assert;
+use Symplify\VendorPatches\Exception\ShouldNotHappenException;
 
 final class VendorDirProvider
 {
+    public static function provideProjectVendorDirectory(): string
+    {
+        $cwdVendorDirectory = getcwd() . '/vendor';
+        if (is_dir($cwdVendorDirectory)) {
+            return $cwdVendorDirectory;
+        }
+
+        return self::provide();
+    }
+
     public static function provide(): string
     {
         $rootFolder = getenv('SystemDrive', true) . DIRECTORY_SEPARATOR;
@@ -31,7 +41,9 @@ final class VendorDirProvider
         $reflectionClass = new ReflectionClass(ClassLoader::class);
 
         $classLoaderFileName = $reflectionClass->getFileName();
-        Assert::string($classLoaderFileName);
+        if (! is_string($classLoaderFileName)) {
+            throw new ShouldNotHappenException('Composer ClassLoader file was not found');
+        }
 
         return dirname($classLoaderFileName, 2);
     }

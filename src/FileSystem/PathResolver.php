@@ -7,7 +7,6 @@ namespace Symplify\VendorPatches\FileSystem;
 use Entropy\Utils\Regex;
 use Symplify\VendorPatches\Exception\ShouldNotHappenException;
 use Symplify\VendorPatches\Utils\FileSystemHelper;
-use Webmozart\Assert\Assert;
 
 final class PathResolver
 {
@@ -28,7 +27,9 @@ final class PathResolver
 
     public static function getRelativeFilePathFromDirectory(string $filePath, string $directory): string
     {
-        Assert::directory($directory);
+        if (! is_dir($directory)) {
+            throw new ShouldNotHappenException(sprintf('Directory "%s" was not found', $directory));
+        }
 
         // get relative path from directory
         return Regex::replace($filePath, '#^' . preg_quote($directory, '#') . '#', '');

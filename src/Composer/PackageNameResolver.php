@@ -7,7 +7,6 @@ namespace Symplify\VendorPatches\Composer;
 use Entropy\Utils\FileSystem;
 use Symplify\VendorPatches\Exception\ShouldNotHappenException;
 use Symplify\VendorPatches\FileSystem\PathResolver;
-use Webmozart\Assert\Assert;
 
 /**
  * @see \Symplify\VendorPatches\Tests\Composer\PackageNameResolverTest
@@ -38,7 +37,11 @@ final class PackageNameResolver
         $vendorPackageDirectory = PathResolver::resolveVendorDirectory($vendorFilePath);
 
         $packageComposerJsonFilePath = $vendorPackageDirectory . '/composer.json';
-        Assert::fileExists($packageComposerJsonFilePath);
+        if (! is_file($packageComposerJsonFilePath)) {
+            throw new ShouldNotHappenException(
+                sprintf('Composer file "%s" was not found', $packageComposerJsonFilePath)
+            );
+        }
 
         return $packageComposerJsonFilePath;
     }

@@ -22,7 +22,7 @@ final readonly class CleanupCommand implements CommandInterface
      */
     public function run(): int
     {
-        $projectVendorDirectory = $this->resolveProjectVendorDirectory();
+        $projectVendorDirectory = VendorDirProvider::provideProjectVendorDirectory();
 
         $oldFilePaths = OldFilesFinder::findOldFiles($projectVendorDirectory);
 
@@ -55,15 +55,5 @@ final readonly class CleanupCommand implements CommandInterface
     public function getDescription(): string
     {
         return 'Remove all *.old backup files from /vendor directory';
-    }
-
-    private function resolveProjectVendorDirectory(): string
-    {
-        $projectVendorDirectory = getcwd() . '/vendor';
-        if (file_exists($projectVendorDirectory)) {
-            return $projectVendorDirectory;
-        }
-
-        return VendorDirProvider::provide();
     }
 }

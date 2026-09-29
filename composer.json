@@ -8,8 +8,7 @@
     "require": {
         "php": ">=8.4",
         "cweagans/composer-patches": "^1.7.3 || ^2.0",
-        "entropy/entropy": "^0.4",
-        "webmozart/assert": "^2.1"
+        "entropy/entropy": "^0.4.14"
     },
     "require-dev": {
         "php-parallel-lint/php-parallel-lint": "^1.4",
