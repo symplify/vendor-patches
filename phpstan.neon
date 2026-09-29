@@ -2,6 +2,18 @@ parameters:
     errorFormat: symplify
     level: 8
 
+    symplify:
+        naming: true
+        complexity: true
+        configurable: true
+        static: true
+        symfony: true
+        symfonyConfig: true
+        doctrine: true
+        phpunit: true
+        mocks: true
+        ctor: true
+
     paths:
         - bin
         - src
