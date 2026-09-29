@@ -42,7 +42,7 @@ final readonly class GenerateCommand implements CommandInterface
         ?string $patchesFolder = null,
         ?bool $resolveFromDirectory = false
     ): int {
-        $projectVendorDirectory = $this->resolveProjectVendorDirectory();
+        $projectVendorDirectory = VendorDirProvider::provideProjectVendorDirectory();
 
         $oldAndNewFiles = $this->oldToNewFilesFinder->find($projectVendorDirectory, (bool) $resolveFromDirectory);
 
@@ -124,15 +124,5 @@ final readonly class GenerateCommand implements CommandInterface
     public function getDescription(): string
     {
         return 'Generate patches from /vendor directory';
-    }
-
-    private function resolveProjectVendorDirectory(): string
-    {
-        $projectVendorDirectory = getcwd() . '/vendor';
-        if (file_exists($projectVendorDirectory)) {
-            return $projectVendorDirectory;
-        }
-
-        return VendorDirProvider::provide();
     }
 }

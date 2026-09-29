@@ -6,7 +6,6 @@ namespace Symplify\VendorPatches\Tests;
 
 use PHPUnit\Framework\TestCase;
 use Symplify\VendorPatches\DependencyInjection\ContainerFactory;
-use Webmozart\Assert\Assert;
 
 abstract class AbstractTestCase extends TestCase
 {
@@ -20,7 +19,7 @@ abstract class AbstractTestCase extends TestCase
         $container = ContainerFactory::create();
 
         $service = $container->make($type);
-        Assert::isInstanceOf($service, $type);
+        $this->assertInstanceOf($type, $service);
 
         return $service;
     }

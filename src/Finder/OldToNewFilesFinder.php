@@ -25,16 +25,12 @@ final readonly class OldToNewFilesFinder
     {
         $oldAndNewFiles = [];
 
-        $oldFilePaths = $this->findFilePathsInDirectory($directory);
+        $oldFilePaths = OldFilesFinder::findOldFiles($directory);
 
         foreach ($oldFilePaths as $oldFilePath) {
-            $oldStrrPos = (int) strrpos($oldFilePath, '.old');
-            if (strlen($oldFilePath) - $oldStrrPos !== 4) {
-                continue;
-            }
-
-            $newFilePath = substr($oldFilePath, 0, $oldStrrPos);
-            if (! file_exists($newFilePath)) {
+            // strip the ".old" suffix to get the patched file next to it
+            $newFilePath = substr($oldFilePath, 0, -4);
+            if (! is_file($newFilePath)) {
                 continue;
             }
 
@@ -48,13 +44,5 @@ final readonly class OldToNewFilesFinder
         }
 
         return $oldAndNewFiles;
-    }
-
-    /**
-     * @return string[]
-     */
-    private function findFilePathsInDirectory(string $directory): array
-    {
-        return OldFilesFinder::findOldFiles($directory);
     }
 }
